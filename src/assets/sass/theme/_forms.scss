@@ -358,7 +358,7 @@ body {
                 }    
                 
                 .ui-autocomplete-token {
-                    font-size: 1em;
+                    font-size: 11px;
                     vertical-align: top;
                 }
             }
@@ -442,6 +442,12 @@ body {
         .ui-dropdown-label:focus,
         .ui-dropdown-label:hover {
             border:0 none;
+        }
+        
+        input.ui-dropdown-label + .ui-dropdown-trigger {
+            span {
+                margin-top: .3em;
+            }
         }
         
         .ui-dropdown-trigger {
@@ -665,7 +671,6 @@ body {
             
             &:focus {
                 outline: 0 none;
-                border-bottom: 1px solid $primaryColor;
             }
         }
         
