@@ -262,6 +262,8 @@ body {
                 width: 100%;
                 box-sizing: border-box;
                 @include border-radius(0);
+                border: 0 none;
+                border-top: 1px solid $headerBorderColor;
                 
                 &:hover {
                     background-color: $headerHoverBgColor;
@@ -357,7 +359,7 @@ body {
             a {
                 padding: $headerPadding;
                 padding-left: 2em;
-                color: $headerIconColor;
+                color: $headerTextColor;
             }
             
             &:not(.ui-state-active):hover {

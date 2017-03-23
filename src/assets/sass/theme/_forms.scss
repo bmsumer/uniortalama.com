@@ -318,7 +318,6 @@ body {
     .ui-autocomplete {
         .ui-autocomplete-dropdown {
             width: 2em;
-            padding: 0.1em;
             
             .fa {
                 @include icon_override("\f078");
@@ -327,7 +326,7 @@ body {
         
         &.ui-autocomplete-multiple {
             .ui-autocomplete-multiple-container {
-                padding: .12em;
+                padding: .3em;
                 
                 &:not(.ui-state-disabled):hover {
                     border: 1px solid $inputHoverBorderColor;
@@ -339,6 +338,9 @@ body {
                 }
                 
                 .ui-autocomplete-input-token {
+                    padding: 0 .25em 0 0;
+                    vertical-align: top;
+                    
                     input {
                         font-size: $fontSize;
                         padding: 0;
@@ -357,6 +359,7 @@ body {
                 
                 .ui-autocomplete-token {
                     font-size: 1em;
+                    vertical-align: top;
                 }
             }
         }
@@ -559,7 +562,7 @@ body {
             
             .ui-chkbox {                
                 .ui-chkbox-box {                    
-                    color: $primaryColor;
+                    color: $primaryTextColor;
                 }
             }
             
@@ -926,6 +929,7 @@ body {
     .ui-fileupload {
         .ui-fileupload-buttonbar {
             padding: $headerPadding;
+            border-bottom: 0 none;
             
             .ui-button {
                 margin-right: 8px;

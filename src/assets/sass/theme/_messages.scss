@@ -35,7 +35,7 @@ body {
         }
         
         .ui-messages-success {
-            background-color: $successMessageBgColor;
+            background-color: $successMessageBgColor!important;
             border-color: $successMessageBgColor;
             color: $successMessageTextColor;
             
