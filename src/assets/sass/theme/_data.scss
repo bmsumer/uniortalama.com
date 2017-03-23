@@ -95,7 +95,7 @@ body {
                 > td {
                     background-color: #ffffff;
                     padding: $headerPadding;
-                    border-color: $dividerColor;
+                    border-color: $contentBorderColor;
                     color: $textColor;
                 }
             }
@@ -119,6 +119,7 @@ body {
                                 
                 td {
                     padding: .42em .85em;
+                    border-color: $contentBorderColor;
                     
                     &.ui-editable-column {
                         &.ui-cell-editing {
