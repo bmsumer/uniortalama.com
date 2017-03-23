@@ -309,9 +309,11 @@ body {
         .ui-inputswitch-on {
             background-color: $primaryColor;
             color: $primaryTextColor;
+            font-weight: normal;
         }
         
         .ui-inputswitch-off {
+            font-weight: normal;
             .ui-inputswitch-offlabel {
                 border-left: 1px solid $contentBorderColor;
             }
@@ -332,6 +334,7 @@ body {
     .ui-autocomplete {
         .ui-autocomplete-dropdown {
             width: 2em;
+            padding: 0.1em;
             
             .fa {
                 @include icon_override("\f078");
@@ -341,7 +344,6 @@ body {
         &.ui-autocomplete-multiple {
             .ui-autocomplete-multiple-container {
                 padding: .12em;
-                display: inline-block;
                 
                 &:not(.ui-state-disabled):hover {
                     border: 1px solid $inputHoverBorderColor;
@@ -697,33 +699,12 @@ body {
     
     .ui-spinner {
         input {
-            padding-right: 24px;
-        }
-        
-        .ui-icon-triangle-1-n {
-            margin-top: -3px;    
-        }
-        .ui-icon-triangle-1-s {
-            margin-top: -11px;    
+            padding: 0.2em;
+            
         }
         
         .ui-spinner-button {
             z-index: auto;
-        }
-    }
-    
-    .ui-fluid {
-        .ui-spinner {
-            .ui-spinner-button {
-                .ui-icon-triangle-1-n {
-                    left: 3px;
-                    margin-top: -2px; 
-                }
-                .ui-icon-triangle-1-s {
-                    left: 3px;
-                    margin-top: -12px; 
-                }
-            }
         }
     }
     
@@ -744,11 +725,12 @@ body {
         
         .ui-slider-handle {
             background-color: $primaryColor;
+            border-radius: 100%;
             @include transition(background-color $transitionDuration);
         }
         
         .ui-slider-range {
-            background-color: lighten($primaryColor,5%);   
+            background-color: lighten($primaryColor,10%);   
         }
         
         &:not(.ui-state-disabled) {
@@ -871,12 +853,14 @@ body {
         
         .ui-datepicker-header {
             padding: $headerPadding;
+            border: 0 none;
+            border-bottom: 1px solid $headerBorderColor;
             @include border-radius(0);
             
             .ui-datepicker-prev {
                 cursor: pointer;
                 top:1em;
-                color: #ffffff;
+                color: $headerIconColor;
                 @include icon_override("\f053");
                 @include transition(color $transitionDuration);
                 span {
@@ -887,7 +871,7 @@ body {
             .ui-datepicker-next {
                 cursor: pointer;
                 top:1em;
-                color: #ffffff;
+                color: $headerIconColor;
                 @include icon_override("\f054");
                 @include transition(color $transitionDuration);
                 span {

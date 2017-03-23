@@ -1,47 +1,121 @@
 <div class="ui-g dashboard">            
     <div class="ui-g-12 ui-md-6 ui-lg-3">
         <div class="ui-g card overview-box overview-box-1">
-            <div class="ui-g-4">
+            <div class="ui-g-4 overview-box-icon">
                 <i class="fa fa-inbox"></i>
             </div>
             <div class="ui-g-8">
                 <span class="overview-box-count">253</span>
                 <span class="overview-box-name">Messages</span>
             </div>
+            <div class="ui-g-12 overview-box-footer">
+                %12 more than yesterday
+            </div>
         </div>
     </div>
     <div class="ui-g-12 ui-md-6 ui-lg-3">
         <div class="ui-g card overview-box overview-box-2">
-            <div class="ui-g-4">
+            <div class="ui-g-4 overview-box-icon">
                 <i class="fa fa-map-marker"></i>
             </div>
             <div class="ui-g-8">
                 <span class="overview-box-count">3216</span>
                 <span class="overview-box-name">Check-ins</span>
             </div>
+            <div class="ui-g-12 overview-box-footer">
+                %20 less than yesterday
+            </div>
         </div>
     </div>
     <div class="ui-g-12 ui-md-6 ui-lg-3">
         <div class="ui-g card overview-box overview-box-3">
-            <div class="ui-g-4">
+            <div class="ui-g-4 overview-box-icon">
                 <i class="fa fa-cloud"></i>
             </div>
             <div class="ui-g-8">
                 <span class="overview-box-count">428</span>
                 <span class="overview-box-name">Files Synced</span>
             </div>
+            <div class="ui-g-12 overview-box-footer">
+                %20 more than last week
+            </div>
         </div>
     </div>
     <div class="ui-g-12 ui-md-6 ui-lg-3">
         <div class="ui-g card overview-box overview-box-4">
-            <div class="ui-g-4">
+            <div class="ui-g-4 overview-box-icon">
                 <i class="fa fa-key"></i>
             </div>
             <div class="ui-g-8">
                 <span class="overview-box-count">4</span>
                 <span class="overview-box-name">Login Attempts</span>
             </div>
+            <div class="ui-g-12 overview-box-footer">
+                %50 less than last week
+            </div>
         </div>
+    </div>
+    
+    <div class="ui-g-12 ui-md-4">
+        <div class="user-card">
+            <div class="user-card-header"></div>
+            <div class="user-card-content">
+                <img src="assets/layout/images/profile-image.png"/>
+                <span class="user-card-name">Jane White</span>
+                <span class="user-card-role">System Admin</span>
+                <button type="button" label="Connect" icon="fa-send" pButton></button>
+            </div>
+            <div class="user-card-footer">
+                <div class="ui-g">
+                    <div class="ui-g-4">
+                        <span>Issues</span>
+                        <span>52</span>
+                    </div>
+                    <div class="ui-g-4">
+                        <span>Open</span>
+                        <span>25</span>
+                    </div>
+                    <div class="ui-g-4">
+                        <span>Closed</span>
+                        <span>27</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ui-g-12 ui-md-8 chat">
+        <p-panel header="Chat">
+            <ul>
+                <li class="clearfix message-from">
+                    <img src="assets/layout/images/avatar2.png"/>
+                    <span>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore.</span>
+                </li>
+                <li class="clearfix message-own">
+                    <img src="assets/layout/images/profile-image.png"/>
+                    <span>Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage.</span>
+                </li>
+                <li class="clearfix message-from">
+                    <img src="assets/layout/images/avatar2.png"/>
+                    <span>Chillwave craft beer tote bag stumptown quinoa hashtag.</span>
+                </li>
+                <li class="clearfix message-own">
+                    <img src="assets/layout/images/profile-image.png"/>
+                    <span>Dreamcatcher locavore iPhone chillwave, occupy trust fund slow-carb distillery art party narwhal.</span>
+                </li>
+                <li class="clearfix message-own">
+                    <span>Sed ut perspiciatis unde omnis iste natus.</span>
+                </li>
+                <li class="clearfix message-from">
+                    <img src="assets/layout/images/avatar2.png"/>
+                    <span>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.</span>
+                </li>
+                <li class="clearfix message-own">
+                    <img src="assets/layout/images/profile-image.png"/>
+                    <span>At vero eos et accusamus.</span>
+                </li>
+            </ul>
+        </p-panel>
     </div>
     
     <div class="ui-g-12 ui-md-6 ui-lg-4 task-list">
@@ -82,6 +156,16 @@
                     <span class="task-name">Generate Charts</span>
                     <i class="fa fa-area-chart"></i>
                 </li>
+                <li>
+                    <p-checkbox binary="true"></p-checkbox>
+                    <span class="task-name">New Theme</span>
+                    <i class="fa fa-paint-brush"></i>
+                </li>
+                <li>
+                    <p-checkbox binary="true"></p-checkbox>
+                    <span class="task-name">Flight Ticket</span>
+                    <i class="fa fa-fighter-jet"></i>
+                </li>
             </ul>
         </p-panel>
     </div>
@@ -92,13 +176,19 @@
                     <p-dropdown [options]="cities" [autoWidth]="false" [(ngModel)]="selectedCity"></p-dropdown>
                 </div>
                 <div class="ui-g-12">
-                    <input id="name" type="text" pInputText placeholder="Name" >
+                    <input type="text" pInputText placeholder="Name" >
                 </div>
                 <div class="ui-g-12">
-                    <input id="age" type="text" pInputText placeholder="Age" >
+                    <input type="text" pInputText placeholder="Age" >
                 </div>
                 <div class="ui-g-12">
-                    <input id="message" type="text" pInputText placeholder="Message">
+                    <input type="text" pInputText placeholder="Email">
+                </div>
+                <div class="ui-g-12">
+                    <input type="text" pInputText placeholder="Location">
+                </div>
+                <div class="ui-g-12">
+                    <textarea type="text" pInputTextarea placeholder="Message"></textarea>
                 </div>
             </div>
             <button type="button" label="Send" icon="fa-send" pButton></button>
@@ -107,33 +197,71 @@
     <div class="ui-g-12 ui-lg-4 contacts">
         <p-panel header="Contacts" [style]="{'minHeight':'360px'}">
             <ul>
-                <li>
+                <li class="clearfix">
                     <a href="#">
                         <img src="assets/layout/images/avatar1.png" width="45">
-                        <span class="name">Joshua Williams</span>
-                        <span class="email">joshua@ng-poseidon.com</span>
+                        <div class="contact-info">
+                            <span class="name">Joshua Williams</span>
+                            <span class="location">joshua@ng-atlantis.com</span>
+                        </div>
+                        <div class="contact-actions">
+                            <span class="connection-status online">online</span>
+                            <i class="fa fa-paper-plane-o"></i>
+                            <i class="fa fa-phone"></i>
+                        </div>
                     </a>
                 </li>
-                <li>
+                <li class="clearfix">
                     <a href="#">
                         <img src="assets/layout/images/avatar2.png" width="45">
-                        <span class="name">Emily Clark</span>
-                        <span class="email">emily@ng-poseidon.com</span>
+                        <div class="contact-info">
+                            <span class="name">Emily Clark</span>
+                            <span class="location">emily@ng-atlantis.com</span>
+                        </div>
+                        <div class="contact-actions">
+                            <span class="connection-status offline">offline</span>
+                            <i class="fa fa-paper-plane-o"></i>
+                            <i class="fa fa-phone"></i>
+                        </div>
                     </a>
                 </li>
-                <li>
+                <li class="clearfix">
                     <a href="#">
                         <img src="assets/layout/images/avatar3.png" width="45">
-                        <span class="name">Susan Johnson</span>
-                        <span class="email">susan@ng-poseidon.com</span>
+                        <div class="contact-info">
+                            <span class="name">Susan Johnson</span>
+                            <span class="location">susan@ng-atlantis.com</span>
+                        </div>
+                        <div class="contact-actions">
+                            <span class="connection-status offline">offline</span>
+                            <i class="fa fa-paper-plane-o"></i>
+                            <i class="fa fa-phone"></i>
+                        </div>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="assets/layout/images/avatar4.png" width="45">
-                        <span class="name">Kelly Stark</span>
-                        <span class="email">kelly@ng-poseidon.com</span>
-                    </a>
+                <li class="clearfix">
+                    <img src="assets/layout/images/profile-image.png" width="45"/>
+                    <div class="contact-info">
+                        <span class="name">Jane White (me)</span>
+                        <span class="location">jane@pf-atlantis.com</span>
+                    </div>
+                    <div class="contact-actions">
+                        <span class="connection-status online">online</span>
+                        <i class="fa fa-paper-plane-o"></i>
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <img src="assets/layout/images/avatar4.png" width="45"/>
+                    <div class="contact-info">
+                        <span class="name">David Stark</span>
+                        <span class="location">kelly@pf-atlantis.com</span>
+                    </div>
+                    <div class="contact-actions">
+                        <span class="connection-status offline">offline</span>
+                        <i class="fa fa-paper-plane-o"></i>
+                        <i class="fa fa-phone"></i>
+                    </div>
                 </li>
             </ul>
         </p-panel>

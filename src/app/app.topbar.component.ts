@@ -166,7 +166,6 @@ import {AppComponent} from './app.component';
                     (click)="app.onTopbarItemClick($event,search)">
                     <span class="md-inputfield">
                         <input type="text" pInputText>
-                        <label>Search</label>
                         <i class="fa fa-search"></i>
                     </span>
                 </li>

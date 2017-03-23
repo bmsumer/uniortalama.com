@@ -4,18 +4,19 @@ body {
         
         .ui-panel-titlebar {
             border: 0 none;
+            border-bottom: 1px solid $headerBorderColor;
             padding: $headerPadding;
             @include border-radius-top($borderRadius);
             @include border-radius-bottom(0px);
             
             .ui-panel-titlebar-icon {
                 position: relative;
-                color: #ffffff;
+                color: $headerIconColor;
                 border:1px solid transparent;
                 @include transition(color .3s);
                 
                 &:hover {
-                    color: $primaryColor;
+                    color: $headerIconHoverColor;
                 }
                 
                 &:focus {
@@ -60,10 +61,16 @@ body {
                 float: none;
                 display: inline-block;
                 vertical-align: middle;
+                margin-right: .5em;
+                color: $headerIconColor;
             }
             
             &:hover {
-                background-color: $primaryColor;
+                background-color: $headerHoverBgColor;
+                
+                .ui-fieldset-toggler {
+                    color: $headerIconHoverColor;
+                }
             }
         }
         
@@ -81,7 +88,7 @@ body {
         .ui-accordion-header {
             background-color: $headerBgColor;
             padding: 0;
-            color:#ffffff;
+            color: $headerTextColor;
             font-size: $fontSize;
             @include transition(background-color .3s);
             
@@ -96,6 +103,10 @@ body {
                 a {
                     color: #ffffff;
                 }
+                
+                span {
+                    color: #ffffff;
+                }
             }
             
             .fa-caret-right {
@@ -108,7 +119,11 @@ body {
             
             > a {
                 padding: .5em 1em .5em 2em;
-                color: #ffffff;
+                color: $headerTextColor;
+            }
+            
+            > span {
+                color: $headerTextColor;
             }
         }
         
@@ -121,8 +136,14 @@ body {
         padding: 0;
         
         &.ui-tabview-top,&.ui-tabview-bottom,&.ui-tabview-left,&.ui-tabview-right {
+            border: 0 none;
+            
             .ui-tabview-nav {
                 padding: 0;
+                border: 0 none;
+                border-bottom: 1px solid $contentBorderColor;
+                background: #ffffff;
+                @include border-radius(0);
                 
                 li {
                     position: static;
@@ -130,10 +151,11 @@ body {
                     @include border-radius(0);
                     margin: 0;
                     box-sizing: border-box;
+                    background-color: $headerBgColor;
                     
                     a {
                         padding: $headerPadding;
-                        color: #ffffff;
+                        color: $headerTextColor;
                         
                         &:focus {
                             outline: 0 none;
@@ -159,9 +181,22 @@ body {
                     &.ui-state-active {
                         background-color: $primaryColor;
                         
+                        a {
+                            color: #ffffff;
+                        }
+                        
+                        .ui-icon-close {
+                            color: #ffffff;
+                        }
+                        
                         &.ui-tabview-outline {
                             background-color: lighten($primaryColor,5%);
                         }
+                    }
+                    
+                    .ui-icon-close {
+                        color: $headerIconColor;
+                        margin-top: .5em;
                     }
                 }
             }
@@ -177,6 +212,7 @@ body {
         
         .ui-tabview-panel {
             padding: $contentPadding;
+            border-bottom: 1px solid $contentBorderColor;
         }
     }
     

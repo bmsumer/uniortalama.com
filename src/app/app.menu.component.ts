@@ -23,92 +23,104 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Themes', icon: 'fa fa-fw fa-paint-brush',
                 items: [
-                    {label: 'Blue - Amber', icon: 'brush', command: (event) => {this.changeTheme('blue')}},
-                    {label: 'Teal - Amber', icon: 'brush', command: (event) => {this.changeTheme('teal')}},
-                    {label: 'Blue Grey - Green', icon: 'brush', command: (event) => {this.changeTheme('blue-grey')}},
-                    {label: 'Cyan - Yellow', icon: 'brush', command: (event) => {this.changeTheme('cyan')}},
-                    {label: 'Dark - Blue', icon: 'brush', command: (event) => {this.changeTheme('dark-blue')}},
-                    {label: 'Dark - Green', icon: 'brush', command: (event) => {this.changeTheme('dark-green')}},
-                    {label: 'Light Blue - Green', icon: 'brush', command: (event) => {this.changeTheme('light-blue')}},
-                    {label: 'Indio - Cyan', icon: 'brush', command: (event) => {this.changeTheme('indigo')}},
-                    {label: 'Deep Purple - Pink', icon: 'brush', command: (event) => {this.changeTheme('deep-purple')}},
-                    {label: 'Green - Yellow', icon: 'brush', command: (event) => {this.changeTheme('green')}}
+                    {label: 'Blue', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('blue')}},
+                    {label: 'Pink', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('pink')}},
+                    {label: 'Steel', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('steel')}},
+                    {label: 'Orange', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('orange')}},
+                    {label: 'Green', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('green')}},
+                    {label: 'Turquoise', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('turquoise')}},
+                    {label: 'Purple', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('purple')}},
+                    {label: 'Cyan', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeTheme('cyan')}},
+                ]
+            },
+            {
+                label: 'Layout Colors', icon: 'fa fa-fw fa-paint-brush',
+                items: [
+                    {label: 'Dark', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('dark')}},
+                    {label: 'Blue', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('blue')}},
+                    {label: 'Pink', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('pink')}},
+                    {label: 'Steel', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('steel')}},
+                    {label: 'Orange', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('orange')}},
+                    {label: 'Green', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('green')}},
+                    {label: 'Turquoise', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('turquoise')}},
+                    {label: 'Purple', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('purple')}},
+                    {label: 'Cyan', icon: 'fa fa-fw fa-paint-brush', command: (event) => {this.changeLayout('cyan')}},
                 ]
             },
             {
                 label: 'Menu Modes', icon: 'fa fa-fw fa-bars',
                 items: [
-                    {label: 'Static Menu', icon: 'menu',  command: () => this.app.changeToStaticMenu()},
-                    {label: 'Overlay Menu', icon: 'exit_to_app',  command: () => this.app.changeToOverlayMenu()},
-                    {label: 'Light Menu', icon: 'label_outline',  command: () => this.app.darkMenu = false},
-                    {label: 'Dark Menu', icon: 'label',  command: () => this.app.darkMenu = true}
+                    {label: 'Static Menu', icon: 'fa fa-fw fa-bars',  command: () => this.app.changeToStaticMenu()},
+                    {label: 'Overlay Menu', icon: 'fa fa-fw fa-bars',  command: () => this.app.changeToOverlayMenu()},
+                    {label: 'Light Menu', icon: 'fa fa-fw fa-bars',  command: () => this.app.darkMenu = false},
+                    {label: 'Dark Menu', icon: 'fa fa-fw fa-bars',  command: () => this.app.darkMenu = true}
                 ]
             },
             {
                 label: 'Components', icon: 'fa fa-fw fa-sitemap',
                 items: [
-                    {label: 'Sample Page', icon: 'desktop_mac', routerLink: ['/sample']},
-                    {label: 'Forms', icon: 'input', routerLink: ['/forms']},
-                    {label: 'Data', icon: 'grid_on', routerLink: ['/data']},
-                    {label: 'Panels', icon: 'content_paste', routerLink: ['/panels']},
-                    {label: 'Overlays', icon: 'content_copy', routerLink: ['/overlays']},
-                    {label: 'Menus', icon: 'menu', routerLink: ['/menus']},
-                    {label: 'Messages', icon: 'message', routerLink: ['/messages']},
-                    {label: 'Charts', icon: 'insert_chart', routerLink: ['/charts']},
-                    {label: 'File', icon: 'attach_file', routerLink: ['/file']},
-                    {label: 'Misc', icon: 'toys', routerLink: ['/misc']}
+                    {label: 'Sample Page', icon: 'fa fa-fw fa-columns', routerLink: ['/sample']},
+                    {label: 'Forms', icon: 'fa fa-fw fa-code', routerLink: ['/forms']},
+                    {label: 'Data', icon: 'fa fa-fw fa-table', routerLink: ['/data']},
+                    {label: 'Panels', icon: 'fa fa-fw fa-list-alt', routerLink: ['/panels']},
+                    {label: 'Overlays', icon: 'fa fa-fw fa-square', routerLink: ['/overlays']},
+                    {label: 'Menus', icon: 'fa fa-fw fa-minus-square-o', routerLink: ['/menus']},
+                    {label: 'Messages', icon: 'fa fa-fw fa-circle-o-notch', routerLink: ['/messages']},
+                    {label: 'Charts', icon: 'fa fa-fw fa-area-chart', routerLink: ['/charts']},
+                    {label: 'File', icon: 'fa fa-fw fa-arrow-circle-o-up', routerLink: ['/file']},
+                    {label: 'Misc', icon: 'fa fa-fw fa-user-secret', routerLink: ['/misc']}
                 ]
             },
+            {label: 'Landing Page', icon: 'fa fa-fw fa-certificate', url: 'assets/pages/landing.html', target: '_blank'},
             {
                 label: 'Template Pages', icon: 'fa fa-fw fa-life-saver',
                 items: [
-                    {label: 'Empty Page', icon: 'hourglass_empty', routerLink: ['/empty']},
-                    {label: 'Landing Page', icon: 'fa fa-fw fa-certificate', url: 'assets/pages/landing.html', target: '_blank'},
-                    {label: 'Login Page', icon: 'verified_user', url: 'assets/pages/login.html', target: '_blank'},
-                    {label: 'Error Page', icon: 'error', url: 'assets/pages/error.html', target: '_blank'},
-                    {label: '404 Page', icon: 'error_outline', url: 'assets/pages/404.html', target: '_blank'},
-                    {label: 'Access Denied Page', icon: 'security', url: 'assets/pages/access.html', target: '_blank'}
+                    {label: 'Empty Page', icon: 'fa fa-fw fa-square-o', routerLink: ['/empty']},
+                    {label: 'Login Page', icon: 'fa fa-fw fa-sign-in', url: 'assets/pages/login.html', target: '_blank'},
+                    {label: 'Error Page', icon: 'fa fa-fw fa-exclamation-circle', url: 'assets/pages/error.html', target: '_blank'},
+                    {label: '404 Page', icon: 'fa fa-fw fa-times', url: 'assets/pages/404.html', target: '_blank'},
+                    {label: 'Access Denied Page', icon: 'fa fa-fw fa-exclamation-triangle', url: 'assets/pages/access.html', target: '_blank'}
                 ]
             },
             {
                 label: 'Menu Hierarchy', icon: 'fa fa-fw fa-gg',
                 items: [
                     {
-                        label: 'Submenu 1', icon: 'subject',
+                        label: 'Submenu 1', icon: 'fa fa-fw fa-sign-in',
                         items: [
                             {
-                                label: 'Submenu 1.1', icon: 'subject',
+                                label: 'Submenu 1.1', icon: 'fa fa-fw fa-sign-in',
                                 items: [
-                                    {label: 'Submenu 1.1.1', icon: 'subject'},
-                                    {label: 'Submenu 1.1.2', icon: 'subject'},
-                                    {label: 'Submenu 1.1.3', icon: 'subject'},
+                                    {label: 'Submenu 1.1.1', icon: 'fa fa-fw fa-sign-in'},
+                                    {label: 'Submenu 1.1.2', icon: 'fa fa-fw fa-sign-in'},
+                                    {label: 'Submenu 1.1.3', icon: 'fa fa-fw fa-sign-in'},
                                 ]
                             },
                             {
-                                label: 'Submenu 1.2', icon: 'subject',
+                                label: 'Submenu 1.2', icon: 'fa fa-fw fa-sign-in',
                                 items: [
-                                    {label: 'Submenu 1.2.1', icon: 'subject'},
-                                    {label: 'Submenu 1.2.2', icon: 'subject'}
+                                    {label: 'Submenu 1.2.1', icon: 'fa fa-fw fa-sign-in'},
+                                    {label: 'Submenu 1.2.2', icon: 'fa fa-fw fa-sign-in'}
                                 ]
                             },
                         ]
                     },
                     {
-                        label: 'Submenu 2', icon: 'subject',
+                        label: 'Submenu 2', icon: 'fa fa-fw fa-sign-in',
                         items: [
                             {
-                                label: 'Submenu 2.1', icon: 'subject',
+                                label: 'Submenu 2.1', icon: 'fa fa-fw fa-sign-in',
                                 items: [
-                                    {label: 'Submenu 2.1.1', icon: 'subject'},
-                                    {label: 'Submenu 2.1.2', icon: 'subject'},
-                                    {label: 'Submenu 2.1.3', icon: 'subject'},
+                                    {label: 'Submenu 2.1.1', icon: 'fa fa-fw fa-sign-in'},
+                                    {label: 'Submenu 2.1.2', icon: 'fa fa-fw fa-sign-in'},
+                                    {label: 'Submenu 2.1.3', icon: 'fa fa-fw fa-sign-in'},
                                 ]
                             },
                             {
-                                label: 'Submenu 2.2', icon: 'subject',
+                                label: 'Submenu 2.2', icon: 'fa fa-fw fa-sign-in',
                                 items: [
-                                    {label: 'Submenu 2.2.1', icon: 'subject'},
-                                    {label: 'Submenu 2.2.2', icon: 'subject'}
+                                    {label: 'Submenu 2.2.1', icon: 'fa fa-fw fa-sign-in'},
+                                    {label: 'Submenu 2.2.2', icon: 'fa fa-fw fa-sign-in'}
                                 ]
                             },
                         ]
@@ -121,10 +133,14 @@ export class AppMenuComponent implements OnInit {
 
     changeTheme(theme) {
         let themeLink: HTMLLinkElement = <HTMLLinkElement> document.getElementById('theme-css');
-        let layoutLink: HTMLLinkElement = <HTMLLinkElement> document.getElementById('layout-css');
         
         themeLink.href = 'assets/theme/theme-' + theme +'.css';
-        layoutLink.href = 'assets/layout/css/layout-' + theme +'.css';
+    }
+    
+    changeLayout(layout) {
+        let layoutLink: HTMLLinkElement = <HTMLLinkElement> document.getElementById('layout-css');
+        
+        layoutLink.href = 'assets/layout/css/layout-' + layout +'.css';
     }
 }
 
@@ -179,7 +195,6 @@ export class AppSubMenu implements OnDestroy {
     constructor(@Inject(forwardRef(() => AppComponent)) public app:AppComponent, public router: Router, public location: Location) {}
         
     itemClick(event: Event, item: MenuItem, index: number) {
-        console.log('xxx');
         //avoid processing disabled items
         if(item.disabled) {
             event.preventDefault();
