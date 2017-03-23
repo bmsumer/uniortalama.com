@@ -77,15 +77,15 @@ body {
         &.turquoise-btn {
             background-color: $turquoise;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($turquoise,5%);
             }
             
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($turquoise,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($turquoise,10%);
             }
         }
@@ -93,15 +93,15 @@ body {
         &.blue-btn {
             background-color: $blue;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($blue,5%);
             }
             
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($blue,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($blue,10%);
             }
         }
@@ -109,15 +109,15 @@ body {
         &.purple-btn {
             background-color: $purple;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($purple,5%);
             }
             
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($purple,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($purple,10%);
             }
         }
@@ -125,15 +125,15 @@ body {
         &.orange-btn {
             background-color: $orange;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($orange,5%);
             }
                         
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($orange,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($orange,10%);
             }
         }
@@ -141,15 +141,15 @@ body {
         &.pink-btn {
             background-color: $pink;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($pink,5%);
             }
                         
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($pink,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($pink,10%);
             }
         }
@@ -157,15 +157,15 @@ body {
         &.green-btn {
             background-color: $green;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($green,5%);
             }
             
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($green,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($green,10%);
             }
         }
@@ -173,32 +173,16 @@ body {
         &.steel-btn {
             background-color: $steel;
             
-            &.ui-state-hover {
+            &:hover {
                 background-color: darken($steel,5%);
             }
             
-            &.ui-state-focus {
+            &:focus {
                 background-color: darken($steel,5%);
             }
             
-            &.ui-state-active {
+            &:active {
                 background-color: darken($steel,10%);
-            }
-        }
-
-        &.black-btn {
-            background-color: $black;
-            
-            &.ui-state-hover {
-                background-color: darken($black,5%);
-            }
-                        
-            &.ui-state-focus {
-                background-color: darken($black,5%);
-            }
-            
-            &.ui-state-active {
-                background-color: darken($black,10%);
             }
         }
 
