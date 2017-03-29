@@ -264,6 +264,10 @@ body {
                 @include border-radius(0);
                 border: 0 none;
                 border-top: 1px solid $headerBorderColor;
+
+                span:last-child {
+                    vertical-align: bottom;
+                }
                 
                 &:hover {
                     background-color: $headerHoverBgColor;
