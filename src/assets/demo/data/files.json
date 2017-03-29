@@ -4,28 +4,28 @@
         {
             "label": "Documents",
             "data": "Documents Folder",
-            "expandedIcon": "ui-icon-folder-open",
-            "collapsedIcon": "ui-icon-folder",
+            "expandedIcon": "fa-folder-open-o",
+            "collapsedIcon": "fa-folder",
             "children": [{
                     "label": "Work",
                     "data": "Work Folder",
-                    "expandedIcon": "ui-icon-folder-open",
-                    "collapsedIcon": "ui-icon-folder",
+                    "expandedIcon": "fa-folder-open-o",
+                    "collapsedIcon": "fa-folder",
                     "children": [{"label": "Expenses.doc", "icon": "ui-icon-insert-drive-file", "data": "Expenses Document"}, {"label": "Resume.doc", "icon": "ui-icon-insert-drive-file", "data": "Resume Document"}]
                 },
                 {
                     "label": "Home",
                     "data": "Home Folder",
-                    "expandedIcon": "ui-icon-folder-open",
-                    "collapsedIcon": "ui-icon-folder",
+                    "expandedIcon": "fa-folder-open-o",
+                    "collapsedIcon": "fa-folder",
                     "children": [{"label": "Invoices.txt", "icon": "ui-icon-insert-drive-file", "data": "Invoices for this month"}]
                 }]
         },
         {
             "label": "Pictures",
             "data": "Pictures Folder",
-            "expandedIcon": "ui-icon-folder-open",
-            "collapsedIcon": "ui-icon-folder",
+            "expandedIcon": "fa-folder-open-o",
+            "collapsedIcon": "fa-folder",
             "children": [
                 {"label": "barcelona.jpg", "icon": "ui-icon-wallpaper", "data": "Barcelona Photo"},
                 {"label": "logo.jpg", "icon": "ui-icon-wallpaper", "data": "PrimeFaces Logo"},
@@ -34,8 +34,8 @@
         {
             "label": "Movies",
             "data": "Movies Folder",
-            "expandedIcon": "ui-icon-folder-open",
-            "collapsedIcon": "ui-icon-folder",
+            "expandedIcon": "fa-folder-open-o",
+            "collapsedIcon": "fa-folder",
             "children": [{
                     "label": "Al Pacino",
                     "data": "Pacino Movies",
