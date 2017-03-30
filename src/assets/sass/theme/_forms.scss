@@ -551,6 +551,9 @@ body {
             padding: $headerPadding;
             background-color: $headerBgColor;
             margin-bottom: 0;
+            border: 0 none;
+            border-bottom: 1px solid $headerBorderColor;
+            @include border-radius(0);
             
             .ui-multiselect-filter-container {
                 width: calc(100% - 3em);
@@ -562,6 +565,7 @@ body {
                 }
                 
                 .fa {
+                    top: .3em;
                     color: $textColor;
                 }
             }
@@ -631,6 +635,11 @@ body {
                 
                 input {
                     width: 100%;
+                }
+                
+                .fa {
+                    top: .35em;
+                    left: .3em;
                 }
             }
         }
@@ -916,6 +925,7 @@ body {
         }
         .ui-datepicker-trigger.ui-button {
             width: 2em;
+            height: 2.1em;
             @include border-radius-left(0);
         }
     }
