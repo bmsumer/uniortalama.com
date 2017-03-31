@@ -427,6 +427,14 @@ body {
                                             color: #545b61;
                                         }
                                     }
+                                    
+                                    &.active-menuitem-routerlink {
+                                        color: $primaryColor;
+                                        
+                                        i:first-child {
+                                            color: $primaryColor;
+                                        }
+                                    }
                                 }
                                 
                                 > ul {
@@ -525,6 +533,14 @@ body {
                                         
                                         i:first-child {
                                             color: $darkMenuItemTextColor;
+                                        }
+                                    }
+                                    
+                                    &.active-menuitem-routerlink {
+                                        color: lighten($primaryColor,15%);
+                                        
+                                        i:first-child {
+                                            color: lighten($primaryColor,15%);
                                         }
                                     }
                                 }
@@ -785,7 +801,7 @@ body {
                 position: absolute;
                 top: 60px;
                 right: 15px;
-                width: 200px;
+                width: 250px;
                 -webkit-animation-duration: .5s;
                 -moz-animation-duration: .5s;
                 animation-duration: .5s;
@@ -840,6 +856,8 @@ body {
                     }
                     
                     > ul {
+                        -webkit-animation-name: none;
+                        animation-name: none;
                         display: none;
                         list-style-type: none;
                         padding: 0 0 0 18px;

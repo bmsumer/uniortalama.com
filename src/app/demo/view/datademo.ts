@@ -12,6 +12,10 @@ import {TreeNode} from 'primeng/primeng';
             margin: 0;
             padding: 0;
         }
+        
+        .cars-datalist ul li:not(:last-child) > div {
+            border-bottom: 1px solid #bdbdbd;
+        }        
     
         @media (max-width:640px) {
             .cars-datalist .text-column {
@@ -43,9 +47,15 @@ export class DataDemo implements OnInit {
     
     files2: TreeNode[];
     
+    files3: TreeNode[];
+    
     events: any[];
     
-    selectedNode: TreeNode;
+    selectedNode1: TreeNode;
+    
+    selectedNode2: TreeNode;
+    
+    selectedNode3: TreeNode;
         
     scheduleHeader: any;
 
@@ -58,8 +68,9 @@ export class DataDemo implements OnInit {
         this.carService.getCarsMedium().then(cars => this.sourceCars = cars);
         this.targetCars = [];
         this.carService.getCarsSmall().then(cars => this.orderListCars = cars);
-        this.nodeService.getFilesystem().then(files => this.files1 = files);
+        this.nodeService.getFiles().then(files => this.files1 = files);
         this.nodeService.getFiles().then(files => this.files2 = files);
+        this.nodeService.getFilesystem().then(files => this.files3 = files);
         this.eventService.getEvents().then(events => {this.events = events;});
         
         this.carouselCars = [

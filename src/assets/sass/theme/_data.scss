@@ -65,7 +65,8 @@ body {
                     color: $textColor;
                     
                     &.ui-sortable-column:not(.ui-state-active):hover {
-                        @include list-item-hover();
+                        background-color: #e3e3e3;
+                        border-color: #c7c7c7;
                     }
                     
                     &.ui-state-active {
@@ -118,7 +119,7 @@ body {
                 }
                                 
                 td {
-                    padding: .42em .85em;
+                    padding: .45em .9em;
                     border-color: $contentBorderColor;
                     
                     &.ui-editable-column {
@@ -165,8 +166,8 @@ body {
             &.ui-datatable-hoverable-rows {
                 > tr.ui-widget-content:not(.ui-state-highlight):hover {
                     cursor: pointer;
-                    background-color: $contentBorderColor;
-                    border-color: darken($contentBorderColor,5%);
+                    background-color: #e3e3e3;
+                    border-color: #c7c7c7;
                 }
             }
         }
@@ -353,7 +354,8 @@ body {
                 color: $textColor;
                 
                 &.ui-state-hover {
-                    @include list-item-hover();
+                    background-color: #e3e3e3;
+                    border-color: #c7c7c7;
                 }
                 
                 &.ui-state-active {
@@ -376,13 +378,13 @@ body {
         }
         
         tbody {
-            > div {
+            > div {                
                 &.ui-treetable-row-selectable {
                     cursor: pointer;
                     
                     &:not(.ui-state-highlight):hover {
-                        background-color: $listItemHoverBgColor;
-                        border-color: darken($contentBorderColor,5%);
+                        background-color: #e3e3e3;
+                        border-color: #c7c7c7;
                     }
                     
                     &.ui-state-highlight {
@@ -395,7 +397,7 @@ body {
                 }
                 
                 td {
-                    padding: .5em .1em;
+                    padding: .45em .9em;
                     
                     .ui-treetable-toggler {
                         font-size: $fontSize + 2;

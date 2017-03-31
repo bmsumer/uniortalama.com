@@ -23,13 +23,13 @@ export class ChartsDemo implements OnInit {
                     label: 'First Dataset',
                     data: [65, 59, 80, 81, 56, 55, 40],
                     fill: false,
-                    borderColor: '#00acac'
+                    borderColor: '#3192e1'
                 },
                 {
                     label: 'Second Dataset',
                     data: [28, 48, 40, 19, 86, 27, 90],
                     fill: false,
-                    borderColor: '#2f8ee5'
+                    borderColor: '#5ea980'
                 }
             ]
         };
@@ -39,14 +39,14 @@ export class ChartsDemo implements OnInit {
             datasets: [
                 {
                     label: 'My First dataset',
-                    backgroundColor: '#00acac',
-                    borderColor: '#00acac',
+                    backgroundColor: '#3192e1',
+                    borderColor: '#3192e1',
                     data: [65, 59, 80, 81, 56, 55, 40]
                 },
                 {
                     label: 'My Second dataset',
-                    backgroundColor: '#2f8ee5',
-                    borderColor: '#2f8ee5',
+                    backgroundColor: '#5ea980',
+                    borderColor: '#5ea980',
                     data: [28, 48, 40, 19, 86, 27, 90]
                 }
             ]
@@ -58,9 +58,9 @@ export class ChartsDemo implements OnInit {
                 {
                     data: [300, 50, 100],
                     backgroundColor: [
-                        "#00acac",
-                        "#2f8ee5",
-                        "#6c76af"
+                        "#3192e1",
+                        "#5ea980",
+                        "#ff9c59"
                     ]
                 }]    
             };
@@ -75,11 +75,11 @@ export class ChartsDemo implements OnInit {
                     14
                 ],
                 backgroundColor: [
-                    "#00acac",
-                    "#2f8ee5",
-                    "#efa64c",
-                    "#6c76af",
-                    "#57c279"
+                    "#3192e1",
+                    "#5ea980",
+                    "#ff9c59",
+                    "#58799f",
+                    "#985edb"
                 ],
                 label: 'My dataset'
             }],
