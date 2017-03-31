@@ -6,10 +6,10 @@ body {
         .ui-paginator-first,.ui-paginator-prev,.ui-paginator-next,.ui-paginator-last {
             color: $textSecondaryColor;
             border: 1px solid transparent;
-            @include transition(color .3s);
+            @include transition(background-color .3s);
             
             &:not(.ui-state-disabled):not(.ui-state-active):hover {
-                color: $primaryColor;
+                background-color: $paginatorHoverBgColor;
             }
             
             &:focus {
@@ -509,6 +509,10 @@ body {
                 height: auto;
                 width: auto;
                 overflow: visible;
+            }
+            
+            .ui-button.ui-state-active {
+                background-color: darken($primaryColor,10%);
             }
         }
         .fc-event-container {

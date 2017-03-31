@@ -240,13 +240,13 @@
             padding: 15px 0 9px 9px;
             
             .count {
+                display: inline-block;
                 font-size: 24px;
                 color: #ffffff;
                 background-color: #03A9F4;
                 font-weight: bold;
-                width: 60px;
-                padding: 5px;
-                @include border-radius(2px);
+                padding: .125em .5em;
+                @include border-radius($borderRadius);
             }
             
             &:first-child {

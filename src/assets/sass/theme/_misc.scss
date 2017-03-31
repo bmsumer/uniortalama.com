@@ -1,13 +1,16 @@
 body {
     .ui-progressbar {
+        border: 0 none;
+        background-color: #e3e3e3;
+        
         .ui-progressbar-value {
-            background-color: $primaryColor;
+            border: 0 none;
+            background: lighten($primaryColor,20%);   
             margin: 0;
             @include border-radius(0);
         }
         
         .ui-progressbar-label {
-            color: lighten($primaryColor, 10%);
             margin-top: -2px;
         }
     }

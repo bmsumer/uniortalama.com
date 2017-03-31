@@ -192,13 +192,7 @@ body {
             box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
         }
     }
-    
-    .ui-fluid {
-        .ui-button-icon-only {
-            width: auto;
-        }
-    }
-        
+            
     .ui-chkbox {
         display: inline-block;
         vertical-align: middle;
@@ -298,8 +292,11 @@ body {
         
         .ui-inputswitch-off {
             font-weight: normal;
+            
             .ui-inputswitch-offlabel {
                 border-left: 1px solid $contentBorderColor;
+                background-color: #a8acb1;
+                color: #ffffff;
             }
         }
 
@@ -711,6 +708,7 @@ body {
     
     .ui-slider {
         background-color: $dividerColor;
+        border-color: $dividerColor;
         
         &.ui-slider-horizontal {
             .ui-slider-handle {
@@ -898,6 +896,7 @@ body {
                     
                     &.ui-state-highlight {
                         background-color: darken($listItemHoverBgColor,5%);
+                        color: $textColor;
                     }
                 }
             }

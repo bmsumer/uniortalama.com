@@ -348,7 +348,9 @@
             </p-dataTable>
             
             <p-panel header="Sales Graph">
-                <p-chart type="line" [data]="chartData" responsive="true"></p-chart>
+                <div style="overflow:auto">
+                    <p-chart type="line" [data]="chartData" responsive="true"></p-chart>
+                </div>
             </p-panel>
         </div>
     </div>

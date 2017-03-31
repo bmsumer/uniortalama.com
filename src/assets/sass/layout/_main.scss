@@ -157,7 +157,7 @@ body {
                         border-color: $topbarMenuTextColor;
                         background-color: $topbarBgColor;
                                                 
-                        &.ui-state-hover, &.ui-state-focus {
+                        &:hover,&:focus {
                             border-color: $topbarMenuTextHoverColor;
                         }
                     }
@@ -263,11 +263,11 @@ body {
                             font-size: 24px;
                         }
                         
-                        &:hover {
+                        &:hover { 
                             + .layout-tabmenu-tooltip {
                                 display: block;
                             }
-                            
+                                                       
                             i {
                                 color: #7a7a7a;
                             }
@@ -317,12 +317,6 @@ body {
                             
                             .layout-tabmenu-tooltip {
                                 left: 56px;
-                            }
-                            
-                            &:hover {
-                                + .layout-tabmenu-tooltip {
-                                    display: none;
-                                }
                             }
                         }
                     }
@@ -555,6 +549,20 @@ body {
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &.layout-wrapper-menu-active {
+        .layout-tabmenu {
+            .layout-tabmenu-nav {
+                > li.active-item {
+                    > a:hover {
+                        + .layout-tabmenu-tooltip {
+                            display: none;
                         }
                     }
                 }
@@ -942,7 +950,8 @@ body {
                             box-sizing: border-box;
                             padding-left: 30px;
                             
-                            &.ui-state-focus {
+                            &:enabled:focus {
+                                @include border-radius(0);
                                 @include no-shadow();
                                 border-bottom: 1px solid $primaryColor;
                             }
@@ -1041,11 +1050,10 @@ body {
                             i {
                                 font-size: 20px;
                             }
-                            
-                            .layout-tabmenu-tooltip {
-                                left: 40px;
-                                top: -20px;
-                            }
+                        }
+                        
+                        .layout-tabmenu-tooltip {
+                            left: 40px;
                         }
                     }
                 }
