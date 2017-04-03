@@ -37,6 +37,8 @@ export class FormsDemo implements OnInit {
     
     radioValues: string[];
     
+    radioValue: string;
+    
     switchChecked: boolean;
     
     rangeValues: number[] = [20,80];
@@ -44,6 +46,8 @@ export class FormsDemo implements OnInit {
     toggleButtonChecked: boolean;
     
     types: SelectItem[];
+    
+    selectedType: string;
     
     splitButtonItems: MenuItem[];
     
@@ -113,7 +117,7 @@ export class FormsDemo implements OnInit {
         }
     }
     
-    handleACDropdownClick() {
+    handleACDropdownClick(event: Event) {
         this.filteredBrands = [];
         
         //mimic remote call

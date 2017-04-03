@@ -65,7 +65,7 @@ export class AppComponent implements AfterViewInit {
         event.preventDefault();
     }
 
-    onSidebarClick($event) {
+    onSidebarClick(event: Event) {
         this.sidebarClick = true;
     }
 
