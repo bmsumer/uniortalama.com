@@ -1,46 +1,45 @@
-.splash-screen,
-.splash-screen::before,
-.splash-screen::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .splash-screen {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  color: #E42A7B;
-  border-radius: 6px;
-  box-shadow: inset 0 0 0 2px #3192E1;
-  transform: rotate(45deg);
-}
-
-.splash-loader {
-    background: url("../images/logo-colored.svg") no-repeat 50%/70%;
+    background: #3192e1;
     width: 100%;
     height: 100%;
-    transform: rotate(-45deg);
+    
+    .splash-loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -60px 0 0 -60px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #3192e1;
+        border: 10px solid #3192e1;
+        
+        img {
+            width: 100px;
+            margin-top: 10px;
+        }
+        
+        &:after {
+            content: '';
+            background: transparent;
+            width: 140%;
+            height: 140%;
+            position: absolute;
+            border-radius: 100%;
+            top: -20%;
+            left: -20%;
+            opacity: 0.7;
+            box-shadow: rgba(0, 0, 0, 0.6) -4px -5px 3px -3px;
+            animation: rotate 1s infinite linear;
+        }
+    }    
 }
 
-.splash-screen::before,
-.splash-screen::after {
-  content: '';
-  z-index: -1;
-  margin: -5%;
-  box-shadow: inset 0 0 0 2px;
-  border-radius: 6px;
-  animation: clipIt 2s linear infinite;
-}
-.splash-screen::before {
-  animation-delay: -4s;
-}
-
-@keyframes clipIt {
-  0%, 100% { clip: rect(0px, 220px, 2px, 0px); }
-  25%      { clip: rect(0px, 2px, 220px, 0px); }
-  50%      { clip: rect(218px, 220px, 220px, 0px); }
-  75%      { clip: rect(0px, 220px, 220px, 218px); }
+@keyframes rotate {
+ 0% {
+   transform: rotateZ(0deg);
+ }
+ 100% {
+   transform: rotateZ(360deg);
+  }
 }

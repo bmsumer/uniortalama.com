@@ -10,10 +10,7 @@ body {
     padding:0;
     margin:0;
     height: 100%;
-
-    &.main-body {
-        background-color: $bodyBgColor;
-    }
+    background-color: $bodyBgColor;
 }
 
 .layout-wrapper {
