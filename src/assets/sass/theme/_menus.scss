@@ -191,6 +191,24 @@ body {
                         margin-right: -8px;
                     }
                 }
+                
+                &.ui-menuitem-active {
+                    > .ui-menuitem-link {
+                        background-color: $primaryColor;
+                        
+                        .ui-menuitem-text,
+                        .ui-menuitem-icon,
+                        .ui-submenu-icon {
+                            color: #ffffff;
+                        }
+                        
+                        .ui-menuitem-icon {
+                            &.fa {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
             }
             
             .ui-menu-child {
