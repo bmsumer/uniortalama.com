@@ -18,6 +18,7 @@ import {CheckboxModule} from 'primeng/primeng';
 import {ChipsModule} from 'primeng/primeng';
 import {CodeHighlighterModule} from 'primeng/primeng';
 import {ConfirmDialogModule} from 'primeng/primeng';
+import {ColorPickerModule} from 'primeng/primeng';
 import {SharedModule} from 'primeng/primeng';
 import {ContextMenuModule} from 'primeng/primeng';
 import {DataGridModule} from 'primeng/primeng';
@@ -45,6 +46,7 @@ import {MenubarModule} from 'primeng/primeng';
 import {MessagesModule} from 'primeng/primeng';
 import {MultiSelectModule} from 'primeng/primeng';
 import {OrderListModule} from 'primeng/primeng';
+import {OrganizationChartModule} from 'primeng/primeng';
 import {OverlayPanelModule} from 'primeng/primeng';
 import {PaginatorModule} from 'primeng/primeng';
 import {PanelModule} from 'primeng/primeng';
@@ -117,6 +119,7 @@ import {NodeService} from './demo/service/nodeservice';
         ConfirmDialogModule,
         SharedModule,
         ContextMenuModule,
+        ColorPickerModule,
         DataGridModule,
         DataListModule,
         DataScrollerModule,
@@ -142,6 +145,7 @@ import {NodeService} from './demo/service/nodeservice';
         MessagesModule,
         MultiSelectModule,
         OrderListModule,
+        OrganizationChartModule,
         OverlayPanelModule,
         PaginatorModule,
         PanelModule,
