@@ -419,6 +419,7 @@ $black:#545b61;
 <pre>
 label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
 </pre>  
+
             <p>Atlantis layout has 4 different badge style.There is a default badge which uses the primary color of atlantis layout. And there is 3 other badge class for menu items.</p>
             <ul>
                 <li>orange-badge</li>
@@ -456,12 +457,14 @@ label: 'Components', icon: 'list', badge: '2', badgeStyleClass: 'red-badge'
             </ul>
             
             <h1>Migration Guide</h1>
+            <p>For seamless updates and easier maintenance, we suggest keeping your CSS customizations in a separate sass file so that your changes
+            are not overriden with an update.</p>
+            
             <p>4.0.1 to 4.1.0</p>
             <ul>
                 <li>Update layout css files.</li>
                 <li>Update theme css files.</li>
-                <li>Update AppSubmenu component in app.menu.component.ts for menu item badges.</li>
-                <li>Update AppSubmenu component in app.menu.component.ts by replacing the itemClick method implementation.</li>
+                <li>Update AppSubmenu component in app.menu.component.ts.</li>
             </ul>
             
             <p>4.0.0 to 4.0.1</p>
