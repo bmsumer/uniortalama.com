@@ -6,9 +6,4 @@ describe('atlantis App', () => {
   beforeEach(() => {
     page = new AtlantisPage();
   });
-
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
 });

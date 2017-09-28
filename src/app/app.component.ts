@@ -48,7 +48,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
         });
     }
 
-    onTabClick(event: Event, index: number) {
+    onTabClick(event, index: number) {
         if (this.activeTabIndex === index) {
             this.sidebarActive = !this.sidebarActive;
         } else {
@@ -59,12 +59,12 @@ export class AppComponent implements AfterViewInit, OnDestroy {
         event.preventDefault();
     }
 
-    closeSidebar(event: Event) {
+    closeSidebar(event) {
         this.sidebarActive = false;
         event.preventDefault();
     }
 
-    onSidebarClick(event: Event) {
+    onSidebarClick(event) {
         this.sidebarClick = true;
     }
 

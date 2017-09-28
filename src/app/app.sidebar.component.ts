@@ -1,9 +1,5 @@
-import {Component, Input, OnInit, EventEmitter, ViewChild, Inject, forwardRef} from '@angular/core';
-import {Location} from '@angular/common';
-import {Router} from '@angular/router';
-import {MenuItem} from 'primeng/primeng';
+import {Component} from '@angular/core';
 import {AppComponent} from './app.component';
-import {AppMenuComponent} from './app.menu.component';
 
 @Component({
     selector: 'app-sidebar',
@@ -11,6 +7,6 @@ import {AppMenuComponent} from './app.menu.component';
 })
 export class AppSideBarComponent {
 
-    constructor(@Inject(forwardRef(() => AppComponent)) public app: AppComponent) {}
+    constructor(public app: AppComponent) {}
 
 }
