@@ -16,7 +16,7 @@ declare var jQuery: any;
         </div>
     `
 })
-export class AppSidebarTabContentComponent implements AfterViewInit, OnDestroy {
+export class AppSideBarTabContentComponent implements AfterViewInit, OnDestroy {
 
     @ViewChild('scroller') layoutMenuScrollerViewChild: ElementRef;
 
