@@ -76,7 +76,7 @@ import {TreeTableModule} from 'primeng/primeng';
 import {AppComponent} from './app.component';
 import {AppMenuComponent, AppSubMenuComponent} from './app.menu.component';
 import {AppSideBarComponent} from './app.sidebar.component';
-import {AppSidebBarTabContentComponent} from './app.sidebartabcontent.component';
+import {AppSideBarTabContentComponent} from './app.sidebartabcontent.component';
 import {AppTopbarComponent} from './app.topbar.component';
 import {AppFooterComponent} from './app.footer.component';
 import {DashboardDemoComponent} from './demo/view/dashboarddemo.component';
@@ -177,7 +177,7 @@ import {NodeService} from './demo/service/nodeservice';
         AppMenuComponent,
         AppSubMenuComponent,
         AppSideBarComponent,
-        AppSidebBarTabContentComponent,
+        AppSideBarTabContentComponent,
         AppTopbarComponent,
         AppFooterComponent,
         DashboardDemoComponent,
