@@ -14,7 +14,9 @@ export class SampleDemoComponent implements OnInit {
 
     filteredCountries: any[];
 
-    cities1: SelectItem[];
+    cols: any[];
+
+  cities1: SelectItem[];
 
     cities2: SelectItem[];
 
@@ -66,6 +68,12 @@ export class SampleDemoComponent implements OnInit {
 
     ngOnInit() {
         this.carService.getCarsSmall().then(cars => this.cars = cars);
+        this.cols = [
+            { field: 'vin', header: 'Vin' },
+            { field: 'year', header: 'Year' },
+            { field: 'brand', header: 'Brand' },
+            { field: 'color', header: 'Color' }
+        ];
         this.carService.getCarsLarge().then(cars => this.carsLarge = cars);
         this.nodeService.getFiles().then(files => this.filesTree = files);
         this.carService.getCarsSmall().then(cars => this.sourceCars = cars);
