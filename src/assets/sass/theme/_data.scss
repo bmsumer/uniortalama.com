@@ -47,7 +47,7 @@ body {
          .ui-table-summary {
              padding: $headerPadding;
              text-align: center;
-             font-weight: bold;
+             font-weight: normal;
          }
 
          .ui-table-caption {
@@ -66,7 +66,6 @@ body {
 
          .ui-table-thead > tr > th,
          .ui-table-tfoot > tr > td {
-             background: $headerBgColor;
              color: $headerTextColor;
              border: 1px solid $contentBorderColor;
          }
@@ -102,7 +101,7 @@ body {
                }
              }
 
-             > tr:nth-child(even) {
+             > tr:nth-child(odd) {
                background-color: $datableOddRowBgColor;
 
                &.ui-state-highlight {
