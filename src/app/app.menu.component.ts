@@ -4,6 +4,7 @@ import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import {MenuItem} from 'primeng/primeng';
 import {AppComponent} from './app.component';
+import {AppSideBarTabContentComponent} from "./app.sidebartabcontent.component";
 
 @Component({
     selector: 'app-menu',
@@ -198,7 +199,8 @@ export class AppSubMenuComponent {
 
     hover: boolean;
 
-    constructor(public app: AppComponent, public router: Router, public location: Location) {}
+    constructor(public app: AppComponent, public router: Router, public location: Location,
+                public appSideBarTab: AppSideBarTabContentComponent) {}
 
     itemClick(event: Event, item: MenuItem, index: number) {
         // avoid processing disabled items
@@ -217,6 +219,9 @@ export class AppSubMenuComponent {
 
         // prevent hash change
         if (item.items || (!item.url && !item.routerLink)) {
+            setTimeout(() => {
+                this.appSideBarTab.layoutMenuScrollerViewChild.moveBar();
+            }, 450);
             event.preventDefault();
         }
 
