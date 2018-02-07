@@ -4,7 +4,7 @@ import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import {MenuItem} from 'primeng/primeng';
 import {AppComponent} from './app.component';
-import {AppSideBarTabContentComponent} from "./app.sidebartabcontent.component";
+import {AppSideBarTabContentComponent} from './app.sidebartabcontent.component';
 
 @Component({
     selector: 'app-menu',
