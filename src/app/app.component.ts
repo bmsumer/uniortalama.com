@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, Renderer, OnDestroy} from '@angular/core';
+import {Component, AfterViewInit, Renderer2, OnDestroy} from '@angular/core';
 
 enum MenuOrientation {
     STATIC,
@@ -30,10 +30,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
     documentClickListener: Function;
 
-    constructor(public renderer: Renderer) {}
+    constructor(public renderer: Renderer2) {}
 
     ngAfterViewInit() {
-        this.documentClickListener = this.renderer.listenGlobal('body', 'click', (event) => {
+        this.documentClickListener = this.renderer.listen('body', 'click', (event) => {
             if (!this.topbarItemClick) {
                 this.activeTopbarItem = null;
                 this.topbarMenuActive = false;
@@ -84,7 +84,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
         event.preventDefault();
     }
-    
+
     onTopbarSubItemClick(event) {
         event.preventDefault();
     }

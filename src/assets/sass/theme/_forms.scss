@@ -58,7 +58,7 @@ body {
 
         &.ui-button-icon-only {
             .ui-button-text {
-                padding: .3em 0;
+                padding: .3em;
             }
         }
 
@@ -288,6 +288,7 @@ body {
             }
 
             &.ui-state-active {
+                border-radius: 0;
                 border: 1px solid $primaryColor;
                 background-color: $primaryColor;
                 color: #ffffff;
@@ -516,6 +517,10 @@ body {
                 width: calc(100% - 2em);
             }
         }
+    }
+
+    .ui-fluid .ui-button-icon-only {
+        width: auto;
     }
 
     .ui-dropdown {
