@@ -9,7 +9,7 @@ import {AppSideBarTabContentComponent} from './app.sidebartabcontent.component';
 @Component({
     selector: 'app-menu',
     template: `
-        <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true"></ul>
+        <ul app-submenu [item]="model" root="true" class="navigation-menu" visible="true" parentActive="true"></ul>
     `
 })
 export class AppMenuComponent implements OnInit {
@@ -170,7 +170,7 @@ export class AppMenuComponent implements OnInit {
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
                 </a>
                 <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ?
-                'visible' : 'hidden'" [visible]="isActive(i)"></ul>
+                'visible' : 'hidden'" [visible]="isActive(i)" [parentActive]="isActive(i)"></ul>
             </li>
         </ng-template>
     `,
@@ -198,6 +198,8 @@ export class AppSubMenuComponent {
     activeIndex: number;
 
     hover: boolean;
+
+    _parentActive: boolean;
 
     constructor(public app: AppComponent, public router: Router, public location: Location,
                 public appSideBarTab: AppSideBarTabContentComponent) {}
@@ -244,6 +246,18 @@ export class AppSubMenuComponent {
             for (const childItem of item.items) {
                 this.unsubscribe(childItem);
             }
+        }
+    }
+
+    @Input() get parentActive(): boolean {
+        return this._parentActive;
+    }
+
+    set parentActive(val: boolean) {
+        this._parentActive = val;
+
+        if (!this._parentActive) {
+            this.activeIndex = null;
         }
     }
 }
