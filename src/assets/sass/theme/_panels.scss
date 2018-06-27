@@ -14,6 +14,12 @@ body {
                 color: $headerIconColor;
                 border:1px solid transparent;
                 @include transition(color .3s);
+                width: 18px;
+                height: 20px;
+
+                .pi {
+                    font-size: $fontSize + 4;
+                }
 
                 &:hover {
                     color: $headerIconHoverColor;
@@ -112,11 +118,11 @@ body {
                 }
             }
 
-            .fa-caret-right {
+            .pi-caret-right {
                 @include icon_override("\f054");
             }
 
-            .fa-caret-down {
+            .pi-caret-down {
                 @include icon_override("\f078");
             }
 

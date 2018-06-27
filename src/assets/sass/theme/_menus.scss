@@ -127,7 +127,7 @@ body {
 
     .ui-menu {
         padding: 0;
-        width: 100%;
+        min-width: 12.5em;
 
         .ui-menuitem {
             margin: 0;
@@ -162,6 +162,14 @@ body {
                 background-color: $primaryColor;
                 color: #ffffff;
               }
+            }
+        }
+
+        .ui-menubar-root-list {
+            &>.ui-menuitem>.ui-menuitem-link {
+                .ui-submenu-icon {
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -280,6 +288,14 @@ body {
                   .ui-menuitem-icon {
                     color: #ffffff;
                   }
+                }
+            }
+        }
+
+        .ui-megamenu-root-list {
+            &>.ui-menuitem>.ui-menuitem-link {
+                .ui-submenu-icon {
+                    vertical-align: middle;
                 }
             }
         }

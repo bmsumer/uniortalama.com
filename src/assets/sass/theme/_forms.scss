@@ -29,7 +29,7 @@ body {
             background-color: darken($primaryColor,5%);
         }
 
-        &:enabled:focus {
+        &:enabled:not(.ui-button-secondary):focus {
             outline: 0 none;
             background-color: darken($primaryColor,5%);
         }
@@ -48,27 +48,15 @@ body {
             .ui-button-text {
                 padding: .3em .6em .3em 2em;
             }
-
-            .fa {
-                margin-top: -.5em;
-            }
         }
 
         &.ui-button-text-icon-right {
             .ui-button-text {
                 padding: .3em 2em .3em .6em;
             }
-
-            .fa {
-                margin-top: -.5em;
-            }
         }
 
         &.ui-button-icon-only {
-            .fa {
-                margin-left: -.6em;
-            }
-
             .ui-button-text {
                 padding: .3em 0;
             }
@@ -77,15 +65,15 @@ body {
         &.turquoise-btn {
             background-color: $turquoise;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($turquoise,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($turquoise,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($turquoise,10%);
             }
         }
@@ -93,15 +81,15 @@ body {
         &.blue-btn {
             background-color: $blue;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($blue,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($blue,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($blue,10%);
             }
         }
@@ -109,15 +97,15 @@ body {
         &.purple-btn {
             background-color: $purple;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($purple,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($purple,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($purple,10%);
             }
         }
@@ -125,15 +113,15 @@ body {
         &.orange-btn {
             background-color: $orange;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($orange,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($orange,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($orange,10%);
             }
         }
@@ -141,15 +129,15 @@ body {
         &.pink-btn {
             background-color: $pink;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($pink,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($pink,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($pink,10%);
             }
         }
@@ -157,15 +145,15 @@ body {
         &.green-btn {
             background-color: $green;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($green,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($green,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($green,10%);
             }
         }
@@ -173,16 +161,32 @@ body {
         &.steel-btn {
             background-color: $steel;
 
-            &:hover {
+            &:enabled:hover {
                 background-color: darken($steel,5%);
             }
 
-            &:focus {
+            &:enabled:focus {
                 background-color: darken($steel,5%);
             }
 
-            &:active {
+            &:enabled:active {
                 background-color: darken($steel,10%);
+            }
+        }
+
+        &.red-btn {
+            background-color: $red;
+
+            &:enabled:hover {
+                background-color: darken($red,5%);
+            }
+
+            &:enabled:focus {
+                background-color: darken($red,5%);
+            }
+
+            &:enabled:active {
+                background-color: darken($red,10%);
             }
         }
 
@@ -190,6 +194,77 @@ body {
             -moz-box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
             -webkit-box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
             box-shadow: 0 1px 2.5px 0 rgba(0, 0, 0, 0.26), 0 1px 5px 0 rgba(0, 0, 0, 0.16);
+        }
+    }
+
+
+    .ui-button.ui-state-default.ui-button-secondary, .ui-buttonset.ui-button-secondary > .ui-button.ui-state-default  {
+        &:enabled:focus {
+            outline: 0 none;
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-info, .ui-buttonset.ui-button-info > .ui-button.ui-state-default  {
+        background-color: $blue;
+        border-color: $blue;
+
+        &:enabled:hover {
+            background-color: darken($blue,5%);
+            border-color: $blue;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken($blue,5%);
+            border-color: $blue;
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-success, .ui-buttonset.ui-button-success > .ui-button.ui-state-default  {
+        background-color: $green;
+        border-color: $green;
+
+        &:enabled:hover {
+            background-color: darken($green,5%);
+            border-color: $green;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken($green,5%);
+            border-color: $green;
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-warning, .ui-buttonset.ui-button-warning > .ui-button.ui-state-default  {
+        background-color: $orange;
+        border-color: $orange;
+
+        &:enabled:hover {
+            background-color: darken($orange,5%);
+            border-color: $orange;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken($orange,5%);
+            border-color: $orange;
+        }
+    }
+
+    .ui-button.ui-state-default.ui-button-danger, .ui-buttonset.ui-button-danger > .ui-button.ui-state-default  {
+        background-color: $red;
+        border-color: $red;
+
+        &:enabled:hover {
+            background-color: darken($red,5%);
+            border-color: $red;
+        }
+
+        &:enabled:focus {
+            outline: 0 none;
+            background-color: darken($red,5%);
+            border-color: $red;
         }
     }
 
@@ -229,6 +304,10 @@ body {
                 top: 0.05em;
             }
         }
+    }
+
+    .ui-chkbox-label {
+        margin: 0 0 0 .5em;
     }
 
     .ui-radiobutton {
@@ -271,7 +350,8 @@ body {
                 width: 8px;
                 height: 8px;
                 display: block;
-                margin: 0 auto;
+                margin-top: -.3em;
+                margin-left: -.3em;
                 @include border-radius(50%);
                 @include transition(all .3s);
 
@@ -280,6 +360,10 @@ body {
                 }
             }
         }
+    }
+
+    .ui-radiobutton-label {
+        margin: 0 0 0 .5em;
     }
 
     .ui-inputswitch {
@@ -323,7 +407,7 @@ body {
         .ui-autocomplete-dropdown {
             width: 2em;
 
-            .fa {
+            .pi {
                 @include icon_override("\f078");
             }
         }
@@ -459,7 +543,7 @@ body {
             text-align: center;
             padding-right: 0;
 
-            .fa-caret-down {
+            .pi-caret-down {
                 @include icon_override("\f078");
             }
         }
@@ -469,7 +553,7 @@ body {
             @include border-shadow();
 
             .ui-dropdown-trigger {
-                .fa-caret-down {
+                .pi-caret-down {
                     color: $primaryColor;
                 }
             }
@@ -488,7 +572,7 @@ body {
                 padding-right: 20px;
             }
 
-            .fa {
+            .pi {
                 top: 15px;
                 right: 20px;
             }
@@ -525,8 +609,7 @@ body {
             padding-right: 0;
             text-align: center;
 
-            .fa {
-                margin-top: .425em;
+            .pi {
                 @include icon_override("\f078");
             }
         }
@@ -568,7 +651,7 @@ body {
                     box-sizing: border-box;
                 }
 
-                .fa {
+                .pi {
                     top: .3em;
                     color: $textColor;
                 }
@@ -641,7 +724,7 @@ body {
                     width: 100%;
                 }
 
-                .fa {
+                .pi {
                     top: .35em;
                     left: .3em;
                 }
@@ -687,12 +770,12 @@ body {
             }
         }
 
-        .fa {
-            font-size: 20px;
-            height: 20px;
-            width: 20px;
+        .pi {
+            font-size: 25px;
+            height: 25px;
+            width: 25px;
 
-            &.fa-ban {
+            &.pi-ban {
                 color: $pink;
 
                 &:hover {
@@ -829,7 +912,8 @@ body {
             border: 1px solid transparent;
         }
         .ui-menu {
-            min-width: 100%;
+            width: 100%;
+            min-width: 12.5em;
         }
     }
 

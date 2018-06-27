@@ -22,7 +22,6 @@ body {
         .ui-paginator-pages {
             .ui-paginator-page {
                 color: $textSecondaryColor;
-                padding: 0.1em .5em;
                 border: 1px solid transparent;
                 @include transition(color .3s);
 
@@ -71,13 +70,32 @@ body {
          }
 
          .ui-sortable-column {
+             color: $textColor;
+
+             a, a:hover {
+                 color: $textSecondaryColor;
+             }
+
              &:not(.ui-state-highlight):hover {
-                @include list-item-hover();
+                 @include list-item-hover();
+
+                 a, a:hover {
+                     @include list-item-hover();
+                 }
              }
 
              &.ui-state-highlight {
                  background-color: $primaryColor;
                  color: $primaryTextColor;
+                 border-top-color: $primaryColor;
+
+                 a, a:hover {
+                     color: $primaryTextColor;
+                 }
+             }
+
+             .ui-sortable-column-icon {
+                 vertical-align: middle;
              }
          }
 
@@ -216,11 +234,11 @@ body {
                         color: $textColor;
                         @include transition(color .3s);
 
-                        &.fa-chevron-circle-right {
+                        &.pi-chevron-circle-right {
                             @include icon_override("\f054");
                         }
 
-                        &.fa-chevron-circle-down {
+                        &.pi-chevron-circle-down {
                             @include icon_override("\f078");
                         }
 
@@ -449,8 +467,14 @@ body {
                 color: $headerTextColor;
                 @include transition(color $transitionDuration);
 
-                &.ui-icon-radio-on {
-                    color: $primaryColor;
+                &.pi-circle-off {
+                    color: $headerIconColor;
+                    @include icon-override("\F10C")
+                }
+
+                &.pi-circle-on {
+                    color: $headerIconColor;
+                    @include icon-override("\F192")
                 }
 
                 &:hover {
