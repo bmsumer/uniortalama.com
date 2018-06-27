@@ -156,8 +156,8 @@ export class AppMenuComponent implements OnInit {
                     (mouseenter)="hover=true" (mouseleave)="hover=false">
                     <i [ngClass]="child.icon"></i>
                     <span>{{child.label}}</span>
+                    <i class="fa fa-fw fa-angle-down layout-menuitem-toggler" *ngIf="child.items"></i>
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
-                    <i class="fa fa-fw fa-angle-down" *ngIf="child.items"></i>
                 </a>
 
                 <a (click)="itemClick($event,child,i)" *ngIf="child.routerLink"
@@ -166,8 +166,8 @@ export class AppMenuComponent implements OnInit {
                     (mouseenter)="hover=true" (mouseleave)="hover=false">
                     <i [ngClass]="child.icon"></i>
                     <span>{{child.label}}</span>
+                    <i class="fa fa-fw fa-angle-down layout-menuitem-toggler" *ngIf="child.items"></i>
                     <span class="menuitem-badge" *ngIf="child.badge">{{child.badge}}</span>
-                    <i class="fa fa-fw fa-angle-down" *ngIf="child.items"></i>
                 </a>
                 <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ?
                 'visible' : 'hidden'" [visible]="isActive(i)"></ul>
