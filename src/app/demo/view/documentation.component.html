@@ -236,7 +236,7 @@ npm install primeicons@latest --save
             with the sub components which are app.menu.component.ts, app.topbar.component.ts and app.footer.component.ts.</p>
 
             <h1>Theme</h1>
-            <p>Atlantis provides 8 PrimeNG themes out of the box, setup of a theme simple including the css of theme to your page that are located inside resources/theme folder.</p>
+            <p>Atlantis provides 8 PrimeNG themes out of the box, setup of a theme simple including the css of theme to your page that are located inside assets/theme folder.</p>
 
             <ul>
                 <li>theme-blue</li>
@@ -277,7 +277,7 @@ sass src/assets/theme-myown/theme.scss src/assets/theme-myown/theme.css
             <p>Watch mode is handy to avoid compiling everytime when a change is made, instead use the following command
             so that sass generates the file whenever you make a customization. This builds all css files whenever a change is made to any scss file.</p>
 <pre>
-sass -w resources/ --sourcemap=none
+sass -w src/assets --sourcemap=none
 </pre>
 
             <p>Same can also be applied to layout itself;</p>
@@ -301,7 +301,7 @@ $primaryColor:#3192e1;
 @import '../../sass/layout/_layout';
 </pre>
 
-            <p>For both cases, several .scss files such as _layout.scss, _theme.scss or _variables.scss has to be present relative to your scss files, these are available inside the resources/sass folder in the distribution.</p>
+            <p>For both cases, several .scss files such as _layout.scss, _theme.scss or _variables.scss has to be present relative to your scss files, these are available inside the assets/sass folder in the distribution.</p>
             <p>In case you'd like to customize the structure not just the colors, the _variables.scss is where the structural variables (e.g. font size, paddings) for the layout are defined.</p>
 <pre>
 /* Common */
