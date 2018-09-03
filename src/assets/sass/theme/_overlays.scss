@@ -132,10 +132,6 @@ body {
                 &:hover {
                     @include scale(1.2);
                 }
-
-                span {
-                    @include icon_override("\f053");
-                }
             }
 
             .ui-lightbox-nav-right {
@@ -145,10 +141,6 @@ body {
 
                 &:hover {
                     @include scale(1.2);
-                }
-
-                span {
-                    @include icon_override("\f054");
                 }
             }
 
