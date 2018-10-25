@@ -57,6 +57,7 @@ body {
         }
 
         &.ui-button-icon-only {
+            width: 2.357em;
             .ui-button-text {
                 padding: .3em;
             }
@@ -597,8 +598,8 @@ body {
         }
     }
 
-    .ui-fluid .ui-button-icon-only {
-        width: auto;
+    .ui-fluid .ui-button.ui-button-icon-only {
+        width: 2.357em;
     }
 
     .ui-dropdown {
