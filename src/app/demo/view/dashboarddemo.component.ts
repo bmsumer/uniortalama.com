@@ -23,6 +23,8 @@ export class DashboardDemoComponent implements OnInit {
 
     selectedCity: any;
 
+    fullcalendarOptions: any;
+
     constructor(private carService: CarService, private eventService: EventService) { }
 
     ngOnInit() {
@@ -61,6 +63,10 @@ export class DashboardDemoComponent implements OnInit {
                     borderColor: '#03A9F4'
                 }
             ]
+        };
+
+        this.fullcalendarOptions = {
+            defaultDate: '2016-01-12'
         };
     }
 }
