@@ -7,7 +7,7 @@
         
         #header {
             background-color: #f7f7f7;
-            height: 60px;
+            height: auto;
             padding: 16px 0;
             
             > div {
@@ -25,6 +25,12 @@
                     
                     &:hover {
                         color: #999999;
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        margin: 0;
                     }
                 }
                 
@@ -258,28 +264,20 @@
                     ul {
                         display: none;
                         float: none;
-                    }
-                }
-                
-                &.menu-active {
-                    height: auto;
-                    
-                    > div {
-                        ul {
+                        &.menu-active  {
                             display: block;
                             background-color: #f7f7f7;
                             width: 100%;
                             text-align: center;
                             padding: 18px 0 6px 0;
                             border-top: 10px solid #1b6bad;
-                            
+
                             li {
                                 float: none;
                                 padding: 6px 0;
                             }
                         }
                     }
-                    
                 }
             }  
             

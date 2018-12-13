@@ -8,21 +8,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <title>PrimeNG - ATLANTIS</title>
-      
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
       <link rel="stylesheet" type="text/css" href="../theme/theme-blue.css">
       <link rel="stylesheet" type="text/css" href="../layout/css/layout-blue.css">
       <link rel="stylesheet" type="text/css" href="primeng.min.css">
 
-      <script src="jquery.js"></script>
-      <script type="text/javascript">
-      $(function() {
-          $('#menu-button').on('click', function(e) {
-              $('#header').toggleClass('menu-active');
-              e.preventDefault();
-          });
-      });
-      </script>
   </head>
   
   <body class="landing-body">
@@ -31,11 +21,11 @@
               <div>
                   <img src="../layout/images/logo-colored.png"/>
                   
-                  <a id="menu-button" href="#">
-                     <span class="fa fa-bars"></span>
+                  <a id="menu-button" href="#" >
+                      <img src="../layout/images/icon-ellipsis-v.svg" alt="Menu"/>
                   </a>
                   
-                  <ul>
+                  <ul id="menu">
                       <li>
                           <a href="#home">HOME</a>
                       </li>
@@ -228,5 +218,56 @@
              </div>
          </div>
       </div>
+
+      <script>
+          AtlantisLanding = {
+              addClass: function(element, className) {
+                  if (element.classList)
+                      element.classList.add(className);
+                  else
+                      element.className += ' ' + className;
+              },
+
+              removeClass: function(element, className) {
+                  if (element.classList)
+                      element.classList.remove(className);
+                  else
+                      element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+              },
+
+              hasClass: function(element, className) {
+                  if (element.classList)
+                      return element.classList.contains(className);
+                  else
+                      return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
+              },
+
+              hideMenu: function() {
+                  this.removeClass(document.getElementById('menu'), 'menu-active');
+              },
+
+              showMenu: function() {
+                  this.addClass(document.getElementById('menu'), 'menu-active');
+              }
+          };
+
+          document.getElementById('menu-button').addEventListener('click', function(e) {
+              var menu = document.getElementById('menu');
+
+              if(AtlantisLanding.hasClass(menu, 'menu-active'))
+                  AtlantisLanding.hideMenu();
+              else
+                  AtlantisLanding.showMenu();
+
+              e.preventDefault();
+          });
+
+          var menuLinks = document.querySelectorAll('#menu a');
+          for (i = 0; i < menuLinks.length; i++) {
+              menuLinks[i].addEventListener('click', function(e) {
+                  AtlantisLanding.hideMenu();
+              });
+          }
+      </script>
     </body>
 </html>
