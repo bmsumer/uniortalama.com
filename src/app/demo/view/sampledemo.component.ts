@@ -3,7 +3,7 @@ import {CarService} from '../service/carservice';
 import {CountryService} from '../service/countryservice';
 import {NodeService} from '../service/nodeservice';
 import {Car} from '../domain/car';
-import {SelectItem, MenuItem, TreeNode} from 'primeng/primeng';
+import {MenuItem, SelectItem, TreeNode} from 'primeng/primeng';
 
 @Component({
     templateUrl: './sampledemo.component.html'
@@ -16,7 +16,7 @@ export class SampleDemoComponent implements OnInit {
 
     cols: any[];
 
-  cities1: SelectItem[];
+    cities1: SelectItem[];
 
     cities2: SelectItem[];
 
@@ -64,15 +64,16 @@ export class SampleDemoComponent implements OnInit {
 
     selectedType: string;
 
-    constructor(private carService: CarService, private countryService: CountryService, private nodeService: NodeService) { }
+    constructor(private carService: CarService, private countryService: CountryService, private nodeService: NodeService) {
+    }
 
     ngOnInit() {
         this.carService.getCarsSmall().then(cars => this.cars = cars);
         this.cols = [
-            { field: 'vin', header: 'Vin' },
-            { field: 'year', header: 'Year' },
-            { field: 'brand', header: 'Brand' },
-            { field: 'color', header: 'Color' }
+            {field: 'vin', header: 'Vin'},
+            {field: 'year', header: 'Year'},
+            {field: 'brand', header: 'Brand'},
+            {field: 'color', header: 'Color'}
         ];
         this.carService.getCarsLarge().then(cars => this.carsLarge = cars);
         this.nodeService.getFiles().then(files => this.filesTree = files);
@@ -120,26 +121,26 @@ export class SampleDemoComponent implements OnInit {
                 {label: 'Open', icon: 'fa fa-fw fa-download'}
             ]
         },
-        {
-            label: 'Edit',
-            items: [
-                {label: 'Undo', icon: 'fa fa-fw fa-refresh'},
-                {label: 'Redo', icon: 'fa fa-fw fa-repeat'}
-            ]
-        }];
+            {
+                label: 'Edit',
+                items: [
+                    {label: 'Undo', icon: 'fa fa-fw fa-refresh'},
+                    {label: 'Redo', icon: 'fa fa-fw fa-repeat'}
+                ]
+            }];
 
         this.panelMenuItems = [
             {
                 label: 'File',
                 icon: 'fa fa-fw fa-file-o',
                 items: [{
-                        label: 'New',
-                        icon: 'fa fa-fw fa-plus',
-                        items: [
-                            {label: 'Project'},
-                            {label: 'Other'},
-                        ]
-                    },
+                    label: 'New',
+                    icon: 'fa fa-fw fa-plus',
+                    items: [
+                        {label: 'Project'},
+                        {label: 'Other'},
+                    ]
+                },
                     {label: 'Open'},
                     {label: 'Quit'}
                 ]
@@ -174,7 +175,8 @@ export class SampleDemoComponent implements OnInit {
                             {
                                 label: 'File'
                             }
-                    ]}
+                        ]
+                    }
                 ]
             },
             {
@@ -224,8 +226,8 @@ export class SampleDemoComponent implements OnInit {
         // in a real application, make a request to a remote url with the query and return filtered results,
         // for demo we filter at client side
         const filtered: any[] = [];
-        for (let i = 0; i < countries.length; i++) {
-            const country = countries[i];
+        for (const item of countries) {
+            const country = item;
             if (country.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
                 filtered.push(country);
             }

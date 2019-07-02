@@ -28,7 +28,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
     activeTopbarItem: any;
 
-    documentClickListener: Function;
+    documentClickListener: any;
 
     constructor(public renderer: Renderer2) {}
 

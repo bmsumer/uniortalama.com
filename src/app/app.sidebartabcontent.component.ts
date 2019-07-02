@@ -19,7 +19,7 @@ declare var jQuery: any;
 })
 export class AppSideBarTabContentComponent implements AfterViewInit {
 
-    @ViewChild('scroller') layoutMenuScrollerViewChild: ScrollPanel;
+    @ViewChild('scroller', { static: true }) layoutMenuScrollerViewChild: ScrollPanel;
 
     ngAfterViewInit() {
         setTimeout(() => {this.layoutMenuScrollerViewChild.moveBar(); }, 100);
