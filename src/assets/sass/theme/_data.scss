@@ -377,8 +377,6 @@ body {
 
     .ui-orderlist {
         .ui-orderlist-controls {
-            margin-right: 10px;
-
             button {
                 font-size: $fontSize + 2;
             }
@@ -387,7 +385,7 @@ body {
         .ui-orderlist-caption {
             padding: $headerPadding;
             box-sizing: border-box;
-            width: 200px;
+            border-bottom: 0;
         }
 
         .ui-orderlist-list {
