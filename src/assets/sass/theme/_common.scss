@@ -9,7 +9,7 @@ body {
         background-color: $contentBgColor;
         border: 1px solid $contentBorderColor;
     }
-    
+
     .ui-widget-header {
         background-color: $headerBgColor;
         color: $headerTextColor;
@@ -20,11 +20,11 @@ body {
         background-color: $primaryColor;
         color: $primaryTextColor;
     }
-    
+
     .ui-state-error, .ui-state-default.ui-state-error {
         border-bottom-color: $inputInvalidBorderColor;
     }
-    
+
     .ui-icon {
         width: $iconWidth;
         height: $iconHeight;
@@ -33,11 +33,11 @@ body {
 
     .ui-state-disabled,
     .ui-widget:disabled {
-        opacity: .35; 
-        filter: Alpha(Opacity= 35); 
-        background-image: none; 
+        opacity: .35;
+        filter: Alpha(Opacity= 35);
+        background-image: none;
         cursor: default !important;
-        
+
         * {
             cursor: default !important;
         }
@@ -64,14 +64,13 @@ body {
     }
 
     .ui-widget-overlay {
-        background-color: $maskBgColor;
-        @include opacity(.7);
+        background-color: rgba(66, 66, 66, 0.7);
     }
-    
+
     a {
         color: $primaryColor;
         text-decoration: none;
-        
+
         &:hover {
             color: lighten($primaryColor, 5%);
         }

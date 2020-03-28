@@ -1069,6 +1069,15 @@ body {
                         color: $textColor;
                     }
                 }
+
+                &.ui-datepicker-today {
+                    a {
+                        &.ui-state-active {
+                            color: #ffffff;
+                            background-color: $primaryColor;
+                        }
+                    }
+                }
             }
         }
 

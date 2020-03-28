@@ -11,7 +11,9 @@ import {AppComponent} from './app.component';
                 </a>
             </div>
 
-            <img src="assets/layout/images/appname.svg" class="app-name"/>
+			<a href="#">
+                <img src="assets/layout/images/appname.svg" class="app-name"/>
+            </a>
 
             <a id="topbar-menu-button" href="#" (click)="app.onTopbarMenuButtonClick($event)">
                 <i class="fa fa-bars"></i>
