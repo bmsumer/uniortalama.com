@@ -1,10 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations';
-import {Location} from '@angular/common';
-import {Router} from '@angular/router';
-import {MenuItem} from 'primeng/primeng';
+import {Component, OnInit} from '@angular/core';
 import {AppComponent} from './app.component';
-import {AppSideBarTabContentComponent} from './app.sidebartabcontent.component';
 
 @Component({
     selector: 'app-menu',
