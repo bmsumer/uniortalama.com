@@ -393,6 +393,8 @@ body {
                                 > a {
                                     display: block;
                                     padding: 6px;
+                                    cursor: pointer;
+                                    user-select: none;
                                     @include transition(background-color .3s);
 
                                     i:first-child {
