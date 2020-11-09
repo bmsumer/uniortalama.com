@@ -3,35 +3,35 @@
     <div class="layout-tabmenu">
         <ul class="layout-tabmenu-nav">
             <li [ngClass]="{'active-item':app.activeTabIndex === 0}">
-                <a href="#" class="tabmenuitem-link" (click)="app.onTabClick($event, 0)"><i class="fa fa-cube"></i></a>
+                <a href="#" class="tabmenuitem-link" (click)="app.onTabClick($event, 0)" pRipple><i class="pi pi-folder-open"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Features</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 1}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 1)"><i class="fa fa-inbox"></i></a>
+                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 1)" pRipple><i class="pi pi-inbox"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Inbox</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 2}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 2)"><i class="fa fa-calendar-o"></i></a>
+                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 2)" pRipple><i class="pi pi-calendar"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Calendar</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 3}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 3)"><i class="fa fa-sliders"></i></a>
+                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 3)" pRipple><i class="pi pi-sliders-h"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Projects</div>
                 </div>
             </li>
             <li [ngClass]="{'active-item':app.activeTabIndex === 4}">
-                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 4)"><i class="fa fa-users"></i></a>
+                <a href="#" class="ripplelink tabmenuitem-link" (click)="app.onTabClick($event, 4)" pRipple><i class="pi pi-users"></i></a>
                 <div class="layout-tabmenu-tooltip">
                     <div class="layout-tabmenu-tooltip-arrow"></div>
                     <div class="layout-tabmenu-tooltip-text">Team</div>
@@ -43,7 +43,7 @@
                 <div class="layout-submenu-title clearfix">
                     <span>Features</span>
                     <a href="#" class="menu-button" (click)="app.closeSidebar($event)">
-                        <i class="fa fa-bars"></i>
+                        <i class="pi pi-bars"></i>
                     </a>
                 </div>
                 <app-sidebarTabContent>
@@ -54,7 +54,7 @@
                 <div class="layout-submenu-title clearfix">
                     <span>Inbox</span>
                     <a href="#" class="menu-button" (click)="app.closeSidebar($event)">
-                        <i class="fa fa-bars"></i>
+                        <i class="pi pi-bars"></i>
                     </a>
                 </div>
                 <app-sidebarTabContent>
@@ -114,7 +114,7 @@
                 <div class="layout-submenu-title clearfix">
                     <span>Calendar</span>
                     <a href="#" class="menu-button" (click)="app.closeSidebar($event)">
-                        <i class="fa fa-bars"></i>
+                        <i class="pi pi-bars"></i>
                     </a>
                 </div>
                 <app-sidebarTabContent>
@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Project Meeting</span>
-                                    <i class="fa fa-map-marker"></i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">Chicago</span>
                                 </div>
                             </li>
@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Presentation 1</span>
-                                    <i class="fa fa-map-marker"></i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">New York</span>
                                 </div>
                             </li>
@@ -149,7 +149,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Presentation 2</span>
-                                    <i class="fa fa-map-marker"></i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">New York</span>
                                 </div>
                             </li>
@@ -160,7 +160,7 @@
                                 </div>
                                 <div class="calendar-event-detail">
                                     <span class="calendar-event-title">Presentation 3</span>
-                                    <i class="fa fa-map-marker"></i>
+                                    <i class="pi pi-map-marker"></i>
                                     <span class="calendar-event-location">San Diego</span>
                                 </div>
                             </li>
@@ -172,14 +172,14 @@
                 <div class="layout-submenu-title clearfix">
                     <span>Projects</span>
                     <a href="#" class="menu-button" (click)="app.closeSidebar($event)">
-                        <i class="fa fa-bars"></i>
+                        <i class="pi pi-bars"></i>
                     </a>
                 </div>
                 <app-sidebarTabContent>
                     <div class="projects-tab">
                         <ul>
                           <li class="clearfix">
-                              <i class="fa fa-github"></i>
+                              <i class="pi pi-github"></i>
                               <span class="project-title">GitHub Tasks</span>
                               <span>3 open, 4 closed</span>
                               <div class="project-progressbar">
@@ -187,7 +187,7 @@
                               </div>
                           </li>
                           <li class="clearfix">
-                              <i class="fa fa-youtube"></i>
+                              <i class="pi pi-video"></i>
                               <span class="project-title">YouTube Videos</span>
                               <span>12 new, 2 subscribers</span>
                               <div class="project-progressbar">
@@ -195,7 +195,7 @@
                               </div>
                           </li>
                           <li class="clearfix">
-                              <i class="fa fa-twitter"></i>
+                              <i class="pi pi-twitter"></i>
                               <span class="project-title">Twitter Posts</span>
                               <span>24 new messages</span>
                               <div class="project-progressbar">
@@ -203,7 +203,7 @@
                               </div>
                           </li>
                           <li class="clearfix">
-                              <i class="fa fa-facebook"></i>
+                              <i class="pi pi-facebook"></i>
                               <span class="project-title">Facebook Messages</span>
                               <span>8 total, 4 unread</span>
                               <div class="project-progressbar">
@@ -211,7 +211,7 @@
                               </div>
                           </li>
                           <li class="clearfix">
-                              <i class="fa fa-linkedin"></i>
+                              <i class="pi pi-user"></i>
                               <span class="project-title">Linkedin Contacts</span>
                               <span>90 total</span>
                               <div class="project-progressbar">
@@ -226,7 +226,7 @@
                 <div class="layout-submenu-title clearfix">
                     <span>Team</span>
                     <a href="#" class="menu-button" (click)="app.closeSidebar($event)">
-                        <i class="fa fa-bars"></i>
+                        <i class="pi pi-bars"></i>
                     </a>
                 </div>
                 <app-sidebarTabContent>

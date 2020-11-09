@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    font-size: $fontSize;
 }
 
 body {
@@ -12,6 +13,11 @@ body {
     margin:0;
     min-height: 100%;
     background-color: $bodyBgColor;
+
+    a {
+        color: $primaryColor;
+        text-decoration: none;
+    }
 }
 
 .layout-wrapper {
@@ -146,7 +152,7 @@ body {
                     i {
                         position: absolute;
                         left: 6px;
-                        top: 7px;
+                        top: 9px;
                     }
 
                     input {
@@ -183,7 +189,7 @@ body {
                         box-sizing: border-box;
                         color: $textColor;
 
-                        .fa {
+                        i {
                             margin-right: 8px;
                         }
 
@@ -191,7 +197,7 @@ body {
                             margin-right: 8px;
                         }
 
-                        .fa,img,span {
+                        i,img,span {
                             vertical-align: middle;
                         }
 
@@ -403,6 +409,12 @@ body {
                                         margin-right: 4px;
                                     }
 
+                                    &.rotated-icon {
+                                        .layout-menuitem-icon {
+                                            transform: rotate(90deg);
+                                        }
+                                    }
+
                                     .layout-menuitem-toggler {
                                         float: right;
                                         margin-top: 2px;
@@ -592,9 +604,18 @@ body {
     }
 
     .layout-main {
+        @include flex();
+        @include flex-direction-column();
+        @include flex-justify-between();
+        min-height: 100vh;
         margin-left: 60px;
-        padding: 70px 6px 0px 6px;
+        padding: 85px 15px 0px 15px;
         @include transition(margin-left .3s);
+
+        .layout-main-content {
+            flex: 1 1 0;
+            padding-bottom: 15px;
+        }
     }
 
     .footer {
@@ -617,127 +638,12 @@ body {
             margin-left: 8px;
             display: block;
             color: $textColor;
-        }
 
-    }
-
-    &.layout-rtl {
-        .layout-sidebar {
-            right: 0;
-
-            .layout-tabmenu {
-                float: right;
-
-                .layout-tabmenu-contents {
-                    direction: rtl;
-                    right: 60px;
-                    left: auto;
-
-                    .layout-tabmenu-content {
-                        .layout-submenu-content {
-                            padding: 6px 6px 6px 0px;
-                        }
-
-                        .layout-submenu-title {
-                            .menu-button {
-                                float: left;
-                            }
-                        }
-                    }
-                }
-
-                .layout-tabmenu-nav {
-                    li {
-                        a {
-                            .layout-tabmenu-tooltip {
-                                left: auto;
-                                right: 60px;
-                                direction: rtl;
-
-                                .layout-tabmenu-tooltip-arrow {
-                                    left: auto;
-                                    right: 0px;
-                                    border-width: 5px 0px 5px 5px;
-                                    border-left-color: #545b61;
-                                }
-                            }
-                        }
-
-                        &.active-item {
-                            border-left: 0px;
-                            border-right: 4px solid #3192e1;
-
-                            a {
-                                .layout-tabmenu-tooltip {
-                                    right: 56px;
-                                }
-                            }
-                        }
-                    }
-                }
+            i {
+                font-size: 1em;
             }
         }
 
-        .layout-main {
-            margin-left: 0px;
-            margin-right: 60px;
-            @include transition(margin-right .3s);
-        }
-
-        .topbar {
-            direction: rtl;
-
-            .topbar-menu {
-                float: left;
-                margin: 15px 0px 0px 10px;
-
-                > li {
-                    float: left;
-                    margin-left: 0px;
-                    margin-right: 15px;
-
-                    > ul {
-                        right: auto;
-                        left: 5px;
-
-                        a {
-                            .topbar-submenuitem-badge {
-                                float: left;
-                            }
-
-                            .fa, img {
-                                margin-right: 0px;
-                                margin-left: 8px;
-                            }
-                        }
-                    }
-
-                    > a {
-                        .topbar-badge {
-                            right: auto;
-                            left: -4px;
-                        }
-                    }
-
-                    &.search-item {
-                        input {
-                            padding-left: 0px;
-                            padding-right: 20px;
-                        }
-
-                        i {
-                            left: auto;
-                            right: 6px;
-                        }
-                    }
-                }
-            }
-
-            .app-name {
-                margin-left: 0px;
-                margin-right: 15px;
-            }
-        }
     }
 }
 
@@ -757,27 +663,12 @@ body {
             .layout-main {
                 margin-left: 260px;
             }
-
-
-            &.layout-rtl {
-                .layout-main {
-                    margin-left: 0px;
-                    margin-right: 260px;
-                }
-            }
         }
 
         &.layout-overlay-menu {
             &.layout-wrapper-menu-active {
                 .layout-main {
                     margin-left: 60px;
-                }
-
-                &.layout-rtl {
-                    .layout-main {
-                        margin-left: 0px;
-                        margin-right: 60px;
-                    }
                 }
             }
         }
@@ -789,6 +680,10 @@ body {
         .topbar {
             #topbar-menu-button {
                 display: block;
+
+                i {
+                    font-size: 24px;
+                }
             }
 
             .topbar-menu {
@@ -870,7 +765,7 @@ body {
                                 width: 100%;
                                 box-sizing: border-box;
 
-                                span, img, .fa {
+                                span, img, i {
                                     display: inline-block;
                                     vertical-align: middle;
                                 }
@@ -880,7 +775,7 @@ body {
                                     margin-right: 8px;
                                 }
 
-                                .fa {
+                                i {
                                     margin-right: 8px;
                                 }
                             }
@@ -922,7 +817,7 @@ body {
 
                     &.search-item {
                         text-align: center;
-                        .fa {
+                        i {
                             color: $textColor;
                             left: 20px;
                         }
@@ -958,52 +853,6 @@ body {
                 .layout-tabmenu {
                     .layout-tabmenu-contents {
                         display: block;
-                    }
-                }
-            }
-        }
-
-        &.layout-rtl {
-            .topbar {
-                #topbar-menu-button {
-                    float: left;
-                    margin: 12px 0px 0px 20px;
-                }
-
-                .topbar-menu {
-                    right: auto;
-                    left: 15px;
-                    margin: 0px;
-
-                    > li {
-                        margin: 0px;
-
-                        > a {
-                            .topbar-icon {
-                                margin-right: 0px;
-                                margin-left: 8px;
-                            }
-
-                            .topbar-badge {
-                                left: 10px;
-                            }
-                        }
-
-                        > ul {
-                            padding: 0px 18px 0px 0px;
-                        }
-                    }
-
-                    > li.search-item {
-                        input {
-                            padding-left: 0px;
-                            padding-right: 30px;
-                        }
-
-                        .fa {
-                            left: auto;
-                            right: 20px;
-                        }
                     }
                 }
             }
@@ -1058,48 +907,6 @@ body {
 
         .layout-main {
             margin-left:40px;
-        }
-
-        &.layout-rtl {
-            .layout-sidebar {
-                .layout-tabmenu {
-                    .layout-tabmenu-nav {
-                        li {
-                            a {
-                                .layout-tabmenu-tooltip {
-                                    left: auto;
-                                    right: 40px;
-
-                                    .layout-tabmenu-tooltip-arrow {
-                                        left: auto;
-                                        right: 0px;
-                                        border-width: 5px 0px 5px 5px;
-                                        border-left-color: #545b61;
-                                    }
-                                }
-                            }
-
-                            &.active-item {
-                                a {
-                                    .layout-tabmenu-tooltip {
-                                        right: 36px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .layout-tabmenu-contents {
-                        left: auto;
-                        right: 40px;
-                    }
-                }
-            }
-
-            .layout-main {
-                margin-left: 0px;
-                margin-right: 40px;
-            }
         }
     }
 }

@@ -1,18 +1,18 @@
 .layout-tabmenu-content {
-    .inbox-tab {        
+    .inbox-tab {
         ul {
             padding: 0 6px;
             margin: 0;
             list-style-type: none;
-            
+
             li {
                 padding: 6px 0;
-                
+
                 img {
                     float: left;
                     margin-right: 8px;
                 }
-                
+
                 .name {
                     font-weight: bold;
                     float: left;
@@ -22,20 +22,20 @@
                 }
             }
         }
-        
+
         .inbox-labels {
             margin: 20px 6px 0 6px;
-            
+
             > span {
                 font-weight: bold;
             }
-            
+
             ul {
                 margin-top: 10px;
-                
+
                 li {
                     padding: 6px;
-                    
+
                     .inbox-label-badge {
                         background-color: $primaryColor;
                         color: #ffffff;
@@ -44,21 +44,21 @@
                         float: right;
                     }
                 }
-                
-                
+
+
             }
         }
     }
-    
+
     .calendar-tab {
         ul {
             padding: 0 6px;
             margin: 0;
             list-style-type: none;
-            
+
             li {
                 padding: 6px 0;
-                
+
                 .calendar-event-date {
                     float: left;
                     background-color: $primaryColor;
@@ -71,36 +71,36 @@
                     font-weight: 700;
                     box-sizing: border-box;
                     margin-right: 8px;
-                    
+
                     span {
                         width: 100%;
                         display: inline-block;
-                    }    
+                    }
                 }
-                
+
                 .calendar-event-detail {
                     float: left;
-                    
+
                     .calendar-event-title {
                         font-weight: 700;
                         display: block;
                     }
-                    
+
                     i {
                         margin-right: 4px;
                     }
-                    
+
                     .calendar-event-location {
                         margin-right: 4px;
                     }
-                    
+
                     .calendar-event-rsvp {
                         display: block;
-                        
+
                         &.calendar-event-rsvp-yes {
                             color: #35ae47;
                         }
-                        
+
                         &.calendar-event-rsvp-maybe {
                             color: #f5a623;
                         }
@@ -109,38 +109,38 @@
             }
         }
     }
-    
+
     .projects-tab {
         ul {
             padding: 0 6px;
             margin: 0;
             list-style-type: none;
-            
+
             li {
                 padding: 12px 0;
-                
+
                 i {
-                    font-size: 36px;
+                    font-size: 32px;
                     margin-right: 8px;
                     float: left;
                     width: 32px;
                 }
-                
+
                 .project-title {
                     font-weight: 700;
                 }
-                
+
                 span {
                     float: left;
                     display: block;
                 }
-                
+
                 .project-progressbar {
                     width: 100px;
                     float: left;
                     background-color: #545b61;
                     margin-top: 4px;
-                    
+
                     .project-progressbar-value {
                         background-color: #8be298;
                         height: 4px;
@@ -149,21 +149,21 @@
             }
         }
     }
-    
+
     .team-tab {
         ul {
             padding: 0 6px;
             margin: 0;
             list-style-type: none;
-            
+
             li {
                 padding: 6px 0;
-                
+
                 img {
                     float: left;
                     margin-right: 8px;
                 }
-                
+
                 .name {
                     font-weight: bold;
                     float: left;
@@ -171,7 +171,7 @@
                 .location {
                     float: left;
                 }
-                
+
                 span {
                     display: block;
                 }
@@ -216,14 +216,14 @@
                         margin-right: 0px;
                         margin-left: 8px;
                     }
-                    
+
                     .calendar-event-detail {
                         float: right;
                     }
                 }
             }
         }
-        
+
         .projects-tab {
             ul {
                 li {
@@ -232,7 +232,7 @@
                         margin-left: 8px;
                         float: right;
                     }
-                    
+
                     span {
                         float: right;
                     }
@@ -243,7 +243,7 @@
                 }
             }
         }
-    
+
         .team-tab {
             ul {
                 padding: 0 6px;
