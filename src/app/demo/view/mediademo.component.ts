@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductService} from '../service/productservice';
-import {PhotoService} from '../service/photoservice';
-import {Product} from '../domain/product';
+import { ProductService } from '../service/productservice';
+import { PhotoService } from '../service/photoservice';
+import { Product } from '../domain/product';
 
 @Component({
     templateUrl: './mediademo.component.html',
     styleUrls: ['./mediademo.scss'],
 })
-export class MediaDemoComponent implements OnInit {
+export class MediaDemoComponent implements OnInit{
 
     products: Product[];
 
