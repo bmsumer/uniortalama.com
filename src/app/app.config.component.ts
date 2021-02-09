@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 
 @Component({
@@ -7,7 +8,7 @@ import { AppMainComponent } from './app.main.component';
         <a style="cursor: pointer" id="layout-config-button" class="layout-config-button" (click)="onConfigButtonClick($event)">
             <i class="pi pi-cog"></i>
         </a>
-        <div class="layout-config" [ngClass]="{'layout-config-active': app.configActive}" (click)="app.onConfigClick($event)">
+        <div class="layout-config" [ngClass]="{'layout-config-active': appMain.configActive}" (click)="appMain.onConfigClick($event)">
             <h5>Menu Type</h5>
             <div class="p-field-radiobutton">
                 <p-radioButton name="layoutMode" value="static" [(ngModel)]="app.layoutMode" inputId="layoutMode1"></p-radioButton>
@@ -39,13 +40,13 @@ import { AppMainComponent } from './app.main.component';
             </div>
 
             <h5>Ripple Effect</h5>
-			<p-inputSwitch [ngModel]="app.ripple" (onChange)="app.onRippleChange($event)"></p-inputSwitch>
+			<p-inputSwitch [ngModel]="app.ripple" (onChange)="appMain.onRippleChange($event)"></p-inputSwitch>
 
             <h5>Layouts</h5>
             <div class="layout-themes">
                 <div *ngFor="let l of layoutColors">
                     <a style="cursor: pointer" (click)="changeLayout(l.name)" [ngStyle]="{'background-color': l.color}">
-                        <i *ngIf="layout === l.name" class="pi pi-check"></i>
+                        <i *ngIf="app.layout === l.name" class="pi pi-check"></i>
                     </a>
                 </div>
             </div>
@@ -54,7 +55,7 @@ import { AppMainComponent } from './app.main.component';
             <div class="layout-themes">
                 <div *ngFor="let t of themeColors">
                     <a style="cursor: pointer" (click)="changeTheme(t.name)" [ngStyle]="{'background-color': t.color}">
-                        <i *ngIf="theme === t.name" class="pi pi-check"></i>
+                        <i *ngIf="app.theme === t.name" class="pi pi-check"></i>
                     </a>
                 </div>
             </div>
@@ -67,11 +68,7 @@ export class AppConfigComponent implements OnInit {
 
     themeColors: any[];
 
-    layout = 'steel';
-
-    theme = 'steel';
-
-    constructor(public app: AppMainComponent) {}
+    constructor(public appMain: AppMainComponent, public app: AppComponent) {}
 
     ngOnInit() {
         this.themeColors = [
@@ -101,6 +98,7 @@ export class AppConfigComponent implements OnInit {
     changeTheme(theme) {
         const themeLink: HTMLLinkElement = document.getElementById('theme-css') as HTMLLinkElement;
         const href = 'assets/theme/theme-' + theme + '.css';
+        this.app.theme = theme;
 
         this.replaceLink(themeLink, href);
     }
@@ -108,6 +106,7 @@ export class AppConfigComponent implements OnInit {
     changeLayout(layout) {
         const layoutLink: HTMLLinkElement = document.getElementById('layout-css') as HTMLLinkElement;
         const href = 'assets/layout/css/layout-' + layout + '.css';
+        this.app.layout = layout;
 
         this.replaceLink(layoutLink, href);
     }
@@ -136,8 +135,8 @@ export class AppConfigComponent implements OnInit {
     }
 
     onConfigButtonClick(event) {
-        this.app.configActive = !this.app.configActive;
-        this.app.configClick = true;
+        this.appMain.configActive = !this.appMain.configActive;
+        this.appMain.configClick = true;
         event.preventDefault();
     }
 }
