@@ -1,6 +1,18 @@
 # Changelog
 
-##10.0.0
+## 11.0.0
+**Migration Guide**
+- Update your project to Angular 11.
+- Update app.main.component.ts, app.main.component.html and app.component.ts
+- Update app.sidebar.component.ts, app.sidebar.component.html.
+- Update theme files and layout files.
+
+**Implemented New Features and Enhancements:**
+
+- Upgrade to Angular and PrimeNG 11
+- Styles of new PrimeNG components
+
+## 10.0.0
 **Migration Guide**
 - Update your project to Angular 10.
 - Update theme files and layout files.
@@ -10,7 +22,7 @@
 - Upgrade to Angular and PrimeNG 10
 - Migrate to PrimeOne Design Architecture
 
-####8.0.0 to 9.0.0
+#### 8.0.0 to 9.0.0
 Angular 9 and PrimeNG 9
 - Update dependencies with <a href="https://angular.io/cli/update">ng update</a>.
 - Update theme.css and layout.css files.
@@ -19,7 +31,7 @@ Angular 9 and PrimeNG 9
 - Include app.menuitem.component.ts under app folder and define it app.module.ts with declarations property.
 - Include app.menu.service.ts under app folder and define it app.module.ts with providers property.
 
-####7.0.0 to 8.0.0
+#### 7.0.0 to 8.0.0
 - Update your project to Angular 8 with ng update. View the official update guide -<a href="https://update.angular.io/">https://update.angular.io/</a>- for more information.
 - Update app.component.ts.
 - Update app.menu.component.ts.
@@ -27,16 +39,16 @@ Angular 9 and PrimeNG 9
 - Update layout css files.
 - Update theme css files.
 
-####6.1.0 to 7.0.0
+#### 6.1.0 to 7.0.0
 - Update layout css files.
 - Update theme css files.
 
-####6.0.0 to 6.1.0
+#### 6.0.0 to 6.1.0
 Adds support for new features in PrimeNG 6.1.x
 - Update layout css files.
 - Update theme css files.
 
-####5.2.0 to 6.0.0
+#### 5.2.0 to 6.0.0
 Brings support for Angular 6 and RxJS 6, adds theming for new components in PrimeNG such as the new TreeTable
 and improves behaviors of the layout menus.
 - Add PrimeIcons package.
@@ -47,7 +59,7 @@ and improves behaviors of the layout menus.
 - Update layout css files.
 - Update theme css files.
 
-####5.0.0 to 5.2.0
+#### 5.0.0 to 5.2.0
 Adds support for PrimeNG 5.2.0 (e.g. TurboTable), replaces nanoscroller with PrimeNG ScrollPanel.
 - Remove nanoscroller as it is replaced by ScrollPanel component of PrimeNG.
 - Update app.sidebartabcontent.component.ts.
@@ -55,20 +67,20 @@ Adds support for PrimeNG 5.2.0 (e.g. TurboTable), replaces nanoscroller with Pri
 - Update layout css files.
 - Update theme css files.
 
-####4.2.0 to 5.0.0
+#### 4.2.0 to 5.0.0
 - Update theme css files.
 - Includes version updates to PrimeNG 5 and Angular 5.
 
-####4.1.0 to 4.2.0
+#### 4.1.0 to 4.2.0
 - Update theme css files.
 
-####4.0.1 to 4.1.0
+#### 4.0.1 to 4.1.0
 - Update layout css files.
 - Update theme css files.
 - Update AppSubmenu component in app.menu.component.ts.
 
-####4.0.0 to 4.0.1
+#### 4.0.0 to 4.0.1
 - Includes version updates to PrimeNG 4, no change required.
 
-####1.0.0 to 4.0.0
+#### 1.0.0 to 4.0.0
 - Includes version updates to PrimeNG 4 and Angular 4.
