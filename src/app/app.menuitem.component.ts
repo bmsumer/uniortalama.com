@@ -32,11 +32,9 @@ import {AppMainComponent} from './app.main.component';
                 <span class="menuitem-badge" *ngIf="item.badge">{{item.badge}}</span>
             </a>
             <ul *ngIf="item.items && active" [@children]="active ? 'visibleAnimated' : 'hiddenAnimated'">
-                <div class="layout-submenu">
                 <ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
                         <li app-menuitem [item]="child" [index]="i" [parentKey]="key" [class]="child.badgeClass"></li>
                 </ng-template>
-                </div>
             </ul>
         </ng-container>
     `,

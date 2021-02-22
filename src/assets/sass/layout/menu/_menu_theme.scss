@@ -201,8 +201,8 @@
 
                             &.active-menuitem {
                                 > a {
-                                    background-color: $slimActiveRootMenuItemBgColor;
-                                    color: $slimActiveRootMenuItemTextColor;
+                                    background-color: transparent;
+                                    color: $activeRootMenuItemTextColor;
 
                                     i {
                                         color: $primaryColor;
@@ -215,13 +215,10 @@
                             }
 
                             > ul {
-                                background: $submenuBgColor;
                                 @include extrenalSubmenuitem;
-                                
-                                .layout-submenu {
-                                    background: rgba(255, 255, 255, 0.05);
-                                    backdrop-filter: blur(200px);
-                                }
+                                background: $submenuBgColor;
+                                backdrop-filter: blur(200px);
+                                --webkit-backdrop-filter: blur(200px);
 
                                 li {
                                     > a {

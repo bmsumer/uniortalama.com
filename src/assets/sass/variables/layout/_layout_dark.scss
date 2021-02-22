@@ -15,7 +15,7 @@ $cardBg: rgba(255, 255, 255, 0.05) !default;
 $cardBorder: 0 none !default;
 
 //topbar
-$topbarBg: rgba(255, 255, 255, 0.05) !default;
+$topbarBg: linear-gradient(180deg, #2E323F 0%, #0A061A 100%) !default;
 $topbarTextColor: $textSecondaryColor !default;
 $topbarTextHoverColor: $textColor !default;
 $topbarIconBg: rgba(255, 255, 255, 0.05) !default;
@@ -25,14 +25,14 @@ $topbarIconHoverBg: rgba(255, 255, 255, 0.1) !default;
 $menuBgColor: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 2.48%, #000000 93.95%, rgba(0, 0, 0, 0) 100%);
 $rootMenuItemTextColor: $textSecondaryColor;
 $rootMenuItemHoverTextColor: $textColor;
-$rootMenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
+$rootMenuItemHoverBgColor: rgba(255, 255, 255, 0.05);;
 
-$submenuBgColor: linear-gradient(180deg, #2E323F 0%, #0A061A 100%);
+$submenuBgColor: rgba(255, 255, 255, 0.05);
+
+$activeRootMenuItemTextColor: $primaryColor;
+$menuItemIconColor: $primaryColor;
 
 
-
-$activeRootMenuItemTextColor:var(--primary-light-color);
-$menuItemIconColor:var(--primary-light-color);
 
 $submenuItemTextColor:rgba(233, 233, 233, .8);
 $submenuItemHoverBgColor:var(--primary-lighter-color);
