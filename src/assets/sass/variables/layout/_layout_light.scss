@@ -1,0 +1,61 @@
+@import './_common';
+
+$bodyBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
+$textColor:#44486D !default;
+$textSecondaryColor:#676B89 !default;
+$dividerColor:rgba(68, 72, 109, 0.2) !default;
+
+/*$itemHoverBg:#e9ecef !default;
+$focusShadow:0 0 0 0.2rem #BBDEFB !default;
+$linkColor: #1976D2 !default;
+$overlayBorder:0 none !default;
+$overlayShadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !default;*/
+
+//card
+$cardBg: rgba(255, 255, 255, 0.9) !default;
+$cardBorder: 0 none !default;
+
+//topbar
+$topbarBg: rgba(68, 72, 109, 0.07) !default;
+$topbarTextColor: $textSecondaryColor !default;
+$topbarTextHoverColor: $textColor !default;
+$topbarIconBg: rgba(68, 72, 109, 0.07) !default;
+$topbarIconHoverBg: rgba(68, 72, 109, 0.12) !default;
+
+//menu
+$menuBgColor: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 2.48%, #000000 93.95%, rgba(0, 0, 0, 0) 100%);
+$rootMenuItemTextColor: $textSecondaryColor;
+$rootMenuItemHoverTextColor: $textColor;
+$rootMenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
+
+$submenuBgColor: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%);
+
+$activeRootMenuItemTextColor: $primaryColor;
+$menuItemIconColor: $primaryColor;
+
+$submenuItemTextColor:rgba(41, 50, 65, 0.7);
+$submenuItemHoverBgColor:var(--primary-lighter-color);
+$activeSubmenuItemTextColor:rgba(41, 50, 65, 0.8);
+
+$slimActiveRootMenuItemBgColor:var(--primary-lighter-color);
+$slimActiveRootMenuItemTextColor:var(--primary-color);
+
+//footer
+$footerBg: rgba(68, 72, 109, 0.07) !default;
+
+/*
+//accent
+$accentColor: $primaryColor !default;
+$accentTextColor: $primaryTextColor !default;
+
+//sidebar
+$sidebarWidth: 16rem !default;
+$slimSidebarWidth: 6rem !default;
+
+//search
+$searchBg:#adb5bd !default;
+$searchBorder: 0 none !default;
+
+//sidebar right
+$rightSidebarWidth: 16rem !default;
+$rightSidebarBg: #ffffff !default;*/

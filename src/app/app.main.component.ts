@@ -1,76 +1,88 @@
-import {Component, AfterViewInit, Renderer2, OnDestroy, OnInit} from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
-import { AppComponent } from './app.component';
+import {Component} from '@angular/core';
+import {MenuService} from './app.menu.service';
+import {PrimeNGConfig} from 'primeng/api';
+import {AppComponent} from './app.component';
 
 @Component({
     selector: 'app-main',
     templateUrl: './app.main.component.html'
 })
-export class AppMainComponent implements AfterViewInit, OnDestroy, OnInit {
+export class AppMainComponent {
+    overlayMenuActive: boolean;
 
-    activeTabIndex: number;
+    staticMenuDesktopInactive: boolean;
 
-    sidebarActive: boolean;
+    staticMenuMobileActive: boolean;
+
+    sidebarActive = false;
+
+    menuClick: boolean;
+
+    menuHoverActive = false;
 
     topbarMenuActive: boolean;
-
-    sidebarClick: boolean;
 
     topbarItemClick: boolean;
 
     activeTopbarItem: any;
 
-    documentClickListener: any;
-
     configActive: boolean;
 
     configClick: boolean;
 
-    constructor(public renderer: Renderer2, private primengConfig: PrimeNGConfig, public app: AppComponent) { }
-
-    ngOnInit() {
-        this.primengConfig.ripple = true;
+    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) {
     }
 
-    ngAfterViewInit() {
-        this.documentClickListener = this.renderer.listen('body', 'click', (event) => {
-            if (!this.topbarItemClick) {
-                this.activeTopbarItem = null;
-                this.topbarMenuActive = false;
-            }
-
-            if (!this.sidebarClick && (this.overlay || !this.isDesktop())) {
-                this.sidebarActive = false;
-            }
-
-            if (this.configActive && !this.configClick) {
-                this.configActive = false;
-            }
-
-            this.configClick = false;
-            this.topbarItemClick = false;
-            this.sidebarClick = false;
-        });
-    }
-
-    onTabClick(event, index: number) {
-        if (this.activeTabIndex === index) {
-            this.sidebarActive = !this.sidebarActive;
-        } else {
-            this.activeTabIndex = index;
-            this.sidebarActive = true;
+    onLayoutClick() {
+        if (!this.topbarItemClick) {
+            this.activeTopbarItem = null;
+            this.topbarMenuActive = false;
         }
 
+        if (this.configActive && !this.configClick) {
+            this.configActive = false;
+        }
+
+        if (!this.menuClick) {
+            if (this.isSlim() || this.isHorizontal()) {
+                this.menuService.reset();
+            }
+
+            if (this.overlayMenuActive || this.staticMenuMobileActive) {
+                this.overlayMenuActive = false;
+                this.staticMenuMobileActive = false;
+            }
+
+            this.menuHoverActive = false;
+        }
+
+        this.configClick = false;
+        this.topbarItemClick = false;
+    }
+
+    onSidebarClick($event) {
+        this.menuClick = true;
+    }
+
+    onToggleMenu(event) {
+        this.menuClick = true;
+        this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
+
         event.preventDefault();
     }
 
-    closeSidebar(event) {
-        this.sidebarActive = false;
-        event.preventDefault();
+    onSidebarMouseOver(event) {
+        if (this.app.menuMode === 'sidebar') {
+            this.sidebarActive = this.isDesktop();
+        }
     }
 
-    onSidebarClick(event) {
-        this.sidebarClick = true;
+    onSidebarMouseLeave($event) {
+        if (this.app.menuMode === 'sidebar') {
+            setTimeout(() => {
+                this.sidebarActive = false;
+            }, 250);
+        }
     }
 
     onTopbarMenuButtonClick(event) {
@@ -84,8 +96,10 @@ export class AppMainComponent implements AfterViewInit, OnDestroy, OnInit {
         this.topbarItemClick = true;
 
         if (this.activeTopbarItem === item) {
-            this.activeTopbarItem = null; } else {
-            this.activeTopbarItem = item; }
+            this.activeTopbarItem = null;
+        } else {
+            this.activeTopbarItem = item;
+        }
 
         event.preventDefault();
     }
@@ -96,24 +110,39 @@ export class AppMainComponent implements AfterViewInit, OnDestroy, OnInit {
 
     onRippleChange(event) {
         this.app.ripple = event.checked;
+        this.primengConfig.ripple = event.checked;
     }
 
     onConfigClick(event) {
         this.configClick = true;
     }
 
-    get overlay(): boolean {
-        return this.app.layoutMode === 'overlay';
+    isStatic() {
+        return this.app.menuMode === 'static';
+    }
+
+    isOverlay() {
+        return this.app.menuMode === 'overlay';
+    }
+
+    isSlim() {
+        return this.app.menuMode === 'slim';
+    }
+
+    isHorizontal() {
+        return this.app.menuMode === 'horizontal';
+    }
+
+    isSidebar() {
+        return this.app.menuMode === 'sidebar';
     }
 
     isDesktop() {
-        return window.innerWidth > 1024;
+        return window.innerWidth > 991;
     }
 
-    ngOnDestroy() {
-        if (this.documentClickListener) {
-            this.documentClickListener();
-        }
+    isMobile() {
+        return window.innerWidth <= 991;
     }
 
 }

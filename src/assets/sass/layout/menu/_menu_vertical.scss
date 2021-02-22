@@ -1,0 +1,364 @@
+.layout-menu-wrapper {
+    position: fixed;
+    top: 60px;
+    width: 60px;
+    background-color: #dee0e3;
+    height: 100%;
+    -webkit-box-shadow: 3px 0px 10px 0 rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 3px 0px 10px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 3px 0px 10px 0 rgba(0, 0, 0, 0.20);
+    z-index: 100;
+    @include transition(width .3s);
+
+    .layout-tabmenu {
+        height: 100%;
+        width: 60px;
+        position: relative;
+
+        .layout-tabmenu-nav {
+            margin: 0;
+            padding: 0;
+            display: block;
+            z-index: 100;
+
+            li {
+                list-style-type: none;
+                text-align: center;
+                box-sizing: border-box;
+                position: relative;
+
+                a {
+                    display: block;
+                    padding: 8px 0;
+                    height: 40px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #c7c7c7;
+
+                    i {
+                        @include transition(color .3s);
+                        color: #999999;
+                        font-size: 24px;
+                    }
+
+                    &:hover {
+                        + .layout-tabmenu-tooltip {
+                            display: block;
+                        }
+
+                        i {
+                            color: #7a7a7a;
+                        }
+                    }
+                }
+
+                .layout-tabmenu-tooltip {
+                    display:none;
+                    padding: 0 5px;
+                    position: absolute;
+                    left: 60px;
+                    top: 10px;
+                    z-index: 101;
+                    line-height: 1;
+
+                    .layout-tabmenu-tooltip-text {
+                        padding: 3px 10px;
+                        background-color: #545b61;
+                        color: #ffffff;
+                        min-width: 75px;
+                        @include overlay-shadow();
+                    }
+
+                    .layout-tabmenu-tooltip-arrow {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-color: transparent;
+                        border-style: solid;
+                        top: 50%;
+                        left: 0;
+                        margin-top: -5px;
+                        border-width: 5px 5px 5px 0;
+                        border-right-color: #545b61;
+                    }
+                }
+
+                &.active-item {
+                    border-left: 4px solid $primaryColor;
+                    background-color: #ebebee;
+
+                    a {
+                        i {
+                            color: $textColor;
+                            margin-left: -4px;
+                        }
+
+                        .layout-tabmenu-tooltip {
+                            left: 56px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .layout-tabmenu-contents {
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 60px;
+            display: none;
+            background-color: #ebebee;
+            height: 100%;
+
+            .layout-tabmenu-content {
+                height: 100%;
+                display: none;
+
+                &.layout-tabmenu-content-active {
+                    display: block;
+                }
+
+                a {
+                    color: $menuitemColor;
+
+                    .menuitem-badge {
+                        position: relative;
+                        float: right;
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        text-align: center;
+                        background-color: $primaryColor;
+                        color: $highlightTextColor;
+                        font-size: $fontSize - 2;
+                        font-weight: 700;
+                        line-height: 16px;
+                        @include border-radius(50%);
+                    }
+                }
+
+                .layout-submenu-title {
+                    padding: 10px 12px;
+                    height: 40px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #c7c7c7;
+                    font-size: 16px;
+
+                    .menu-button {
+                        padding: 0px 4px;
+                        float: right;
+                        @include transition(background-color .3s);
+
+                        &:hover {
+                            background-color: $menuItemHoverBgColor;
+                        }
+                    }
+                }
+
+                .layout-submenu-content {
+                    padding: 6px 0px 6px 6px;
+                    height: 100%;
+                    overflow: auto;
+
+                    .menu-scroll-content {
+                        padding-bottom: 150px;
+                    }
+
+                    .navigation-menu {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+
+                        li {
+                            > a {
+                                display: block;
+                                padding: 6px;
+                                cursor: pointer;
+                                user-select: none;
+                                @include transition(background-color .3s);
+
+                                i:first-child {
+                                    @include transition(color .3s);
+                                    color: #999999;
+                                    margin-right: 4px;
+                                }
+
+                                &.rotated-icon {
+                                    .layout-menuitem-icon {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+
+                                .layout-menuitem-toggler {
+                                    float: right;
+                                    margin-top: 2px;
+                                    @include transition(transform .3s);
+                                }
+
+                                &:hover {
+                                    background-color:$menuItemHoverBgColor;
+                                    i:first-child {
+                                        color: #545b61;
+                                    }
+                                }
+
+                                &.active-menuitem-routerlink {
+                                    color: $primaryColor;
+
+                                    i:first-child {
+                                        color: $primaryColor;
+                                    }
+                                }
+                            }
+
+                            > ul {
+                                margin: 0;
+                                padding: 0 0 0 18px;
+                                list-style-type: none;
+                                overflow: hidden;
+                            }
+
+                            &.active-menuitem {
+                                > a {
+                                    color: $primaryColor;
+
+                                    i:first-child {
+                                        color: $primaryColor;
+                                    }
+
+                                    .layout-menuitem-toggler {
+                                        @include rotate(-180deg);
+                                    }
+                                }
+                            }
+
+                            &.orange-badge {
+                                > a {
+                                    .menuitem-badge {
+                                        background-color: $orange;
+                                        color: $highlightTextColor;
+                                    }
+                                }
+                            }
+
+                            &.steel-badge {
+                                > a {
+                                    .menuitem-badge {
+                                        background-color: $steel;
+                                        color: $highlightTextColor;
+                                    }
+                                }
+                            }
+
+                            &.green-badge {
+                                > a {
+                                    .menuitem-badge {
+                                        background-color: $green;
+                                        color: $highlightTextColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.layout-sidebar-dark {
+        background-color: $darkSidemenuBgColor;
+
+        .layout-tabmenu {
+            .layout-tabmenu-nav {
+                li {
+                    a {
+                        border-bottom: 1px solid #767b7f;
+
+                        i {
+                            color: #8f8f8f;
+                        }
+
+                        &:hover {
+                            i {
+                                color: #b3b3b3;
+                            }
+                        }
+                    }
+
+                    &.active-item {
+                        border-left: 4px solid $primaryColor;
+                        background-color: #ebebee;
+
+                        a {
+                            background-color: $darkMenuBgColor;
+
+                            i {
+                                color: $darkMenuItemTextColor;
+                                margin-left: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .layout-tabmenu-contents {
+                background-color: $darkMenuBgColor;
+
+                .layout-tabmenu-content {
+                    .layout-submenu-title {
+                        color: $darkMenuItemTextColor;
+                        border-bottom-color: #82878b;
+
+                        .menu-button {
+                            color: $darkMenuItemTextColor;
+
+                            &:hover {
+                                background-color: $darkMenuItemHoverBgColor;
+                            }
+                        }
+                    }
+                }
+
+                .layout-submenu-content {
+                    .navigation-menu {
+                        li {
+                            > a {
+                                color: $darkMenuItemTextColor;
+
+                                i:first-child {
+                                    color: $darkMenuItemTextColor;
+                                }
+
+                                &:hover {
+                                    background-color: $darkMenuItemHoverBgColor;
+
+                                    i:first-child {
+                                        color: $darkMenuItemTextColor;
+                                    }
+                                }
+
+                                &.active-menuitem-routerlink {
+                                    color: lighten($primaryColor,15%);
+
+                                    i:first-child {
+                                        color: lighten($primaryColor,15%);
+                                    }
+                                }
+                            }
+
+                            &.active-menuitem {
+                                > a {
+                                    color: lighten($primaryColor,15%);
+
+                                    i:first-child {
+                                        color: lighten($primaryColor,15%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

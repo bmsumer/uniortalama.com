@@ -1,0 +1,313 @@
+.layout-topbar {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+    z-index: 100;
+    display: flex;
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    border-radius: 0 0 20px 20px;
+    padding: 0 10px;
+    background-color: $topbarBg;
+
+    .layout-topbar-left {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            margin-left: 20px;
+
+            img {
+                height: 2rem;
+            }
+        }
+
+        .app-name {
+            margin-left: 9px;
+            height: 24px;
+        }
+
+        .topbar-menu-button {
+            width: 32px;
+            height: 32px;
+            line-height: 35px;
+            margin-left: 20px;
+            text-align: center;
+            border-radius: 6px;
+            background-color: $topbarIconBg;
+            color: $topbarTextColor;
+            @include transition(color .3s);
+
+            &:hover {
+                color: $topbarTextHoverColor;
+            }
+
+            i {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .layout-topbar-right {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: flex-end;
+
+        .layout-topbar-right-items {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            height: 100%;
+
+            > li {
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                > a {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    color: $topbarTextColor;
+                    width: 32px;
+                    height: 32px;
+                    margin: 0 0.4rem;
+
+                    .topbar-icon {
+                        font-size: 1.5rem;
+                        @include transition(color .3s);
+
+                        &:hover {
+                            color: $topbarTextHoverColor;
+                        }
+                    }
+
+                    .topbar-item-name {
+                        display: none;
+                    }
+
+                    .topbar-badge {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background-color: $primaryColor;
+                        color: $primaryTextColor;
+                        padding: 2px 4px;
+                        display: block;
+                        font-size: 11px;
+                        line-height: 10px;
+                        @include border-radius($borderRadius);
+                    }
+                }
+
+                &.profile-item {
+                    margin-right: 20px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                > ul {
+                    position: absolute;
+                    top: 56px;
+                    right: 0;
+                    display: none;
+                    min-width: 12rem;
+                    background-color: $topbarBg;
+                    animation-duration: .5s;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 8px 0;
+                    @include overlay-shadow();
+
+                    a {
+                        padding: 10px;
+                        display: block;
+                        width: 100%;
+                        box-sizing: border-box;
+                        color: $textColor;
+
+                        i {
+                            margin-right: 8px;
+                        }
+
+                        img {
+                            margin-right: 8px;
+                        }
+
+                        i, img, span {
+                            vertical-align: middle;
+                        }
+
+                        &:hover {
+                            //background-color: $topbarSubmenuItemHoverBgColor;
+                            @include transition(background-color .3s);
+                        }
+                    }
+                }
+
+                &.active-topmenuitem {
+                    > ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .layout-wrapper {
+        /*.topbar {
+            #topbar-menu-button {
+                display: block;
+
+                i {
+                    font-size: 24px;
+                }
+            }
+
+            .topbar-menu {
+                position: absolute;
+                top: 60px;
+                right: 15px;
+                width: 250px;
+                -webkit-animation-duration: .5s;
+                -moz-animation-duration: .5s;
+                animation-duration: .5s;
+                display: none;
+                background-color: $topbarSubmenuBgColor;
+                list-style-type: none;
+                margin: 0;
+                padding: 8px 0;
+                @include overlay-shadow();
+
+                > li {
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 0;
+                    float: none;
+
+                    > a {
+                        font-size: $fontSize;
+                        width: 100%;
+                        display: block;
+                        box-sizing: border-box;
+                        color: $textColor;
+                        padding: $listItemPadding;
+                        position: relative;
+                        @include transition(background-color .3s);
+
+                        .topbar-icon {
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 8px;
+                            font-size: 20px;
+                        }
+
+                        &:hover {
+                            background-color: $topbarSubmenuItemHoverBgColor;
+                        }
+
+                        .topbar-item-name {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+
+                        .topbar-badge {
+                            position: absolute;
+                            right: 10px;
+                            top: 8px;
+                            padding: 2px 4px;
+                            display: block;
+                            font-size: 12px;
+                            line-height: 12px;
+                        }
+                    }
+
+                    > ul {
+                        -webkit-animation-name: none;
+                        animation-name: none;
+                        display: none;
+                        list-style-type: none;
+                        padding: 0 0 0 18px;
+                        margin: 0;
+                        position: static;
+                        top: auto;
+                        left: auto;
+                        box-sizing: border-box;
+                        width: 100%;
+                        @include no-shadow();
+
+                        li {
+                            a {
+                                padding: $listItemPadding;
+                                display: block;
+                                width: 100%;
+                                box-sizing: border-box;
+
+                                span, img, i {
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+
+                                img {
+                                    width: 1.28571429em;
+                                    margin-right: 8px;
+                                }
+
+                                i {
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.active-topmenuitem {
+
+
+                        > ul {
+                            display: block;
+                        }
+                    }
+
+                    &.profile-item {
+                        .profile-image {
+                            img {
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: 24px;
+                                height: 24px;
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+
+                &.topbar-menu-visible {
+                    display: block;
+                }
+            }
+        }*/
+    }
+}
+
+
+@media (max-width: 640px) {
+    .layout-wrapper {
+        /*.topbar {
+            .logo {
+                width: 40px;
+                padding-top: 20px;
+
+                img {
+                    width: 30px;
+                }
+            }
+        }*/
+    }
+}

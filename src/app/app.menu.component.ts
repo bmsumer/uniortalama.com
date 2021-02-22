@@ -3,17 +3,13 @@ import {AppMainComponent} from './app.main.component';
 
 @Component({
     selector: 'app-menu',
-    template: `
-		<ul class="navigation-menu">
-			<li app-menuitem *ngFor="let item of model; let i = index;" [item]="item" [index]="i" [root]="true"></li>
-		</ul>
-    `
+    templateUrl: './app.menu.component.html'
 })
 export class AppMenuComponent implements OnInit {
 
     public model: any[];
 
-    constructor(public app: AppMainComponent) {}
+    constructor(public appMain: AppMainComponent) {}
 
     ngOnInit() {
         this.model = [

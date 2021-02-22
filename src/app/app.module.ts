@@ -93,8 +93,6 @@ import {AppMainComponent} from './app.main.component';
 import {AppConfigComponent} from './app.config.component';
 import {AppMenuComponent} from './app.menu.component';
 import {AppMenuitemComponent} from './app.menuitem.component';
-import {AppSideBarComponent} from './app.sidebar.component';
-import {AppSideBarTabContentComponent} from './app.sidebartabcontent.component';
 import {AppTopbarComponent} from './app.topbar.component';
 import {AppFooterComponent} from './app.footer.component';
 
@@ -245,8 +243,6 @@ import {MenuService} from './app.menu.service';
         AppConfigComponent,
         AppTopbarComponent,
         AppFooterComponent,
-        AppSideBarTabContentComponent,
-        AppSideBarComponent,
         DashboardDemoComponent,
         FormLayoutDemoComponent,
         FloatLabelDemoComponent,

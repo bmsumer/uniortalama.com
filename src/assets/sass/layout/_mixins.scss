@@ -179,3 +179,17 @@
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
+
+@mixin nested-submenu-indents($val, $index, $length) {
+    ul {
+        li {
+            a {
+                padding-left: $val * $index * 1px;
+            }
+
+            @if $index < $length {
+                @include nested-submenu-indents($val, $index + 1, $length);
+            }
+        }
+    }
+}
