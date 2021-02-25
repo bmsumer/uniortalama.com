@@ -4,11 +4,11 @@
     height: 56px;
     z-index: 100;
     display: flex;
-    backdrop-filter: blur(200px);
-    --webkit-backdrop-filter: blur(200px);
+    //backdrop-filter: blur(200px);
+    //--webkit-backdrop-filter: blur(200px);
     border-radius: 0 0 20px 20px;
     padding: 0 10px;
-    //background: $topbarBg;
+    background: $topbarBg;
 
     .layout-topbar-left {
         display: flex;
@@ -109,7 +109,7 @@
                 &.profile-item {
                     margin-right: 20px;
 
-                    a {
+                    > a {
                         background-color: transparent;
                         padding: 0;
 
@@ -126,19 +126,19 @@
                     right: 0;
                     display: none;
                     min-width: 12rem;
-                    background-color: $topbarBg;
                     animation-duration: .5s;
                     list-style-type: none;
                     margin: 0;
                     padding: 8px 0;
-                    @include overlay-shadow();
+                    backdrop-filter: blur(200px);
+                    --webkit-backdrop-filter: blur(200px);
 
                     a {
                         padding: 10px;
                         display: block;
                         width: 100%;
                         box-sizing: border-box;
-                        color: $textColor;
+                        color: $textSecondaryColor;
 
                         i {
                             margin-right: 8px;
@@ -153,8 +153,8 @@
                         }
 
                         &:hover {
-                            //background-color: $topbarSubmenuItemHoverBgColor;
-                            @include transition(background-color .3s);
+                            color: $textColor;
+                            background-color: $topbarSubmenuItemHoverBgColor;
                         }
                     }
                 }

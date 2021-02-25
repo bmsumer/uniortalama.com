@@ -22,22 +22,20 @@ $topbarTextHoverColor: $textColor !default;
 $topbarIconBg: rgba(68, 72, 109, 0.07) !default;
 $topbarIconHoverBg: rgba(68, 72, 109, 0.12) !default;
 
+$topbarSubmenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
+
 //menu
 $menuBgColor: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 2.48%, #000000 93.95%, rgba(0, 0, 0, 0) 100%);
+
 $rootMenuItemTextColor: $textSecondaryColor;
 $rootMenuItemHoverTextColor: $textColor;
 $rootMenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
-
-$submenuBgColor: rgba(68, 72, 109, 0.07);
-
 $activeRootMenuItemTextColor: $primaryColor;
-$menuItemIconColor: $primaryColor;
 
-
-
-$submenuItemTextColor:rgba(41, 50, 65, 0.7);
-$submenuItemHoverBgColor:var(--primary-lighter-color);
-$activeSubmenuItemTextColor:rgba(41, 50, 65, 0.8);
+$submenuItemTextColor: $textSecondaryColor;
+$submenuItemHoverTextColor: $textColor;
+$submenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
+$activeSubmenuItemTextColor: $primaryColor;
 
 $slimActiveRootMenuItemBgColor:var(--primary-lighter-color);
 $slimActiveRootMenuItemTextColor:var(--primary-color);

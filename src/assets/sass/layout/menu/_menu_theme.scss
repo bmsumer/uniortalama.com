@@ -95,14 +95,13 @@
             color: $submenuItemTextColor;
 
             &:hover {
-                background-color: rgba($primaryColor, .2);
                 background-color: $submenuItemHoverBgColor;
+                color: $submenuItemHoverTextColor;
             }
         }
 
         &.active-menuitem {
             > a {
-                color: $primaryColor;
                 color: $activeRootMenuItemTextColor;
             }
         }
@@ -216,25 +215,16 @@
 
                             > ul {
                                 @include extrenalSubmenuitem;
-                                background: $submenuBgColor;
                                 backdrop-filter: blur(200px);
                                 --webkit-backdrop-filter: blur(200px);
 
                                 li {
                                     > a {
-                                        &.active-route {
-                                            background-color: rgba($primaryColor, .2);
-                                            background-color: $slimActiveRootMenuItemBgColor;
-                                            color: $slimActiveRootMenuItemTextColor;
-
-                                            i {
-                                                color: $primaryColor;
-                                                color: $slimActiveRootMenuItemTextColor;
-                                            }
+                                        &.active-menuitem-routerlink {
+                                            color: $activeSubmenuItemTextColor;
 
                                             &:hover {
-                                                color: $primaryColor;
-                                                color: $slimActiveRootMenuItemTextColor;
+                                                color: $activeSubmenuItemTextColor;
                                             }
                                         }
                                     }

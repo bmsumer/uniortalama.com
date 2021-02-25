@@ -57,6 +57,7 @@ export class AppMainComponent {
         }
 
         this.configClick = false;
+        this.menuClick = false;
         this.topbarItemClick = false;
     }
 

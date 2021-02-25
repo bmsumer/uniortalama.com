@@ -73,7 +73,7 @@
 
                             > ul {
                                 list-style-type: none;
-                                top:  50px;
+                                top:  43px;
                                 left: 0px;
                                 width: 230px;
                                 position: absolute;
@@ -87,6 +87,11 @@
                                     border: 0 none;
                                     margin: 0;
                                     @include nested-submenu-indents(10, 2, 10);
+
+                                    ul {
+                                        list-style-type: none;
+                                        padding: 0;
+                                    }
                                 }
                             }
                         }
