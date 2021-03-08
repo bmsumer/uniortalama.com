@@ -1,0 +1,138 @@
+.layout-menu-wrapper {
+    height: 100%;
+    width: $menuWidth;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 997;
+    transform: none;
+    mix-blend-mode: normal;
+    backdrop-filter: blur(200px);
+    border-radius: 0px 40px 40px 0px;
+
+    .menu-logo {
+        height: 75px;
+        @include flex();
+        @include flex-justify-start();
+        @include flex-align-center();
+        padding: 0 22px 0 25px;
+
+        .menu-pin {
+            display: none;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            right: 22px;
+            border-radius: 6px;
+            @include transition(all $transitionDuration);
+
+            > span {
+                font-size: 1.25rem;
+            }
+        }
+
+        .logo {
+            img {
+                height: 2rem;
+                border: 0 none;
+            }
+        }
+
+        .app-name {
+            img {
+                height: 1.5rem;
+                padding-left: 16px;
+            }
+        }
+    }
+
+    ul {
+        @include reset-list;
+        padding: 0 1.5rem;
+    }
+
+    .layout-menu-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+
+        .layout-menu {
+            padding-bottom: 2rem;
+
+            li {
+                border-radius: 8px;
+
+                &.layout-root-menuitem {
+                    > div {
+                        padding-left: 1rem;
+                        margin-bottom: .5rem;
+                        margin-top: 1.5rem;
+
+                        > .layout-menuitem-text {
+                            font-size: .857rem;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                > a {
+                    display: flex;
+                    align-items: center;
+                    padding: .75rem;
+                    cursor: pointer;
+                    user-select: none;
+                    border-radius: 8px;
+                    transition: background-color $transitionDuration, color $transitionDuration;
+
+                    .layout-menuitem-text {
+                        margin-left: 1rem;
+                    }
+
+                    .layout-submenu-toggler {
+                        margin-left: auto;
+                    }
+
+                    &.rotated-icon {
+                        .layout-menuitem-icon {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                &.active-menuitem {
+                    > a {
+                        .layout-submenu-toggler {
+                            transition: all $transitionDuration;
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+
+                > ul {
+                    padding: 0 .5rem;
+
+                    li {
+                        ul {
+                            padding: 0 0 .25rem;
+                            overflow: hidden;
+                        }
+                    }
+
+                    > li {
+                        margin-top: .2rem;
+
+                        &.layout-root-menuitem {
+                            > a {
+                                display: flex;
+                            }
+                        }
+
+                        @include nested-submenu-indents(10, 2, 5);
+                    }
+                }
+            }
+        }
+    }
+}

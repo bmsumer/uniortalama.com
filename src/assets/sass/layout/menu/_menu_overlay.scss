@@ -1,0 +1,31 @@
+@media (min-width: $phoneBreakpoint + 1) {
+    .layout-overlay {
+        .layout-menu-wrapper {
+            transform: translate3d(-$menuWidth, 0px, 0px);
+            transition: transform $transitionDuration;
+            transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+
+            .layout-menu {
+                li {
+                    &.layout-root-menuitem {
+                        > div {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.layout-overlay-active {
+            .layout-menu-wrapper {
+                transform: translate3d(0px, 0px, 0px);
+
+                .menu-pin {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

@@ -1,11 +1,16 @@
 <div class="layout-menu-wrapper" [ngClass]="{'layout-sidebar-active': appMain.sidebarActive}"
      (click)="appMain.onSidebarClick($event)" (mouseover)="appMain.onSidebarMouseOver($event)" (mouseleave)="appMain.onSidebarMouseLeave($event)">
-    <div class="sidebar-logo" *ngIf="!appMain.isHorizontal()">
-        <a [routerLink]="['/']">
-            ATLANTIS
+    <div class="menu-logo" *ngIf="!appMain.isHorizontal()">
+
+        <a href="#" class="logo">
+            <img src="assets/layout/images/logo.png">
         </a>
-        <a href="#" class="sidebar-pin" (click)="appMain.onToggleMenu($event)">
-            <span class="pin"></span>
+
+        <a href="#" class="app-name">
+            <img src="assets/layout/images/appname.png"/>
+        </a>
+        <a href="#" class="menu-pin" (click)="appMain.onToggleMenu($event)">
+            <span class="pi pi-times"></span>
         </a>
     </div>
 

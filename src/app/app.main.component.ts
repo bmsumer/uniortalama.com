@@ -67,7 +67,10 @@ export class AppMainComponent {
 
     onToggleMenu(event) {
         this.menuClick = true;
-        this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
+
+        if (this.overlayMenuActive) {
+            this.overlayMenuActive = false;
+        }
 
         event.preventDefault();
     }
@@ -86,9 +89,18 @@ export class AppMainComponent {
         }
     }
 
-    onTopbarMenuButtonClick(event) {
-        this.topbarItemClick = true;
-        this.topbarMenuActive = !this.topbarMenuActive;
+    onMenuButtonClick(event) {
+        this.menuClick = true;
+
+        if (this.isOverlay()) {
+            this.overlayMenuActive = !this.overlayMenuActive;
+        }
+
+        if (this.isDesktop()) {
+            this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
+        } else {
+            this.staticMenuMobileActive = !this.staticMenuMobileActive;
+        }
 
         event.preventDefault();
     }

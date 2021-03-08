@@ -17,7 +17,7 @@ import {AppMainComponent} from './app.main.component';
                (mouseenter)="onMouseEnter()" (keydown.enter)="itemClick($event)"
                [attr.target]="item.target" [attr.tabindex]="0" [ngClass]="item.class" pRipple>
                 <i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
-                <span>{{item.label}}</span>
+                <span class="layout-menuitem-text">{{item.label}}</span>
                 <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
                 <span class="menuitem-badge" *ngIf="item.badge">{{item.badge}}</span>
             </a>
@@ -27,7 +27,7 @@ import {AppMainComponent} from './app.main.component';
                [routerLinkActiveOptions]="{exact: true}" [attr.target]="item.target" [attr.tabindex]="0"
                [ngClass]="item.class" pRipple>
                 <i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
-                <span>{{item.label}}</span>
+                <span class="layout-menuitem-text">{{item.label}}</span>
                 <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
                 <span class="menuitem-badge" *ngIf="item.badge">{{item.badge}}</span>
             </a>
@@ -147,6 +147,10 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
 
             if (this.app.isMobile()) {
                 this.app.staticMenuMobileActive = false;
+            }
+
+            if (this.app.isOverlay()) {
+                this.app.overlayMenuActive = false;
             }
 
             // reset horizontal menu

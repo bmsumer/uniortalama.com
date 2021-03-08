@@ -6,7 +6,7 @@ import {AppMainComponent} from './app.main.component';
     template: `
         <div class="layout-topbar">
             <div class="layout-topbar-left">
-                <a href="#" class="topbar-menu-button" (click)="app.onTopbarMenuButtonClick($event)" *ngIf="app.isOverlay() || app.isMobile()">
+                <a href="#" class="topbar-menu-button" (click)="app.onMenuButtonClick($event)" *ngIf="app.isOverlay() || app.isMobile()">
                     <i class="pi pi-bars"></i>
                 </a>
 

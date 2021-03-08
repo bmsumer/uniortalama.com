@@ -24,17 +24,26 @@ $topbarIconHoverBg: rgba(255, 255, 255, 0.1) !default;
 $topbarSubmenuItemHoverBgColor: rgba(255, 255, 255, 0.05);
 
 //menu
-$menuBgColor: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 2.48%, #000000 93.95%, rgba(0, 0, 0, 0) 100%);
+$menuBg: rgba(255, 255, 255, 0.05);
+$menuWidth: 21rem;
+$menuIconBg: rgba(255, 255, 255, 0.05);
+$menuIconHoverBg: rgba(255, 255, 255, 0.1) !default;
+$menuIconTextColor: $textSecondaryColor;
+$menuIconHoverTextColor: $textColor !default;
 
 $rootMenuItemTextColor: $textSecondaryColor;
 $rootMenuItemHoverTextColor: $textColor;
-$rootMenuItemHoverBgColor: rgba(255, 255, 255, 0.05);
+$rootMenuItemHoverBg: rgba(255, 255, 255, 0.05);
 $activeRootMenuItemTextColor: $primaryColor;
 
 $submenuItemTextColor: $textSecondaryColor;
 $submenuItemHoverTextColor: $textColor;
-$submenuItemHoverBgColor: rgba(255, 255, 255, 0.05);
+$submenuItemHoverBg: rgba(255, 255, 255, 0.05);
 $activeSubmenuItemTextColor: $primaryColor;
+
+$overlayMenuActiveBg: rgba(255, 255, 255, 0.05);
+$overlayMenuItemActiveBg: $primaryColor;
+$overlayMenuItemActiveTextColor: $primaryTextColor;
 
 $slimActiveRootMenuItemBgColor:var(--primary-lighter-color);
 $slimActiveRootMenuItemTextColor:var(--primary-light-color);
