@@ -49,16 +49,6 @@
 
                 > ul {
                     > li {
-                        &.active-menuitem {
-                            background-color: $menuBg;
-
-                            > a {
-                                background-color: $menuBg;
-                                color: $primaryColor;
-                                color: $activeRootMenuItemTextColor;
-                            }
-                        }
-
                         > a {
                             &.active-route {
                                 color: $primaryColor;
@@ -214,8 +204,6 @@
                                 background: $overlayMenuActiveBg;
 
                                 > a {
-                                    background-color: transparent;
-                                    color: $rootMenuItemTextColor;
 
                                     i {
                                         color: $rootMenuItemTextColor;
@@ -229,10 +217,14 @@
                             }
 
                             > ul {
-                                @include extrenalSubmenuitem;
-
                                 li {
                                     > a {
+                                        color: $submenuItemTextColor;
+
+                                        &:hover {
+                                            background-color: $submenuItemHoverBg;
+                                            color: $submenuItemHoverTextColor;
+                                        }
                                         &.active-menuitem-routerlink {
                                             background-color: $overlayMenuItemActiveBg;
                                             color: $overlayMenuItemActiveTextColor;

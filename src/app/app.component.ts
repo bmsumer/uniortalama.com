@@ -18,6 +18,8 @@ export class AppComponent implements OnInit{
 
     ripple: boolean;
 
+    colorScheme = 'dark';
+
     constructor(private primengConfig: PrimeNGConfig) {
     }
 
