@@ -31,7 +31,8 @@ import {AppMainComponent} from './app.main.component';
                 <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
                 <span class="menuitem-badge" *ngIf="item.badge">{{item.badge}}</span>
             </a>
-            <ul *ngIf="item.items && active" [@children]="active ? 'visibleAnimated' : 'hiddenAnimated'">
+            <ul *ngIf="item.items && active" [@children]="((app.isSlim()||app.isHorizontal()) && !app.isMobile() && root) ? (active ? 'visible' : 'hidden') :
+				(active ? 'visibleAnimated' : 'hiddenAnimated')">
                 <ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
                         <li app-menuitem [item]="child" [index]="i" [parentKey]="key" [class]="child.badgeClass"></li>
                 </ng-template>
@@ -53,10 +54,17 @@ import {AppMainComponent} from './app.main.component';
             state('visibleAnimated', style({
                 height: '*'
             })),
+            state('visible', style({
+                height: '*',
+                'z-index': 100
+            })),
+            state('hidden', style({
+                height: '0px',
+                'z-index': '*'
+            })),
             transition('visibleAnimated => hiddenAnimated', animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')),
             transition('hiddenAnimated => visibleAnimated', animate('400ms cubic-bezier(0.86, 0, 0.07, 1)')),
-            transition('void => visibleAnimated, visibleAnimated => void',
-                animate('400ms cubic-bezier(0.86, 0, 0.07, 1)'))
+            transition('void => visibleAnimated, visibleAnimated => void', animate('400ms cubic-bezier(0.86, 0, 0.07, 1)'))
         ])
     ]
 })
