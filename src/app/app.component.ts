@@ -8,7 +8,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent implements OnInit{
 
-    menuMode = 'overlay';
+    menuMode = 'static';
 
     layout = 'steel';
 

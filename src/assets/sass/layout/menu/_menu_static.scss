@@ -1,0 +1,35 @@
+@media (min-width: $phoneBreakpoint + 1) {
+    .layout-static {
+        .layout-menu-wrapper {
+            position: fixed;
+            
+            .layout-menu-container {
+                padding-bottom: 120px;
+
+                ul {
+                    overflow: scroll;
+
+                    .layout-root-menuitem {
+                        > a {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .layout-main {
+            margin-left: $menuWidth;
+        }
+
+        &.layout-static-inactive {
+            .layout-sidebar {
+                transform: translateX(-100%);
+            }
+
+            .layout-menu-wrapper {
+                margin-left: 0;
+            }
+        }
+    }
+}

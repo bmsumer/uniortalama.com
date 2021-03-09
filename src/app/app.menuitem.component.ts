@@ -31,8 +31,10 @@ import {AppMainComponent} from './app.main.component';
                 <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
                 <span class="menuitem-badge" *ngIf="item.badge">{{item.badge}}</span>
             </a>
-            <ul *ngIf="item.items && active" [@children]="((app.isSlim()||app.isHorizontal()) && !app.isMobile() && root) ? (active ? 'visible' : 'hidden') :
-				(active ? 'visibleAnimated' : 'hiddenAnimated')">
+            <ul *ngIf="(item.items && active) || (item.items && app.isStatic() && (root || active))" [@children]="(
+            (app.isSlim()||app.isHorizontal()) && !app.isMobile() && root) ?
+            (active ? 'visible' : 'hidden') :
+            (app.isStatic() && root ? 'visible' : (active ? 'visibleAnimated' : 'hiddenAnimated'))">
                 <ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
                         <li app-menuitem [item]="child" [index]="i" [parentKey]="key" [class]="child.badgeClass"></li>
                 </ng-template>
