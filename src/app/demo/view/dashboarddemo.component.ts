@@ -3,6 +3,7 @@ import {EventService} from '../service/eventservice';
 import {SelectItem} from 'primeng/api';
 import {Product} from '../domain/product';
 import {ProductService} from '../service/productservice';
+import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -25,11 +26,19 @@ export class DashboardDemoComponent implements OnInit {
 
     fullcalendarOptions: any;
 
-    constructor(private productService: ProductService, private eventService: EventService) { }
+    constructor(private productService: ProductService, private eventService: EventService,
+                private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            {label: 'Dashboard'},
+            {label: 'Sales Dashboard', routerLink: ['/']},
+        ]);
+    }
 
     ngOnInit() {
         this.productService.getProducts().then(data => this.products = data);
-        this.eventService.getEvents().then(events => {this.events = events; });
+        this.eventService.getEvents().then(events => {
+            this.events = events;
+        });
 
         this.cities = [];
         this.cities.push({label: 'Select City', value: null});
@@ -58,7 +67,7 @@ export class DashboardDemoComponent implements OnInit {
         };
 
         this.fullcalendarOptions = {
-            plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin ],
+            plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
             defaultDate: '2017-02-12',
             header: {
                 right: 'prev,next,today',

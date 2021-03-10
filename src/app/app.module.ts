@@ -89,6 +89,7 @@ import {VirtualScrollerModule} from 'primeng/virtualscroller';
 // Application Components
 import {AppCodeModule} from './app.code.component';
 import {AppComponent} from './app.component';
+import {AppBreadcrumbComponent} from './app.breadcrumb.component';
 import {AppMainComponent} from './app.main.component';
 import {AppConfigComponent} from './app.config.component';
 import {AppMenuComponent} from './app.menu.component';
@@ -146,6 +147,7 @@ import {ProductService} from './demo/service/productservice';
 
 // Application services
 import {MenuService} from './app.menu.service';
+import {AppBreadcrumbService} from './app.breadcrumb.service';
 
 @NgModule({
     imports: [
@@ -237,6 +239,7 @@ import {MenuService} from './app.menu.service';
     ],
     declarations: [
         AppComponent,
+        AppBreadcrumbComponent,
         AppMainComponent,
         AppMenuComponent,
         AppMenuitemComponent,
@@ -285,7 +288,7 @@ import {MenuService} from './app.menu.service';
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService
+        PhotoService, ProductService, MenuService, AppBreadcrumbService
     ],
     bootstrap: [AppComponent]
 })

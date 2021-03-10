@@ -2,7 +2,7 @@
     .layout-static {
         .layout-menu-wrapper {
             position: fixed;
-            
+
             .layout-menu-container {
                 padding-bottom: 120px;
 
@@ -20,6 +20,10 @@
 
         .layout-main {
             margin-left: $menuWidth;
+
+            .layout-main-content {
+                padding-top: 20px;
+            }
         }
 
         &.layout-static-inactive {

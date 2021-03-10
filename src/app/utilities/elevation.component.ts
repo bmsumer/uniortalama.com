@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {AppBreadcrumbService} from '../app.breadcrumb.service';
 
 @Component({
     templateUrl: './elevation.component.html',
@@ -16,6 +17,13 @@ import {Component} from '@angular/core';
     `]
 })
 export class ElevationComponent {
+
+    constructor(private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'Utilities' },
+            { label: 'Elevation', routerLink: ['/utilities/elevation'] }
+        ]);
+    }
 
     boxes: Array<number> = new Array(24);
 }

@@ -1,0 +1,39 @@
+.layout-breadcrumb-container {
+    background-color: transparent;
+    padding-top: 30px;
+
+    .layout-breadcrumb {
+        background: transparent;
+        border: 0 none;
+        border-radius: 0;
+
+        ul {
+            li {
+                &.p-breadcrumb-chevron {
+                    margin: 0 .75rem;
+
+                    &::before {
+                        content: "\2044";
+                        font-weight: bold;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                .p-menuitem-link {
+                    font-size: 1.25rem;
+
+                    .p-menuitem-text {
+                        color: $textThirdColor;
+                    }
+                }
+
+                &:last-child {
+                    .p-menuitem-text {
+                        color: $textColor;
+                    }
+                }
+            }
+        }
+    }
+}
+

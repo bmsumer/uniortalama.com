@@ -1,10 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 
 @Component({
     templateUrl: './buttondemo.component.html'
 })
 export class ButtonDemoComponent implements OnInit {
+
+    constructor(private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'UI Kit' },
+            { label: 'Button', routerLink: ['/uikit/button'] }
+        ]);
+    }
 
     items: MenuItem[];
 

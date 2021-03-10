@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Product} from '../demo/domain/product';
 import {ProductService} from '../demo/service/productservice';
 import {ConfirmationService, MessageService} from 'primeng/api';
+import {AppBreadcrumbService} from '../app.breadcrumb.service';
 
 @Component({
     templateUrl: './app.crud.component.html',
@@ -41,7 +42,12 @@ export class AppCrudComponent implements OnInit {
     cols: any[];
 
     constructor(private productService: ProductService, private messageService: MessageService,
-                private confirmationService: ConfirmationService) {}
+                private confirmationService: ConfirmationService, private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'Pages' },
+            { label: 'Crud', routerLink: ['/pages/crud'] }
+        ]);
+    }
 
     ngOnInit() {
         this.productService.getProducts().then(data => this.products = data);

@@ -2,7 +2,9 @@
 @import '../overrides/_layout_variables';
 @import './_mixins';
 @import './_utils';
+@import './_typography';
 @import './_topbar';
+@import './_breadcrumb';
 @import './_main';
 @import './menu/_menu';
 @import './_config';
@@ -15,6 +17,5 @@
 @import './_splash';
 @import './_help';
 @import './_invoice';
-@import './_typography';
 @import './_widgets';
 @import '../overrides/_layout_styles';*/

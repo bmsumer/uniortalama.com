@@ -1,9 +1,17 @@
 import {Component} from '@angular/core';
+import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 
 @Component({
     templateUrl: './formlayoutdemo.component.html'
 })
 export class FormLayoutDemoComponent {
+
+    constructor(private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'UI Kit' },
+            { label: 'Form Layout', routerLink: ['/uikit/formlayout'] }
+        ]);
+    }
 
     selectedState: any = null;
 
