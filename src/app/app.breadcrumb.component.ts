@@ -2,6 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { AppBreadcrumbService } from './app.breadcrumb.service';
 import { Subscription } from 'rxjs';
 import { MenuItem } from 'primeng/api';
+import {AppMainComponent} from './app.main.component';
 
 @Component({
     selector: 'app-breadcrumb',
@@ -15,7 +16,7 @@ export class AppBreadcrumbComponent implements OnDestroy {
 
     home: MenuItem;
 
-    constructor(public breadcrumbService: AppBreadcrumbService) {
+    constructor(public breadcrumbService: AppBreadcrumbService, public appMain: AppMainComponent) {
         this.subscription = breadcrumbService.itemsHandler.subscribe(response => {
             this.items = response;
         });

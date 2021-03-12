@@ -6,8 +6,7 @@
                 mix-blend-mode: normal;
                 backdrop-filter: blur(200px);
                 transform: translate3d(-$menuWidth, 0px, 0px);
-                transition: transform $transitionDuration;
-                transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+                transition: transform $animationDuration $animationTimingFunction;
 
                 .layout-menu-container {
                     overflow-y: auto;

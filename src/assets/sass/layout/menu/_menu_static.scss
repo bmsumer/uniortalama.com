@@ -1,46 +1,69 @@
 @media (min-width: $phoneBreakpoint + 1) {
-    .layout-static {
-        .layout-menu-wrapper {
-            position: fixed;
+    .layout-wrapper {
+        &.layout-static {
+            .menu-button {
+                width: 32px;
+                height: 32px;
+                line-height: 35px;
+                margin-left: 30px;
+                text-align: center;
+                border-radius: 6px;
+                background-color: $topbarIconBg;
+                color: $topbarTextColor;
+                @include transition(color .3s);
 
-            .layout-menu-container {
-                padding-bottom: 120px;
-
-                ul {
-                    overflow: scroll;
-
-                    .layout-root-menuitem {
-                        > a {
-                            display: none;
-                        }
-                    }
+                &:hover {
+                    color: $topbarTextHoverColor;
                 }
 
-                .layout-menu {
-                    li {
-                        a {
-                            border-left: 8px solid transparent;
-                        }
-                    }
+                i {
+                    font-size: 1.25rem;
                 }
-            }
-        }
-
-        .layout-main {
-            margin-left: $menuWidth;
-
-            .layout-main-content {
-                padding-top: 20px;
-            }
-        }
-
-        &.layout-static-inactive {
-            .layout-sidebar {
-                transform: translateX(-100%);
             }
 
             .layout-menu-wrapper {
-                margin-left: 0;
+                position: fixed;
+                transition: transform $animationDuration $animationTimingFunction;
+
+                .layout-menu-container {
+                    padding-bottom: 120px;
+
+                    ul {
+                        overflow: scroll;
+
+                        .layout-root-menuitem {
+                            > a {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .layout-menu {
+                        li {
+                            a {
+                                border-left: 8px solid transparent;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .layout-main {
+                margin-left: $menuWidth;
+
+                .layout-main-content {
+                    padding-top: 20px;
+                }
+            }
+
+            &.layout-static-inactive {
+                .layout-menu-wrapper {
+                    transform: translateX(-100%);
+                }
+
+                .layout-main {
+                    margin-left: 0;
+                }
             }
         }
     }
