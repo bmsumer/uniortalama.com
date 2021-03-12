@@ -1,36 +1,50 @@
 @media (min-width: $phoneBreakpoint + 1) {
-    .layout-overlay {
-        .layout-menu-wrapper {
-            position: fixed;
-            mix-blend-mode: normal;
-            backdrop-filter: blur(200px);
-            transform: translate3d(-$menuWidth, 0px, 0px);
-            transition: transform $transitionDuration;
-            transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    .layout-wrapper {
+        &.layout-overlay {
+            .layout-menu-wrapper {
+                position: fixed;
+                mix-blend-mode: normal;
+                backdrop-filter: blur(200px);
+                transform: translate3d(-$menuWidth, 0px, 0px);
+                transition: transform $transitionDuration;
+                transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 
-            .layout-menu-container {
-                overflow-y: auto;
+                .layout-menu-container {
+                    overflow-y: auto;
 
-                .layout-menu {
-                    li {
-                        &.layout-root-menuitem {
-                            > div {
-                                display: none;
+                    .layout-menu {
+                        padding: 0 1.5rem;
+
+                        li {
+                            &.layout-root-menuitem {
+                                > div {
+                                    display: none;
+                                }
+                            }
+
+                            > ul {
+                                padding: 0 .5rem;
+                            }
+                        }
+
+                        > li {
+                            > a {
+                                padding: .75rem 1.25rem;
                             }
                         }
                     }
                 }
             }
-        }
 
-        &.layout-overlay-active {
-            .layout-menu-wrapper {
-                transform: translate3d(0px, 0px, 0px);
+            &.layout-overlay-active {
+                .layout-menu-wrapper {
+                    transform: translate3d(0px, 0px, 0px);
 
-                .menu-pin {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    .menu-pin {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }

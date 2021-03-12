@@ -180,8 +180,23 @@
         &.layout-static {
             .layout-menu-wrapper {
                 @include internalSubmenu;
-            }
 
+                .layout-menu-container {
+                    .layout-menu {
+                        > li {
+                            ul {
+                                li {
+                                    &.active-menuitem {
+                                        > a {
+                                            border-left-color: $primaryColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &.layout-overlay {

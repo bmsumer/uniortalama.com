@@ -113,10 +113,15 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Buy Now', icon: 'pi pi-fw pi-shopping-cart', url: ['https://www.primefaces.org/store']
-            },
-            {
-                label: 'Documentation', icon: 'pi pi-fw pi-info-circle', routerLink: ['/documentation']
+                label: 'Start', icon: 'pi pi-download',
+                items: [
+                    {
+                        label: 'Buy Now', icon: 'pi pi-shopping-cart', url: ['https://www.primefaces.org/store']
+                    },
+                    {
+                        label: 'Documentation', icon: 'pi pi-info-circle', routerLink: ['/documentation']
+                    }
+                ]
             }
         ];
     }
