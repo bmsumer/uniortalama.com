@@ -6,7 +6,7 @@
             <img src="assets/layout/images/logo.png">
         </a>
 
-        <a href="#" class="app-name">
+        <a href="#" class="app-name" *ngIf="!appMain.isSlim()">
             <img src="assets/layout/images/appname.png"/>
         </a>
         <a href="#" class="menu-pin" (click)="appMain.onToggleMenu($event)">

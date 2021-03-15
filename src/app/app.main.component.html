@@ -11,7 +11,7 @@
 
     <app-topbar *ngIf="isMobile() || isOverlay() || isHorizontal()"></app-topbar>
 
-    <app-menu *ngIf="isStatic()"></app-menu>
+    <app-menu *ngIf="!isMobile() && (isStatic() || isSlim() || isSidebar())"></app-menu>
 
     <div class="layout-main">
         <app-breadcrumb></app-breadcrumb>

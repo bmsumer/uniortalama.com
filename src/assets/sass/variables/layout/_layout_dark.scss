@@ -46,8 +46,10 @@ $overlayMenuActiveBg: rgba(255, 255, 255, 0.05);
 $overlayMenuItemActiveBg: $primaryColor;
 $overlayMenuItemActiveTextColor: $primaryTextColor;
 
-$slimActiveRootMenuItemBgColor:var(--primary-lighter-color);
-$slimActiveRootMenuItemTextColor:var(--primary-light-color);
+$slimRootMenuItemIconColor: $textColor;
+$slimActiveRootMenuItemBgColor: $primaryColor;
+$slimActiveRootMenuItemTextColor: $primaryTextColor;
+$slimMenuItemTextColor: $textColor;
 
 //footer
 $footerBg: rgba(255, 255, 255, 0.05) !default;

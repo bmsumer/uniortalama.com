@@ -1,0 +1,109 @@
+@media (min-width: $tabletBreakpoint + 1) {
+    .layout-wrapper {
+        &.layout-slim {
+            .layout-menu-wrapper {
+                height: 100%;
+                position: fixed;
+                width: 5.857rem;
+                padding: 0;
+
+                .menu-logo {
+                    padding: 0 0 0 32px;
+                }
+
+                .layout-menu {
+                    overflow: visible;
+
+                    > li {
+                        position: relative;
+                        padding: 10px 0 10px 12px;
+
+                        .layout-menuitem-root-text {
+                            display: none;
+                        }
+
+                        > a {
+                            margin: 0px;
+                            padding: 8px;
+                            width: 40px;
+                            height: 40px;
+                            @include border-radius(12px);
+                            @include flex();
+                            @include flex-align-center();
+                            @include flex-justify-center();
+                            @include transition(all $transitionDuration);
+                            position: relative;
+                            border: none;
+
+                            &:before {
+                                display: none;
+                            }
+
+                            span {
+                                display: none;
+                            }
+
+                            i {
+                                margin-right: 0;
+                                font-size: 1.75rem;
+
+                                &.layout-submenu-toggler {
+                                    display: none;
+                                }
+                            }
+
+                            .menuitem-badge {
+                                display: none;
+                                margin-left: auto;
+                            }
+
+                            &:hover + .layout-menu-tooltip {
+                                display: block;
+                            }
+                        }
+
+                        > ul {
+                            position: absolute;
+                            top: 0;
+                            left: 72px;
+                            min-width: 250px;
+                            max-height: 450px;
+                            padding: 4px;
+                            overflow: auto;
+                            margin-top: 10px;
+                            border-radius: 8px;
+
+                            li {
+                                margin: 0;
+
+                                > a {
+                                    padding: 10px 5px;
+
+                                    .layout-menuitem-text {
+                                        margin-left: .5rem;
+                                    }
+
+                                    > span {
+                                        visibility: visible;
+                                    }
+
+                                    > i {
+                                        &.layout-submenu-toggler {
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                                @include nested-submenu-indents(10, 2, 10);
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .layout-main {
+                margin-left: 5.857rem;
+            }
+        }
+    }
+}
