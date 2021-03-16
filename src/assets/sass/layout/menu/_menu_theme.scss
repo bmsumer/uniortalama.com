@@ -173,10 +173,6 @@
 
 @media (min-width: $tabletBreakpoint + 1) {
     .layout-wrapper {
-        &.layout-sidebar-active {
-            @include internalSubmenu;
-        }
-
         &.layout-static {
             .layout-menu-wrapper {
                 @include internalSubmenu;
@@ -199,7 +195,7 @@
             }
         }
 
-        &.layout-overlay {
+        &.layout-overlay, &.layout-sidebar {
             .layout-menu-wrapper {
                 background-color: transparent;
 

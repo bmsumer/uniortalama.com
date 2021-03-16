@@ -1,6 +1,161 @@
 @media (min-width: $tabletBreakpoint + 1) {
     .layout-wrapper {
         &.layout-sidebar {
+            .layout-menu-wrapper {
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 999;
+                width: 6.571em;
+                overflow-y: scroll;
+                mix-blend-mode: normal;
+                backdrop-filter: blur(200px);
+                @include transition(all $transitionDuration);
+
+                .menu-logo {
+                    height: 62px;
+                    padding: 0 22px 0 34px;
+
+                    .app-name {
+                        display: none;
+                    }
+                }
+
+                &.layout-sidebar-active {
+                    transform: translate3d(0px, 0px, 0px);
+                    width: 21em;
+
+                    .menu-logo {
+                        .app-name {
+                            display: inline;
+                        }
+                    }
+                    //@include internalSubmenu;
+                    .layout-menu-container {
+                        overflow: auto;
+
+                        .layout-menu {
+                            padding-bottom: 120px;
+
+                            li {
+                                > a {
+                                    > span {
+                                        visibility: visible;
+                                    }
+
+                                    > i {
+                                        &.layout-submenu-toggler {
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .layout-menu-container {
+                    height: 100%;
+
+                    .layout-menu {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0 22px;
+                        overflow: hidden;
+
+                        > li {
+
+                            .layout-menuitem-root-text {
+                                display: none;
+                            }
+
+                            > ul {
+                                > li {
+                                    margin-left: 6px;
+                                    @include border-radius(8px);
+                                }
+                            }
+                        }
+
+                        li {
+                            padding: 6px;
+
+                            &.active-menuitem {
+                                > a {
+                                    i.layout-submenu-toggler {
+                                        @include rotate(-180deg);
+                                    }
+                                }
+                            }
+
+                            > a {
+                                margin: 0px;
+                                @include flex();
+                                @include flex-align-center();
+                                @include border-radius(8px);
+                                padding: 8px;
+                                user-select: none;
+                                cursor: pointer;
+
+                                > span {
+                                    margin: 0 .5rem;
+                                    margin-left: 1rem;
+                                    visibility: hidden;
+                                    white-space: nowrap;
+                                }
+
+                                > i {
+                                    font-size: 1.25rem;
+                                    width: auto;
+
+                                    &.layout-submenu-toggler {
+                                        @include transition(transform $transitionDuration);
+                                        margin-left: auto;
+                                        font-size:12px ;
+                                        visibility: hidden;
+                                    }
+                                }
+
+                                &.rotated-icon {
+                                    .layout-menuitem-icon {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+
+                            > ul {
+                                list-style-type: none;
+                                overflow: hidden;
+                                padding: 0;
+                                margin: 0;
+
+                                > li {
+                                    padding: 6px 0;
+                                    margin: 0;
+
+                                    ul {
+                                        li {
+                                            padding: 0;
+                                        }
+                                    }
+
+                                    &.layout-root-menuitem {
+                                        > a {
+                                            @include flex();
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .layout-main {
+                margin-left: 92px;
+            }
         }
     }
 }

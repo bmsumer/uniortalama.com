@@ -9,11 +9,12 @@
                 'layout-static-inactive': staticMenuDesktopInactive && app.menuMode === 'static',
                 'p-input-filled': app.inputStyle === 'filled', 'p-ripple-disabled': !app.ripple}">
 
-    <app-topbar *ngIf="isMobile() || isOverlay() || isHorizontal()"></app-topbar>
-
-    <app-menu *ngIf="!isMobile() && (isStatic() || isSlim() || isSidebar())"></app-menu>
-
     <div class="layout-main">
+
+        <app-topbar *ngIf="isMobile() || isOverlay() || isHorizontal()"></app-topbar>
+
+        <app-menu *ngIf="!isMobile() && (isStatic() || isSlim() || isSidebar())"></app-menu>
+
         <app-breadcrumb></app-breadcrumb>
 
         <div class="layout-main-content">
