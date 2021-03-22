@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
+import {AppComponent} from './app.component';
 
 @Component({
     selector: 'app-footer',
     template: `
         <div class="layout-footer">
             <div class="footer-logo-container">
-                <img id="footer-logo" [src]="'assets/layout/images/logo-black.png'" alt="atlantis-layout"/>
+                <img id="footer-logo"   [src]="'assets/layout/images/logo-'+ (app.colorScheme === 'light' ? 'dark' : 'light') + '.png'" alt="atlantis-layout"/>
                 <span class="app-name">ATLANTIS</span>
             </div>
             <span class="copyright">&#169; Your Organization - 2021</span>
@@ -13,5 +14,5 @@ import {Component} from '@angular/core';
     `
 })
 export class AppFooterComponent {
-
+    constructor(public app: AppComponent) {}
 }

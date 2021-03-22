@@ -3,11 +3,11 @@
     <div class="menu-logo" *ngIf="!appMain.isHorizontal() || appMain.isMobile()">
 
         <a href="#" class="logo">
-            <img src="assets/layout/images/logo.png">
+            <img [src]="'assets/layout/images/logo-'+ (app.colorScheme === 'light' ? 'dark' : 'light') + '.png'">
         </a>
 
         <a href="#" class="app-name" *ngIf="!appMain.isSlim() || appMain.isMobile()">
-            <img src="assets/layout/images/appname.png"/>
+            <img [src]="'assets/layout/images/appname-'+ (app.colorScheme === 'light' ? 'dark' : 'light') + '.png'"/>
         </a>
         <a href="#" class="menu-pin" (click)="appMain.onToggleMenu($event)">
             <span *ngIf="appMain.isOverlay()" class="pi pi-times"></span>
