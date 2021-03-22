@@ -109,29 +109,3 @@
         }
     }
 }
-
-@media (max-width: $tabletBreakpoint) {
-    .layout-menu-wrapper {
-        .menu-logo {
-            height: 75px;
-            @include flex();
-            @include flex-justify-start();
-            @include flex-align-center();
-            padding: 0 22px 0 25px;
-
-            .logo {
-                img {
-                    height: 2rem;
-                    border: 0 none;
-                }
-            }
-
-            .app-name {
-                img {
-                    height: 1.5rem;
-                    padding-left: 16px;
-                }
-            }
-        }
-    }
-}
