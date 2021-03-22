@@ -1,6 +1,12 @@
 @media (min-width: $tabletBreakpoint + 1) {
     .layout-wrapper {
         &.layout-sidebar {
+            &.layout-sidebar-static {
+                .layout-main {
+                    margin-left: 21rem;
+                }
+            }
+
             .layout-menu-wrapper {
                 height: 100%;
                 position: fixed;
@@ -29,6 +35,13 @@
                             display: inline;
                         }
                     }
+
+                    .menu-pin {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
                     //@include internalSubmenu;
                     .layout-menu-container {
                         overflow: auto;

@@ -10,7 +10,9 @@
             <img src="assets/layout/images/appname.png"/>
         </a>
         <a href="#" class="menu-pin" (click)="appMain.onToggleMenu($event)">
-            <span class="pi pi-times"></span>
+            <span *ngIf="appMain.isOverlay()" class="pi pi-times"></span>
+            <span *ngIf="appMain.isSidebar() && !appMain.sidebarStatic" class="pi pi-unlock"></span>
+            <span *ngIf="appMain.isSidebar() && appMain.sidebarStatic" class="pi pi-lock"></span>
         </a>
     </div>
 

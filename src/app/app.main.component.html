@@ -4,6 +4,7 @@
                 'layout-slim': app.menuMode === 'slim',
                 'layout-horizontal': app.menuMode === 'horizontal',
                 'layout-sidebar': app.menuMode === 'sidebar',
+                'layout-sidebar-static': app.menuMode === 'sidebar' && sidebarStatic,
                 'layout-overlay-active': overlayMenuActive,
                 'layout-mobile-active': staticMenuMobileActive,
                 'layout-static-inactive': staticMenuDesktopInactive && app.menuMode === 'static',

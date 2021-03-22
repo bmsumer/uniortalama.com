@@ -16,6 +16,8 @@ export class AppMainComponent {
 
     sidebarActive = false;
 
+    sidebarStatic = false;
+
     menuClick: boolean;
 
     menuHoverActive = false;
@@ -72,17 +74,21 @@ export class AppMainComponent {
             this.overlayMenuActive = false;
         }
 
+        if (this.sidebarActive) {
+            this.sidebarStatic = !this.sidebarStatic;
+        }
+
         event.preventDefault();
     }
 
     onSidebarMouseOver(event) {
-        if (this.app.menuMode === 'sidebar') {
+        if (this.app.menuMode === 'sidebar' && !this.sidebarStatic) {
             this.sidebarActive = this.isDesktop();
         }
     }
 
     onSidebarMouseLeave($event) {
-        if (this.app.menuMode === 'sidebar') {
+        if (this.app.menuMode === 'sidebar' && !this.sidebarStatic) {
             setTimeout(() => {
                 this.sidebarActive = false;
             }, 250);
