@@ -166,8 +166,16 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: $tabletBreakpoint) {
     .layout-wrapper {
+        .layout-topbar {
+            .layout-topbar-left {
+                .app-name {
+                    height: 10px;
+                }
+            }
+        }
+
         /*.topbar {
             #topbar-menu-button {
                 display: block;

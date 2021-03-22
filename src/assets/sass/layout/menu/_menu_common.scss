@@ -1,4 +1,5 @@
 .layout-menu-wrapper {
+    position: fixed;
     height: 100%;
     width: $menuWidth;
     left: 0;
@@ -8,11 +9,10 @@
     border-radius: 0px 40px 40px 0px;
 
     .menu-logo {
-        height: 75px;
         @include flex();
         @include flex-justify-start();
         @include flex-align-center();
-        padding: 0 22px 0 25px;
+        padding: 25px 22px 0 34px;
 
         .menu-pin {
             display: none;
@@ -30,7 +30,7 @@
 
         .logo {
             img {
-                height: 2rem;
+                height: 2.5rem;
                 border: 0 none;
             }
         }
@@ -48,12 +48,18 @@
     }
 
     .layout-menu-container {
-        display: flex;
-        flex-direction: column;
         height: 100%;
+        overflow: auto;
+        padding-bottom: 120px;
 
         .layout-menu {
-            padding: 0 .75rem;
+            padding: 0 1.5rem;
+
+            > li {
+                &:first-child {
+                    margin-top: 2rem;
+                }
+            }
 
             li {
                 border-radius: 8px;
@@ -62,7 +68,7 @@
                     > div {
                         padding-left: 1.5rem;
                         margin-bottom: .5rem;
-                        margin-top: 1.5rem;
+                        font-size: 12px;
 
                         > .layout-menuitem-text {
                             font-size: .857rem;
@@ -75,7 +81,7 @@
                 > a {
                     display: flex;
                     align-items: center;
-                    padding: .75rem;
+                    padding: .5rem 1rem;
                     cursor: pointer;
                     user-select: none;
                     border-radius: 8px;
@@ -127,6 +133,45 @@
                         @include nested-submenu-indents(10, 2, 5);
                     }
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width: $tabletBreakpoint) {
+    .layout-wrapper {
+        .layout-menu-wrapper {
+            mix-blend-mode: normal;
+            backdrop-filter: blur(200px);
+            transform: translateX(-100%);
+            transition: transform $animationDuration $animationTimingFunction;
+
+            .layout-menu {
+                padding: 0 1.5rem;
+                overflow: auto;
+
+                li {
+                    &.layout-root-menuitem {
+                        > div {
+                            display: none;
+                        }
+                    }
+
+                    > ul {
+                        padding: 0 .5rem;
+                    }
+                }
+
+                > li {
+                    > a {
+                        padding: .75rem 1.25rem;
+                    }
+                }
+            }
+        }
+
+        &.layout-mobile-active {
+            .layout-menu-wrapper {
+                transform: translateX(0);
             }
         }
     }

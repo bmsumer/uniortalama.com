@@ -8,14 +8,12 @@
                 left: 0;
                 z-index: 999;
                 width: 6.571em;
-                overflow-y: scroll;
                 mix-blend-mode: normal;
                 backdrop-filter: blur(200px);
                 @include transition(all $transitionDuration);
 
                 .menu-logo {
-                    height: 62px;
-                    padding: 0 22px 0 34px;
+                    padding-left: 25px;
 
                     .app-name {
                         display: none;
@@ -36,7 +34,7 @@
                         overflow: auto;
 
                         .layout-menu {
-                            padding-bottom: 120px;
+                            padding-right: 22px;
 
                             li {
                                 > a {
@@ -61,7 +59,7 @@
                     .layout-menu {
                         list-style-type: none;
                         margin: 0;
-                        padding: 0 22px;
+                        padding: 0 26px 0 22px;
                         overflow: hidden;
 
                         > li {
@@ -131,7 +129,7 @@
                                 margin: 0;
 
                                 > li {
-                                    padding: 6px 0;
+                                    padding: 6px 0 0 0;
                                     margin: 0;
 
                                     ul {

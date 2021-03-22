@@ -12,83 +12,6 @@
             }
         }
     }
-
-    .layout-menu-container {
-        .layout-menu {
-            > li {
-                > a {
-                    color: $rootMenuItemTextColor;
-
-                    &:hover {
-                        color: $primaryColor;
-                        color: $activeRootMenuItemTextColor;
-                    }
-
-                    &.active-menuitem-routerlink {
-                        color: $primaryColor;
-                        color: $activeRootMenuItemTextColor;
-
-                        &::before {
-                            background-color: $primaryColor;
-                            background-color: $activeRootMenuItemTextColor;
-                        }
-                    }
-                }
-
-                &.active-menuitem {
-                    > a {
-                        color: $primaryColor;
-                        color: $activeRootMenuItemTextColor;
-
-                        &::before {
-                            background-color: $primaryColor;
-                            background-color: $activeRootMenuItemTextColor;
-                        }
-                    }
-                }
-
-                > ul {
-                    > li {
-                        > a {
-                            &.active-menuitem-routerlink {
-                                color: $primaryColor;
-                                color: $activeRootMenuItemTextColor;
-
-                                &::before {
-                                    background-color: $primaryColor;
-                                    background-color: $activeRootMenuItemTextColor;
-                                }
-                            }
-                        }
-                    }
-
-                    li {
-                        a {
-                            color: $submenuItemTextColor;
-
-                            &:hover {
-                                background-color: rgba($primaryColor, .2);
-                                background-color: $submenuItemHoverBg;
-                            }
-                        }
-
-                        &.active-menuitem {
-                            > a {
-                                color: $primaryColor;
-                                color: $activeRootMenuItemTextColor;
-
-                                &::before {
-                                    background-color: $primaryColor;
-                                    background-color: $activeRootMenuItemTextColor;
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-        }
-    }
 }
 
 @mixin extrenalSubmenuitem {
@@ -118,18 +41,15 @@
                     color: $rootMenuItemTextColor;
 
                     &:hover {
-                        color: $primaryColor;
                         color: $activeRootMenuItemTextColor;
                     }
                 }
 
                 &.active-menuitem {
                     > a {
-                        color: $primaryColor;
                         color: $activeRootMenuItemTextColor;
 
                         &::before {
-                            background-color: $primaryColor;
                             background-color: $activeRootMenuItemTextColor;
                         }
                     }
@@ -138,13 +58,11 @@
                 > ul {
                     > li {
                         &.active-menuitem {
-                            background-color: rgba($primaryColor, .2);
                             background-color: $submenuItemHoverBg;
 
                             > a {
-                                background-color: rgba($primaryColor, .1);
                                 background-color: $submenuItemHoverBg;
-                                color: $rootMenuItemTextColor;
+                                color: $submenuItemTextColor;
                             }
                         }
                     }
@@ -154,14 +72,13 @@
                             color: $submenuItemTextColor;
 
                             &:hover {
-                                background-color: rgba($primaryColor, .1);
                                 background-color: $submenuItemHoverBg;
                             }
                         }
 
                         &.active-menuitem {
                             > a {
-                                color: $rootMenuItemTextColor;
+                                color: $submenuItemTextColor;
                             }
                         }
                     }
@@ -180,6 +97,13 @@
                 .layout-menu-container {
                     .layout-menu {
                         > li {
+
+                            &.layout-root-menuitem {
+                                > div {
+                                    color: $rootMenuItemTextColor;
+                                }
+                            }
+
                             ul {
                                 li {
                                     &.active-menuitem {
@@ -403,6 +327,59 @@
 
 @media (max-width: $tabletBreakpoint) {
     .layout-menu-wrapper {
-        @include internalSubmenu;
+        background-color: transparent;
+
+        .layout-menu-container {
+            .layout-menu {
+                > li {
+                    > a {
+                        color: $rootMenuItemTextColor;
+
+                        &:hover {
+                            background-color: $rootMenuItemHoverBg;
+                            color: $rootMenuItemHoverTextColor;
+                        }
+                    }
+
+                    &.active-menuitem {
+                        background: $overlayMenuActiveBg;
+
+                        > a {
+                            color: $rootMenuItemTextColor;
+
+                            i {
+                                color: $rootMenuItemTextColor;
+                            }
+
+                            &:hover {
+                                background-color: $rootMenuItemHoverBg;
+                                color: $rootMenuItemHoverTextColor;
+                            }
+                        }
+                    }
+
+                    > ul {
+                        li {
+                            > a {
+                                color: $submenuItemTextColor;
+
+                                &:hover {
+                                    background-color: $submenuItemHoverBg;
+                                    color: $submenuItemHoverTextColor;
+                                }
+                                &.active-menuitem-routerlink {
+                                    background-color: $overlayMenuItemActiveBg;
+                                    color: $overlayMenuItemActiveTextColor;
+
+                                    &:hover {
+                                        color: $overlayMenuItemActiveTextColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

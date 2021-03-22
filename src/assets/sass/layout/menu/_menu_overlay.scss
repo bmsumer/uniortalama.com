@@ -1,4 +1,4 @@
-@media (min-width: $phoneBreakpoint + 1) {
+@media (min-width: $tabletBreakpoint + 1) {
     .layout-wrapper {
         &.layout-overlay {
             .layout-menu-wrapper {
@@ -9,8 +9,6 @@
                 transition: transform $animationDuration $animationTimingFunction;
 
                 .layout-menu-container {
-                    overflow-y: auto;
-
                     .layout-menu {
                         padding: 0 1.5rem;
 
@@ -20,15 +18,13 @@
                                     display: none;
                                 }
                             }
-
-                            > ul {
-                                padding: 0 .5rem;
-                            }
                         }
 
                         > li {
+                            padding: 6px;
+
                             > a {
-                                padding: .75rem 1.25rem;
+                                padding: .75rem 1rem;
                             }
                         }
                     }

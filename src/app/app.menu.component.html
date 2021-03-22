@@ -1,12 +1,12 @@
 <div class="layout-menu-wrapper" [ngClass]="{'layout-sidebar-active': appMain.sidebarActive}"
      (click)="appMain.onSidebarClick($event)" (mouseover)="appMain.onSidebarMouseOver($event)" (mouseleave)="appMain.onSidebarMouseLeave($event)">
-    <div class="menu-logo" *ngIf="!appMain.isHorizontal()">
+    <div class="menu-logo" *ngIf="!appMain.isHorizontal() || appMain.isMobile()">
 
         <a href="#" class="logo">
             <img src="assets/layout/images/logo.png">
         </a>
 
-        <a href="#" class="app-name" *ngIf="!appMain.isSlim()">
+        <a href="#" class="app-name" *ngIf="!appMain.isSlim() || appMain.isMobile()">
             <img src="assets/layout/images/appname.png"/>
         </a>
         <a href="#" class="menu-pin" (click)="appMain.onToggleMenu($event)">

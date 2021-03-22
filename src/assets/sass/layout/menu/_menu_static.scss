@@ -1,4 +1,4 @@
-@media (min-width: $phoneBreakpoint + 1) {
+@media (min-width: $tabletBreakpoint + 1) {
     .layout-wrapper {
         &.layout-static {
             .menu-button {
@@ -29,8 +29,6 @@
                     padding-bottom: 120px;
 
                     ul {
-                        overflow: scroll;
-
                         .layout-root-menuitem {
                             > a {
                                 display: none;
@@ -39,6 +37,10 @@
                     }
 
                     .layout-menu {
+                        > li {
+                            margin-bottom: 2.25rem;
+                        }
+
                         li {
                             a {
                                 border-left: 8px solid transparent;
