@@ -94,7 +94,7 @@
                                 > li {
                                     border: 0 none;
                                     margin: 0;
-                                    @include nested-submenu-indents(10, 2, 10);
+                                    @include nested-submenu-indents(8, 2, 8);
 
                                     ul {
                                         list-style-type: none;

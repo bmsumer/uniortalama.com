@@ -133,6 +133,8 @@
                     list-style-type: none;
                     margin: 0;
                     padding: 8px 0;
+                    border-radius: 6px;
+                    background: $topbarSubmenuBg;
                     backdrop-filter: blur(200px);
                     --webkit-backdrop-filter: blur(200px);
 
