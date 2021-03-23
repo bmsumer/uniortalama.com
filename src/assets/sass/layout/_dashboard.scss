@@ -1,3 +1,95 @@
+.layout-dashboard {
+    .widget-overview-box {
+        height: 6rem;
+        border-radius: 12px;
+        padding: 14px 12px;
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: 14px;
+            right: 12px;
+        }
+
+        .overview-title {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        .overview-badge {
+            height: 32px;
+            width: 70px;
+            border-radius: 6px;
+            padding: .5em;
+            margin-top: .5em;
+            margin-right: 12px;
+
+            i {
+                width: 24px;
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        .overview-text {
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        &.widget-overview-box-1 {
+            .overview-badge {
+                background-color: #FC6161;
+                box-shadow: 0px 6px 20px rgba(252, 97, 97, 0.3);
+            }
+        }
+
+        &.widget-overview-box-2 {
+            .overview-badge {
+                margin-right: 12px;
+                background-color: #0BD18A;
+                box-shadow: 0px 6px 20px rgba(11, 209, 138, 0.3);
+            }
+        }
+
+        &.widget-overview-box-3 {
+            .overview-badge {
+                background-color: #00D0DE;
+                box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tabletBreakpoint) {
+    .layout-dashboard {
+        .widget-overview-box {
+            &.widget-overview-box-1 {
+                img {
+                    height: 54px;
+                }
+            }
+
+            &.widget-overview-box-2 {
+                img {
+                    height: 38px;
+                }
+            }
+
+            &.widget-overview-box-3 {
+                img {
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
 .dashboard {
 
     .card {
