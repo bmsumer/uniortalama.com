@@ -6,15 +6,11 @@
 }
 
 .card {
-    @include border-radius(2px);
+    @include border-radius(8px);
     background: $cardBg;
     padding: 16px;
     box-sizing: border-box;
     margin-bottom: 16px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
 
     .card-header {
         @include flex();

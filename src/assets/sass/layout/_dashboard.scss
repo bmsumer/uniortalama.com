@@ -62,6 +62,132 @@
             }
         }
     }
+
+    .widget-visitor-graph {
+        .card-header {
+            line-height: 24px;
+
+            .actions {
+                span {
+                    display: inline-flex;
+                    align-items: center;
+
+                    &:first-child {
+                        margin-right: 25px;
+                    }
+
+                    i {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+
+        .graph-content {
+            margin-top: 1.5rem;
+
+            h6 {
+                margin-top: 1rem;
+            }
+
+            p {
+                color: $textThirdColor;
+            }
+        }
+
+        .graph {
+            h6 {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    .widget-timeline {
+        &.card {
+            padding: 0;
+        }
+
+        .timeline-header {
+            padding: 16px;
+
+            p {
+                margin: 0;
+            }
+
+            .header-icons {
+                i {
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+        .p-timeline {
+            padding: 0 16px;
+
+            &.p-timeline-vertical .p-timeline-event-opposite {
+                flex: 0;
+                padding: 0;
+            }
+
+            .p-timeline-event-content {
+                p, h6 {
+                    margin: 0;
+                }
+
+                span {
+                    color: $textThirdColor;
+                    font-size: 11px;
+                }
+
+                &:last-child {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .custom-marker {
+                border-radius: 50%;
+                padding: .25rem;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+            }
+        }
+
+        .timeline-footer {
+            border-top: 1px solid $dividerColor;
+            padding: 16px;
+        }
+    }
+
+    .widget-country-graph {
+        .country-title {
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        .country-content {
+            ul {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                outline: 0;
+                text-decoration: none;
+                list-style-type: none;
+
+                li {
+                    padding: 8px 0;
+                    border-bottom: 1px solid $dividerColor;
+
+                    .color {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 4px;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $tabletBreakpoint) {

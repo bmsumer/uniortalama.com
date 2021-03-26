@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EventService} from '../service/eventservice';
-import {SelectItem} from 'primeng/api';
+import {SelectItem, PrimeIcons} from 'primeng/api';
 import {Product} from '../domain/product';
 import {ProductService} from '../service/productservice';
 import {AppBreadcrumbService} from '../../app.breadcrumb.service';
@@ -13,6 +13,19 @@ import interactionPlugin from '@fullcalendar/interaction';
     styleUrls: ['./tabledemo.scss']
 })
 export class DashboardDemoComponent implements OnInit {
+
+    visitorChart: any;
+
+    visitorChartOptions: any;
+
+    timelineEvents: any[];
+
+    countryChart: any;
+
+    countryChartOptions: any;
+
+
+
 
     cities: SelectItem[];
 
@@ -35,6 +48,114 @@ export class DashboardDemoComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.visitorChart = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Plan',
+                    data: [630, 630, 695, 695, 695, 760, 760, 760, 840, 840, 840, 840],
+                    borderColor: [
+                        '#FC6161',
+                    ],
+                    steppedLine: true,
+                    pointBorderColor: 'transparent',
+                    pointBackgroundColor: 'transparent',
+                    type: 'line',
+                    fill: false
+                },
+                {
+                    label: 'Groth actual',
+                    data: [600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810, 780],
+                    backgroundColor: getComputedStyle(document.body).getPropertyValue('--primary-color') ,
+                    fill: true
+                }
+            ]
+        };
+
+        this.visitorChartOptions = {
+            legend: {
+                position: 'top',
+                align: 'end'
+            },
+            responsive: true,
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 500,
+                        max: 900
+                    },
+                    gridLines: {
+                        display: false
+                    }
+                }],
+                xAxes: [{
+                    barPercentage: 0.5,
+                    gridLines: {
+                        display: false
+                    }
+                }]
+            }
+        };
+
+        this.timelineEvents = [
+            {transaction: 'Payment from #28492', amount: '+$250.00', date: 'June 13, 2020 11:09 AM',
+                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
+            {transaction: 'Process refund to #94830', amount: '-$570.00', date: 'June 13, 2020 08:22 AM',
+                icon: PrimeIcons.REFRESH, iconColor: '#FC6161', amountColor: '#FC6161'},
+            {transaction: 'New 8 user to #5849', amount: '+$50.00', date: 'June 12, 2020 02:56 PM',
+                icon: PrimeIcons.PLUS, iconColor: '#0BD18A', amountColor: '#0BD18A'},
+            {transaction: 'Payment from #3382', amount: '+$3830.00', date: 'June 11, 2020 06:11 AM',
+                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
+            {transaction: 'Payment from #4738', amount: '+$845.00', date: 'June 11, 2020 03:50 AM',
+                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
+            {transaction: 'Payment failed form #60958', amount: '$1450.00', date: 'June 10, 2020 07:54 PM',
+                icon: PrimeIcons.EXCLAMATION_TRIANGLE, iconColor: '#EC4DBC', amountColor: '#EC4DBC'},
+            {transaction: 'Payment from #5748', amount: '+$50.00', date: 'June 09, 2020 11:37 PM',
+                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
+            {transaction: 'Removed 32 users from #5849', amount: '-$240.00', date: 'June 09, 2020 08:40 PM',
+                icon: PrimeIcons.MINUS, iconColor: '#FC6161', amountColor: '#FC6161'},
+        ];
+
+        this.countryChart = {
+            labels: ['RUS', 'Other', 'IND', 'AUS', 'JPN', 'USA', 'CHN'],
+            datasets: [
+                {
+                    data: [30, 18, 36, 54, 61, 90, 72],
+                    backgroundColor: [
+                        '#0F8BFD',
+                        '#545C6B',
+                        '#EC4DBC',
+                        '#EEE500',
+                        '#FC6161',
+                        '#00D0DE',
+                        '#873EFE',
+                    ],
+                    hoverBackgroundColor: [
+                        '#0F8BFD',
+                        '#545C6B',
+                        '#EC4DBC',
+                        '#EEE500',
+                        '#FC6161',
+                        '#00D0DE',
+                        '#873EFE',
+                    ],
+                    borderColor: 'transparent',
+                    fill: true
+                }
+            ]
+        };
+
+        this.countryChartOptions = {
+
+        };
+
+
+
+
+
         this.productService.getProducts().then(data => this.products = data);
         this.eventService.getEvents().then(events => {
             this.events = events;
@@ -49,7 +170,7 @@ export class DashboardDemoComponent implements OnInit {
         this.cities.push({label: 'Paris', value: {id: 5, name: 'Paris', code: 'PRS'}});
 
         this.chartData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
             datasets: [
                 {
                     label: 'First Dataset',
