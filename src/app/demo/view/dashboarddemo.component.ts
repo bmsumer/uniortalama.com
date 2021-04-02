@@ -24,6 +24,10 @@ export class DashboardDemoComponent implements OnInit {
 
     countryChartOptions: any;
 
+    revenueChart: any;
+
+    revenueChartOptions: any;
+
 
 
 
@@ -148,9 +152,61 @@ export class DashboardDemoComponent implements OnInit {
             ]
         };
 
-        this.countryChartOptions = {
+        this.countryChartOptions = {};
 
+        this.revenueChart = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [
+                {
+                    label: 'Sales',
+                    data: [37, 34, 21, 27, 10, 18, 15],
+                    borderColor: '#EEE500',
+                    pointBackgroundColor: '#EEE500',
+                    backgroundColor: 'rgba(238, 229, 0, 0.05)',
+                    fill: true
+                },
+                {
+                    label: 'Revenue',
+                    data: [31, 27, 30, 37, 23, 29, 20],
+                    borderColor: '#00D0DE',
+                    pointBackgroundColor: '#00D0DE',
+                    backgroundColor: 'rgba(0, 208, 222, 0.05)',
+                    fill: true,
+                },
+                {
+                    label: 'Expenses',
+                    data: [21, 7, 13, 3, 19, 11, 6],
+                    borderColor: '#FC6161',
+                    pointBackgroundColor: '#FC6161',
+                    backgroundColor: 'rgba(253, 72, 74, 0.05)',
+                    fill: true
+                },
+                {
+                    label: 'Customer',
+                    data: [47, 31, 35, 20, 46, 39, 25],
+                    borderColor: '#0F8BFD',
+                    pointBackgroundColor: '#0F8BFD',
+                    backgroundColor: 'rgba(15, 139, 253, 0.05)',
+                    fill: true
+                }]
         };
+
+        this.revenueChartOptions = {
+            responsive: true,
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 60,
+                        stepSize: 5
+                    }
+                }]
+            }
+        };
+
 
 
 

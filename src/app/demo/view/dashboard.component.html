@@ -130,12 +130,94 @@
                     <ul>
                         <li class="p-d-flex p-jc-between p-ai-center">
                             <div class="p-d-flex p-jc-between p-ai-center">
-                                <div class="color" style="background-color: #00D0DE"></div>
+                                <div class="color" style="background-color: #00D0DE; box-shadow: 0px 0px 10px rgba(0, 208, 222, 0.3);"></div>
                                 <span>United States of America</span>
                             </div>
                             <span>25%</span>
                         </li>
+                        <li class="p-d-flex p-jc-between p-ai-center">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <div class="color" style="background-color: #873EFE; box-shadow: 0px 0px 10px rgba(135, 62, 254, 0.3)"></div>
+                                <span>China</span>
+                            </div>
+                            <span>20%</span>
+                        </li>
+                        <li class="p-d-flex p-jc-between p-ai-center">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <div class="color" style="background-color: #FC6161; box-shadow: 0px 0px 10px rgba(252, 97, 97, 0.3)"></div>
+                                <span>Japan</span>
+                            </div>
+                            <span>17%</span>
+                        </li>
+                        <li class="p-d-flex p-jc-between p-ai-center">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <div class="color" style="background-color: #EEE500; box-shadow: 0px 0px 10px rgba(238, 229, 0, 0.3)"></div>
+                                <span>Australia</span>
+                            </div>
+                            <span>15%</span>
+                        </li>
+                        <li class="p-d-flex p-jc-between p-ai-center">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <div class="color" style="background-color: #EC4DBC; box-shadow: 0px 0px 10px rgba(236, 77, 188, 0.3)"></div>
+                                <span>India</span>
+                            </div>
+                            <span>10%</span>
+                        </li>
+                        <li class="p-d-flex p-jc-between p-ai-center">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <div class="color" style="background-color: #0F8BFD; box-shadow: 0px 0px 10px rgba(15, 139, 253, 0.3)"></div>
+                                <span>Rusian Federation</span>
+                            </div>
+                            <span>8%</span>
+                        </li>
+                        <li class="p-d-flex p-jc-between p-ai-center">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                                <div class="color" style="background-color: #545C6B"></div>
+                                <span>Others</span>
+                            </div>
+                            <span>5%</span>
+                        </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-col-12 p-md-8">
+            <div class="card widget-revenue-graph">
+                <div class="card-header">
+                    <span>Montly revenue</span>
+                    <div class="actions">
+                        <span>January - July 2020<i class="pi pi-angle-down"></i></span>
+                    </div>
+                </div>
+
+                <div class="graph">
+                    <h6>Revenue</h6>
+
+                    <p-chart type="line" id="revenue-chart" [data]="revenueChart" [options]="revenueChartOptions"></p-chart>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-col-12 p-md-8">
+            <div class="card widget-table">
+                <div class="card-header">
+                    <span>Yearly win</span>
+                    <div class="actions">
+                        <span>2019<i class="pi pi-angle-down"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-col-12 p-md-4">
+            <div class="card widget-performance">
+                <div class="header">
+                    <span>Quarterly win</span>
+                    <p class="subtitle">Top performances</p>
+                </div>
+                <div class="content">
+
                 </div>
             </div>
         </div>

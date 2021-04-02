@@ -188,6 +188,52 @@
             }
         }
     }
+
+    .widget-revenue-graph {
+        .card-header {
+            line-height: 24px;
+
+            .actions {
+                span {
+                    display: inline-flex;
+                    align-items: center;
+
+                    i {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-table {
+        .card-header {
+            line-height: 24px;
+
+            .actions {
+                span {
+                    display: inline-flex;
+                    align-items: center;
+
+                    i {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-performance {
+        .header {
+            line-height: 24px;
+            font-weight: 500;
+
+            .subtitle {
+                font-size: 12px;
+                color: $textSecondaryColor;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $tabletBreakpoint) {
