@@ -1,12 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {EventService} from '../service/eventservice';
 import {SelectItem, PrimeIcons} from 'primeng/api';
-import {Product} from '../domain/product';
-import {ProductService} from '../service/productservice';
+import {Customer} from '../domain/customer';
+import {CustomerService} from '../service/customerservice';
 import {AppBreadcrumbService} from '../../app.breadcrumb.service';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from '@fullcalendar/interaction';
 
 @Component({
     templateUrl: './dashboard.component.html',
@@ -28,22 +25,15 @@ export class DashboardDemoComponent implements OnInit {
 
     revenueChartOptions: any;
 
+    customers1: Customer[];
 
+    selectedCustomers1: Customer[];
 
+    customerChart: any;
 
-    cities: SelectItem[];
+    customerChartOptions: any;
 
-    products: Product[];
-
-    chartData: any;
-
-    events: any[];
-
-    selectedCity: any;
-
-    fullcalendarOptions: any;
-
-    constructor(private productService: ProductService, private eventService: EventService,
+    constructor(private customerService: CustomerService, private eventService: EventService,
                 private breadcrumbService: AppBreadcrumbService) {
         this.breadcrumbService.setItems([
             {label: 'Dashboard'},
@@ -52,6 +42,12 @@ export class DashboardDemoComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.customerService.getCustomersLarge().then(customers => {
+            this.customers1 = customers;
+            // @ts-ignore
+            this.customers1.forEach(customer => customer.date = new Date(customer.date));
+        });
+
         this.visitorChart = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
             datasets: [
@@ -207,49 +203,136 @@ export class DashboardDemoComponent implements OnInit {
             }
         };
 
-
-
-
-
-
-        this.productService.getProducts().then(data => this.products = data);
-        this.eventService.getEvents().then(events => {
-            this.events = events;
-        });
-
-        this.cities = [];
-        this.cities.push({label: 'Select City', value: null});
-        this.cities.push({label: 'New York', value: {id: 1, name: 'New York', code: 'NY'}});
-        this.cities.push({label: 'Rome', value: {id: 2, name: 'Rome', code: 'RM'}});
-        this.cities.push({label: 'London', value: {id: 3, name: 'London', code: 'LDN'}});
-        this.cities.push({label: 'Istanbul', value: {id: 4, name: 'Istanbul', code: 'IST'}});
-        this.cities.push({label: 'Paris', value: {id: 5, name: 'Paris', code: 'PRS'}});
-
-        this.chartData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+        this.customerChart = {
+            labels: ['January', 'March', 'May', 'Agust', 'October', 'December'],
             datasets: [
                 {
-                    label: 'First Dataset',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    fill: false,
-                    borderColor: '#FFC107'
+                    data: [10, 25, 48, 35, 54, 70],
+                    backgroundColor: '#AAABDD',
+                    hoverBackgroundColor: '#AAABDD',
+                    fill: true
                 },
                 {
-                    label: 'Second Dataset',
-                    data: [28, 48, 40, 19, 86, 27, 90],
-                    fill: false,
-                    borderColor: '#03A9F4'
+                    data: [18, 35, 23, 30, 59, 65],
+                    backgroundColor: '#A0A0D9',
+                    hoverBackgroundColor: '#A0A0D9',
+                    fill: true
+                },
+                {
+                    data: [20, 47, 46, 46, 61, 70],
+                    backgroundColor: '#ACADDE',
+                    hoverBackgroundColor: '#ACADDE',
+                    fill: true
+                },
+                {
+                    data: [17, 34, 18, 48, 67, 68],
+                    backgroundColor: '#ABABDD',
+                    hoverBackgroundColor: '#ABABDD',
+                    fill: true
+                },
+                {
+                    data: [9, 37, 47, 50, 60, 62],
+                    backgroundColor: '#A2A3D9',
+                    hoverBackgroundColor: '#A2A3D9',
+                    fill: true
+                },
+                {
+                    data: [8, 48, 40, 52, 72, 75],
+                    backgroundColor: '#A3A4DA',
+                    hoverBackgroundColor: '#A3A4DA',
+                    fill: true
+                },
+                {
+                    data: [10, 18, 50, 47, 63, 80],
+                    backgroundColor: '#A2A3D9',
+                    hoverBackgroundColor: '#A2A3D9',
+                    fill: true
+                },
+                {
+                    data: [20, 36, 39, 58, 59, 85],
+                    backgroundColor: '#8485CD',
+                    hoverBackgroundColor: '#8485CD',
+                    fill: true
+                },
+                {
+                    data: [30, 45, 35, 50, 54, 81],
+                    backgroundColor: '#7D7ECA',
+                    hoverBackgroundColor: '#7D7ECA',
+                    fill: true
+                },
+                {
+                    data: [28, 35, 52, 56, 60, 77],
+                    backgroundColor: '#8384CD',
+                    hoverBackgroundColor: '#8384CD',
+                    fill: true
+                },
+                {
+                    data: [40, 40, 38, 45, 68, 86],
+                    backgroundColor: '#8F90D2',
+                    hoverBackgroundColor: '#8F90D2',
+                    fill: true
+                },
+                {
+                    data: [50, 23, 27, 34, 65, 90],
+                    backgroundColor: '#8C8DD0',
+                    hoverBackgroundColor: '#8C8DD0',
+                    fill: true
+                },
+                {
+                    data: [29, 27, 29, 42, 55, 84],
+                    backgroundColor: '#9495D4',
+                    hoverBackgroundColor: '#9495D4',
+                    fill: true
+                },
+                {
+                    data: [10, 37, 47, 29, 59, 80],
+                    backgroundColor: '#9696D4',
+                    hoverBackgroundColor: '#9696D4',
+                    fill: true
+                },
+                {
+                    data: [10, 54, 42, 38, 63, 83],
+                    backgroundColor: '#7273C6',
+                    hoverBackgroundColor: '#7273C6',
+                    fill: true
+                },
+                {
+                    data: [25, 44, 50, 56, 65, 92],
+                    backgroundColor: '#5F60BE',
+                    hoverBackgroundColor: '#5F60BE',
+                    fill: true
+                },
+                {
+                    data: [30, 43, 48, 45, 73, 78],
+                    backgroundColor: '#5C5DBD',
+                    hoverBackgroundColor: '#5C5DBD',
+                    fill: true
+                },
+                {
+                    data: [29, 47, 54, 60, 77, 86],
+                    backgroundColor: '#5C5DBD',
+                    hoverBackgroundColor: '#5C5DBD',
+                    fill: true
                 }
             ]
         };
 
-        this.fullcalendarOptions = {
-            plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
-            defaultDate: '2017-02-12',
-            header: {
-                right: 'prev,next,today',
-                left: 'title'
-            }
+        this.customerChartOptions = {
+            legend: {
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                    display: false,
+                }],
+                xAxes: [{
+                    gridLines : {
+                        display : false
+                    },
+                    categoryPercentage: 1.0,
+                    barPercentage: 1.0
+                }]
+            },
         };
     }
 }

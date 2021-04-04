@@ -23,7 +23,6 @@ $topbarTextHoverColor: $textColor !default;
 $topbarIconBg: rgba(68, 72, 109, 0.07) !default;
 $topbarIconHoverBg: rgba(68, 72, 109, 0.12) !default;
 
-
 $topbarSubmenuBg: rgba(68, 72, 109, 0.07) !default;
 $topbarSubmenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
 
@@ -53,6 +52,9 @@ $slimRootMenuItemIconColor: $textColor;
 $slimActiveRootMenuItemBgColor: $primaryColor;
 $slimActiveRootMenuItemTextColor: $primaryTextColor;
 $slimMenuItemTextColor: $textColor;
+
+//dashboard
+$progressBarBg: rgba(68, 72, 109, 0.12);
 
 /*
 //accent

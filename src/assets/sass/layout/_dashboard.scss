@@ -209,6 +209,7 @@
     .widget-table {
         .card-header {
             line-height: 24px;
+            margin-bottom: 1rem;
 
             .actions {
                 span {
@@ -221,6 +222,14 @@
                 }
             }
         }
+
+        .p-datatable {
+            .p-button {
+                .p-button-icon {
+                    color: $textColor;
+                }
+            }
+        }
     }
 
     .widget-performance {
@@ -230,7 +239,161 @@
 
             .subtitle {
                 font-size: 12px;
-                color: $textSecondaryColor;
+                color: $textThirdColor;
+            }
+        }
+
+        .content {
+            ul {
+                padding: 0;
+                outline: 0;
+                list-style-type: none;
+
+                li {
+                    padding: 1rem 0;
+                    display: flex;
+                    align-items: center;
+
+                    .p-avatar {
+                        width: 3.571rem;
+                        height: 3.571rem;
+
+                        .p-badge {
+                            top: 4px;
+                            right: 4px;
+                        }
+                    }
+
+                    .person-info {
+                        margin-left: .5rem;
+
+                        .amount {
+                            font-size: 18px;
+                            color: $textColor;
+                        }
+                        .name {
+                            font-size: 12px;
+                            color: $textThirdColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-customer-graph {
+        .header {
+            .title {
+                display: flex;
+                justify-content: space-between;
+                line-height: 24px;
+
+                .actions {
+                    i {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+
+            .subtitle {
+                font-size: 12px;
+                color: $textThirdColor;
+            }
+        }
+
+        .content {
+            margin-top: 1rem;
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-left: .5rem;
+                color:$textThirdColor;
+                font-size: 12px;
+                line-height: 1rem;
+            }
+        }
+    }
+
+    .widget-target {
+        .content {
+            h3 {
+                margin-top: 1rem;
+                margin-bottom: 0;
+            }
+
+            .rate {
+                font-size: 13px;
+                line-height: 1rem;
+                color: #0BD18A;
+
+                i {
+                    font-size: 12px;
+                }
+
+                span {
+                    color: $textSecondaryColor;
+                }
+            }
+        }
+
+        .values {
+            margin-top: 1.5rem;
+            min-height: 235px;
+            position: relative;
+            color: #FC6161;
+            display: flex;
+            justify-content: space-between;
+
+            .item {
+                min-height: inherit;
+                width: 40px;
+
+                span {
+                    position: absolute;
+
+                    &.day {
+                        bottom: 0;
+                        color: $textSecondaryColor;
+                    }
+                }
+
+                &.today{
+                    span {
+                        &.day {
+                            color: $textColor;
+                        }
+                    }
+                }
+
+                &.success {
+                    span:first-child {
+                        color: #0BD18A;
+                    }
+
+                    .p-progressbar {
+                        box-shadow: 0px 0px 10px rgba(11, 209, 138, 0.3);
+
+                        .p-progressbar-value {
+                            background-color: #0BD18A;
+                        }
+                    }
+                }
+
+                .p-progressbar {
+                    transform: rotate(-90deg);
+                    top: 115px;
+                    left: -70px;
+                    width: 170px;
+                    background-color: $progressBarBg;
+
+                    .p-progressbar-value {
+                        background-color: #FC6161;
+                        box-shadow: 0px 0px 10px rgba(252, 97, 97, 0.3);
+                    }
+                }
             }
         }
     }
