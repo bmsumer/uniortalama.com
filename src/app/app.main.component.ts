@@ -10,7 +10,7 @@ import {AppComponent} from './app.component';
 export class AppMainComponent {
     overlayMenuActive: boolean;
 
-    staticMenuDesktopInactive: boolean;
+    staticMenuDesktopInactive = false;
 
     staticMenuMobileActive: boolean;
 
