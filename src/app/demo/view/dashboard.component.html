@@ -397,5 +397,24 @@
                 </div>
             </div>
         </div>
+
+        <div class="p-col-12 widget-customer-carousel">
+            <h6>Top customers</h6>
+            <p-carousel [value]="customer" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="carouselResponsiveOptions">
+                <ng-template let-customer pTemplate="item">
+                    <div class="card p-mr-4">
+                        <div class="customer-item-content">
+                            <div class="p-mb-6">
+                                <img src="assets/layout/images/dashboard/{{customer.image}}.png" [alt]="customer.image" class="product-image" />
+                            </div>
+                            <div>
+                                <h4>{{customer.user}}</h4>
+                                <h5 class="p-mt-0 p-mb-3">{{customer.value}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
     </div>
 </div>

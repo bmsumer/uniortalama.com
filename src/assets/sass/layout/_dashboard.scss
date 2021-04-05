@@ -397,6 +397,20 @@
             }
         }
     }
+
+    .widget-customer-carousel {
+        .p-carousel-indicators {
+            display: none;
+        }
+
+        .customer-item-content {
+            text-align: center;
+
+            h5 {
+                color: $textThirdColor;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $tabletBreakpoint) {
