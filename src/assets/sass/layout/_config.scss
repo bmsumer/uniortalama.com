@@ -6,8 +6,8 @@
     top: 0;
     padding: 1rem;
     overflow: auto;
-    background: #ffffff;
-    color: #000000 !important;
+    background: $bodyBg;
+    color: $textColor !important;
     z-index: 999;
     border-left: 0 none;
     transform: translateX(100%);
@@ -75,7 +75,7 @@
     height: 3rem;
     line-height: 3rem;
     background: $primaryColor;
-    color: #ffffff;
+    color: $primaryTextColor;
     text-align: center;
     top: 50%;
     right: 0;
