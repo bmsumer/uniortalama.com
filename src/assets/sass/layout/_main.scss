@@ -27,6 +27,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background: $bodyImage;
+    background-repeat: no-repeat;
 
     .layout-main {
         @include flex();

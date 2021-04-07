@@ -1,6 +1,4 @@
 .layout-menu-wrapper {
-    background-color: $menuBg;
-
     .menu-logo {
         .menu-pin {
             background: $menuIconBg;
@@ -121,7 +119,7 @@
 
         &.layout-overlay, &.layout-sidebar {
             .layout-menu-wrapper {
-                background-color: transparent;
+                background-color: $menuBg;
 
                 .layout-menu-container {
                     .layout-menu {
