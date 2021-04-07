@@ -27,8 +27,10 @@ $topbarSubmenuBg: rgba(68, 72, 109, 0.07) !default;
 $topbarSubmenuItemHoverBgColor: rgba(68, 72, 109, 0.07);
 
 //menu
-$menuBg: rgba(68, 72, 109, 0.07);
 $menuWidth: 21rem;
+$slimMenuWidth: 5.857rem;
+$sidebarInactiveMenuWidth: 6.571rem;
+$menuBg: rgba(68, 72, 109, 0.07);
 $menuIconBg: rgba(68, 72, 109, 0.07);
 $menuIconHoverBg: rgba(68, 72, 109, 0.12) !default;
 $menuIconTextColor: $textSecondaryColor;
@@ -56,19 +58,18 @@ $slimMenuItemTextColor: $textColor;
 //dashboard
 $progressBarBg: rgba(68, 72, 109, 0.12);
 
+//rightmenu
+$rightMenuWidth: 24.571rem;
+$rightMenuBg: rgba(255, 255, 255, 0.9);
+$rightMenuButtonBg: rgba(68, 72, 109, 0.07);
+$rightMenuListItemBg: rgba(68, 72, 109, 0.07);
+
 /*
-//accent
-$accentColor: $primaryColor !default;
-$accentTextColor: $primaryTextColor !default;
-
-//sidebar
-$sidebarWidth: 16rem !default;
-$slimSidebarWidth: 6rem !default;
-
 //search
 $searchBg:#adb5bd !default;
 $searchBorder: 0 none !default;
 
 //sidebar right
 $rightSidebarWidth: 16rem !default;
-$rightSidebarBg: #ffffff !default;*/
+$rightSidebarBg: #ffffff !default;
+*/

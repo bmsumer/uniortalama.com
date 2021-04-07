@@ -5,6 +5,7 @@ $textColor: #ffffff !default;
 $textSecondaryColor: #C8CCD8 !default;
 $textThirdColor: #868C9B !default;
 $dividerColor:rgba(255, 255, 255, 0.15) !default;
+
 /*$itemHoverBg:rgba(255,255,255,.03) !default;
 $focusShadow:0 0 0 1px #BBDEFB !default;
 $linkColor: #90CAF9 !default;
@@ -26,8 +27,10 @@ $topbarSubmenuBg: rgba(255, 255, 255, 0.05) !default;
 $topbarSubmenuItemHoverBgColor: rgba(255, 255, 255, 0.05);
 
 //menu
-$menuBg: rgba(255, 255, 255, 0.05);
 $menuWidth: 21rem;
+$slimMenuWidth: 5.857rem;
+$sidebarInactiveMenuWidth: 6.571em;
+$menuBg: rgba(255, 255, 255, 0.05);
 $menuIconBg: rgba(255, 255, 255, 0.05);
 $menuIconHoverBg: rgba(255, 255, 255, 0.1) !default;
 $menuIconTextColor: $textSecondaryColor;
@@ -55,15 +58,13 @@ $slimMenuItemTextColor: $textColor;
 //dashboard
 $progressBarBg: rgba(255, 255, 255, 0.1);
 
+//rightmenu
+$rightMenuWidth: 24.571rem;
+$rightMenuBg: rgba(255, 255, 255, 0.05);
+$rightMenuButtonBg: rgba(255, 255, 255, 0.05);
+$rightMenuListItemBg: rgba(255, 255, 255, 0.05);
+
 /*
-//accent
-$accentColor: $primaryColor !default;
-$accentTextColor: $primaryTextColor !default;
-
-//sidebar
-$sidebarWidth: 16rem !default;
-$slimSidebarWidth: 6rem !default;
-
 //search
 $searchBg:#121212 !default;
 $searchBorder: 1px solid $dividerColor !default;

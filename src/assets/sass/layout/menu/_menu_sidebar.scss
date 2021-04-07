@@ -13,7 +13,7 @@
                 top: 0;
                 left: 0;
                 z-index: 999;
-                width: 6.571em;
+                width: $sidebarInactiveMenuWidth;
                 mix-blend-mode: normal;
                 backdrop-filter: blur(200px);
                 @include transition(all $transitionDuration);
@@ -28,7 +28,7 @@
 
                 &.layout-sidebar-active {
                     transform: translate3d(0px, 0px, 0px);
-                    width: 21em;
+                    width: $menuWidth;
 
                     .menu-logo {
                         .app-name {

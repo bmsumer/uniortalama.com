@@ -32,8 +32,15 @@ export class AppMainComponent {
 
     configClick: boolean;
 
-    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) {
-    }
+    rightMenuActive: boolean;
+
+    rightMenuClick: boolean;
+
+    searchActive: boolean;
+
+    searchClick: boolean;
+
+    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) {}
 
     onLayoutClick() {
         if (!this.topbarItemClick) {
@@ -43,6 +50,14 @@ export class AppMainComponent {
 
         if (this.configActive && !this.configClick) {
             this.configActive = false;
+        }
+
+        if (this.rightMenuActive && !this.rightMenuClick) {
+            this.rightMenuActive = false;
+        }
+
+        if (this.searchActive && !this.searchClick) {
+            this.searchActive = false;
         }
 
         if (!this.menuClick) {
@@ -59,6 +74,8 @@ export class AppMainComponent {
         }
 
         this.configClick = false;
+        this.rightMenuClick = false;
+        this.searchClick = false;
         this.menuClick = false;
         this.topbarItemClick = false;
     }
@@ -134,6 +151,15 @@ export class AppMainComponent {
 
     onConfigClick(event) {
         this.configClick = true;
+    }
+
+    onRightMenuButtonClick() {
+        this.rightMenuClick = true;
+        this.rightMenuActive = true;
+    }
+
+    onRightMenuClick($event) {
+        this.rightMenuClick = true;
     }
 
     isStatic() {

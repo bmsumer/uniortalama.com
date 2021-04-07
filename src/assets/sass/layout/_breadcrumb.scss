@@ -36,5 +36,63 @@
             }
         }
     }
+
+    .layout-breadcrumb-right-items {
+        .search-icon {
+            display:none;
+            align-items: center;
+            justify-content: center;
+            color: $textColor;
+            width: 32px;
+            height: 32px;
+            margin-right: .5rem;
+        }
+
+        .search-wrapper {
+            transition: transform $animationDuration $animationTimingFunction;
+
+            .p-input-icon-left {
+                margin-right: .5rem;
+                width: 100%;
+
+                input {
+                    background: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
 }
 
+@media screen and (max-width: $tabletBreakpoint) {
+    .layout-breadcrumb-container {
+        .layout-breadcrumb-right-items {
+            .search-icon {
+                display:flex;
+            }
+            .search-wrapper {
+                width: 0;
+                opacity: 0;
+                position: absolute;
+                right: 40px;
+                background: $cardBg;
+                border-radius: 6px;
+                backdrop-filter: blur(20px);
+                transition: width $animationDuration $animationTimingFunction;
+
+                input {
+                    width: 0;
+                }
+
+                &.active-search-wrapper {
+                    opacity: 1;
+                    width: calc(100% - 70px);
+
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

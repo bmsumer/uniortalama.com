@@ -14,20 +14,20 @@ $colors: (
 //shades
 $shade000:rgba(255,255,255,.87) !default;  //text color
 $shade100:rgba(255,255,255,.60) !default;  //text secondary color
-$shade600:#383838 !default;  //input bg, border, divider
-$shade700:#2b2b2b !default;  //unused
-$shade800:#1e1e1e !default;  //elevated surface
-$shade900:#121212 !default;  //ground surface
+$shade600:#304562 !default;  //input bg, border, divider
+$shade700:#283951 !default;  //unused
+$shade800:#1f2d40 !default;  //elevated surface
+$shade900:#17212f !default;  //ground surface
 
 $hoverBg:rgba(255,255,255,.03) !default;
 
 //global
-$fontFamily:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontSize:1rem !default;
 $fontWeight:normal !default;
 $textColor:$shade000 !default;
 $textSecondaryColor:$shade100 !default;
-$borderRadius:4px !default;
+$borderRadius:3px !default;
 $transitionDuration:.2s !default;
 $formElementTransition:background-color $transitionDuration, color $transitionDuration, border-color $transitionDuration, box-shadow $transitionDuration !default;
 $actionIconTransition:background-color $transitionDuration, color $transitionDuration, box-shadow $transitionDuration !default;
@@ -205,7 +205,7 @@ $dangerButtonFocusShadow:0 0 0 1px scale-color($dangerButtonBg, $lightness: 30%)
 $linkButtonColor:$primaryColor !default;
 $linkButtonHoverColor:$primaryColor !default;
 $linkButtonTextHoverDecoration:underline !default;
-$linkButtonFocusShadow:0 0 0 1px $focusOutlineColor !default;
+$linkButtonFocusShadow:0 0 0 0.1rem $focusOutlineColor !default;
 
 //checkbox
 $checkboxWidth:20px !default;
@@ -236,7 +236,7 @@ $colorPickerPreviewWidth:2rem !default;
 $colorPickerPreviewHeight:2rem !default;
 $colorPickerBg:$shade800 !default;
 $colorPickerBorderColor:$shade600 !default;
-$colorPickerHandleColor:$shade000 !default;
+$colorPickerHandleColor:#ffffff !default;
 
 //togglebutton
 $toggleButtonBg:$shade800 !default;
@@ -301,8 +301,8 @@ $calendarHeaderFontWeight:600 !default;
 $calendarHeaderCellPadding:.5rem !default;
 
 $calendarCellDatePadding:.5rem !default;
-$calendarCellDateWidth:2.5rem !default;
-$calendarCellDateHeight:2.5rem !default;
+$calendarCellDateWidth:2rem !default;
+$calendarCellDateHeight:2rem !default;
 $calendarCellDateBorderRadius:50% !default;
 $calendarCellDateBorder:1px solid transparent !default;
 $calendarCellDateHoverBg:$hoverBg !default;
@@ -515,10 +515,6 @@ $dataViewContentBorder:0 none !default;
 $dataViewListItemBorder:solid $shade600 !default;
 $dataViewListItemBorderWidth:0 0 1px 0 !default;
 
-//orderlist, picklist
-$orderListBreakpoint:960px !default;
-$pickListBreakpoint:960px !default;
-
 //schedule
 $fullCalendarEventBg:$primaryDarkColor !default;
 $fullCalendarEventBorder:1px solid $primaryDarkColor !default;
@@ -543,7 +539,7 @@ $timelineEventConnectorSize:2px !default;
 $timelineEventColor:$shade600 !default;
 
 //org chart
-$organizationChartConnectorColor:$shade600 !default;
+$organizationChartConnectorColor:$shade100 !default;
 
 //message
 $messageMargin:1rem 0 !default;
@@ -605,6 +601,10 @@ $dialogContentPadding:0 1.5rem 2rem 1.5rem !default;
 $dialogFooterBorder:0 none !default;
 $dialogFooterPadding:0 1.5rem 1.5rem 1.5rem !default;
 
+//confirmpopup
+$confirmPopupContentPadding:$panelContentPadding;
+$confirmPopupFooterPadding:0 1rem 1rem 1rem;
+
 //tooltip
 $tooltipBg:$shade600 !default;
 $tooltipTextColor:$shade000 !default;
@@ -641,7 +641,7 @@ $menuitemIconHoverColor:$shade000 !default;
 $menuitemHoverBg:$hoverBg !default;
 $menuitemTextActiveColor:$shade000 !default;
 $menuitemIconActiveColor:$shade000 !default;
-$menuitemActiveBg:$hoverBg !default;
+$menuitemActiveBg:$shade900 !default;
 $menuitemSubmenuIconFontSize:.875rem !default;
 $submenuHeaderMargin:0 !default;
 $submenuHeaderPadding:.75rem 1rem !default;
@@ -693,7 +693,7 @@ $tagPadding:.25rem .4rem !default;
 //carousel
 $carouselIndicatorsPadding:1rem !default;
 $carouselIndicatorBg:$shade600 !default;
-$carouselIndicatorHoverBg:$hoverBg !default;
+$carouselIndicatorHoverBg:scale-color($shade600, $lightness: 10%) !default;
 $carouselIndicatorBorderRadius:0 !default;
 $carouselIndicatorWidth:2rem !default;
 $carouselIndicatorHeight:.5rem !default;
@@ -726,7 +726,7 @@ $galleriaCaptionPadding:1rem !default;
 
 $galleriaIndicatorsPadding:1rem !default;
 $galleriaIndicatorBg:$shade600 !default;
-$galleriaIndicatorHoverBg:rgba(255,255,255,0.1) !default;
+$galleriaIndicatorHoverBg:scale-color($shade600, $lightness: 10%) !default;
 $galleriaIndicatorBorderRadius:50% !default;
 $galleriaIndicatorWidth:1rem !default;
 $galleriaIndicatorHeight:1rem !default;
@@ -790,4 +790,17 @@ $splitterGutterHandleBg:$shade600;
     --primary-color:#{$primaryColor};
     --primary-color-text:#{$primaryTextColor};
     --font-family:#{$fontFamily};
+    --surface-0: #17212f;
+    --surface-50: #1d2734;
+    --surface-100: #232c39;
+    --surface-200: #28323f;
+    --surface-300: #2e3744;
+    --surface-400: #343d49;
+    --surface-500: #3a424e;
+    --surface-600: #404853;
+    --surface-700: #454d59;
+    --surface-800: #4b535e;
+    --surface-900: #515963;
+    --content-padding:#{$panelContentPadding};
+    --inline-spacing:#{$inlineSpacing};
 }
