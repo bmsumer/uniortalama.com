@@ -2,6 +2,7 @@
     background: linear-gradient(271.89deg, rgba(70,82,104,1), rgba(115,130,161,1));
     border-radius: 6px 0px 0px 6px;
     border-color: transparent;
+    border-left: 0 none;
 
     &:enabled:hover {
         background: linear-gradient(271.89deg, rgba(70,82,104,0.5), rgba(115,130,161,0.5));
