@@ -1,90 +1,112 @@
+.p-button-outlined.invoice-button {
+    color: inherit;
+}
+
 .invoice {
-    padding: 2rem;
+    padding: 2.429rem;
 
     .invoice-header {
         @include flex();
         @include flex-justify-between();
-    }
 
-    .invoice-company {
-        .logo-image {
-            width: 75px;
-            margin-bottom: .5rem;
+        .invoice-company {
+            .invoice-logo {
+                height: 2.25rem;
+            }
+
+            .invoice-appname {
+                height: 1.25rem;
+                margin-left: .75rem;
+            }
         }
 
-        div {
-            margin-bottom: .5rem;
-        }
-
-        .company-name {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-    }
-
-    .invoice-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        text-align: right;
-    }
-
-    .invoice-details {
-        width: 15rem;
-        @include flex();
-        @include flex-wrap(wrap);
-
-        > div {
-            width: 50%;
-            margin-bottom: .5rem;
-        }
-
-        .invoice-label {
-            text-align: left;
-            font-weight: 700;
-        }
-
-        .invoice-value {
+        .customer-id {
+            line-height: 16px;
             text-align: right;
+            color: $textSecondaryColor;
+        }
+
+        .invoice-address {
+            font-size: .786rem;
+            line-height: 16px;
+            color: $textThirdColor;
         }
     }
 
     .invoice-to {
         margin-top: 1.5rem;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
+        line-height: 1.429rem;
         border-top: 1px solid $dividerColor;
 
-        .bill-to {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: .5rem;
+        .invoice-date {
+            font-size: .786rem;
+            font-weight: 500;
+            color: $textThirdColor;
+        }
+
+        .invoice-id {
+            font-size: 1.714rem;
+            font-weight: 500;
+
+            span {
+                margin-left: .5rem;
+                font-size: 1.429rem;
+                font-weight: 300;
+                color: $textThirdColor;
+            }
+        }
+
+        .invoice-to-name {
+            margin-top: 2rem;
+            font-size: 1.143rem;
+            font-weight: 600;
         }
 
         .invoice-to-info {
-            div {
-                margin-bottom: .5rem;
-            }
+            margin-top: .25rem;
+            color: $textThirdColor;
+            font-size: 0.857rem;
         }
     }
 
     .invoice-items {
         margin-top: 2rem;
-        padding-top: 2rem;
 
         table {
             width: 100%;
             border-collapse: collapse;
 
-            tr {
+            thead tr {
+                border-bottom: 1px solid $dividerColor;
+            }
+
+            tbody tr:last-child {
                 border-bottom: 1px solid $dividerColor;
             }
 
             th {
-                font-weight: 700;
+                font-size: 0.714rem;
+                color: $textThirdColor;
             }
 
             th, td {
-                padding: 1rem;
+                padding: .5rem 1rem;
                 text-align: right;
+            }
+
+            tr{
+                &:first-child {
+                    td {
+                        padding-top: 1rem;
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        padding-bottom: 1rem;
+                    }
+                }
             }
 
             th:first-child, td:first-child {
@@ -94,14 +116,42 @@
     }
 
     .invoice-summary {
-        @include flex();
-        @include flex-justify-between();
-        margin-top: 2.5rem;
-        padding-top: 2.5rem;
+        margin-top: 1rem;
 
-        .invoice-value {
-            font-weight: 700;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            tbody tr {
+                &:last-child {
+                    font-weight: 600;
+                    border-bottom: 1px solid $primaryColor;
+
+                    td {
+                        padding-bottom: 1rem;
+                    }
+                }
+
+                &:first-child, &:nth-child(2) {
+                    td:first-child {
+                        color: $textThirdColor;
+                    }
+                }
+
+                td:last-child {
+                    text-align: right;
+                }
+
+                td {
+                    padding: .5rem 1rem;
+                }
+            }
         }
+    }
+
+    .invoice-notes {
+        margin-top: 2rem;
+        padding-left: .5rem;
     }
 }
 
