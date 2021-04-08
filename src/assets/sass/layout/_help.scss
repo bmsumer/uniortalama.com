@@ -4,25 +4,33 @@
     }
 
     .help-search {
-        background: url("../../layout/images/pages/bg-help.png") repeat;
+        background: $helpHeaderBg;
+        backdrop-filter: blur(200px);
         padding: 0;
-        text-align: center;
+        margin-bottom: 4rem;
 
         .help-search-content {
-            padding: 5rem 12rem;
+            padding: 50px 60px;
+        }
+
+        .help-search-effect {
+            background: $bodyImage;
+            background-repeat: no-repeat;
+            transform:  matrix(-1, 0, 0, 1, 0, 0);
         }
 
         .search-container {
             font-size: 1.5rem;
-            padding: 1rem;
             position: relative;
 
             input {
                 appearance: none;
-                font-size: 1.5rem;
                 text-indent: 2.5rem;
-                padding: .5rem;
                 width: 100%;
+
+                &::placeholder {
+                    color: $textThirdColor;
+                }
             }
 
             i {
@@ -36,106 +44,113 @@
         }
     }
 
-    .status-bars {
-        margin-top: 1rem;
-        @include flex();
+    .status-card {
+        margin-top: 30px;
 
-        .status-bar {
-            flex: 1 1 0;
-            -ms-flex: 1 1 0px;
-            background: #8BC34A;
-            height: 50px;
-            margin-right: .25rem;
-            transition: transform $transitionDuration;
+        h6 {
+            margin-bottom: 0;
+        }
+
+        p {
+            color: $textThirdColor;
+        }
+
+        .status-bars {
+            margin-top: 1rem;
+            @include flex();
+
+            .status-bar {
+                flex: 1 1 0;
+                -ms-flex: 1 1 0px;
+                background: #0BD18A;
+                box-shadow: 0px 0px 10px rgba(11, 209, 138, 0.3);
+                height: 50px;
+                margin-right: .25rem;
+                transition: transform $transitionDuration;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.status-bar-failure {
+                    background: #FC6161;
+                    box-shadow: 0px 0px 10px rgba(252, 97, 97, 0.3);
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .status-bar-footer {
+            padding: 1rem 0 0 0;
+            @include flex();
+            @include flex-justify-between();
+            color: $textThirdColor;
+        }
+    }
+
+    .articles-card {
+        h6 {
+            margin-bottom: 0;
+        }
+
+        p {
+            color: $textThirdColor;
+        }
+
+        .blog-post {
+            height: 130px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            position: relative;
+            background-repeat: no-repeat;
 
             &:last-child {
-                margin-right: 0;
-            }
-
-            &.status-bar-failure {
-                background: #EC407A;
-            }
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-    }
-
-    .status-bar-footer {
-        padding: 1rem 0 0 0;
-        @include flex();
-        @include flex-justify-between();
-    }
-
-    .blog-post {
-        height: 150px;
-        border-radius: 4px;
-        margin: 3rem 2rem;
-        position: relative;
-        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-
-        &:last-child {
-            margin-bottom: 1rem;
-        }
-
-        img {
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .blog-text {
-            position: absolute;
-            left: 20px;
-            top: 30px;
-
-            h1 {
-                font-size: 1.25rem;
-                color: #ffffff;
                 margin-bottom: 1rem;
-                font-weight: 700;
             }
 
-            span {
-                color: #ffffff;
-                font-weight: 600;
+            .blog-text {
+                position: absolute;
+                left: 74px;
+                bottom: 12px;
+
+                h6 {
+                    margin-bottom: 0;
+                    line-height: 20px;
+                }
+
+                span {
+                    color: $textSecondaryColor;
+                    line-height: 16px;
+                    font-size: 12px;
+                }
             }
-        }
 
-        .blog-profile {
-            position: absolute;
-            top: -25px;
-            left: -25px;
+            .blog-profile {
+                position: absolute;
+                top: 68px;
+                left: 12px;
 
-            img {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
 
+                }
             }
-        }
 
-        &:nth-child(1) {
-            background-image: url("../../layout/images/pages/help/blog1.jpg");
-        }
+            &:nth-child(1) {
+                background-image: linear-gradient(180deg, rgba(28, 28, 44, 0) 33.85%, rgba(27, 27, 44, 0.8) 80.77%), url("../../../layout/images/pages/help/blog1.jpg");
+            }
 
-        &:nth-child(2) {
-            background-image: url("../../layout/images/pages/help/blog2.jpg");
-        }
+            &:nth-child(2) {
+                background-image: linear-gradient(186.73deg, rgba(28, 28, 44, 0) 46.89%, rgba(27, 27, 44, 0.8) 95.1%), url("../../../layout/images/pages/help/blog2.jpg");
+            }
 
-        &:nth-child(3) {
-            background-image: url("../../layout/images/pages/help/blog3.jpg");
-        }
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .help-page {
-        .help-search {
-            .help-search-content {
-                padding: 6rem 2rem;
+            &:nth-child(3) {
+                background-image: linear-gradient(180deg, rgba(28, 28, 44, 0) 33.85%, rgba(27, 27, 44, 0.8) 80.77%), url("../../../layout/images/pages/help/blog3.jpg");
             }
         }
     }
