@@ -42,10 +42,7 @@
                         justify-content: center;
                     }
 
-                    //@include internalSubmenu;
                     .layout-menu-container {
-                        overflow: auto;
-
                         .layout-menu {
                             padding-right: 22px;
 
@@ -73,6 +70,24 @@
                                 ul {
                                     li {
                                         @include nested-submenu-indents(8, 3, 8);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .layout-inline-menu {
+                        .layout-inline-menu-action {
+                            .layout-inline-menu-text, .layout-inline-menu-icon {
+                                visibility: visible;
+                            }
+                        }
+
+                        .layout-inline-menu-action-panel {
+                            .layout-inline-menu-action-item {
+                                a {
+                                    span {
+                                        visibility: visible;
                                     }
                                 }
                             }
@@ -170,6 +185,26 @@
                                             @include flex();
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .layout-inline-menu {
+                    .layout-inline-menu-action {
+                        .layout-inline-menu-text, .layout-inline-menu-icon {
+                            white-space: nowrap;
+                            visibility: hidden;
+                        }
+                    }
+
+                    .layout-inline-menu-action-panel {
+                        .layout-inline-menu-action-item {
+                            a {
+                                span {
+                                    white-space: nowrap;
+                                    visibility: hidden;
                                 }
                             }
                         }

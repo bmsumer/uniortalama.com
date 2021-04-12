@@ -40,6 +40,8 @@ export class AppMainComponent {
 
     searchClick: boolean;
 
+    activeInlineProfile: boolean;
+
     constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) {}
 
     onLayoutClick() {

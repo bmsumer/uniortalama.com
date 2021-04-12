@@ -101,6 +101,33 @@
                         }
                     }
                 }
+
+                .layout-inline-menu {
+                    .layout-inline-menu-action {
+                        .layout-inline-menu-text,
+                        .layout-inline-menu-icon {
+                            display: none !important;
+                        }
+                    }
+
+                    .layout-inline-menu-action-panel {
+                        padding: 0 .5rem;
+                        padding-left: 1.5rem;
+
+                        .layout-inline-menu-action-item {
+                            padding: 5px 12px 5px 12px;
+
+                            a {
+                                border-left: 0 none;
+                                padding: 8px;
+
+                                span {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .layout-main {

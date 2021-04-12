@@ -7,6 +7,8 @@
     z-index: 997;
     transform: none;
     border-radius: 0px 40px 40px 0px;
+    display: flex;
+    flex-direction: column;
 
     .menu-logo {
         @include flex();
@@ -50,7 +52,7 @@
     .layout-menu-container {
         height: 100%;
         overflow: auto;
-        padding-bottom: 120px;
+        padding-bottom: 2rem;
 
         .layout-menu {
             padding: 0 1.5rem;

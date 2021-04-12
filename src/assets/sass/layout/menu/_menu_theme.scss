@@ -10,6 +10,45 @@
             }
         }
     }
+
+    .layout-inline-menu {
+        &.layout-inline-menu-active {
+            .layout-inline-menu-action {
+                img {
+                    border-color: $primaryColor;
+                    filter: drop-shadow(0px 0px 10px rgba($primaryColor, 0.3));
+                }
+
+                &:hover {
+                    img {
+                        border-color: $primaryColor;
+                        filter: drop-shadow(0px 0px 10px rgba($primaryColor, 0.3));
+                    }
+                }
+            }
+        }
+
+        .layout-inline-menu-action {
+            &:hover {
+                img {
+                    border-color: $inlineMenuImageHoverBorderColor;
+                    filter: drop-shadow(0px 0px 10px rgba(15, 139, 253, 0.3));
+                }
+            }
+        }
+
+        .layout-inline-menu-action-panel {
+            .layout-inline-menu-action-item {
+                a {
+                    color: $textColor;
+
+                    &:hover {
+                        background-color: $submenuItemHoverBg;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @mixin extrenalSubmenuitem {
