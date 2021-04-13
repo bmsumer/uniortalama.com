@@ -1,9 +1,12 @@
-<div class="exception-body">
+<div class="exception-body notfound">
     <div class="exception-panel">
-        <img src="assets/layout/images/icon-404.png" alt="atlantis-layout"/>
-
-        <h1>Page Not Found</h1>
-        <p>The page you requested cannot be found.</p>
-        <button type="button" pButton label="Dashboard" class="p-button-success" [routerLink]="['/']"></button>
+        <h1>404</h1>
+        <h3>not found</h3>
+        <p>The page that you are looking for does not exist</p>
+        <button type="button" pButton label="Go back to home" [routerLink]="['/']"></button>
+    </div>
+    <div class="exception-footer">
+        <img [src]="'assets/layout/images/logo-'+ (app.colorScheme === 'light' ? 'dark' : 'light') + '.png'" class="exception-logo"/>
+        <img [src]="'assets/layout/images/appname-'+ (app.colorScheme === 'light' ? 'dark' : 'light') + '.png'" class="exception-appname"/>
     </div>
 </div>
