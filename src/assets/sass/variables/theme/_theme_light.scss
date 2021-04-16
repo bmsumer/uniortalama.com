@@ -12,24 +12,22 @@ $colors: (
 );
 
 //reused color variables
-$shade000:#ffffff !default;    //surface
-$shade100:#f8f9fa !default;    //header background
-$shade200:#e9ecef !default;    //hover background
-$shade300:#dee2e6 !default;    //border, divider
-$shade400:#ced4da !default;    //input border
-$shade500:#adb5bd !default;    //input icon
-$shade600:#6c757d !default;    //text secondary color
-$shade700:#495057 !default;    //text color
-$shade800:#343a40 !default;    //unused
-$shade900:#212529 !default;    //unused
+$shade000:rgba(68, 72, 109, 0.07) !default;    //surface
+$shade100:transparent !default;    //header background
+$shade200:rgba(68, 72, 109, 0.07) !default;    //hover background
+$shade300:rgba(68, 72, 109, 0.17) !default;    //border, divider
+$shade400:transparent !default;    //input border
+$shade500:#676B89 !default;    //input icon
+$shade600:#676B89 !default;    //text secondary color
+$shade700:#44486D !default;    //text color
 
 //global
-$fontFamily:"Open Sans","Helvetica Neue",sans-serif;
+$fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontSize:1rem !default;
 $fontWeight:normal !default;
 $textColor:$shade700 !default;
 $textSecondaryColor:$shade600 !default;
-$borderRadius:3px !default;
+$borderRadius:6px !default;
 $transitionDuration:.2s !default;
 $formElementTransition:background-color $transitionDuration, color $transitionDuration, border-color $transitionDuration, box-shadow $transitionDuration !default;
 $actionIconTransition:background-color $transitionDuration, color $transitionDuration, box-shadow $transitionDuration !default;
@@ -40,17 +38,17 @@ $inlineSpacing:.5rem !default;
 $disabledOpacity:.6 !default;
 $maskBg:rgba(0, 0, 0, 0.4) !default;
 $loadingIconFontSize:2rem !default;
-$errorColor:#f44336 !default;
+$errorColor:#FC6161 !default;
 
 //scale
 $scaleSM:0.875 !default;
 $scaleLG:1.25 !default;
 
 //focus
-$focusOutlineColor:$primaryLightColor !default;
+$focusOutlineColor:$primaryColor !default;
 $focusOutline:0 none !default;
 $focusOutlineOffset:0 !default;
-$focusShadow:0 0 0 0.2rem $focusOutlineColor !default;
+$focusShadow:0 0 0 1px $focusOutlineColor !default;
 
 //action icons
 $actionIconWidth:2rem !default;

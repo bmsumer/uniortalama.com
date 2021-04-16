@@ -12,14 +12,14 @@ $colors: (
 );
 
 //shades
-$shade000:rgba(255,255,255,.87) !default;  //text color
-$shade100:rgba(255,255,255,.60) !default;  //text secondary color
-$shade600:#304562 !default;  //input bg, border, divider
+$shade000:#FFFFFF!default;  //text color
+$shade100:#C8CCD8 !default;  //text secondary color
+$shade600:rgba(255, 255, 255, 0.05) !default;  //input bg, border, divider
 $shade700:#283951 !default;  //unused
-$shade800:#1f2d40 !default;  //elevated surface
-$shade900:#17212f !default;  //ground surface
+$shade800:rgba(255, 255, 255, 0.05) !default;  //elevated surface
+$shade900:rgba(255, 255, 255, 0.05) !default;  //ground surface
 
-$hoverBg:rgba(255,255,255,.03) !default;
+$hoverBg: rgba(255, 255, 255, 0.05) !default;
 
 //global
 $fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -27,7 +27,7 @@ $fontSize:1rem !default;
 $fontWeight:normal !default;
 $textColor:$shade000 !default;
 $textSecondaryColor:$shade100 !default;
-$borderRadius:3px !default;
+$borderRadius:6px !default;
 $transitionDuration:.2s !default;
 $formElementTransition:background-color $transitionDuration, color $transitionDuration, border-color $transitionDuration, box-shadow $transitionDuration !default;
 $actionIconTransition:background-color $transitionDuration, color $transitionDuration, box-shadow $transitionDuration !default;
@@ -38,14 +38,14 @@ $inlineSpacing:.5rem !default; //spacing between inline elements
 $disabledOpacity:.4 !default; //opacity of a disabled item
 $maskBg:rgba(0, 0, 0, 0.4) !default; //modal mask bg color
 $loadingIconFontSize:2rem !default;
-$errorColor:#ef9a9a !default;
+$errorColor:#FC6161 !default;
 
 //scale
 $scaleSM:0.875 !default;
 $scaleLG:1.25 !default;
 
 //focus
-$focusOutlineColor:$primaryLightColor !default;
+$focusOutlineColor:$primaryColor !default;
 $focusOutline:0 none !default;
 $focusOutlineOffset:0 !default;
 $focusShadow:0 0 0 1px $focusOutlineColor !default;
