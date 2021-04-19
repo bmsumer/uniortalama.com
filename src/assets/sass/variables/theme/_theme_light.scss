@@ -21,6 +21,11 @@ $shade500:#676B89 !default;    //input icon
 $shade600:#676B89 !default;    //text secondary color
 $shade700:#44486D !default;    //text color
 
+$shadeText: #8A8EA6;        //USED FOR THIRD TEXT COLOR
+
+$solidSurfaceColor: #ececf9;
+
+
 //global
 $fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontSize:1rem !default;
@@ -62,18 +67,17 @@ $actionIconHoverColor:$shade700 !default;
 $actionIconBorderRadius:50% !default;
 
 //input field (e.g. inputtext, spinner, inputmask)
-$inputPadding:.5rem .5rem !default;
+$inputPadding:0.429rem 0.571rem !default;
 $inputTextFontSize:1rem !default;
-
 $inputBg:$shade000 !default;
 $inputTextColor:$shade700 !default;
 $inputIconColor:$shade600 !default;
-$inputBorder:1px solid $shade400 !default;
-$inputHoverBorderColor:$primaryColor !default;
+$inputBorder:1px solid transparent !default;
+$inputHoverBorderColor:transparent !default;
 $inputFocusBorderColor:$primaryColor !default;
 $inputErrorBorderColor:$errorColor !default;
-$inputPlaceholderTextColor:$shade600 !default;
-$inputFilledBg:$shade100 !default;
+$inputPlaceholderTextColor:$shadeText !default;
+$inputFilledBg:$shade100 !default;      //??
 $inputFilledHoverBg:$inputFilledBg !default;
 $inputFilledFocusBg:$shade000 !default;
 
@@ -86,37 +90,37 @@ $inputGroupAddOnMinWidth:2.357rem !default;
 $inputListBg:$shade000 !default;
 $inputListTextColor:$shade700 !default;
 $inputListBorder:$inputBorder !default;
-$inputListPadding:.5rem 0 !default;
-$inputListItemPadding:.5rem 1rem !default;
+$inputListPadding:0.286rem !default;
+$inputListItemPadding:0.429rem 0.286rem !default;
 $inputListItemBg:transparent !default;
 $inputListItemTextColor:$shade700 !default;
 $inputListItemHoverBg:$shade200 !default;
 $inputListItemTextHoverColor:$shade700 !default;
 $inputListItemBorder:0 none !default;
-$inputListItemBorderRadius:0 !default;
+$inputListItemBorderRadius:4px !default;
 $inputListItemMargin:0 !default;
-$inputListItemFocusShadow:inset 0 0 0 0.15rem $focusOutlineColor !default;
-$inputListHeaderPadding:.5rem 1rem !default;
+$inputListItemFocusShadow:0 0 0.714rem $focusOutlineColor !default;
+$inputListHeaderPadding:0.429rem 0.286rem !default;
 $inputListHeaderMargin:0 !default;
 $inputListHeaderBg:$shade100 !default;
 $inputListHeaderTextColor:$shade700 !default;
 $inputListHeaderBorder:0 none !default;
 
 //inputs with overlays (e.g. autocomplete, dropdown, multiselect)
-$inputOverlayBg:$inputListBg !default;
+$inputOverlayBg:$solidSurfaceColor !default;
 $inputOverlayHeaderBg:$inputListHeaderBg !default;
 $inputOverlayBorder:0 none !default;
 $inputOverlayShadow:0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !default;
 
 //password
-$passwordMeterBg:$shade300 !default;
+$passwordMeterBg:$solidSurfaceColor !default;
 $passwordWeakBg:#D32F2F !default;
 $passwordMediumBg:#FBC02D !default;
 $passwordStrongBg:#689F38 !default;
 
 //button
-$buttonPadding:.5rem 1rem !default;
-$buttonIconOnlyWidth:2.357rem !default;
+$buttonPadding:0.429rem 0.571rem !default;
+$buttonIconOnlyWidth:2.286rem !default;
 $buttonIconOnlyPadding:.5rem 0 !default;
 $buttonBg:$primaryColor !default;
 $buttonTextColor:$primaryTextColor !default;
@@ -287,7 +291,7 @@ $sliderRangeBg:$primaryColor !default;
 //calendar
 $calendarTableMargin:.5rem 0 !default;
 $calendarPadding:.5rem !default;
-$calendarBg:$shade000 !default;
+$calendarBg:$solidSurfaceColor !default;
 $calendarInlineBg:$calendarBg !default;
 $calendarTextColor:$shade700 !default;
 $calendarBorder:$inputListBorder !default;
