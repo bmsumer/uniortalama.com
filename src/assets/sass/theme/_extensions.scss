@@ -1,6 +1,10 @@
 //buttons
-.p-button:not(.p-button-outlined, .p-button-text, .p-button-link) {
+.p-button:not(.p-button-outlined, .p-button-text, .p-button-link, .p-togglebutton) {
     box-shadow: $buttonShadow;
+}
+
+.p-buttonset .p-button {
+    box-shadow: $selectbuttonShadow;
 }
 
 

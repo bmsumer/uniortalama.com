@@ -133,6 +133,7 @@ $buttonTextActiveColor:$primaryTextColor !default;
 $buttonActiveBorderColor:$primaryDarkerColor !default;
 $buttonShadow: 0px 0px 10px rgba($primaryColor, 0.25);
 
+$selectbuttonShadow: none !default;
 $raisedButtonShadow:0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12) !default;
 $roundedButtonBorderRadius:2rem !default;
 
@@ -255,11 +256,11 @@ $colorPickerHandleColor:#191919 !default;
 
 //togglebutton
 $toggleButtonBg:$inputBg !default;
-$toggleButtonBorder:1px solid $shade400 !default;
+$toggleButtonBorder:1px solid transparent !default;
 $toggleButtonTextColor:$shade700 !default;
 $toggleButtonIconColor:$shade600 !default;
-$toggleButtonHoverBg:$shade200 !default;
-$toggleButtonHoverBorderColor:$shade400 !default;
+$toggleButtonHoverBg:rgba(68, 72, 109, 0.12) !default;
+$toggleButtonHoverBorderColor:transparent !default;
 $toggleButtonTextHoverColor:$shade700 !default;
 $toggleButtonIconHoverColor:$shade600 !default;
 $toggleButtonActiveBg:$primaryColor !default;
