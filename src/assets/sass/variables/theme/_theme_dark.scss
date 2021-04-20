@@ -277,22 +277,22 @@ $inplaceHoverBg:$hoverBg !default;
 $inplaceTextHoverColor:$shade000 !default;
 
 //rating
-$ratingIconFontSize:1.143rem !default;
-$ratingCancelIconColor:#F48FB1 !default;
-$ratingCancelIconHoverColor:#F48FB1 !default;
+$ratingIconFontSize:1.286rem !default;
+$ratingCancelIconColor:#FC6161 !default;
+$ratingCancelIconHoverColor:#FC6161 !default;
 $ratingStarIconOffColor:$shade000 !default;
 $ratingStarIconOnColor:$primaryColor !default;
 $ratingStarIconHoverColor:$primaryColor !default;
 
 //slider
-$sliderBg:$shade600 !default;
+$sliderBg:rgba(255, 255, 255, 0.1) !default;
 $sliderBorder:0 none !default;
-$sliderHorizontalHeight:.286rem !default;
-$sliderVerticalWidth:0.286rem !default;
+$sliderHorizontalHeight:0.429rem !default;
+$sliderVerticalWidth:0.429rem !default;
 $sliderHandleWidth:1.143rem !default;
 $sliderHandleHeight:1.143rem !default;
-$sliderHandleBg:$shade600 !default;
-$sliderHandleBorder:2px solid $primaryColor !default;
+$sliderHandleBg:#ffffff !default;
+$sliderHandleBorder:4px solid $primaryColor !default;
 $sliderHandleBorderRadius:50% !default;
 $sliderHandleHoverBorderColor:$primaryColor !default;
 $sliderHandleHoverBg:$primaryColor !default;

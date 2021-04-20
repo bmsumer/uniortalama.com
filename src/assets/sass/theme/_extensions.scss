@@ -7,7 +7,6 @@
     box-shadow: $selectbuttonShadow;
 }
 
-
 .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
     box-shadow: $secondaryButtonShadow;
 
@@ -116,5 +115,12 @@
         &:not(.p-disabled):not(.p-highlight):hover {
             border-color: $radiobuttonHoverBorderColor;
         }
+    }
+}
+
+//slider
+.p-slider {
+    .p-slider-range {
+        border-radius: $borderRadius;
     }
 }
