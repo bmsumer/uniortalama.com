@@ -222,8 +222,9 @@ $linkButtonFocusShadow:none !default;
 //checkbox
 $checkboxWidth:20px !default;
 $checkboxHeight:20px !default;
-$checkboxBorder:2px solid $shade600 !default;
+$checkboxBorder:2px solid rgba(255, 255, 255, 0.2) !default;
 $checkboxIconFontSize:14px !default;
+$checkboxHoverBorderColor: rgba(255, 255, 255, 0.25) !default;
 $checkboxActiveBorderColor:$primaryColor !default;
 $checkboxActiveBg:$primaryColor !default;
 $checkboxIconActiveColor:$primaryTextColor !default;
@@ -234,8 +235,9 @@ $checkboxActiveHoverBorderColor:$primaryDarkerColor !default;
 //radiobutton
 $radiobuttonWidth:20px !default;
 $radiobuttonHeight:20px !default;
-$radiobuttonBorder:2px solid $shade600 !default;
+$radiobuttonBorder:2px solid #868C9B !default;
 $radiobuttonIconSize:12px !default;
+$radiobuttonHoverBorderColor: #C8CCD8 !default;
 $radiobuttonActiveBorderColor:$primaryColor !default;
 $radiobuttonActiveBg:$primaryColor !default;
 $radiobuttonIconActiveColor:$primaryTextColor !default;
@@ -246,7 +248,7 @@ $radiobuttonActiveHoverBorderColor:$primaryDarkerColor !default;
 //colorpicker
 $colorPickerPreviewWidth:2rem !default;
 $colorPickerPreviewHeight:2rem !default;
-$colorPickerBg:$shade800 !default;
+$colorPickerBg:rgba(255, 255, 255, 0.05) !default;
 $colorPickerBorderColor:$shade600 !default;
 $colorPickerHandleColor:#ffffff !default;
 

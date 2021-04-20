@@ -1,3 +1,4 @@
+//buttons
 .p-button:not(.p-button-outlined, .p-button-text, .p-button-link) {
     box-shadow: $buttonShadow;
 }
@@ -91,5 +92,25 @@
 
     &.p-button-text {
         box-shadow: none;
+    }
+}
+
+//checkbox
+.p-checkbox {
+    &:not(.p-checkbox-disabled) {
+        .p-checkbox-box {
+            &:hover {
+                border-color: $checkboxHoverBorderColor;
+            }
+        }
+    }
+}
+
+//radiobutton
+.p-radiobutton {
+    .p-radiobutton-box {
+        &:not(.p-disabled):not(.p-highlight):hover {
+            border-color: $radiobuttonHoverBorderColor;
+        }
     }
 }
