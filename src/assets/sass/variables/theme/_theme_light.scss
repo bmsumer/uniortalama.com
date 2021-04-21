@@ -25,7 +25,6 @@ $shadeText: #8A8EA6;        //USED FOR THIRD TEXT COLOR
 
 $solidSurfaceColor: #ececf9;
 
-
 //global
 $fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $fontSize:1rem !default;
@@ -460,74 +459,79 @@ $editorContentBorder:$panelContentBorder !default;
 $editorContentBg:$panelContentBg !default;
 
 //paginator
-$paginatorBg:$shade000 !default;
-$paginatorTextColor:$shade600 !default;
-$paginatorBorder:solid $shade200 !default;
+$paginatorBg:transparent !default;
+$paginatorTextColor:$shade700 !default;
+$paginatorBorder:solid rgba(68, 72, 109, 0.17) !default;
 $paginatorBorderWidth:0 !default;
-$paginatorPadding:.5rem 1rem !default;
-$paginatorElementWidth:$buttonIconOnlyWidth !default;
-$paginatorElementHeight:$buttonIconOnlyWidth !default;
+$paginatorPadding:.571rem .571rem !default;
+$paginatorElementWidth:1.429rem !default;
+$paginatorElementHeight:1.429rem !default;
 $paginatorElementBg:transparent !default;
 $paginatorElementBorder:0 none !default;
-$paginatorElementIconColor:$shade600 !default;
+$paginatorElementIconColor:$shade700 !default;
 $paginatorElementHoverBg:$shade200 !default;
 $paginatorElementHoverBorderColor:transparent !default;
 $paginatorElementIconHoverColor:$shade700 !default;
-$paginatorElementBorderRadius:$borderRadius !default;
+$paginatorElementActiveBg:rgba(68, 72, 109, 0.12) !default;
+$paginatorElementActiveBorderColor:transparent !default;
+$paginatorElementIconActiveColor:$shade700 !default;
+$paginatorElementBorderRadius:4px !default;
 $paginatorElementMargin:.143rem !default;
 $paginatorElementPadding:0 !default;
 
 //table
-$tableHeaderBorder:1px solid $shade200 !default;
+$tableHeaderBorder:1px solid rgba(68, 72, 109, 0.17) !default;
 $tableHeaderBorderWidth:1px 0 1px 0 !default;
-$tableHeaderBg:$shade100 !default;
-$tableHeaderTextColor:$shade700 !default;
-$tableHeaderFontWeight:600 !default;
-$tableHeaderPadding:1rem 1rem !default;
+$tableHeaderBg:transparent !default;
+$tableHeaderTextColor:$shadeText !default;
+$tableHeaderFontWeight:500 !default;
+$tableHeaderPadding:0.571rem 0.571rem !default;
 
-$tableHeaderCellPadding:1rem 1rem !default;
-$tableHeaderCellBg:$shade100 !default;
-$tableHeaderCellTextColor:$shade700 !default;
-$tableHeaderCellFontWeight:600 !default;
-$tableHeaderCellBorder:1px solid $shade200 !default;
+$tableHeaderCellPadding:0.571rem 0.571rem !default;
+$tableHeaderCellBg:transparent !default;
+$tableHeaderCellTextColor:$shadeText !default;
+$tableHeaderCellFontWeight:500 !default;
+$tableHeaderCellBorder:1px solid rgba(68, 72, 109, 0.17) !default;
 $tableHeaderCellBorderWidth:0 0 1px 0 !default;
 $tableHeaderCellHoverBg:$shade200 !default;
-$tableHeaderCellTextHoverColor:$shade700 !default;
-$tableHeaderCellIconColor:$shade600 !default;
-$tableHeaderCellIconHoverColor:$shade600 !default;
-$tableHeaderCellHighlightBg:$shade100 !default;
-$tableHeaderCellHighlightTextColor:$primaryColor !default;
-$tableHeaderCellHighlightHoverBg:$shade200 !default;
-$tableHeaderCellHighlightTextHoverColor:$primaryColor !default;
+$tableHeaderCellTextHoverColor:$shadeText !default;
+$tableHeaderCellIconColor:$shadeText !default;
+$tableHeaderCellIconHoverColor:$shadeText !default;
+$tableHeaderCellHighlightBg:rgba(68, 72, 109, 0.12) !default;
+$tableHeaderCellHighlightTextColor:$shadeText !default;
+$tableHeaderCellHighlightHoverBg:rgba(68, 72, 109, 0.12) !default;
+$tableHeaderCellHighlightTextHoverColor:$shadeText !default;
 $tableSortableColumnBadgeSize:1.143rem !default;
 
-$tableBodyRowBg:$shade000 !default;
+$tableBodyRowBg:transparent !default;
 $tableBodyRowTextColor:$shade700 !default;
-$tableBodyRowEvenBg:scale-color($tableBodyRowBg, $lightness: -1%) !default;
+$tableBodyRowEvenBg:transparent !default;
 $tableBodyRowHoverBg:$shade200 !default;
 $tableBodyRowTextHoverColor:$shade700 !default;
-$tableBodyCellBorder:1px solid $shade200 !default;
-$tableBodyCellBorderWidth:0 0 1px 0 !default;
-$tableBodyCellPadding:1rem 1rem !default;
+$tableBodyRowHighlightBg: linear-gradient(0deg, rgba($highlightBg, 0.1), rgba($highlightBg, 0.1)), #FFFFFF;
+$tableBodyRowHighlightTextColor: $shade700;
+$tableBodyCellBorder:1px solid rgba(68, 72, 109, 0.17) !default;
+$tableBodyCellBorderWidth:0 0 0 0 !default;
+$tableBodyCellPadding:0.429rem 0.571rem !default;
 
-$tableFooterCellPadding:1rem 1rem !default;
-$tableFooterCellBg:$shade100 !default;
-$tableFooterCellTextColor:$shade700 !default;
-$tableFooterCellFontWeight:600 !default;
-$tableFooterCellBorder:1px solid $shade200 !default;
+$tableFooterCellPadding:0.571rem 0.571rem !default;
+$tableFooterCellBg:transparent !default;
+$tableFooterCellTextColor:$shadeText !default;
+$tableFooterCellFontWeight:500 !default;
+$tableFooterCellBorder:1px solid rgba(68, 72, 109, 0.17) !default;
 $tableFooterCellBorderWidth:0 0 1px 0 !default;
 $tableResizerHelperBg:$primaryColor !default;
 
-$tableFooterBorder:1px solid $shade200 !default;
+$tableFooterBorder:1px solid rgba(68, 72, 109, 0.17) !default;
 $tableFooterBorderWidth:0 0 1px 0 !default;
-$tableFooterBg:$shade100 !default;
-$tableFooterTextColor:$shade700 !default;
-$tableFooterFontWeight:600 !default;
+$tableFooterBg:transparent !default;
+$tableFooterTextColor:$shadeText !default;
+$tableFooterFontWeight:500 !default;
 $tableFooterPadding:1rem 1rem !default;
 
 $tableCellContentAlignment:left !default;
-$tableTopPaginatorBorderWidth:0 0 1px 0 !default;
-$tableBottomPaginatorBorderWidth:0 0 1px 0 !default;
+$tableTopPaginatorBorderWidth:1px 0 1px 0 !default;
+$tableBottomPaginatorBorderWidth:1px 0 1px 0 !default;
 
 $tableScaleSM:0.5 !default;
 $tableScaleLG:1.25 !default;
