@@ -355,25 +355,27 @@ $inputSwitchHandleOnBg:#FFFFFF !default;
 
 //panel
 $panelHeaderBorder:1px solid $shade300 !default;
-$panelHeaderBg:$shade100 !default;
+$panelHeaderBg:transparent !default;
 $panelHeaderTextColor:$shade700 !default;
-$panelHeaderFontWeight:600 !default;
-$panelHeaderPadding:1rem !default;
-$panelToggleableHeaderPadding:.5rem 1rem !default;
+$panelHeaderFontWeight:500 !default;
+$panelHeaderPadding:0.714rem 1.143rem !default;
+$panelToggleableHeaderPadding:0.429rem 0.571rem !default;
 
 $panelHeaderHoverBg:$shade200 !default;
 $panelHeaderHoverBorderColor:$shade300 !default;
 $panelHeaderTextHoverColor:$shade700 !default;
 
 $panelContentBorder:1px solid $shade300 !default;
-$panelContentBg:$shade000 !default;
+$panelContentBg:transparent !default;
 $panelContentTextColor:$shade700 !default;
-$panelContentPadding:1rem !default;
+$panelContentPadding:1.143rem !default;
 
 $panelFooterBorder:1px solid $shade300 !default;
-$panelFooterBg:$shade000 !default;
+$panelFooterBg:transparent !default;
 $panelFooterTextColor:$shade700 !default;
-$panelFooterPadding:0.5rem 1rem !default;
+$panelFooterPadding:0.714rem 1.143rem !default;
+
+$fieldsetContentPadding: 0.429rem !default;
 
 //accordion
 $accordionSpacing:0 !default;
@@ -387,11 +389,11 @@ $accordionHeaderHoverBg:$shade200 !default;
 $accordionHeaderHoverBorderColor:$shade300 !default;
 $accordionHeaderTextHoverColor:$shade700 !default;
 
-$accordionHeaderActiveBg:$panelHeaderBg !default;
+$accordionHeaderActiveBg:rgba(68, 72, 109, 0.12) !default;
 $accordionHeaderActiveBorderColor:$shade300 !default;
 $accordionHeaderTextActiveColor:$shade700 !default;
 
-$accordionHeaderActiveHoverBg:$shade200 !default;
+$accordionHeaderActiveHoverBg:rgba(68, 72, 109, 0.12) !default;
 $accordionHeaderActiveHoverBorderColor:$shade300 !default;
 $accordionHeaderTextActiveHoverColor:$shade700 !default;
 
