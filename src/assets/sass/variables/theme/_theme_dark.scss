@@ -300,30 +300,34 @@ $sliderRangeBg:$primaryColor !default;
 
 //calendar
 $calendarTableMargin:.5rem 0 !default;
-$calendarPadding:.5rem !default;
+$calendarPadding:0.857rem !default;
 $calendarBg:$solidSurfaceColor !default;
 $calendarInlineBg:$calendarBg !default;
 $calendarTextColor:$shade000 !default;
 $calendarBorder:$inputListBorder !default;
 $calendarOverlayBorder:$inputOverlayBorder !default;
 
-$calendarHeaderPadding:.5rem !default;
-$calendarHeaderBg:$shade800 !default;
+$calendarHeaderPadding:0 0 .75rem 0 !default;
+$calendarHeaderBg:transparent !default;
 $calendarInlineHeaderBg:$calendarBg !default;
-$calendarHeaderBorder:1px solid $shade600 !default;
+$calendarHeaderBorder:0 none !default;
 $calendarHeaderTextColor:$shade000 !default;
-$calendarHeaderFontWeight:600 !default;
-$calendarHeaderCellPadding:.5rem !default;
+$calendarHeaderFontWeight:400 !default;
+$calendarHeaderCellPadding:0.357rem !default;
+$calendarHeaderCellFontWeight:500 !default;
+$calendarHeaderCellFontSize:12px !default;
+$calendarHeaderCellTextColor:$shadeText !default;
 
-$calendarCellDatePadding:.5rem !default;
-$calendarCellDateWidth:2rem !default;
-$calendarCellDateHeight:2rem !default;
-$calendarCellDateBorderRadius:50% !default;
-$calendarCellDateBorder:1px solid transparent !default;
-$calendarCellDateHoverBg:$hoverBg !default;
-$calendarCellDateTodayBg:transparent !default;
-$calendarCellDateTodayBorderColor:transparent !default;
-$calendarCellDateTodayTextColor:$primaryColor !default;
+$calendarCellDateBg: rgba(255, 255, 255, 0.05) !default;
+$calendarCellDatePadding:0.357rem !default;
+$calendarCellDateWidth:2.571rem !default;
+$calendarCellDateHeight:2.571rem !default;
+$calendarCellDateBorderRadius:$borderRadius!default;
+$calendarCellDateBorder:2px solid transparent !default;
+$calendarCellDateHoverBg:rgba(255, 255, 255, 0.1) !default;
+$calendarCellDateTodayBg:rgba(255, 255, 255, 0.05) !default;
+$calendarCellDateTodayBorderColor:rgba(255, 255, 255, 0.25) !default;
+$calendarCellDateTodayTextColor:$shade000 !default;
 
 $calendarButtonBarPadding:1rem 0 !default;
 $calendarTimePickerPadding:.5rem !default;

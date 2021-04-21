@@ -301,29 +301,33 @@ $sliderRangeBg:$primaryColor !default;
 
 //calendar
 $calendarTableMargin:.5rem 0 !default;
-$calendarPadding:.5rem !default;
+$calendarPadding:0.857rem !default;
 $calendarBg:$solidSurfaceColor !default;
 $calendarInlineBg:$calendarBg !default;
 $calendarTextColor:$shade700 !default;
 $calendarBorder:$inputListBorder !default;
 $calendarOverlayBorder:$inputOverlayBorder !default;
 
-$calendarHeaderPadding:.5rem !default;
-$calendarHeaderBg:$shade000 !default;
+$calendarHeaderPadding:0 0 .75rem 0 !default;
+$calendarHeaderBg:transparent !default;
 $calendarInlineHeaderBg:$calendarBg !default;
-$calendarHeaderBorder:1px solid $shade300 !default;
+$calendarHeaderBorder:0 none !default;
 $calendarHeaderTextColor:$shade700 !default;
-$calendarHeaderFontWeight:600 !default;
-$calendarHeaderCellPadding:.5rem !default;
+$calendarHeaderFontWeight:400 !default;
+$calendarHeaderCellPadding:0.357rem !default;
+$calendarHeaderCellFontWeight:500 !default;
+$calendarHeaderCellFontSize:12px !default;
+$calendarHeaderCellTextColor:$shadeText !default;
 
-$calendarCellDatePadding:.5rem !default;
-$calendarCellDateWidth:2rem !default;
-$calendarCellDateHeight:2rem !default;
-$calendarCellDateBorderRadius:50% !default;
-$calendarCellDateBorder:1px solid transparent !default;
-$calendarCellDateHoverBg:$shade200 !default;
-$calendarCellDateTodayBg:$shade400 !default;
-$calendarCellDateTodayBorderColor:transparent !default;
+$calendarCellDateBg:rgba(68, 72, 109, 0.07) !default;
+$calendarCellDatePadding:0.357rem !default;
+$calendarCellDateWidth:2.571rem !default;
+$calendarCellDateHeight:2.571rem !default;
+$calendarCellDateBorderRadius:$borderRadius !default;
+$calendarCellDateBorder:2px solid transparent !default;
+$calendarCellDateHoverBg:rgba(68, 72, 109, 0.12) !default;
+$calendarCellDateTodayBg:rgba(68, 72, 109, 0.07) !default;
+$calendarCellDateTodayBorderColor:rgba(68, 72, 109, 0.12) !default;
 $calendarCellDateTodayTextColor:$shade700 !default;
 
 $calendarButtonBarPadding:1rem 0 !default;
