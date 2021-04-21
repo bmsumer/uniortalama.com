@@ -339,19 +339,19 @@ $calendarBreakpoint:769px !default;
 $calendarCellDatePaddingSM:0 !default;
 
 //input switch
-$inputSwitchWidth:3rem !default;
-$inputSwitchHeight:1.75rem !default;
-$inputSwitchBorderRadius:30px !default;
-$inputSwitchHandleWidth:1.250rem !default;
-$inputSwitchHandleHeight:1.250rem !default;
-$inputSwitchHandleBorderRadius:50% !default;
+$inputSwitchWidth:2.714rem !default;
+$inputSwitchHeight:1.429rem !default;
+$inputSwitchBorderRadius:12px !default;
+$inputSwitchHandleWidth:1.143rem !default;
+$inputSwitchHandleHeight:1.143rem !default;
+$inputSwitchHandleBorderRadius:8px !default;
 $inputSwitchSliderPadding:.25rem !default;
-$inputSwitchSliderOffBg:$shade400 !default;
-$inputSwitchHandleOffBg:$shade000 !default;
-$inputSwitchSliderOffHoverBg:scale-color($shade400, $lightness: -10%) !default;
+$inputSwitchSliderOffBg:$shade000 !default;
+$inputSwitchHandleOffBg:$shade600 !default;
+$inputSwitchSliderOffHoverBg:rgba(68, 72, 109, 0.12)!default;
 $inputSwitchSliderOnBg:$primaryColor !default;
 $inputSwitchSliderOnHoverBg:$primaryDarkColor !default;
-$inputSwitchHandleOnBg:$shade000 !default;
+$inputSwitchHandleOnBg:#FFFFFF !default;
 
 //panel
 $panelHeaderBorder:1px solid $shade300 !default;
