@@ -150,3 +150,10 @@
         padding: $fieldsetContentPadding;
     }
 }
+
+//card
+.p-card {
+    .p-card-subtitle {
+        font-size: $cardSubTitleFontSize;
+    }
+}

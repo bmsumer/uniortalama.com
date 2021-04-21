@@ -403,32 +403,32 @@ $accordionContentTextColor:$panelContentTextColor !default;
 $accordionContentPadding:$panelContentPadding !default;
 
 //tabview
-$tabviewNavBorder:1px solid $shade300 !default;
+$tabviewNavBorder:1px solid rgba(68, 72, 109, 0.17) !default;
 $tabviewNavBorderWidth:0 0 2px 0 !default;
-$tabviewNavBg:$shade000 !default;
+$tabviewNavBg:transparent !default;
 
-$tabviewHeaderSpacing:0 !default;
-$tabviewHeaderBorder:solid $shade300 !default;
+$tabviewHeaderSpacing:0.857rem !default;
+$tabviewHeaderBorder:solid transparent !default;
 $tabviewHeaderBorderWidth:0 0 2px 0 !default;
-$tabviewHeaderBorderColor:transparent transparent $shade300 transparent !default;
-$tabviewHeaderBg:$shade000 !default;
-$tabviewHeaderTextColor:$shade600 !default;
+$tabviewHeaderBorderColor:transparent transparent transparent transparent !default;
+$tabviewHeaderBg:transparent !default;
+$tabviewHeaderTextColor:$shadeText !default;
 $tabviewHeaderFontWeight:$panelHeaderFontWeight !default;
-$tabviewHeaderPadding:$panelHeaderPadding !default;
+$tabviewHeaderPadding:0.571rem 0.429rem !default;
 $tabviewHeaderMargin:0 0 -2px 0 !default;
 
-$tabviewHeaderHoverBg:$shade000 !default;
-$tabviewHeaderHoverBorderColor:$shade600 !default;
-$tabviewHeaderTextHoverColor:$shade600 !default;
+$tabviewHeaderHoverBg:transparent !default;
+$tabviewHeaderHoverBorderColor:$shade700 !default;
+$tabviewHeaderTextHoverColor:$shade700 !default;
 
-$tabviewHeaderActiveBg:$shade000 !default;
+$tabviewHeaderActiveBg:transparent !default;
 $tabviewHeaderActiveBorderColor:$primaryColor !default;
 $tabviewHeaderTextActiveColor:$primaryColor !default;
 
 $tabviewContentBorder:0 none !default;
-$tabviewContentBg:$panelContentBg !default;
+$tabviewContentBg:transparent !default;
 $tabviewContentTextColor:$panelContentTextColor !default;
-$tabviewContentPadding:$panelContentPadding !default;
+$tabviewContentPadding:1.143rem 0 !default;
 
 //upload
 $fileUploadProgressBarHeight:.25rem !default;
@@ -439,11 +439,12 @@ $scrollPanelTrackBorder:0 none !default;
 $scrollPanelTrackBg:$shade100 !default;
 
 //card
-$cardBodyPadding:1rem !default;
-$cardTitleFontSize:1.5rem !default;
-$cardTitleFontWeight:700 !default;
-$cardSubTitleFontWeight:400 !default;
-$cardSubTitleColor:$shade600 !default;
+$cardBodyPadding:0.857rem 1.143rem !default;
+$cardTitleFontSize:1.143rem !default;
+$cardTitleFontWeight:500 !default;
+$cardSubTitleFontSize:12px !default;
+$cardSubTitleFontWeight:500 !default;
+$cardSubTitleColor:$shadeText !default;
 $cardContentPadding:1rem 0 !default;
 $cardFooterPadding:1rem 0 0 0 !default;
 $cardShadow:0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12) !default;

@@ -402,32 +402,32 @@ $accordionContentTextColor:$panelContentTextColor !default;
 $accordionContentPadding:$panelContentPadding !default;
 
 //tabview
-$tabviewNavBorder:1px solid $shade600 !default;
+$tabviewNavBorder:1px solid rgba(255, 255, 255, 0.15) !default;
 $tabviewNavBorderWidth:0 0 2px 0 !default;
 $tabviewNavBg:transparent !default;
 
-$tabviewHeaderSpacing:0 !default;
-$tabviewHeaderBorder:solid $shade600 !default;
+$tabviewHeaderSpacing:0.857rem !default;
+$tabviewHeaderBorder:solid transparent !default;
 $tabviewHeaderBorderWidth:0 0 2px 0 !default;
-$tabviewHeaderBorderColor:transparent transparent $shade600 transparent !default;
-$tabviewHeaderBg:$shade800 !default;
-$tabviewHeaderTextColor:$shade100 !default;
+$tabviewHeaderBorderColor:transparent transparent transparent transparent !default;
+$tabviewHeaderBg:transparent !default;
+$tabviewHeaderTextColor:$shadeText !default;
 $tabviewHeaderFontWeight:$panelHeaderFontWeight !default;
-$tabviewHeaderPadding:$panelHeaderPadding !default;
+$tabviewHeaderPadding:0.571rem 0.429rem !default;
 $tabviewHeaderMargin:0 0 -2px 0 !default;
 
-$tabviewHeaderHoverBg:$shade800 !default;
-$tabviewHeaderHoverBorderColor:$primaryColor !default;
+$tabviewHeaderHoverBg:transparent !default;
+$tabviewHeaderHoverBorderColor:$shade000 !default;
 $tabviewHeaderTextHoverColor:$shade000 !default;
 
-$tabviewHeaderActiveBg:$shade800 !default;
+$tabviewHeaderActiveBg:transparent !default;
 $tabviewHeaderActiveBorderColor:$primaryColor !default;
 $tabviewHeaderTextActiveColor:$primaryColor !default;
 
 $tabviewContentBorder:0 none !default;
-$tabviewContentBg:$shade800 !default;
+$tabviewContentBg:transparent !default;
 $tabviewContentTextColor:$shade000 !default;
-$tabviewContentPadding:$panelContentPadding !default;
+$tabviewContentPadding:1.143rem 0 !default;
 
 //upload
 $fileUploadProgressBarHeight:.25rem !default;
@@ -438,11 +438,12 @@ $scrollPanelTrackBorder:0 none !default;
 $scrollPanelTrackBg:$shade600 !default;
 
 //card
-$cardBodyPadding:1rem !default;
-$cardTitleFontSize:1.5rem !default;
-$cardTitleFontWeight:700 !default;
-$cardSubTitleFontWeight:700 !default;
-$cardSubTitleColor:$shade100 !default;
+$cardBodyPadding:0.857rem 1.143rem !default;
+$cardTitleFontSize:1.143rem !default;
+$cardTitleFontWeight:500 !default;
+$cardSubTitleFontSize:12px !default;
+$cardSubTitleFontWeight:500 !default;
+$cardSubTitleColor:$shadeText !default;
 $cardContentPadding:1rem 0 !default;
 $cardFooterPadding:1rem 0 0 0 !default;
 $cardShadow:0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12) !default;
