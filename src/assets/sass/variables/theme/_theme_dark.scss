@@ -639,27 +639,24 @@ $errorMessageTextColor:$shade000 !default;
 $errorMessageIconColor:$shade000 !default;
 
 //overlays
-$overlayContentBorder:1px solid $shade600 !default;
-$overlayContentBg:$panelContentBg !default;
-$overlayContainerShadow:0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0,0,0,.12) !default;
+$overlayContentBorder:0 none !default;
+$overlayContentBg:$solidSurfaceColor !default;
+$overlayContainerShadow:0px 10px 30px rgba(0, 0, 0, 0.3) !default;
 
 //dialog
-$dialogHeaderBg:$shade800 !default;
+$dialogBorderRadius:20px;
+$dialogHeaderBg:$solidSurfaceColor !default;
 $dialogHeaderBorder:0 none !default;
 $dialogHeaderTextColor:$shade000 !default;
-$dialogHeaderFontWeight:600 !default;
-$dialogHeaderFontSize:1.25rem !default;
-$dialogHeaderPadding:1.5rem !default;
-$dialogContentPadding:0 1.5rem 2rem 1.5rem !default;
+$dialogHeaderFontWeight:500 !default;
+$dialogHeaderFontSize:1.143rem !default;
+$dialogHeaderPadding:1.286rem 1.714rem !default;
+$dialogContentPadding:0 1.714rem 1.714rem 1.714rem !default;
 $dialogFooterBorder:0 none !default;
-$dialogFooterPadding:0 1.5rem 1.5rem 1.5rem !default;
-
-//confirmpopup
-$confirmPopupContentPadding:$panelContentPadding;
-$confirmPopupFooterPadding:0 1rem 1rem 1rem;
+$dialogFooterPadding:0 1.714rem 1.714rem 1.714rem !default;
 
 //tooltip
-$tooltipBg:$shade600 !default;
+$tooltipBg:$solidSurfaceColor !default;
 $tooltipTextColor:$shade000 !default;
 $tooltipPadding:$inputPadding !default;
 

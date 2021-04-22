@@ -640,23 +640,24 @@ $errorMessageIconColor:$shade700 !default;
 
 //overlays
 $overlayContentBorder:0 none !default;
-$overlayContentBg:$panelContentBg !default;
-$overlayContainerShadow:0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0,0,0,.12) !default;
+$overlayContentBg:$solidSurfaceColor !default;
+$overlayContainerShadow:0px 18px 50px -4px rgba(68, 72, 109, 0.1) !default;
 
 //dialog
-$dialogHeaderBg:$shade000 !default;
+$dialogBorderRadius:20px;
+$dialogHeaderBg:$solidSurfaceColor !default;
 $dialogHeaderBorder:0 none !default;
 $dialogHeaderTextColor:$shade700 !default;
-$dialogHeaderFontWeight:600 !default;
-$dialogHeaderFontSize:1.25rem !default;
-$dialogHeaderPadding:1.5rem !default;
-$dialogContentPadding:0 1.5rem 2rem 1.5rem !default;
+$dialogHeaderFontWeight:500 !default;
+$dialogHeaderFontSize:1.143rem !default;
+$dialogHeaderPadding:1.286rem 1.714rem !default;
+$dialogContentPadding:0 1.714rem 1.714rem 1.714rem !default;
 $dialogFooterBorder:0 none !default;
-$dialogFooterPadding:0 1.5rem 1.5rem 1.5rem !default;
+$dialogFooterPadding:0 1.714rem 1.714rem 1.714rem !default;
 
 //tooltip
-$tooltipBg:$shade700 !default;
-$tooltipTextColor:$shade000 !default;
+$tooltipBg:$solidSurfaceColor !default;
+$tooltipTextColor:$shade700 !default;
 $tooltipPadding:$inputPadding !default;
 
 //steps
