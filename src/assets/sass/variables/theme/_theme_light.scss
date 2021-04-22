@@ -596,47 +596,47 @@ $organizationChartConnectorColor:$shade300 !default;
 
 //message
 $messageMargin:1rem 0 !default;
-$messagePadding:1rem 1.5rem !default;
-$messageBorderWidth:0 0 0 6px !default;
-$messageIconFontSize:1.5rem !default;
+$messagePadding:1.143rem 1.357rem !default;
+$messageBorderWidth:0 0 0 20px !default;
+$messageIconFontSize:1.286rem !default;
 $messageTextFontSize:1rem !default;
-$messageTextFontWeight:500 !default;
+$messageTextFontWeight:400 !default;
 
 //inline message
 $inlineMessagePadding:$inputPadding !default;
 $inlineMessageMargin:0 !default;
-$inlineMessageIconFontSize:1rem !default;
+$inlineMessageIconFontSize:1.286rem  !default;
 $inlineMessageTextFontSize:1rem !default;
-$inlineMessageBorderWidth:0px !default;
+$inlineMessageBorderWidth:0 0 0 20px !default;
 
 //toast
-$toastIconFontSize:2rem !default;
+$toastIconFontSize:1.286rem !default;
 $toastMessageTextMargin:0 0 0 1rem !default;
 $toastMargin:0 0 1rem 0 !default;
-$toastPadding:1rem !default;
-$toastBorderWidth:0 0 0 6px !default;
-$toastShadow:0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !default;
+$toastPadding:1.143rem 1.357rem !default;
+$toastBorderWidth:0 0 0 20px !default;
+$toastShadow:none !default;
 $toastOpacity:.9 !default;
-$toastTitleFontWeight:700 !default;
+$toastTitleFontWeight:400 !default;
 $toastDetailMargin:$inlineSpacing 0 0 0 !default;
 
 //severities
-$infoMessageBg:#B3E5FC !default;
-$infoMessageBorder:solid scale-color($infoMessageBg, $lightness: -50%) !default;
-$infoMessageTextColor:scale-color($infoMessageBg, $lightness: -75%) !default;
-$infoMessageIconColor:scale-color($infoMessageBg, $lightness: -75%) !default;
-$successMessageBg:#C8E6C9 !default;
-$successMessageBorder:solid scale-color($successMessageBg, $lightness: -50%) !default;
-$successMessageTextColor:scale-color($successMessageBg, $lightness: -75%) !default;
-$successMessageIconColor:scale-color($successMessageBg, $lightness: -75%) !default;
-$warningMessageBg:#FFECB3 !default;
-$warningMessageBorder:solid scale-color($warningMessageBg, $lightness: -50%) !default;
-$warningMessageTextColor:scale-color($warningMessageBg, $lightness: -75%) !default;
-$warningMessageIconColor:scale-color($warningMessageBg, $lightness: -75%) !default;
-$errorMessageBg:#FFCDD2 !default;
-$errorMessageBorder:solid scale-color($errorMessageBg, $lightness: -50%) !default;
-$errorMessageTextColor:scale-color($errorMessageBg, $lightness: -75%) !default;
-$errorMessageIconColor:scale-color($errorMessageBg, $lightness: -75%) !default;
+$infoMessageBg:$shade200 !default;
+$infoMessageBorder:solid #873EFE !default;
+$infoMessageTextColor:$shade700 !default;
+$infoMessageIconColor:$shade700 !default;
+$successMessageBg:$shade200 !default;
+$successMessageBorder:solid #0BD18A !default;
+$successMessageTextColor:$shade700 !default;
+$successMessageIconColor:$shade700 !default;
+$warningMessageBg:$shade200 !default;
+$warningMessageBorder:solid #EEE500 !default;
+$warningMessageTextColor:$shade700 !default;
+$warningMessageIconColor:$shade700 !default;
+$errorMessageBg:$shade200 !default;
+$errorMessageBorder:solid #FC6161 !default;
+$errorMessageTextColor:$shade700 !default;
+$errorMessageIconColor:$shade700 !default;
 
 //overlays
 $overlayContentBorder:0 none !default;
