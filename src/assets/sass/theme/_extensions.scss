@@ -172,7 +172,6 @@
 }
 
 //datatable
-
 .p-datatable {
     .p-column-filter-menu-button {
         color: $shadeText;
@@ -250,6 +249,58 @@
     }
 }
 
+//treetable
+.p-treetable {
+    .p-column-filter-menu-button {
+        color: $shadeText;
+    }
+
+    .p-sortable-column {
+        border-radius: $borderRadius;
+
+        &:focus {
+            box-shadow: none;
+            outline: 0 none;
+        }
+    }
+
+    .p-treetable-tbody {
+        > tr {
+            > td {
+                &:first-child {
+                    border-top-left-radius: $borderRadius;
+                    border-bottom-left-radius: $borderRadius;
+                }
+                &:last-child {
+                    border-top-right-radius: $borderRadius;
+                    border-bottom-right-radius: $borderRadius;
+                }
+            }
+
+            &.p-highlight {
+                background: $tableBodyRowHighlightBg;
+                color: $tableBodyRowHighlightTextColor;
+            }
+        }
+    }
+}
+
+//tree
+.p-tree {
+    &.p-tree-horizontal {
+        .p-treenode {
+            .p-treenode-content {
+                background: $solidSurfaceColor;
+
+                &.p-treenode-selectable:not(.p-highlight):hover {
+                    background-color: $solidSurfaceColor;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
 //orderlist
 .p-orderlist {
     .p-orderlist-list-container {
@@ -284,6 +335,45 @@
                 color: $textColor;
                 background: $orderlistListItemActiveBg;
                 border-color: $orderlistListItemActiveBorderColor;
+            }
+        }
+    }
+}
+
+//picklist
+.p-picklist {
+    .p-picklist-list-wrapper {
+        background: $picklistBg;
+        box-shadow: $picklistShadow;
+        border-radius: $picklistBorderRadius;
+    }
+
+    .p-picklist-header {
+        border: $picklistBorder;
+        border-width: $picklistBorderWidth;
+        padding: $picklistHeaderPadding;
+    }
+
+
+    .p-picklist-filter-container {
+        border: $picklistBorder;
+        border-width: $picklistBorderWidth;
+    }
+
+    .p-picklist-list {
+        border: $picklistBorder;
+        border-width: $picklistBorderWidth;
+        padding: $picklistListPadding;
+
+        .p-picklist-item {
+            padding: $picklistListItemPadding;
+            border-radius: $borderRadius;
+            border: $picklistListItemBorder;
+
+            &.p-highlight {
+                color: $textColor;
+                background: $picklistListItemActiveBg;
+                border-color: $picklistListItemActiveBorderColor;
             }
         }
     }

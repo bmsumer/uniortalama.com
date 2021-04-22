@@ -555,6 +555,19 @@ $orderlistListItemBorder:1px solid transparent !default;
 $orderlistListItemActiveBg:linear-gradient(0deg, rgba($highlightBg, 0.25), rgba($highlightBg, 0.25)), rgba(255, 255, 255, 0.05) !default;
 $orderlistListItemActiveBorderColor:$highlightBg !default;
 
+//picklist
+$picklistBg:$shade600 !default;
+$picklistShadow:none !default;
+$picklistBorderRadius:8px !default;
+$picklistBorder:0 none !default;
+$picklistBorderWidth:0 0 0 0 !default;
+$picklistHeaderPadding:1.143rem !default;
+$picklistListPadding:0.571rem !default;
+$picklistListItemPadding:0.714rem 0.571rem !default;
+$picklistListItemBorder:1px solid transparent !default;
+$picklistListItemActiveBg:linear-gradient(0deg, rgba($highlightBg, 0.25), rgba($highlightBg, 0.25)), rgba(255, 255, 255, 0.05) !default;
+$picklistListItemActiveBorderColor:$highlightBg !default;
+
 //schedule
 $fullCalendarEventBg:$primaryDarkColor !default;
 $fullCalendarEventBorder:1px solid $primaryDarkColor !default;
@@ -563,9 +576,9 @@ $fullCalendarEventTextColor:$primaryTextColor !default;
 //tree
 $treeContainerPadding:0.286rem !default;
 $treeNodePadding:0.143rem !default;
-$treeNodeContentPadding:.5rem !default;
+$treeNodeContentPadding:0.429rem 0.571rem !default;
 $treeNodeChildrenPadding:0 0 0 1rem !default;
-$treeNodeIconColor:$shade100 !default;
+$treeNodeIconColor:$shade000 !default;
 
 //timeline
 $timelineVerticalEventContentPadding:0 1rem !default;
