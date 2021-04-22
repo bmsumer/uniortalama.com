@@ -540,11 +540,20 @@ $tableScaleLG:1.25 !default;
 $dataViewContentPadding:0 !default;
 $dataViewContentBorder:0 none !default;
 $dataViewListItemBorder:solid $shade200 !default;
-$dataViewListItemBorderWidth:0 0 1px 0 !default;
+$dataViewListItemBorderWidth:0 0 0 0 !default;
 
-//orderlist, picklist
-$orderListBreakpoint:769px !default;
-$pickListBreakpoint:769px !default;
+//orderlist
+$orderlistBg:rgba(255, 255, 255, 0.9) !default;
+$orderlistShadow:0px 9px 30px rgba(68, 72, 109, 0.06) !default;
+$orderlistBorderRadius:8px !default;
+$orderlistBorder:0 none !default;
+$orderlistBorderWidth:0 0 0 0 !default;
+$orderlistHeaderPadding:1.143rem !default;
+$orderlistListPadding:0.571rem !default;
+$orderlistListItemPadding:0.714rem 0.571rem !default;
+$orderlistListItemBorder:1px solid transparent !default;
+$orderlistListItemActiveBg:linear-gradient(0deg, rgba($highlightBg, 0.1), rgba($highlightBg, 0.1)), #FFFFFF !default;
+$orderlistListItemActiveBorderColor:$highlightBg !default;
 
 //schedule
 $fullCalendarEventBg:$primaryDarkColor !default;

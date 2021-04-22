@@ -16,7 +16,7 @@
 				</ng-template>
 				<ng-template let-product pTemplate="listItem">
 					<div class="p-col-12">
-						<div class="product-list-item">
+						<div class="product-list-item card">
 							<img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name"/>
 							<div class="product-list-detail">
 								<div class="product-name">{{product.name}}</div>
@@ -74,7 +74,7 @@
 	<div class="p-col-12 p-lg-4">
 		<div class="card">
 			<h5>OrderList</h5>
-			<p-orderList [value]="orderCities" [listStyle]="{'height':'auto'}" header="Cities" dragdrop="true">
+			<p-orderList [value]="orderCities" [listStyle]="{'height':'auto'}" header="Cities" [dragdrop]="true">
 				<ng-template let-city pTemplate="item">
 					<div>{{city.name}}</div>
 				</ng-template>
