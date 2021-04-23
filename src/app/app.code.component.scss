@@ -27,6 +27,7 @@ i:not([class~="pi"]) {
 :host ::ng-deep pre[class*="language-"] {
 	box-shadow: none;
 	border: 0 none;
+    background: inherit;
 
 	&:before, &:after {
 		display: none !important;
