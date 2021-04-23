@@ -661,20 +661,28 @@ $tooltipTextColor:$shade700 !default;
 $tooltipPadding:$inputPadding !default;
 
 //steps
-$stepsItemBg:$shade000 !default;
-$stepsItemBorder:1px solid $shade200 !default;
-$stepsItemTextColor:$shade600 !default;
-$stepsItemNumberWidth:2rem !default;
-$stepsItemNumberHeight:2rem !default;
+$stepsItemBg:transparent !default;
+$stepsItemBorder:0 none !default;
+$stepsItemTextColor:$shadeText !default;
+$stepsItemNumberBg:rgba(68, 72, 109, 0.12) !default;
+$stepsItemNumberWidth:1.714rem !default;
+$stepsItemNumberHeight:1.714rem !default;
 $stepsItemNumberFontSize:1.143rem !default;
-$stepsItemNumberColor:$shade700 !default;
-$stepsItemNumberBorderRadius:50% !default;
-$stepsItemActiveFontWeight:600 !default;
+$stepsItemNumberColor:$shadeText !default;
+$stepsItemNumberBorderRadius:12px !default;
+$stepsItemActiveFontWeight:400 !default;
+$stepsItemHoverBg:rgba(68, 72, 109, 0.17) !default;
+$stepsItemHoverTextColor:$shade700 !default;
+$stepsItemActiveFontWeight:400 !default;
+$stepsItemActiveBg:$highlightBg !default;
+$stepsItemNumberActiveTextColor:$highlightTextColor !default;
+$stepsItemActiveTextColor:$shade700 !default;
+$stepsItemActiveShadow:0px 0px 10px rgba($highlightBg, 0.25) !default;
 
 //progressbar
-$progressBarHeight:1.5rem !default;
+$progressBarHeight:0.571rem !default;
 $progressBarBorder:0 none !default;
-$progressBarBg:$shade300 !default;
+$progressBarBg:rgba(68, 72, 109, 0.12) !default;
 $progressBarValueBg:$primaryColor !default;
 
 //menu (e.g. menu, menubar, tieredmenu)
