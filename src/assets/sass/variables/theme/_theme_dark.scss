@@ -302,14 +302,14 @@ $sliderRangeBg:$primaryColor !default;
 $calendarTableMargin:.5rem 0 !default;
 $calendarPadding:0.857rem !default;
 $calendarBg:$solidSurfaceColor !default;
-$calendarInlineBg:$calendarBg !default;
+$calendarInlineBg:transparent !default;
 $calendarTextColor:$shade000 !default;
 $calendarBorder:$inputListBorder !default;
 $calendarOverlayBorder:$inputOverlayBorder !default;
 
 $calendarHeaderPadding:0 0 .75rem 0 !default;
 $calendarHeaderBg:transparent !default;
-$calendarInlineHeaderBg:$calendarBg !default;
+$calendarInlineHeaderBg:$calendarInlineBg !default;
 $calendarHeaderBorder:0 none !default;
 $calendarHeaderTextColor:$shade000 !default;
 $calendarHeaderFontWeight:400 !default;
