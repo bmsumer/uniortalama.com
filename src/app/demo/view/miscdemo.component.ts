@@ -39,7 +39,7 @@ import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 
         :host ::ng-deep  .custom-skeleton {
             border: 1px solid var(--surface-d);
-            border-borderRadius: 4px;
+            border-radius: 6px;
         }
 
         :host ::ng-deep  .custom-skeleton ul {

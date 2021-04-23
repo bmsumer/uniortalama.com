@@ -746,39 +746,41 @@ $horizontalMenuRootMenuitemActiveBg:$menuitemActiveBg !default;
 //badge and tag
 $badgeBg:$primaryColor !default;
 $badgeTextColor:$primaryTextColor !default;
-$badgeMinWidth:1.5rem !default;
-$badgeHeight:1.5rem !default;
-$badgeFontWeight:700 !default;
-$badgeFontSize:.75rem !default;
+$badgeMinWidth:1.429rem !default;
+$badgeHeight:1.429rem !default;
+$badgeFontWeight:500 !default;
+$badgeFontSize:1rem !default;
 
-$tagPadding:.25rem .4rem !default;
+$tagPadding:0 0.429rem !default;
 
 //carousel
 $carouselIndicatorsPadding:1rem !default;
-$carouselIndicatorBg:$shade200 !default;
-$carouselIndicatorHoverBg:$shade300 !default;
-$carouselIndicatorBorderRadius:0 !default;
-$carouselIndicatorWidth:2rem !default;
-$carouselIndicatorHeight:.5rem !default;
+$carouselIndicatorBg:rgba(68, 72, 109, 0.12) !default;
+$carouselIndicatorHoverBg:rgba(68, 72, 109, 0.15) !default;
+$carouselIndicatorBorderRadius:3px !default;
+$carouselIndicatorWidth:1.429rem !default;
+$carouselIndicatorHeight:0.286rem !default;
+$carouselIndicatorActiveBg: $shade600 !default;
+$carouselIndicatorActiveTextColor: $shade700 !default;
 
 //galleria
 $galleriaMaskBg:rgba(0,0,0,0.9) !default;
 $galleriaCloseIconMargin:.5rem !default;
 $galleriaCloseIconFontSize:2rem !default;
 $galleriaCloseIconBg:transparent !default;
-$galleriaCloseIconColor:$shade100 !default;
-$galleriaCloseIconHoverBg:rgba(255,255,255,0.1) !default;
-$galleriaCloseIconHoverColor:$shade100 !default;
+$galleriaCloseIconColor:$shade700 !default;
+$galleriaCloseIconHoverBg:rgba(68, 72, 109, 0.15) !default;
+$galleriaCloseIconHoverColor:$shade700 !default;
 $galleriaCloseIconWidth:4rem !default;
 $galleriaCloseIconHeight:4rem !default;
 $galleriaCloseIconBorderRadius:50% !default;
 
 $galleriaItemNavigatorBg:transparent !default;
-$galleriaItemNavigatorColor:$shade100 !default;
+$galleriaItemNavigatorColor:$shade700 !default;
 $galleriaItemNavigatorMargin:0 .5rem !default;
 $galleriaItemNavigatorFontSize:2rem !default;
-$galleriaItemNavigatorHoverBg:rgba(255,255,255,0.1) !default;
-$galleriaItemNavigatorHoverColor:$shade100 !default;
+$galleriaItemNavigatorHoverBg:rgba(68, 72, 109, 0.15) !default;
+$galleriaItemNavigatorHoverColor:$shade700 !default;
 $galleriaItemNavigatorWidth:4rem !default;
 $galleriaItemNavigatorHeight:4rem !default;
 $galleriaItemNavigatorBorderRadius:$borderRadius !default;
@@ -788,21 +790,21 @@ $galleriaCaptionTextColor:$shade100 !default;
 $galleriaCaptionPadding:1rem !default;
 
 $galleriaIndicatorsPadding:1rem !default;
-$galleriaIndicatorBg:$shade200 !default;
-$galleriaIndicatorHoverBg:$shade300 !default;
-$galleriaIndicatorBorderRadius:50% !default;
-$galleriaIndicatorWidth:1rem !default;
-$galleriaIndicatorHeight:1rem !default;
+$galleriaIndicatorBg:rgba(68, 72, 109, 0.12) !default;
+$galleriaIndicatorHoverBg:rgba(68, 72, 109, 0.15)  !default;
+$galleriaIndicatorBorderRadius:3px !default;
+$galleriaIndicatorWidth:1.429rem !default;
+$galleriaIndicatorHeight:0.286rem !default;
 $galleriaIndicatorsBgOnItem:rgba(0,0,0,.5) !default;
-$galleriaIndicatorBgOnItem:rgba(255,255,255,.4) !default;
-$galleriaIndicatorHoverBgOnItem:rgba(255,255,255,.6) !default;
+$galleriaIndicatorBgOnItem:$shade600 !default;
+$galleriaIndicatorHoverBgOnItem:$shade700 !default;
 
-$galleriaThumbnailContainerBg:rgba(0,0,0,.9) !default;
+$galleriaThumbnailContainerBg:$solidSurfaceColor !default;
 $galleriaThumbnailContainerPadding:1rem .25rem !default;
 $galleriaThumbnailNavigatorBg:transparent !default;
-$galleriaThumbnailNavigatorColor:$shade100 !default;
-$galleriaThumbnailNavigatorHoverBg:rgba(255,255,255,0.1) !default;
-$galleriaThumbnailNavigatorHoverColor:$shade100 !default;
+$galleriaThumbnailNavigatorColor:$shade700 !default;
+$galleriaThumbnailNavigatorHoverBg:rgba(68, 72, 109, 0.15)!default;
+$galleriaThumbnailNavigatorHoverColor:$shade700 !default;
 $galleriaThumbnailNavigatorBorderRadius:50% !default;
 $galleriaThumbnailNavigatorWidth:2rem !default;
 $galleriaThumbnailNavigatorHeight:2rem !default;
@@ -838,7 +840,7 @@ $skeletonBg:$shade200;
 $skeletonAnimationBg:rgba(255,255,255,0.4);
 
 //splitter
-$splitterGutterBg:$shade100;
+$splitterGutterBg:$shade300;
 $splitterGutterHandleBg:$shade300;
 
 :root {

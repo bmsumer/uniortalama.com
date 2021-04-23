@@ -745,39 +745,41 @@ $horizontalMenuRootMenuitemActiveBg:$menuitemActiveBg !default;
 //badge and tag
 $badgeBg:$primaryColor !default;
 $badgeTextColor:$primaryTextColor !default;
-$badgeMinWidth:1.5rem !default;
-$badgeHeight:1.5rem !default;
-$badgeFontWeight:700 !default;
-$badgeFontSize:.75rem !default;
+$badgeMinWidth:1.429rem !default;
+$badgeHeight:1.429rem !default;
+$badgeFontWeight:500 !default;
+$badgeFontSize:1rem !default;
 
-$tagPadding:.25rem .4rem !default;
+$tagPadding:0 0.429rem !default;
 
 //carousel
 $carouselIndicatorsPadding:1rem !default;
-$carouselIndicatorBg:$shade600 !default;
-$carouselIndicatorHoverBg:scale-color($shade600, $lightness: 10%) !default;
-$carouselIndicatorBorderRadius:0 !default;
-$carouselIndicatorWidth:2rem !default;
-$carouselIndicatorHeight:.5rem !default;
+$carouselIndicatorBg:rgba(255, 255, 255, 0.1) !default;
+$carouselIndicatorHoverBg:rgba(255, 255, 255, 0.2) !default;
+$carouselIndicatorBorderRadius:3px !default;
+$carouselIndicatorWidth:1.429rem !default;
+$carouselIndicatorHeight:0.286rem !default;
+$carouselIndicatorActiveBg: $shade100 !default;
+$carouselIndicatorActiveTextColor: $shade000 !default;
 
 //galleria
 $galleriaMaskBg:rgba(0,0,0,0.9) !default;
 $galleriaCloseIconMargin:.5rem !default;
 $galleriaCloseIconFontSize:2rem !default;
 $galleriaCloseIconBg:transparent !default;
-$galleriaCloseIconColor:#f8f9fa !default;
+$galleriaCloseIconColor:$shade000 !default;
 $galleriaCloseIconHoverBg:rgba(255,255,255,0.1) !default;
-$galleriaCloseIconHoverColor:#f8f9fa !default;
+$galleriaCloseIconHoverColor:$shade000 !default;
 $galleriaCloseIconWidth:4rem !default;
 $galleriaCloseIconHeight:4rem !default;
 $galleriaCloseIconBorderRadius:50% !default;
 
 $galleriaItemNavigatorBg:transparent !default;
-$galleriaItemNavigatorColor:#f8f9fa !default;
+$galleriaItemNavigatorColor:$shade000 !default;
 $galleriaItemNavigatorMargin:0 .5rem !default;
 $galleriaItemNavigatorFontSize:2rem !default;
 $galleriaItemNavigatorHoverBg:rgba(255,255,255,0.1) !default;
-$galleriaItemNavigatorHoverColor:#f8f9fa !default;
+$galleriaItemNavigatorHoverColor:$shade000 !default;
 $galleriaItemNavigatorWidth:4rem !default;
 $galleriaItemNavigatorHeight:4rem !default;
 $galleriaItemNavigatorBorderRadius:$borderRadius !default;
@@ -787,21 +789,21 @@ $galleriaCaptionTextColor:#f8f9fa !default;
 $galleriaCaptionPadding:1rem !default;
 
 $galleriaIndicatorsPadding:1rem !default;
-$galleriaIndicatorBg:$shade600 !default;
-$galleriaIndicatorHoverBg:scale-color($shade600, $lightness: 10%) !default;
-$galleriaIndicatorBorderRadius:50% !default;
-$galleriaIndicatorWidth:1rem !default;
-$galleriaIndicatorHeight:1rem !default;
+$galleriaIndicatorBg:rgba(255, 255, 255, 0.1) !default;
+$galleriaIndicatorHoverBg:rgba(255, 255, 255, 0.2)  !default;
+$galleriaIndicatorBorderRadius:3px !default;
+$galleriaIndicatorWidth:1.429rem !default;
+$galleriaIndicatorHeight:0.286rem !default;
 $galleriaIndicatorsBgOnItem:rgba(0,0,0,.5) !default;
-$galleriaIndicatorBgOnItem:rgba(255,255,255,.4) !default;
-$galleriaIndicatorHoverBgOnItem:rgba(255,255,255,.6) !default;
+$galleriaIndicatorBgOnItem:$shade100 !default;
+$galleriaIndicatorHoverBgOnItem:$shade000 !default;
 
-$galleriaThumbnailContainerBg:rgba(0,0,0,.9) !default;
+$galleriaThumbnailContainerBg:$solidSurfaceColor !default;
 $galleriaThumbnailContainerPadding:1rem .25rem !default;
 $galleriaThumbnailNavigatorBg:transparent !default;
-$galleriaThumbnailNavigatorColor:#f8f9fa !default;
+$galleriaThumbnailNavigatorColor:$shade000 !default;
 $galleriaThumbnailNavigatorHoverBg:rgba(255,255,255,0.1) !default;
-$galleriaThumbnailNavigatorHoverColor:#f8f9fa !default;
+$galleriaThumbnailNavigatorHoverColor:$shade000 !default;
 $galleriaThumbnailNavigatorBorderRadius:50% !default;
 $galleriaThumbnailNavigatorWidth:2rem !default;
 $galleriaThumbnailNavigatorHeight:2rem !default;
@@ -812,7 +814,7 @@ $dividerHorizontalPadding:0 1rem;
 $dividerVerticalMargin:0 1rem;
 $dividerVerticalPadding:1rem 0;
 $dividerSize:1px;
-$dividerColor:$shade600;
+$dividerColor:rgba(255, 255, 255, 0.15);
 
 //avatar
 $avatarBg:$shade600;
@@ -837,8 +839,8 @@ $skeletonBg:rgba(255,255,255,.06);
 $skeletonAnimationBg:rgba(255,255,255,.04);
 
 //splitter
-$splitterGutterBg:rgba(255,255,255,.03);
-$splitterGutterHandleBg:$shade600;
+$splitterGutterBg:rgba(255, 255, 255, 0.15);
+$splitterGutterHandleBg:rgba(255, 255, 255, 0.15);
 
 :root {
     --surface-a:#{$shade800};
