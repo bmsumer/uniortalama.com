@@ -63,16 +63,15 @@ export class AppMainComponent {
         }
 
         if (!this.menuClick) {
-            if (this.isSlim() || this.isHorizontal()) {
+            if ((this.isSlim() || this.isHorizontal()) && !this.isMobile()) {
                 this.menuService.reset();
+                this.menuHoverActive = false;
             }
 
             if (this.overlayMenuActive || this.staticMenuMobileActive) {
                 this.overlayMenuActive = false;
                 this.staticMenuMobileActive = false;
             }
-
-            this.menuHoverActive = false;
         }
 
         this.configClick = false;
