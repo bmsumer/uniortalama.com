@@ -1,0 +1,15 @@
+//tree
+.p-tree {
+    &.p-tree-horizontal {
+        .p-treenode {
+            .p-treenode-content {
+                background: $solidSurfaceColor;
+
+                &.p-treenode-selectable:not(.p-highlight):hover {
+                    background-color: $solidSurfaceColor;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
