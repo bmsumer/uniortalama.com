@@ -104,7 +104,7 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
 
         this.router.events.pipe(filter(event => event instanceof NavigationEnd))
             .subscribe(params => {
-                if (this.app.isSlim() || this.app.isHorizontal()) {
+                if ((this.app.isSlim() || this.app.isHorizontal()) && !this.app.isMobile()) {
                     this.active = false;
                 } else {
                     if (this.item.routerLink) {
