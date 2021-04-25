@@ -110,7 +110,8 @@ $inputOverlayBorder:0 none !default;
 $inputOverlayShadow:0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !default;
 
 //password
-$passwordMeterBg:$solidSurfaceColor !default;
+$passwordPanelBg:$solidSurfaceColor !default;
+$passwordMeterBg:$shade200 !default;
 $passwordWeakBg:#D32F2F !default;
 $passwordMediumBg:#FBC02D !default;
 $passwordStrongBg:#689F38 !default;
