@@ -86,26 +86,25 @@ export class AppConfigComponent implements OnInit {
 
     ngOnInit() {
         this.themeColors = [
-            {name: 'blue', color: '#3192e1'},
-            {name: 'cyan', color: '#5e91a9'},
-            {name: 'green', color: '#5ea980'},
-            {name: 'orange', color: '#ff9c59'},
-            {name: 'pink', color: '#e42a7b'},
-            {name: 'purple', color: '#985edb'},
-            {name: 'steel', color: '#58799f'},
-            {name: 'turquoise', color: '#47c5d4'}
+            {name: 'blue', color: '#0F8BFD'},
+            {name: 'green', color: '#0BD18A'},
+            {name: 'magenta', color: '#EC4DBC'},
+            {name: 'orange', color: '#FD9214'},
+            {name: 'purple', color: '#873EFE'},
+            {name: 'red', color: '#FC6161'},
+            {name: 'teal', color: '#00D0DE'},
+            {name: 'yellow', color: '#EEE500'}
         ];
 
         this.layoutColors = [
-            {name: 'blue', color: '#3192e1'},
-            {name: 'cyan', color: '#5e91a9'},
-            {name: 'dark', color: '#545b61'},
-            {name: 'green', color: '#5ea980'},
-            {name: 'orange', color: '#ff9c59'},
-            {name: 'pink', color: '#e42a7b'},
-            {name: 'purple', color: '#985edb'},
-            {name: 'steel', color: '#58799f'},
-            {name: 'turquoise', color: '#47c5d4'}
+            {name: 'blue', color: '#0F8BFD'},
+            {name: 'green', color: '#0BD18A'},
+            {name: 'magenta', color: '#EC4DBC'},
+            {name: 'orange', color: '#FD9214'},
+            {name: 'purple', color: '#873EFE'},
+            {name: 'red', color: '#FC6161'},
+            {name: 'teal', color: '#00D0DE'},
+            {name: 'yellow', color: '#EEE500'}
         ];
     }
 
@@ -133,7 +132,7 @@ export class AppConfigComponent implements OnInit {
 
     changeTheme(theme) {
         const themeLink: HTMLLinkElement = document.getElementById('theme-css') as HTMLLinkElement;
-        const href = 'assets/theme/theme-' + theme + '.css';
+        const href = 'assets/theme/' + theme + '/theme-' + this.app.colorScheme + '.css';
         this.app.theme = theme;
 
         this.replaceLink(themeLink, href);
@@ -141,7 +140,7 @@ export class AppConfigComponent implements OnInit {
 
     changeLayout(layout) {
         const layoutLink: HTMLLinkElement = document.getElementById('layout-css') as HTMLLinkElement;
-        const href = 'assets/layout/css/layout-' + layout + '.css';
+        const href = 'assets/layout/css/' + layout + '/layout-' + this.app.colorScheme + '.css';
         this.app.layout = layout;
 
         this.replaceLink(layoutLink, href);

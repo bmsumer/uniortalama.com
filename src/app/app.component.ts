@@ -10,9 +10,9 @@ export class AppComponent implements OnInit{
 
     menuMode = 'sidebar';
 
-    layout = 'steel';
+    layout = 'blue';
 
-    theme = 'steel';
+    theme = 'blue';
 
     inputStyle = 'outlined';
 
