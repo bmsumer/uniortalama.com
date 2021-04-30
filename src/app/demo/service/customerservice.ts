@@ -28,4 +28,11 @@ export class CustomerService {
             .then(data => data);
     }
 
+    getCustomersMixed() {
+        return this.http.get<any>('assets/demo/data/customers-mixed.json')
+            .toPromise()
+            .then(res => res.data as Customer[])
+            .then(data => data);
+    }
+
 }

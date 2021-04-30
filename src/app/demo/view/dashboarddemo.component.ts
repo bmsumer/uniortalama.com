@@ -25,9 +25,17 @@ export class DashboardDemoComponent implements OnInit {
 
     revenueChartOptions: any;
 
+    customers: Customer[];
+
     customers1: Customer[];
 
+    customers2: Customer[];
+
     selectedCustomers1: Customer[];
+
+    orderYear: any;
+
+    selectedOrderYear: any;
 
     customerChart: any;
 
@@ -63,9 +71,19 @@ export class DashboardDemoComponent implements OnInit {
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then(customers => {
+            this.customers = customers;
+            // @ts-ignore
+            this.customers.forEach(customer => customer.date = new Date(customer.date));
+        });
+        this.customerService.getCustomersLarge().then(customers => {
             this.customers1 = customers;
             // @ts-ignore
             this.customers1.forEach(customer => customer.date = new Date(customer.date));
+        });
+        this.customerService.getCustomersMixed().then(customers => {
+            this.customers2 = customers;
+            // @ts-ignore
+            this.customers2.forEach(customer => customer.date = new Date(customer.date));
         });
 
         this.visitorChart = {
@@ -369,5 +387,18 @@ export class DashboardDemoComponent implements OnInit {
             {user: '3,490 Users', value: '$3,688,362', image: 'deloitte'},
             {user: '2,976 Users', value: '$3,978,478', image: 'pg'},
         ];
+
+        this.orderYear = [
+            {name: '2021', code: '0'},
+            {name: '2020', code: '1'}
+        ];
+    }
+
+    recentSales(event) {
+        if (event.value.code === '0') {
+            this.customers = this.customers1;
+        } else {
+            this.customers = this.customers2;
+        }
     }
 }

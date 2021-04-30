@@ -201,11 +201,9 @@
             <div class="card widget-table">
                 <div class="card-header">
                     <span>Yearly win</span>
-                    <div class="actions">
-                        <span>2021<i class="pi pi-angle-down"></i></span>
-                    </div>
+                    <p-dropdown [options]="orderYear" [(ngModel)]="selectedOrderYear" optionLabel="name" (onChange)="recentSales($event)"></p-dropdown>
                 </div>
-                <p-table #dt [value]="customers1" [(selection)]="selectedCustomers1" dataKey="id"
+                <p-table #dt [value]="customers" [(selection)]="selectedCustomers1" dataKey="id"
                          styleClass="p-datatable-customers" [rowHover]="true" [rows]="10" [paginator]="true">
                     <ng-template pTemplate="header">
                         <tr>
