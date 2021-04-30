@@ -8,13 +8,19 @@ export class ChartsDemoComponent implements OnInit {
 
     lineData: any;
 
+    lineBarOptions: any;
+
     barData: any;
 
     pieData: any;
 
+    pieDoughnutOptions: any;
+
     polarData: any;
 
     radarData: any;
+
+    radarPolarOptions: any;
 
     constructor(private breadcrumbService: AppBreadcrumbService) {
         this.breadcrumbService.setItems([
@@ -62,6 +68,33 @@ export class ChartsDemoComponent implements OnInit {
             ]
         };
 
+        this.lineBarOptions = {
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: '#A0A7B5'
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        fontColor: '#A0A7B5'
+                    },
+                    gridLines: {
+                        color:  'rgba(160, 167, 181, .3)',
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#A0A7B5'
+                    },
+                    gridLines: {
+                        color:  'rgba(160, 167, 181, .3)',
+                    }
+                }],
+            }
+        };
+
         this.pieData = {
             labels: ['A', 'B', 'C'],
             datasets: [
@@ -72,32 +105,18 @@ export class ChartsDemoComponent implements OnInit {
                         'rgb(255, 99, 132)',
                         'rgb(255, 205, 86)',
                         'rgb(75, 192, 192)'
-                    ]
+                    ],
+                    borderColor: '#A0A7B5'
                 }]
         };
 
-        this.polarData = {
-            datasets: [{
-                data: [
-                    11,
-                    16,
-                    7,
-                    3
-                ],
-                backgroundColor: [
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 205, 86)',
-                    'rgb(75, 192, 192)'
-                ],
-                label: 'My dataset'
-            }],
-            labels: [
-                'Blue',
-                'Purple',
-                'Orange',
-                'Green'
-            ]
+        this.pieDoughnutOptions = {
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: '#A0A7B5'
+                }
+            }
         };
 
         this.radarData = {
@@ -124,6 +143,47 @@ export class ChartsDemoComponent implements OnInit {
                     data: [28, 48, 40, 19, 96, 27, 100]
                 }
             ]
+        };
+
+        this.polarData = {
+            datasets: [{
+                data: [
+                    11,
+                    16,
+                    7,
+                    3
+                ],
+                backgroundColor: [
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)'
+                ],
+                label: 'My dataset'
+            }],
+            labels: [
+                'Blue',
+                'Purple',
+                'Orange',
+                'Green'
+            ]
+        };
+
+        this.radarPolarOptions = {
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: '#A0A7B5'
+                }
+            },
+            scale: {
+                gridLines: {
+                    color: '#A0A7B5'
+                },
+                ticks: {
+                    backdropColor: 'transparent'
+                }
+            },
         };
     }
 }
