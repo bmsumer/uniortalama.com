@@ -5,6 +5,10 @@
 
     .login-image {
         height: 100vh;
+
+        img {
+            height: 100vh;
+        }
     }
 
     .login-panel {
@@ -52,6 +56,7 @@
                 color: $textThirdColor;
 
                 a{
+                    cursor: pointer;
                     margin-left: .25rem;
                 }
             }
