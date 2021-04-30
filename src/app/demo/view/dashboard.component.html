@@ -62,20 +62,17 @@
             <div class="card widget-visitor-graph">
                 <div class="card-header">
                     <span>Unique visitor graph</span>
-                    <div class="actions">
-                        <span>Yearly<i class="pi pi-angle-down"></i></span>
-                        <span>2021<i class="pi pi-angle-down"></i></span>
-                    </div>
+                    <p-dropdown [options]="visitorYear" [(ngModel)]="selectedVisitorYear" optionLabel="name" (onChange)="changeVisitorChart($event); visitor.refresh()"></p-dropdown>
                 </div>
 
                 <div class="graph-content p-grid">
                     <div class="p-col-12 p-md-6">
-                        <h2>$620,076</h2>
+                        <h2>{{growth}}</h2>
                         <h6>MRR GROWTH</h6>
                         <p>Measure how fast you’re growing mothly recurring revenue. <a href="#">Learn more</a></p>
                     </div>
                     <div class="p-col-12 p-md-6">
-                        <h2>$1,120</h2>
+                        <h2>{{avgCustomer}}</h2>
                         <h6>AVG. MRR/CUSTOMER</h6>
                         <p>The revenue generated per account on a monthly or yearly basis. <a href="#">Learn more</a></p>
                     </div>
@@ -84,7 +81,7 @@
                 <div class="graph">
                     <h6>Revenue</h6>
 
-                    <p-chart type="bar" [data]="visitorChart" [options]="visitorChartOptions" id="visitor-chart"></p-chart>
+                    <p-chart #visitor type="bar" [data]="visitorChart" [options]="visitorChartOptions" id="visitor-chart"></p-chart>
                 </div>
             </div>
         </div>
@@ -186,7 +183,7 @@
             <div class="card widget-revenue-graph">
                 <div class="card-header">
                     <span>Montly revenue</span>
-                    <p-dropdown [options]="orderMonth" [(ngModel)]="selectedOrderMonth" optionLabel="name" (onChange)="changeRevenueChart($event); revenue.refresh()"></p-dropdown>
+                    <p-dropdown [options]="revenueMonth" [(ngModel)]="selectedRevenueMonth" optionLabel="name" (onChange)="changeRevenueChart($event); revenue.refresh()"></p-dropdown>
                 </div>
 
                 <div class="graph">

@@ -37,9 +37,17 @@ export class DashboardDemoComponent implements OnInit {
 
     selectedOrderYear: any;
 
-    orderMonth: any;
+    revenueMonth: any;
 
-    selectedOrderMonth: any;
+    selectedRevenueMonth: any;
+
+    visitorYear: any;
+
+    selectedVisitorYear: any;
+
+    growth: any;
+
+    avgCustomer: any;
 
     customerChart: any;
 
@@ -141,6 +149,9 @@ export class DashboardDemoComponent implements OnInit {
                 }]
             }
         };
+
+        this.growth = '$620,076';
+        this.avgCustomer = '$1,120';
 
         this.timelineEvents = [
             {transaction: 'Payment from #28492', amount: '+$250.00', date: 'June 13, 2020 11:09 AM',
@@ -397,7 +408,12 @@ export class DashboardDemoComponent implements OnInit {
             {name: '2020', code: '1'}
         ];
 
-        this.orderMonth = [
+        this.visitorYear = [
+            {name: '2020', code: '0'},
+            {name: '2019', code: '1'}
+        ];
+
+        this.revenueMonth = [
             {name: 'January - July 2021', code: '0'},
             {name: 'August - December 2020', code: '1'}
         ];
@@ -427,6 +443,29 @@ export class DashboardDemoComponent implements OnInit {
             this.revenueChart.datasets[1].data = dataSet1[parseInt('1')];
             this.revenueChart.datasets[2].data = dataSet1[parseInt('2')];
             this.revenueChart.datasets[3].data = dataSet1[parseInt('3')];
+        }
+    }
+
+    changeVisitorChart(event) {
+        const dataSet1 = [
+            [630, 630, 695, 695, 695, 760, 760, 760, 840, 840, 840, 840],
+            [600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810, 780]
+        ];
+        const dataSet2 = [
+            [580, 580, 620, 620, 620, 680, 680, 680, 730, 730, 730, 730],
+            [550, 592, 600, 605, 630, 649, 660, 690, 710, 720, 730, 780],
+        ];
+
+        if (event.value.code === '1') {
+            this.growth = '$581,259';
+            this.avgCustomer = '$973';
+            this.visitorChart.datasets[0].data = dataSet2[parseInt('0')];
+            this.visitorChart.datasets[1].data = dataSet2[parseInt('1')];
+        } else {
+            this.growth = '$620,076';
+            this.avgCustomer = '$1,120';
+            this.visitorChart.datasets[0].data = dataSet1[parseInt('0')];
+            this.visitorChart.datasets[1].data = dataSet1[parseInt('1')];
         }
     }
 
