@@ -4,17 +4,6 @@
     justify-content: center;
     border: 0 none;
     padding-bottom: 1.5rem;
-    //border-top: 1px solid $dividerColor;
-    //background-color: $cardBg;
-
-    /*.list-effect {
-        height: 40px;
-        width: 100%;
-        @include background-gradient-bottom2top( $dividerColor, transparent);
-        position: relative;
-        bottom: 0;
-        left: 0;
-    }*/
 
     &.layout-inline-menu-active {
         .layout-inline-menu-icon {
@@ -34,6 +23,10 @@
 
         .layout-inline-menu-text {
             font-weight: 500;
+        }
+
+        .layout-inline-menu-icon {
+            transition: all $transitionDuration;
         }
     }
 
