@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {EventService} from '../service/eventservice';
-import {SelectItem, PrimeIcons} from 'primeng/api';
+import {PrimeIcons} from 'primeng/api';
 import {Customer} from '../domain/customer';
 import {CustomerService} from '../service/customerservice';
 import {AppBreadcrumbService} from '../../app.breadcrumb.service';
@@ -25,11 +25,11 @@ export class DashboardDemoComponent implements OnInit {
 
     revenueChartOptions: any;
 
-    customers: Customer[];
+    customersTable: Customer[];
 
-    customers1: Customer[];
+    customersTable1: Customer[];
 
-    customers2: Customer[];
+    customersTable2: Customer[];
 
     selectedCustomers1: Customer[];
 
@@ -45,6 +45,10 @@ export class DashboardDemoComponent implements OnInit {
 
     selectedVisitorYear: any;
 
+    customerYear: any;
+
+    selectedCustomerYear: any;
+
     growth: any;
 
     avgCustomer: any;
@@ -52,6 +56,12 @@ export class DashboardDemoComponent implements OnInit {
     customerChart: any;
 
     customerChartOptions: any;
+
+    customerMax: any;
+
+    customerMin: any;
+
+    customerAvg: any;
 
     carouselResponsiveOptions: any[] = [
         {
@@ -71,7 +81,7 @@ export class DashboardDemoComponent implements OnInit {
         }
     ];
 
-    customer: any[];
+    customerCarousel: any[];
 
     constructor(private customerService: CustomerService, private eventService: EventService,
                 private breadcrumbService: AppBreadcrumbService) {
@@ -83,19 +93,19 @@ export class DashboardDemoComponent implements OnInit {
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then(customers => {
-            this.customers = customers;
+            this.customersTable = customers;
             // @ts-ignore
-            this.customers.forEach(customer => customer.date = new Date(customer.date));
+            this.customersTable.forEach(customer => customer.date = new Date(customer.date));
         });
         this.customerService.getCustomersLarge().then(customers => {
-            this.customers1 = customers;
+            this.customersTable1 = customers;
             // @ts-ignore
-            this.customers1.forEach(customer => customer.date = new Date(customer.date));
+            this.customersTable1.forEach(customer => customer.date = new Date(customer.date));
         });
         this.customerService.getCustomersMixed().then(customers => {
-            this.customers2 = customers;
+            this.customersTable2 = customers;
             // @ts-ignore
-            this.customers2.forEach(customer => customer.date = new Date(customer.date));
+            this.customersTable2.forEach(customer => customer.date = new Date(customer.date));
         });
 
         this.visitorChart = {
@@ -388,7 +398,13 @@ export class DashboardDemoComponent implements OnInit {
             },
         };
 
-        this.customer = [
+        this.customerMax = '1232';
+
+        this.customerMin = '284';
+
+        this.customerAvg = '875';
+
+        this.customerCarousel = [
             {user: '9,673 Users', value: '$8,362,478', image: 'nasa'},
             {user: '9,395 Users', value: '$7,927,105', image: 'beats'},
             {user: '7,813 Users', value: '$6,471,594', image: 'gopro'},
@@ -409,6 +425,11 @@ export class DashboardDemoComponent implements OnInit {
         ];
 
         this.visitorYear = [
+            {name: '2020', code: '0'},
+            {name: '2019', code: '1'}
+        ];
+
+        this.customerYear = [
             {name: '2020', code: '0'},
             {name: '2019', code: '1'}
         ];
@@ -469,11 +490,100 @@ export class DashboardDemoComponent implements OnInit {
         }
     }
 
+    changeCustomerChart(event) {
+        const dataSet1 = [
+            [10, 25, 48, 35, 54, 70],
+            [18, 35, 23, 30, 59, 65],
+            [20, 47, 46, 46, 61, 70],
+            [17, 34, 18, 48, 67, 68],
+            [9, 37, 47, 50, 60, 62],
+            [8, 48, 40, 52, 72, 75],
+            [10, 18, 50, 47, 63, 80],
+            [20, 36, 39, 58, 59, 85],
+            [30, 45, 35, 50, 54, 81],
+            [28, 35, 52, 56, 60, 77],
+            [40, 40, 38, 45, 68, 86],
+            [50, 23, 27, 34, 65, 90],
+            [29, 27, 29, 42, 55, 84],
+            [10, 37, 47, 29, 59, 80],
+            [10, 54, 42, 38, 63, 83],
+            [25, 44, 50, 56, 65, 92],
+            [30, 43, 48, 45, 73, 78],
+            [29, 47, 54, 60, 77, 86]
+        ];
+        const dataSet2 = [
+            [10, 25, 48, 35, 54, 70],
+            [20, 47, 46, 46, 61, 70],
+            [17, 34, 18, 48, 67, 68],
+            [50, 23, 27, 34, 65, 90],
+            [8, 48, 40, 52, 72, 75],
+            [9, 37, 47, 50, 60, 62],
+            [10, 18, 50, 47, 63, 80],
+            [30, 45, 35, 50, 54, 81],
+            [10, 37, 47, 29, 59, 80],
+            [28, 35, 52, 56, 60, 77],
+            [25, 44, 50, 56, 65, 92],
+            [18, 35, 23, 30, 59, 65],
+            [20, 36, 39, 58, 59, 85],
+            [29, 27, 29, 42, 55, 84],
+            [40, 40, 38, 45, 68, 86],
+            [30, 43, 48, 45, 73, 78],
+            [10, 54, 42, 38, 63, 83],
+            [29, 47, 54, 60, 77, 86]
+        ];
+
+        if (event.value.code === '1') {
+            this.customerAvg = '621';
+            this.customerMin = '198';
+            this.customerMax = '957';
+            this.customerChart.datasets[0].data = dataSet2[parseInt('0')];
+            this.customerChart.datasets[1].data = dataSet2[parseInt('1')];
+            this.customerChart.datasets[2].data = dataSet2[parseInt('2')];
+            this.customerChart.datasets[3].data = dataSet2[parseInt('3')];
+            this.customerChart.datasets[4].data = dataSet2[parseInt('4')];
+            this.customerChart.datasets[5].data = dataSet2[parseInt('5')];
+            this.customerChart.datasets[6].data = dataSet2[parseInt('6')];
+            this.customerChart.datasets[7].data = dataSet2[parseInt('7')];
+            this.customerChart.datasets[8].data = dataSet2[parseInt('8')];
+            this.customerChart.datasets[9].data = dataSet2[parseInt('9')];
+            this.customerChart.datasets[10].data = dataSet2[parseInt('10')];
+            this.customerChart.datasets[11].data = dataSet2[parseInt('11')];
+            this.customerChart.datasets[12].data = dataSet2[parseInt('12')];
+            this.customerChart.datasets[13].data = dataSet2[parseInt('13')];
+            this.customerChart.datasets[14].data = dataSet2[parseInt('14')];
+            this.customerChart.datasets[15].data = dataSet2[parseInt('15')];
+            this.customerChart.datasets[16].data = dataSet2[parseInt('16')];
+            this.customerChart.datasets[17].data = dataSet2[parseInt('17')];
+        } else {
+            this.customerAvg = '875';
+            this.customerMin = '284';
+            this.customerMax = '1232';
+            this.customerChart.datasets[0].data = dataSet1[parseInt('0')];
+            this.customerChart.datasets[1].data = dataSet1[parseInt('1')];
+            this.customerChart.datasets[2].data = dataSet1[parseInt('2')];
+            this.customerChart.datasets[3].data = dataSet1[parseInt('3')];
+            this.customerChart.datasets[4].data = dataSet1[parseInt('4')];
+            this.customerChart.datasets[5].data = dataSet1[parseInt('5')];
+            this.customerChart.datasets[6].data = dataSet1[parseInt('6')];
+            this.customerChart.datasets[7].data = dataSet1[parseInt('7')];
+            this.customerChart.datasets[8].data = dataSet1[parseInt('8')];
+            this.customerChart.datasets[9].data = dataSet1[parseInt('9')];
+            this.customerChart.datasets[10].data = dataSet1[parseInt('10')];
+            this.customerChart.datasets[11].data = dataSet1[parseInt('11')];
+            this.customerChart.datasets[12].data = dataSet1[parseInt('12')];
+            this.customerChart.datasets[13].data = dataSet1[parseInt('13')];
+            this.customerChart.datasets[14].data = dataSet1[parseInt('14')];
+            this.customerChart.datasets[15].data = dataSet1[parseInt('15')];
+            this.customerChart.datasets[16].data = dataSet1[parseInt('16')];
+            this.customerChart.datasets[17].data = dataSet1[parseInt('17')];
+        }
+    }
+
     recentSales(event) {
         if (event.value.code === '0') {
-            this.customers = this.customers1;
+            this.customersTable = this.customersTable1;
         } else {
-            this.customers = this.customers2;
+            this.customersTable = this.customersTable2;
         }
     }
 }
