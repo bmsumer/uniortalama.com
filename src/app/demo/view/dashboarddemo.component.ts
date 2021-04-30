@@ -37,6 +37,10 @@ export class DashboardDemoComponent implements OnInit {
 
     selectedOrderYear: any;
 
+    orderMonth: any;
+
+    selectedOrderMonth: any;
+
     customerChart: any;
 
     customerChartOptions: any;
@@ -392,6 +396,38 @@ export class DashboardDemoComponent implements OnInit {
             {name: '2021', code: '0'},
             {name: '2020', code: '1'}
         ];
+
+        this.orderMonth = [
+            {name: 'January - July 2021', code: '0'},
+            {name: 'August - December 2020', code: '1'}
+        ];
+    }
+
+    changeRevenueChart(event) {
+        const dataSet1 = [
+            [37, 34, 21, 27, 10, 18, 15],
+            [31, 27, 30, 37, 23, 29, 20],
+            [21, 7, 13, 3, 19, 11, 6],
+            [47, 31, 35, 20, 46, 39, 25]
+        ];
+        const dataSet2 = [
+            [31, 27, 30, 37, 23, 29, 20],
+            [47, 31, 35, 20, 46, 39, 25],
+            [37, 34, 21, 27, 10, 18, 15],
+            [21, 7, 13, 3, 19, 11, 6]
+        ];
+
+        if (event.value.code === '1') {
+            this.revenueChart.datasets[0].data = dataSet2[parseInt('0')];
+            this.revenueChart.datasets[1].data = dataSet2[parseInt('1')];
+            this.revenueChart.datasets[2].data = dataSet2[parseInt('2')];
+            this.revenueChart.datasets[3].data = dataSet2[parseInt('3')];
+        } else {
+            this.revenueChart.datasets[0].data = dataSet1[parseInt('0')];
+            this.revenueChart.datasets[1].data = dataSet1[parseInt('1')];
+            this.revenueChart.datasets[2].data = dataSet1[parseInt('2')];
+            this.revenueChart.datasets[3].data = dataSet1[parseInt('3')];
+        }
     }
 
     recentSales(event) {

@@ -186,13 +186,11 @@
             <div class="card widget-revenue-graph">
                 <div class="card-header">
                     <span>Montly revenue</span>
-                    <div class="actions">
-                        <span>January - July 2021<i class="pi pi-angle-down"></i></span>
-                    </div>
+                    <p-dropdown [options]="orderMonth" [(ngModel)]="selectedOrderMonth" optionLabel="name" (onChange)="changeRevenueChart($event); revenue.refresh()"></p-dropdown>
                 </div>
 
                 <div class="graph">
-                    <p-chart type="line" id="revenue-chart" [data]="revenueChart" [options]="revenueChartOptions"></p-chart>
+                    <p-chart #revenue type="line" id="revenue-chart" [data]="revenueChart" [options]="revenueChartOptions"></p-chart>
                 </div>
             </div>
         </div>
