@@ -90,6 +90,7 @@
                                 z-index: 100;
                                 max-height: 460px;
                                 border-radius: $borderRadius;
+                                overflow: auto;
 
                                 > li {
                                     border: 0 none;
