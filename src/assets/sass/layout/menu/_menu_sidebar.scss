@@ -32,6 +32,7 @@
                     .menu-logo {
                         .app-name {
                             display: inline;
+                            @include transition(all $transitionDuration);
                         }
                     }
 
@@ -61,6 +62,7 @@
                                 > ul {
                                     > li {
                                         a {
+                                            @include transition(all $transitionDuration);
                                             padding-left: 16px;
                                         }
                                     }
@@ -172,6 +174,10 @@
                                 > li {
                                     padding: 6px 0 0 0;
                                     margin: 0;
+
+                                    a {
+                                        @include transition(all $transitionDuration);
+                                    }
 
                                     ul {
                                         li {
