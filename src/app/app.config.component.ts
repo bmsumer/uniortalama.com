@@ -43,16 +43,6 @@ import { AppMainComponent } from './app.main.component';
                 <label for="darkMode2">Dark</label>
             </div>
 
-            <h5>Input Style</h5>
-            <div class="p-field-radiobutton">
-                <p-radioButton name="inputStyle" value="outlined" [(ngModel)]="app.inputStyle" inputId="inputStyle1"></p-radioButton>
-                <label for="inputStyle1">Outlined</label>
-            </div>
-            <div class="p-field-radiobutton">
-                <p-radioButton name="inputStyle" value="filled" [(ngModel)]="app.inputStyle" inputId="inputStyle2"></p-radioButton>
-                <label for="inputStyle2">Filled</label>
-            </div>
-
             <h5>Ripple Effect</h5>
 			<p-inputSwitch [ngModel]="app.ripple" (onChange)="appMain.onRippleChange($event)"></p-inputSwitch>
 

@@ -14,8 +14,6 @@ export class AppComponent implements OnInit{
 
     theme = 'blue';
 
-    inputStyle = 'outlined';
-
     ripple: boolean;
 
     colorScheme = 'dark';
