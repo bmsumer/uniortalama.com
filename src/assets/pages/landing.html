@@ -402,6 +402,12 @@
             });
         }
 
+        document.addEventListener('keydown', function (e) {
+            if(e.key === "Escape") {
+                LandingUtils.removeClass(menu, 'menu-active fadeOutUp');
+            }
+        })
+
         if (menuButton) {
             var isMenuActive = false;
 
