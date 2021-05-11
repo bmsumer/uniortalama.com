@@ -42,6 +42,8 @@ export class AppMainComponent {
 
     activeInlineProfile: boolean;
 
+    pinActive: boolean;
+
     constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) {}
 
     onLayoutClick() {
@@ -102,6 +104,9 @@ export class AppMainComponent {
     onSidebarMouseOver(event) {
         if (this.app.menuMode === 'sidebar' && !this.sidebarStatic) {
             this.sidebarActive = this.isDesktop();
+            setTimeout(() => {
+                this.pinActive = this.isDesktop();
+            }, 200);
         }
     }
 
@@ -109,6 +114,7 @@ export class AppMainComponent {
         if (this.app.menuMode === 'sidebar' && !this.sidebarStatic) {
             setTimeout(() => {
                 this.sidebarActive = false;
+                this.pinActive = false;
             }, 250);
         }
     }
