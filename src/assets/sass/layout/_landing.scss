@@ -1,4 +1,6 @@
 .landing-container {
+    background: #100E23;
+
     .layout-topbar-logo, .layout-footer-logo {
         .appname {
             margin-left: .5rem;
@@ -154,12 +156,68 @@
         }
     }
 
+    .clip-background {
+        background: #100E23;
+        position: relative;
+    }
+
+    .landing-wrapper-back {
+        background: transparent;
+        color: #F4F8FB;
+        margin-top: calc((var(--clip-padding) * -1) - 300px);
+        padding: calc((var(--clip-padding) * 4) - (var(--clip-padding) - var(--skew-padding))) 0 4em;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        position: absolute;
+        width: 100%;
+
+        #features-back {
+            padding-left: 14rem;
+            padding-right: 5rem;
+
+            h2 {
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 36px;
+                text-align: center;
+            }
+
+            .feature-boxes {
+                h3 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 26px;
+                    max-width: 420px;
+                }
+
+                &.feature-boxes-1 {
+                    margin-bottom: 170px;
+
+                    .widget-overview-box {
+                        background: #FFFFFF;
+                        box-shadow: 0px 8px 30px rgba(59, 56, 109, 0.07);
+                        border-radius: 12px;
+                        margin-bottom: 2rem;
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
     .landing-wrapper {
         background: linear-gradient(180deg, #F4F8FB 17.13%, #EEEEFA 65.89%);
         padding-left: 3rem;
         padding-right: 3rem;
         padding-bottom: 5rem;
+        position: absolute;
         color: #44486D;
+        width: 100%;
 
         #features {
             padding-left: 14rem;
@@ -481,6 +539,10 @@
                     max-height: 170px;
                 }
             }
+        }
+
+        .landing-wrapper-back {
+            display: none;
         }
 
         .landing-wrapper {
