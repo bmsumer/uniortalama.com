@@ -639,12 +639,12 @@ $errorMessageIconColor:$shade000 !default;
 
 //overlays
 $overlayContentBorder:0 none !default;
-$overlayContentBg:$solidSurfaceColor !default;
+$overlayContentBg:#252636 !default;
 $overlayContainerShadow:0px 10px 30px rgba(0, 0, 0, 0.3) !default;
 
 //dialog
 $dialogBorderRadius:20px;
-$dialogHeaderBg:$solidSurfaceColor !default;
+$dialogHeaderBg:#252636 !default;
 $dialogHeaderBorder:0 none !default;
 $dialogHeaderTextColor:$shade000 !default;
 $dialogHeaderFontWeight:500 !default;
