@@ -1,10 +1,7 @@
 .layout-topbar {
     z-index: 100;
-    //backdrop-filter: blur(200px);
-    //--webkit-backdrop-filter: blur(200px);
     border-radius: 0 0 20px 20px;
     padding: 0 10px;
-    background: $topbarBg;
     display: flex;
     flex-wrap: wrap;
     min-height: 4em;
@@ -132,11 +129,10 @@
                     animation-duration: .5s;
                     list-style-type: none;
                     margin: 0;
+                    z-index: 1;
                     padding: 8px 0;
                     border-radius: 6px;
                     background: $topbarSubmenuBg;
-                    backdrop-filter: blur(200px);
-                    --webkit-backdrop-filter: blur(200px);
 
                     a {
                         padding: 10px;

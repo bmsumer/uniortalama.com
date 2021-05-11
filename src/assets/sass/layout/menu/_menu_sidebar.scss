@@ -15,7 +15,6 @@
                 z-index: 999;
                 width: $sidebarInactiveMenuWidth;
                 mix-blend-mode: normal;
-                backdrop-filter: blur(200px);
                 @include transition(all $transitionDuration);
 
                 .menu-logo {

@@ -1,7 +1,7 @@
 @import './_common';
 
-$bodyBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default !default;
-$bodyImage:  url("../../../layout/images/effect-onlight.png") !default !default;
+$bodyBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
+$bodyImage:  url("../../../layout/images/effect-onlight.png") !default;
 $textColor:#44486D !default;
 $textSecondaryColor:#676B89 !default;
 $textThirdColor: #8A8EA6 !default;
@@ -15,20 +15,19 @@ $cardBg: rgba(255, 255, 255, 0.9) !default;
 $cardBorder: 0 none !default;
 
 //topbar
-$topbarBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
 $topbarTextColor: $textSecondaryColor !default;
 $topbarTextHoverColor: $textColor !default;
 $topbarIconBg: rgba(68, 72, 109, 0.07) !default;
 $topbarIconHoverBg: rgba(68, 72, 109, 0.12) !default;
 
-$topbarSubmenuBg: rgba(68, 72, 109, 0.07) !default;
+$topbarSubmenuBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%)!default;
 $topbarSubmenuItemHoverBgColor: rgba(68, 72, 109, 0.07) !default;
 
 //menu
 $menuWidth: 21rem !default;
 $slimMenuWidth: 5.857rem !default;
 $sidebarInactiveMenuWidth: 6.571rem !default;
-$menuBg: rgba(68, 72, 109, 0.07) !default;
+$menuBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
 $menuIconBg: rgba(68, 72, 109, 0.07) !default;
 $menuIconHoverBg: rgba(68, 72, 109, 0.12) !default;
 $menuIconTextColor: $textSecondaryColor !default;
@@ -58,7 +57,7 @@ $inlineMenuImageHoverBorderColor: #8A8EA6 !default;
 
 //rightmenu
 $rightMenuWidth: 24.571rem !default;
-$rightMenuBg: rgba(255, 255, 255, 0.9) !default;
+$rightMenuBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
 $rightMenuButtonBg: rgba(68, 72, 109, 0.07) !default;
 $rightMenuListItemBg: rgba(68, 72, 109, 0.07) !default;
 

@@ -144,7 +144,6 @@
     .layout-wrapper {
         .layout-menu-wrapper {
             mix-blend-mode: normal;
-            backdrop-filter: blur(200px);
             transform: translateX(-100%);
             transition: transform $animationDuration $animationTimingFunction;
 

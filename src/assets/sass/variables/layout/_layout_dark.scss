@@ -15,20 +15,19 @@ $cardBg: rgba(255, 255, 255, 0.05) !default;
 $cardBorder: 0 none !default;
 
 //topbar
-$topbarBg: linear-gradient(180deg, #2E323F 0%, #0A061A 100%) !default;
 $topbarTextColor: $textSecondaryColor !default;
 $topbarTextHoverColor: $textColor !default;
 $topbarIconBg: rgba(255, 255, 255, 0.05) !default;
 $topbarIconHoverBg: rgba(255, 255, 255, 0.1) !default;
 
-$topbarSubmenuBg: rgba(255, 255, 255, 0.05) !default;
+$topbarSubmenuBg:linear-gradient(180deg, #2E323F 0%, #0A061A 100%) !default;
 $topbarSubmenuItemHoverBgColor: rgba(255, 255, 255, 0.05) !default;
 
 //menu
 $menuWidth: 21rem !default;
 $slimMenuWidth: 5.857rem !default;
 $sidebarInactiveMenuWidth: 6.571em !default;
-$menuBg: rgba(255, 255, 255, 0.05) !default;
+$menuBg: linear-gradient(180deg, #2E323F 0%, #0A061A 100%) !default;
 $menuIconBg: rgba(255, 255, 255, 0.05) !default;
 $menuIconHoverBg: rgba(255, 255, 255, 0.1) !default;
 $menuIconTextColor: $textSecondaryColor !default;
@@ -58,7 +57,7 @@ $inlineMenuImageHoverBorderColor: #868C9B !default;
 
 //rightmenu
 $rightMenuWidth: 24.571rem !default;
-$rightMenuBg: rgba(255, 255, 255, 0.05) !default;
+$rightMenuBg: linear-gradient(180deg, #2E323F 0%, #0A061A 100%) !default;
 $rightMenuButtonBg: rgba(255, 255, 255, 0.05) !default;
 $rightMenuListItemBg: rgba(255, 255, 255, 0.05) !default;
 

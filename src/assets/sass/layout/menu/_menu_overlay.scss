@@ -4,7 +4,6 @@
             .layout-menu-wrapper {
                 position: fixed;
                 mix-blend-mode: normal;
-                backdrop-filter: blur(200px);
                 transform: translate3d(-$menuWidth, 0px, 0px);
                 transition: transform $animationDuration $animationTimingFunction;
 
