@@ -43,6 +43,8 @@
                     }
 
                     .layout-menu-container {
+                        overflow: auto;
+
                         .layout-menu {
                             padding-right: 22px;
 
@@ -98,6 +100,7 @@
 
                 .layout-menu-container {
                     height: 100%;
+                    overflow: hidden;
 
                     .layout-menu {
                         list-style-type: none;
