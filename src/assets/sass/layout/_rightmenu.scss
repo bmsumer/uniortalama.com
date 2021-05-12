@@ -13,7 +13,8 @@
 .layout-rightmenu {
     height: 100%;
     width: $rightMenuWidth;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: fixed;
     right: 0;
     top: 0;
