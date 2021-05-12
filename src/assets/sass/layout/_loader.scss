@@ -1,92 +1,18 @@
-// Center & dribbble
-.loader-body {
-    min-height: 100vh;
+.loading-wrapper {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 
-    .dribbble {
-        position: fixed;
-        display: block;
-        right: 20px;
-        bottom: 20px;
-        img {
-            display: block;
-            height: 28px;
-        }
-    }
-}
-
-.loader {
-    display: inline-block;
-    margin: 0 16px;
-}
-
-.loader {
-    --duration: 1s;
-    width: 44px;
-    height: 44px;
-    position: relative;
-    &:before {
-        content: '';
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
+    > svg {
         position: absolute;
-        display: block;
-        background: #5628EE;
-        top: 37px;
-        left: 19px;
-        transform: translate(-18px, -18px);
-        animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-    }
-    svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-        polygon {
-            fill: none;
-            stroke: $loaderPathColor;
-            stroke-width: 10px;
-            stroke-linejoin: round;
-            stroke-linecap: round;
-        }
-        polygon {
-            stroke-dasharray: 145 (221 - 145) 145 (221 - 145);
-            stroke-dashoffset: 0;
-            animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-        }
-    }
-    &.triangle {
-        width: 48px;
-        &:before {
-            left: 21px;
-            transform: translate(-10px, -18px);
-            animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-        }
-    }
-}
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
 
-@keyframes pathTriangle {
-    33% {
-        stroke-dashoffset: 74;
-    }
-    66% {
-        stroke-dashoffset: 147;
-    }
-    100% {
-        stroke-dashoffset: 221;
-    }
-}
-
-@keyframes dotTriangle {
-    33% {
-        transform: translate(0, 0);
-    }
-    66% {
-        transform: translate(10px, -18px);
-    }
-    100% {
-        transform: translate(-10px, -18px);
     }
 }
