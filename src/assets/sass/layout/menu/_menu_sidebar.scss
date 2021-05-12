@@ -84,6 +84,10 @@
                             .layout-inline-menu-text, .layout-inline-menu-icon {
                                 visibility: visible;
                             }
+
+                            .layout-inline-menu-icon {
+                                transition: all $transitionDuration;
+                            }
                         }
 
                         .layout-inline-menu-action-panel {
