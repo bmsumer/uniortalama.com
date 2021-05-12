@@ -20,8 +20,7 @@
             display: none;
             width: 32px;
             height: 32px;
-            position: absolute;
-            right: 22px;
+            margin-left: auto;
             border-radius: 6px;
             @include transition(all $transitionDuration);
 
