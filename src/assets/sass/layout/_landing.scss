@@ -89,6 +89,10 @@
         .header-features {
             padding: 100px 60px;
 
+            > div {
+                justify-content: space-between;
+            }
+
             .header-feature-box {
                 background: rgba(0, 0, 0, 0.5);
                 border: 1px solid rgba(0, 0, 0, 0.15);
@@ -486,6 +490,12 @@
         #header {
             .header-features, .header-text {
                 padding: 100px 0;
+            }
+
+            .header-features {
+                > div {
+                    justify-content: center;
+                }
             }
 
             .header-menu-container {
