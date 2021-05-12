@@ -1,5 +1,15 @@
 # Changelog
 
+## 11.1.0
+**Migration Guide**
+- Update theme files and layout files.
+- Update app.* components
+
+**Implemented New Features and Enhancements:**
+
+- Implemented new Atlantis design
+- Added dark mode, topbar and menu modes
+
 ## 11.0.0
 **Migration Guide**
 - Update your project to Angular 11.
