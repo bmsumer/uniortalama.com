@@ -6,8 +6,8 @@
 						[sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
 				<ng-template pTemplate="header">
 					<div class="flex p-flex-column p-flex-md-row md:justify-content-between">
-						<p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
-						<span class="p-input-icon-left p-mb-2 p-mb-md-0">
+						<p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)" styleClass="mb-2 md:mb--0"></p-dropdown>
+						<span class="p-input-icon-left mb-2 md:mb--0">
                     <i class="pi pi-search"></i>
                     <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
                 </span>

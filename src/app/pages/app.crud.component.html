@@ -4,15 +4,15 @@
 		<p-toast></p-toast>
 
 		<div class="card">
-			<p-toolbar styleClass="p-mb-4">
+			<p-toolbar styleClass="mb-4">
 				<ng-template pTemplate="left">
-					<button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2 p-mb-2" (click)="openNew()"></button>
-					<button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger p-mb-2" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button>
+					<button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2 mb-2" (click)="openNew()"></button>
+					<button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger mb-2" (click)="deleteSelectedProducts()" [disabled]="!selectedProducts || !selectedProducts.length"></button>
 				</ng-template>
 
 				<ng-template pTemplate="right">
-					<p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="p-mr-2 p-mb-2 inline-block"></p-fileUpload>
-					<button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help p-mb-2" (click)="dt.exportCSV()"></button>
+					<p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 mb-2 inline-block"></p-fileUpload>
+					<button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help mb-2" (click)="dt.exportCSV()"></button>
 				</ng-template>
 			</p-toolbar>
 
@@ -67,7 +67,7 @@
 							<span [class]="'product-badge status-' + (product.inventoryStatus ? product.inventoryStatus.toLowerCase() : '')">{{product.inventoryStatus}}</span>
 						</td>
 						<td>
-							<button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" (click)="editProduct(product)"></button>
+							<button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" (click)="editProduct(product)"></button>
 							<button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(product)"></button>
 						</td>
 					</tr>
@@ -94,7 +94,7 @@
 				</div>
 
 				<div class="p-field">
-					<label class="p-mb-3">Category</label>
+					<label class="mb-3">Category</label>
 					<div class="p-formgrid p-grid">
 						<div class="p-field-radiobutton p-col-6">
 							<p-radioButton id="category1" name="category" value="Accessories" [(ngModel)]="product.category"></p-radioButton>

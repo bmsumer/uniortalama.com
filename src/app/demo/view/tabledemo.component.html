@@ -25,14 +25,14 @@
 							<div class="flex justify-content-between align-items-center">
 								Name
 								<p-sortIcon field="name"></p-sortIcon>
-								<p-columnFilter type="text" field="name" display="menu" class="p-ml-auto"></p-columnFilter>
+								<p-columnFilter type="text" field="name" display="menu" class="ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="country.name">
 							<div class="flex justify-content-between align-items-center">
 								Country
 								<p-sortIcon field="country.name"></p-sortIcon>
-								<p-columnFilter type="text" field="country.name" display="menu" class="p-ml-auto"></p-columnFilter>
+								<p-columnFilter type="text" field="country.name" display="menu" class="ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="representative.name">
@@ -50,7 +50,7 @@
 											<ng-template let-option pTemplate="item">
 												<div class="p-multiselect-representative-option">
 													<img [alt]="option.label" src="assets/demo/images/avatar/{{option.image}}" width="32" style="vertical-align: middle" />
-													<span class="p-ml-1">{{option.name}}</span>
+													<span class="ml-1">{{option.name}}</span>
 												</div>
 											</ng-template>
 										</p-multiSelect>
@@ -62,14 +62,14 @@
 							<div class="flex justify-content-between align-items-center">
 								Date
 								<p-sortIcon field="date"></p-sortIcon>
-								<p-columnFilter type="date" field="date" display="menu" class="p-ml-auto"></p-columnFilter>
+								<p-columnFilter type="date" field="date" display="menu" class="ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="balance">
 							<div class="flex justify-content-between align-items-center">
 								Balance
 								<p-sortIcon field="balance"></p-sortIcon>
-								<p-columnFilter type="numeric" field="balance" display="menu" currency="USD" class="p-ml-auto"></p-columnFilter>
+								<p-columnFilter type="numeric" field="balance" display="menu" currency="USD" class="ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="status">
@@ -324,7 +324,7 @@
 				<tr *ngIf="rowGroupMetadata[customer.representative.name].index === rowIndex">
 					<td colspan="5">
 						<img [alt]="customer.representative.name" src="assets/demo/images/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
-						<span class="p-text-bold p-ml-2">{{customer.representative.name}}</span>
+						<span class="p-text-bold ml-2">{{customer.representative.name}}</span>
 					</td>
 				</tr>
 				<tr>
