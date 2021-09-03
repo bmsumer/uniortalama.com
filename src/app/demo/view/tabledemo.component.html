@@ -7,7 +7,7 @@
 					 styleClass="p-datatable-customers" [rowHover]="true" [rows]="10" [paginator]="true"
 					 [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
 				<ng-template pTemplate="caption">
-					<div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+					<div class="flex p-flex-column p-flex-md-row p-jc-md-between table-header">
 						Customers
 						<span class="p-input-icon-left">
                     <i class="pi pi-search"></i>
@@ -22,21 +22,21 @@
 							<p-tableHeaderCheckbox></p-tableHeaderCheckbox>
 						</th>
 						<th pSortableColumn="name">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Name
 								<p-sortIcon field="name"></p-sortIcon>
 								<p-columnFilter type="text" field="name" display="menu" class="p-ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="country.name">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Country
 								<p-sortIcon field="country.name"></p-sortIcon>
 								<p-columnFilter type="text" field="country.name" display="menu" class="p-ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="representative.name">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Agent
 								<p-sortIcon field="representative.name"></p-sortIcon>
 								<p-columnFilter field="representative" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
@@ -59,21 +59,21 @@
 							</div>
 						</th>
 						<th pSortableColumn="date">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Date
 								<p-sortIcon field="date"></p-sortIcon>
 								<p-columnFilter type="date" field="date" display="menu" class="p-ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="balance">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Balance
 								<p-sortIcon field="balance"></p-sortIcon>
 								<p-columnFilter type="numeric" field="balance" display="menu" currency="USD" class="p-ml-auto"></p-columnFilter>
 							</div>
 						</th>
 						<th pSortableColumn="status">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Status
 								<p-sortIcon field="status"></p-sortIcon>
 								<p-columnFilter field="status" matchMode="equals" display="menu">
@@ -88,13 +88,13 @@
 							</div>
 						</th>
 						<th pSortableColumn="activity">
-							<div class="p-d-flex p-jc-between p-ai-center">
+							<div class="flex p-jc-between p-ai-center">
 								Activity
 								<p-sortIcon field="activity"></p-sortIcon>
 								<p-columnFilter field="activity" matchMode="between" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
 									<ng-template pTemplate="filter" let-filter="filterCallback">
 										<p-slider [ngModel]="activityValues" [range]="true" (onSlideEnd)="filter($event.values)" styleClass="p-m-3"></p-slider>
-										<div class="p-d-flex p-ai-center p-jc-between p-px-2">
+										<div class="flex p-ai-center p-jc-between p-px-2">
 											<span>{{activityValues[0]}}</span>
 											<span>{{activityValues[1]}}</span>
 										</div>
@@ -166,7 +166,7 @@
 					 styleClass="p-datatable-customers p-datatable-gridlines p-datatable-striped p-datatable-sm"
 					 [scrollable]="true" scrollHeight="600px" [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
 				<ng-template pTemplate="caption">
-					<div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+					<div class="flex p-flex-column p-flex-md-row p-jc-md-between table-header">
 						Customers
 						<span class="p-input-icon-left">
                     <i class="pi pi-search"></i>

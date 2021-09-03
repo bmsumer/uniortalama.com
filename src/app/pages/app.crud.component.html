@@ -11,7 +11,7 @@
 				</ng-template>
 
 				<ng-template pTemplate="right">
-					<p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="p-mr-2 p-mb-2 p-d-inline-block"></p-fileUpload>
+					<p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="p-mr-2 p-mb-2 inline-block"></p-fileUpload>
 					<button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help p-mb-2" (click)="dt.exportCSV()"></button>
 				</ng-template>
 			</p-toolbar>
@@ -21,7 +21,7 @@
 					 styleClass="p-datatable-customers"
 					 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
 				<ng-template pTemplate="caption">
-					<div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+					<div class="flex p-flex-column p-flex-md-row p-jc-md-between table-header">
 						<h5 class="p-m-0">Manage Products</h5>
 						<span class="p-input-icon-left">
                         <i class="pi pi-search"></i>
@@ -73,7 +73,7 @@
 					</tr>
 				</ng-template>
 				<ng-template pTemplate="summary">
-					<div class="p-d-flex p-ai-center p-jc-between">
+					<div class="flex p-ai-center p-jc-between">
 						In total there are {{products ? products.length : 0 }} products.
 					</div>
 				</ng-template>
