@@ -41,7 +41,7 @@
 								<p-sortIcon field="representative.name"></p-sortIcon>
 								<p-columnFilter field="representative" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
 									<ng-template pTemplate="header">
-										<div class="p-px-3 p-pt-3 p-pb-0">
+										<div class="px-3 pt-3 pb-0">
 											<span class="p-text-bold">Agent Picker</span>
 										</div>
 									</ng-template>
@@ -94,7 +94,7 @@
 								<p-columnFilter field="activity" matchMode="between" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
 									<ng-template pTemplate="filter" let-filter="filterCallback">
 										<p-slider [ngModel]="activityValues" [range]="true" (onSlideEnd)="filter($event.values)" styleClass="p-m-3"></p-slider>
-										<div class="flex align-items-center justify-content-between p-px-2">
+										<div class="flex align-items-center justify-content-between px-2">
 											<span>{{activityValues[0]}}</span>
 											<span>{{activityValues[1]}}</span>
 										</div>
@@ -270,7 +270,7 @@
 				<ng-template pTemplate="rowexpansion" let-product>
 					<tr>
 						<td colspan="7">
-							<div class="p-p-3">
+							<div class="p-3">
 								<p-table [value]="product.orders" dataKey="id">
 									<ng-template pTemplate="header">
 					<tr>
