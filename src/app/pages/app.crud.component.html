@@ -21,7 +21,7 @@
 					 styleClass="p-datatable-customers"
 					 currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
 				<ng-template pTemplate="caption">
-					<div class="flex p-flex-column p-flex-md-row p-jc-md-between table-header">
+					<div class="flex p-flex-column p-flex-md-row md:justify-content-between table-header">
 						<h5 class="p-m-0">Manage Products</h5>
 						<span class="p-input-icon-left">
                         <i class="pi pi-search"></i>
@@ -73,7 +73,7 @@
 					</tr>
 				</ng-template>
 				<ng-template pTemplate="summary">
-					<div class="flex p-ai-center p-jc-between">
+					<div class="flex align-items-center justify-content-between">
 						In total there are {{products ? products.length : 0 }} products.
 					</div>
 				</ng-template>

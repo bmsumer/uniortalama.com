@@ -5,9 +5,9 @@
                 <span class="overview-title">
                     CONVERSATION RATE
                 </span>
-                <div class="flex p-jc-between">
-                    <div class="overview-detail flex p-jc-between">
-                        <div class="overview-badge flex p-jc-center p-ai-center">
+                <div class="flex justify-content-between">
+                    <div class="overview-detail flex justify-content-between">
+                        <div class="overview-badge flex justify-content-center align-items-center">
                             <i class="pi pi-arrow-down"></i>
                             <span>0.6%</span>
                         </div>
@@ -24,9 +24,9 @@
                 <span class="overview-title">
                     AVG. ORDER VALUE
                 </span>
-                <div class="flex p-jc-between">
-                    <div class="overview-detail flex p-jc-between">
-                        <div class="overview-badge flex p-jc-center p-ai-center">
+                <div class="flex justify-content-between">
+                    <div class="overview-detail flex justify-content-between">
+                        <div class="overview-badge flex justify-content-center align-items-center">
                             <i class="pi pi-arrow-up"></i>
                             <span>4,2%</span>
                         </div>
@@ -43,9 +43,9 @@
                 <span class="overview-title">
                     ORDER QUANTITY
                 </span>
-                <div class="flex p-jc-between">
-                    <div class="overview-detail flex p-jc-between">
-                        <div class="overview-badge flex p-jc-center p-ai-center">
+                <div class="flex justify-content-between">
+                    <div class="overview-detail flex justify-content-between">
+                        <div class="overview-badge flex justify-content-center align-items-center">
                             <i class="pi pi-minus"></i>
                             <span>2,1%</span>
                         </div>
@@ -88,7 +88,7 @@
 
         <div class="p-col-12 p-md-4">
             <div class="card widget-timeline">
-                <div class="timeline-header flex p-jc-between p-ai-center">
+                <div class="timeline-header flex justify-content-between align-items-center">
                     <p>Transaction history</p>
                     <div class="header-icons">
                         <i class="pi pi-refresh"></i>
@@ -103,7 +103,7 @@
                             </span>
                         </ng-template>
                         <ng-template pTemplate="content" let-event>
-                            <div class="flex p-ai-center p-jc-between">
+                            <div class="flex align-items-center justify-content-between">
                                 <p>{{event.transaction}}</p>
                                 <h6 [style.color]="event.amountColor">{{event.amount}}</h6>
                             </div>
@@ -111,7 +111,7 @@
                         </ng-template>
                     </p-timeline>
                 </div>
-                <div class="timeline-footer flex p-ai-center p-jc-center">
+                <div class="timeline-footer flex align-items-center justify-content-center">
                     <a href="#">View all transactions <i class="pi pi-arrow-down"></i></a>
                 </div>
             </div>
@@ -121,56 +121,56 @@
             <div class="card widget-country-graph">
                 <div class="country-title">Country distrubutions</div>
                 <div class="country-graph">
-                    <div class="flex p-jc-center">
+                    <div class="flex justify-content-center">
                         <p-chart type="doughnut" id="country-chart" [data]="countryChart" [options]="countryChartOptions" [style]="{'width': '75%'}"></p-chart>
                     </div>
                 </div>
                 <div class="country-content">
                     <ul>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #00D0DE; box-shadow: 0px 0px 10px rgba(0, 208, 222, 0.3);"></div>
                                 <span>United States of America</span>
                             </div>
                             <span>25%</span>
                         </li>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #873EFE; box-shadow: 0px 0px 10px rgba(135, 62, 254, 0.3)"></div>
                                 <span>China</span>
                             </div>
                             <span>20%</span>
                         </li>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #FC6161; box-shadow: 0px 0px 10px rgba(252, 97, 97, 0.3)"></div>
                                 <span>Japan</span>
                             </div>
                             <span>17%</span>
                         </li>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #EEE500; box-shadow: 0px 0px 10px rgba(238, 229, 0, 0.3)"></div>
                                 <span>Australia</span>
                             </div>
                             <span>15%</span>
                         </li>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #EC4DBC; box-shadow: 0px 0px 10px rgba(236, 77, 188, 0.3)"></div>
                                 <span>India</span>
                             </div>
                             <span>10%</span>
                         </li>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #0F8BFD; box-shadow: 0px 0px 10px rgba(15, 139, 253, 0.3)"></div>
                                 <span>Rusian Federation</span>
                             </div>
                             <span>8%</span>
                         </li>
-                        <li class="flex p-jc-between p-ai-center">
-                            <div class="flex p-jc-between p-ai-center">
+                        <li class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-between align-items-center">
                                 <div class="color" style="background-color: #545C6B"></div>
                                 <span>Others</span>
                             </div>
@@ -205,25 +205,25 @@
                     <ng-template pTemplate="header">
                         <tr>
                             <th pSortableColumn="representative.name">
-                                <div class="flex p-jc-between p-ai-center">
+                                <div class="flex justify-content-between align-items-center">
                                     Agent
                                     <p-sortIcon field="representative.name"></p-sortIcon>
                                 </div>
                             </th>
                             <th pSortableColumn="country.name">
-                                <div class="flex p-jc-between p-ai-center">
+                                <div class="flex justify-content-between align-items-center">
                                     Country
                                     <p-sortIcon field="country.name"></p-sortIcon>
                                 </div>
                             </th>
                             <th pSortableColumn="date">
-                                <div class="flex p-jc-between p-ai-center">
+                                <div class="flex justify-content-between align-items-center">
                                     Date
                                     <p-sortIcon field="date"></p-sortIcon>
                                 </div>
                             </th>
                             <th pSortableColumn="balance">
-                                <div class="flex p-jc-between p-ai-center">
+                                <div class="flex justify-content-between align-items-center">
                                     Balance
                                     <p-sortIcon field="balance"></p-sortIcon>
                                 </div>
@@ -323,15 +323,15 @@
 
                 <div class="content p-grid p-nogutter">
                     <div class="p-col-12 p-md-6 p-grid">
-                        <div class="p-col-12 p-md-4 flex p-ai-center">
+                        <div class="p-col-12 p-md-4 flex align-items-center">
                             <h2>{{customerMax}}</h2>
                             <p>MAX</p>
                         </div>
-                        <div class="p-col-12 p-md-4 flex p-ai-center">
+                        <div class="p-col-12 p-md-4 flex align-items-center">
                             <h2>{{customerMin}}</h2>
                             <p>MIN</p>
                         </div>
-                        <div class="p-col-12 p-md-4 flex p-ai-center">
+                        <div class="p-col-12 p-md-4 flex align-items-center">
                             <h2 style="color:#FC6161">{{customerAvg}}</h2>
                             <p>AVARAGE</p>
                         </div>
