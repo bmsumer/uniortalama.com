@@ -121,7 +121,9 @@
             <div class="card widget-country-graph">
                 <div class="country-title">Country distrubutions</div>
                 <div class="country-graph">
-                    <p-chart type="doughnut" id="country-chart" [data]="countryChart" [options]="countryChartOptions"></p-chart>
+                    <div class="p-d-flex p-jc-center">
+                        <p-chart type="doughnut" id="country-chart" [data]="countryChart" [options]="countryChartOptions" [style]="{'width': '75%'}"></p-chart>
+                    </div>
                 </div>
                 <div class="country-content">
                     <ul>
