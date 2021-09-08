@@ -1,5 +1,5 @@
-<div class="p-grid table-demo">
-	<div class="p-col-12">
+<div class="grid table-demo">
+	<div class="col-12">
 		<div class="card">
 			<h5>Default</h5>
 			<p>Pagination, sorting, filtering and checkbox selection.</p>
@@ -7,7 +7,7 @@
 					 styleClass="p-datatable-customers" [rowHover]="true" [rows]="10" [paginator]="true"
 					 [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
 				<ng-template pTemplate="caption">
-					<div class="flex p-flex-column p-flex-md-row md:justify-content-between table-header">
+					<div class="flex flex-column md:flex-row md:justify-content-between table-header">
 						Customers
 						<span class="p-input-icon-left">
                     <i class="pi pi-search"></i>
@@ -42,7 +42,7 @@
 								<p-columnFilter field="representative" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false" [showAddButton]="false">
 									<ng-template pTemplate="header">
 										<div class="px-3 pt-3 pb-0">
-											<span class="p-text-bold">Agent Picker</span>
+											<span class="font-bold">Agent Picker</span>
 										</div>
 									</ng-template>
 									<ng-template pTemplate="filter" let-value let-filter="filterCallback">
@@ -157,7 +157,7 @@
 		</div>
 	</div>
 
-	<div class="p-col-12">
+	<div class="col-12">
 		<div class="card">
 			<h5>Customized</h5>
 			<p>Scrollable table with gridlines (<mark>.p-datatable-gridlines</mark>), striped rows (<mark>.p-datatable-striped</mark>) and smaller paddings (<mark>p-datatable-sm</mark>).</p>
@@ -166,7 +166,7 @@
 					 styleClass="p-datatable-customers p-datatable-gridlines p-datatable-striped p-datatable-sm"
 					 [scrollable]="true" scrollHeight="600px" [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
 				<ng-template pTemplate="caption">
-					<div class="flex p-flex-column p-flex-md-row md:justify-content-between table-header">
+					<div class="flex flex-column md:flex-row md:justify-content-between table-header">
 						Customers
 						<span class="p-input-icon-left">
                     <i class="pi pi-search"></i>
@@ -239,7 +239,7 @@
 		</div>
 	</div>
 
-	<div class="p-col-12">
+	<div class="col-12">
 		<div class="card">
 			<h5>Row Expand</h5>
 			<p-table [value]="products" dataKey="name" styleClass="p-datatable-customers rowexpand-table">
@@ -260,7 +260,7 @@
 							<button type="button" pButton pRipple [pRowToggler]="product" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
 						</td>
 						<td><span class="p-column-title">Name</span>{{product.name}}</td>
-						<td><span class="p-column-title">Image</span><img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name" width="100" class="p-shadow-4" /></td>
+						<td><span class="p-column-title">Image</span><img [src]="'assets/demo/images/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
 						<td><span class="p-column-title">Price</span>{{product.price | currency:'USD'}}</td>
 						<td><span class="p-column-title">Category</span>{{product.category}}</td>
 						<td><span class="p-column-title">Reviews</span><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -306,7 +306,7 @@
 	</div>
 </div>
 
-<div class="p-col-12">
+<div class="col-12">
 	<div class="card">
 		<h5>Row Group and Scrolling</h5>
 		<p-table [value]="customers3" sortField="representative.name" sortMode="single" (onSort)="onSort()" [scrollable]="true" scrollHeight="600px"
@@ -324,7 +324,7 @@
 				<tr *ngIf="rowGroupMetadata[customer.representative.name].index === rowIndex">
 					<td colspan="5">
 						<img [alt]="customer.representative.name" src="assets/demo/images/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
-						<span class="p-text-bold ml-2">{{customer.representative.name}}</span>
+						<span class="font-bold ml-2">{{customer.representative.name}}</span>
 					</td>
 				</tr>
 				<tr>

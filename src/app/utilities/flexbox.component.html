@@ -8,10 +8,10 @@
         <h5>Flex Container</h5>
         <p>An element can configured as a flexbox container using the <i>flex</i> or <i>inline-flex</i> classes.</p>
 
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex"&gt;Flex Container&lt;/div&gt;
-            &lt;div class="inline-flex"&gt;Inline Flex Container&lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex"&gt;Flex Container&lt;/div&gt;
+&lt;div class="inline-flex"&gt;Inline Flex Container&lt;/div&gt;
+</app-code>
 
         <div class="box flex mb-3">Flex Container</div>
         <div class="box inline-flex">Inline Flex Container</div>
@@ -26,13 +26,13 @@
         </ul>
 
         <h6>Row</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex"&gt;
-            &lt;div class="mr-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mr-2"&gt;Item 2&lt;/div&gt;
-            &lt;div&gt;Item 3&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex"&gt;
+    &lt;div class="mr-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mr-2"&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex">
             <div class="mr-2">Item 1</div>
@@ -41,13 +41,13 @@
         </div>
 
         <h6>Column</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex flex-column"&gt;
-            &lt;div class="mb-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mb-2"&gt;Item 2&lt;/div&gt;
-            &lt;div&gt;Item 3&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex flex-column"&gt;
+    &lt;div class="mb-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mb-2"&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex flex-column">
             <div class="mb-2">Item 1</div>
@@ -58,13 +58,13 @@
         <h6>Responsive</h6>
         <p>Row direction for larger screens and column for smaller.</p>
 
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex flex-column md:flex-row"&gt;
-            &lt;div class="mb-2 mr-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mb-2 mr-2"&gt;Item 2&lt;/div&gt;
-            &lt;div class="mb-2 mr-2"&gt;Item 3&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex flex-column md:flex-row"&gt;
+    &lt;div class="mb-2 mr-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mb-2 mr-2"&gt;Item 2&lt;/div&gt;
+    &lt;div class="mb-2 mr-2"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex flex-column md:flex-row">
             <div class="mb-2 mr-2">Item 1</div>
@@ -100,13 +100,13 @@
         <p>Order configures the way in which they appear in the flex container. <i>flex-order-&#123;value&#125;</i> format is used where value can be a number from 0 to 6.</p>
 
         <h6>Customized</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex"&gt;
-            &lt;div class="mr-2 flex-order-3"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mr-2 flex-order-1"&gt;Item 2&lt;/div&gt;
-            &lt;div class="mr-2 flex-order-2"&gt;Item 3&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex"&gt;
+    &lt;div class="mr-2 flex-order-3"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mr-2 flex-order-1"&gt;Item 2&lt;/div&gt;
+    &lt;div class="mr-2 flex-order-2"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex">
             <div class="mr-2 flex-order-3">Item 1</div>
@@ -116,13 +116,13 @@
 
         <h6>Responsive</h6>
         <p>Orders change depending on the screen size.</p>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex"&gt;
-            &lt;div class="mr-2 flex-order-3 md:flex-order-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mr-2 flex-order-1 md:flex-order-3"&gt;Item 2&lt;/div&gt;
-            &lt;div class="mr-2 flex-order-2 md:flex-order-1"&gt;Item 3&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex"&gt;
+    &lt;div class="mr-2 flex-order-3 md:flex-order-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mr-2 flex-order-1 md:flex-order-3"&gt;Item 2&lt;/div&gt;
+    &lt;div class="mr-2 flex-order-2 md:flex-order-1"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex">
             <div class="mr-2 flex-order-3 md:flex-order-2">Item 1</div>
@@ -180,16 +180,16 @@
         </ul>
 
         <h6>No Wrap</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex"&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 2&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 3&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 4&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 5&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 6&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex"&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 2&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 3&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 4&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 5&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex">
             <div class="mr-2 mb-2">Item 1</div>
@@ -201,16 +201,16 @@
         </div>
 
         <h6>Wrap</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex flex-wrap"&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 2&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 3&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 4&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 5&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 6&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex flex-wrap"&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 2&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 3&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 4&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 5&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex flex-wrap">
             <div class="mr-2 mb-2">Item 1</div>
@@ -222,16 +222,16 @@
         </div>
 
         <h6>Wrap Reverse</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex flex-wrap-reverse"&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 1&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 2&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 3&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 4&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 5&lt;/div&gt;
-            &lt;div class="mr-2 mb-2"&gt;Item 6&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex flex-wrap-reverse"&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 1&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 2&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 3&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 4&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 5&lt;/div&gt;
+    &lt;div class="mr-2 mb-2"&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex flex-wrap-reverse">
             <div class="mr-2 mb-2">Item 1</div>
@@ -274,24 +274,24 @@
         </ul>
 
         <h6>Between</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex justify-content-between"&gt;
-            &lt;div&gt;Item 1&lt;/div&gt;
-            &lt;div&gt;Item 2&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex justify-content-between"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
         <div class="flex justify-content-between">
             <div>Item 1</div>
             <div>Item 2</div>
         </div>
 
         <h6>Center</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex justify-content-center"&gt;
-            &lt;div class="mr-2"&gt;Item 1&lt;/div&gt;
-            &lt;div&gt;Item 2&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex justify-content-center"&gt;
+    &lt;div class="mr-2"&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
         <div class="flex justify-content-center">
             <div class="mr-2">Item 1</div>
             <div>Item 2</div>
@@ -343,24 +343,24 @@
         </ul>
 
         <h6>Start</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex align-items-start"&gt;
-            &lt;div class="mr-2" style="height:100px"&gt;Item 1&lt;/div&gt;
-            &lt;div style="height:50px"&gt;Item 2&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex align-items-start"&gt;
+    &lt;div class="mr-2" style="height:100px"&gt;Item 1&lt;/div&gt;
+    &lt;div style="height:50px"&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
         <div class="flex align-items-start">
             <div class="mr-2" style="height:100px">Item 1</div>
             <div style="height:50px">Item 2</div>
         </div>
 
         <h6>Center</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex align-items-center"&gt;
-            &lt;div class="mr-2" style="height:100px"&gt;Item 1&lt;/div&gt;
-            &lt;div style="height:50px"&gt;Item 2&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex align-items-center"&gt;
+    &lt;div class="mr-2" style="height:100px"&gt;Item 1&lt;/div&gt;
+    &lt;div style="height:50px"&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
         <div class="flex align-items-center">
             <div class="mr-2" style="height:100px">Item 1</div>
             <div style="height:50px">Item 2</div>
@@ -406,14 +406,14 @@
             <li>stretch (default)</li>
         </ul>
 
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex" style="height: 150px;"&gt;
-            &lt;div class="mr-2 align-self-start"&gt;Start&lt;/div&gt;
-            &lt;div class="mr-2 align-self-center"&gt;Center&lt;/div&gt;
-            &lt;div class="mr-2 align-self-end"&gt;End&lt;/div&gt;
-            &lt;div class="mr-2 align-self-stretch"&gt;Stretch&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex" style="height: 150px;"&gt;
+    &lt;div class="mr-2 align-self-start"&gt;Start&lt;/div&gt;
+    &lt;div class="mr-2 align-self-center"&gt;Center&lt;/div&gt;
+    &lt;div class="mr-2 align-self-end"&gt;End&lt;/div&gt;
+    &lt;div class="mr-2 align-self-stretch"&gt;Stretch&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex" style="height: 150px;">
             <div class="mr-2 align-self-start">Start</div>
@@ -501,13 +501,13 @@
         <p>When combined with <a [routerLink]="['/primeflex/spacing']">spacing utilities</a>, flexbox offers endless possibilities.</p>
         <h6>Horizontal Spacing</h6>
 
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex p-3 card"&gt;
-            &lt;button pButton pRipple type="button" icon="pi pi-check" class="mr-2"&gt;&lt;/button&gt;
-            &lt;button pButton pRipple type="button" icon="pi pi-trash" class="p-button-danger"&gt;&lt;/button&gt;
-            &lt;button pButton pRipple  type="button" icon="pi pi-search" class="ml-auto p-button-help"&gt;&lt;/button&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex p-3 card"&gt;
+    &lt;button pButton pRipple type="button" icon="pi pi-check" class="mr-2"&gt;&lt;/button&gt;
+    &lt;button pButton pRipple type="button" icon="pi pi-trash" class="p-button-danger"&gt;&lt;/button&gt;
+    &lt;button pButton pRipple  type="button" icon="pi pi-search" class="ml-auto p-button-help"&gt;&lt;/button&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex p-3 card">
             <button pButton pRipple type="button" icon="pi pi-check" class="mr-2"></button>
@@ -516,12 +516,12 @@
         </div>
 
         <h6>Vertical Spacing</h6>
-        <app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
-            &lt;div class="flex flex-column" style="height:150px"&gt;
-            &lt;div&gt;Item 1&lt;/div&gt;
-            &lt;div class="mt-auto"&gt;Item 2&lt;/div&gt;
-            &lt;/div&gt;
-        </app-code>
+<app-code lang="markup" ngPreserveWhitespaces ngNonBindable>
+&lt;div class="flex flex-column" style="height:150px"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div class="mt-auto"&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+</app-code>
 
         <div class="flex flex-column" style="height:150px">
             <div>Item 1</div>

@@ -10,34 +10,34 @@ import { AppMainComponent } from './app.main.component';
         </a>
         <div class="layout-config" [ngClass]="{'layout-config-active': appMain.configActive}" (click)="appMain.onConfigClick($event)">
             <h5>Menu Type</h5>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="layoutMode" value="static" [(ngModel)]="app.menuMode" inputId="layoutMode1"></p-radioButton>
                 <label for="layoutMode1">Static</label>
             </div>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="layoutMode" value="overlay" [(ngModel)]="app.menuMode" inputId="layoutMode2"></p-radioButton>
                 <label for="layoutMode2">Overlay</label>
             </div>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="layoutMode" value="slim" [(ngModel)]="app.menuMode" inputId="layoutMode3"></p-radioButton>
                 <label for="layoutMode3">Slim</label>
             </div>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="layoutMode" value="horizontal" [(ngModel)]="app.menuMode" inputId="layoutMode4"></p-radioButton>
                 <label for="layoutMode4">Horizontal</label>
             </div>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="layoutMode" value="sidebar" [(ngModel)]="app.menuMode" inputId="layoutMode5"></p-radioButton>
                 <label for="layoutMode5">Sidebar</label>
             </div>
 
             <h5>Color Scheme</h5>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="darkMode" value="light" [(ngModel)]="app.colorScheme" inputId="darkMode1"
                                (onClick)="changeColorScheme('light')"></p-radioButton>
                 <label for="darkMode1">Light</label>
             </div>
-            <div class="p-field-radiobutton">
+            <div class="field-radiobutton">
                 <p-radioButton name="darkMode" value="dark" [(ngModel)]="app.colorScheme" inputId="darkMode2"
                                (onClick)="changeColorScheme('dark')"></p-radioButton>
                 <label for="darkMode2">Dark</label>

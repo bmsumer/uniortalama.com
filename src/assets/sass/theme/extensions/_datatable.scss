@@ -74,4 +74,10 @@
             }
         }
     }
+
+    &.p-datatable-scrollable {
+        .p-datatable-thead {
+            background: $overlayContentBg;
+        }
+    }
 }

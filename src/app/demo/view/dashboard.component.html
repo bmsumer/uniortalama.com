@@ -1,6 +1,6 @@
 <div class="layout-dashboard">
-    <div class="p-grid">
-        <div class="p-col-12 p-md-4">
+    <div class="grid">
+        <div class="col-12 md:col-4">
             <div class="card widget-overview-box widget-overview-box-1">
                 <span class="overview-title">
                     CONVERSATION RATE
@@ -19,7 +19,7 @@
                 <img src="assets/layout/images/dashboard/rate.svg">
             </div>
         </div>
-        <div class="p-col-12 p-md-4">
+        <div class="col-12 md:col-4">
             <div class="card widget-overview-box widget-overview-box-2">
                 <span class="overview-title">
                     AVG. ORDER VALUE
@@ -38,7 +38,7 @@
                 <img src="assets/layout/images/dashboard/value.svg">
             </div>
         </div>
-        <div class="p-col-12 p-md-4">
+        <div class="col-12 md:col-4">
             <div class="card widget-overview-box widget-overview-box-3">
                 <span class="overview-title">
                     ORDER QUANTITY
@@ -58,20 +58,20 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-md-8">
+        <div class="col-12 md:col-8">
             <div class="card widget-visitor-graph">
                 <div class="card-header">
                     <span>Unique visitor graph</span>
                     <p-dropdown [options]="visitorYear" [(ngModel)]="selectedVisitorYear" optionLabel="name" (onChange)="changeVisitorChart($event); visitor.refresh()"></p-dropdown>
                 </div>
 
-                <div class="graph-content p-grid">
-                    <div class="p-col-12 p-md-6">
+                <div class="graph-content grid">
+                    <div class="col-12 md:col-6">
                         <h2>{{growth}}</h2>
                         <h6>MRR GROWTH</h6>
                         <p>Measure how fast you’re growing mothly recurring revenue. <a href="#">Learn more</a></p>
                     </div>
-                    <div class="p-col-12 p-md-6">
+                    <div class="col-12 md:col-6">
                         <h2>{{avgCustomer}}</h2>
                         <h6>AVG. MRR/CUSTOMER</h6>
                         <p>The revenue generated per account on a monthly or yearly basis. <a href="#">Learn more</a></p>
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-md-4">
+        <div class="col-12 md:col-4">
             <div class="card widget-timeline">
                 <div class="timeline-header flex justify-content-between align-items-center">
                     <p>Transaction history</p>
@@ -117,7 +117,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-md-4">
+        <div class="col-12 md:col-4">
             <div class="card widget-country-graph">
                 <div class="country-title">Country distrubutions</div>
                 <div class="country-graph">
@@ -181,7 +181,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-md-8">
+        <div class="col-12 md:col-8">
             <div class="card widget-revenue-graph">
                 <div class="card-header">
                     <span>Montly revenue</span>
@@ -194,7 +194,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-md-8">
+        <div class="col-12 md:col-8">
             <div class="card widget-table">
                 <div class="card-header">
                     <span>Yearly win</span>
@@ -263,7 +263,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-md-4">
+        <div class="col-12 md:col-4">
             <div class="card widget-performance">
                 <div class="header">
                     <span>Quarterly win</span>
@@ -311,7 +311,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-lg-8">
+        <div class="col-12 lg:col-8">
             <div class="card widget-customer-graph">
                 <div class="header">
                     <div class="title">
@@ -321,17 +321,17 @@
                     <p class="subtitle">Number of new customer are listed by weekly</p>
                 </div>
 
-                <div class="content p-grid p-nogutter">
-                    <div class="p-col-12 p-md-6 p-grid">
-                        <div class="p-col-12 p-md-4 flex align-items-center">
+                <div class="content grid p-nogutter">
+                    <div class="col-12 md:col-6 grid">
+                        <div class="col-12 md:col-4 flex align-items-center">
                             <h2>{{customerMax}}</h2>
                             <p>MAX</p>
                         </div>
-                        <div class="p-col-12 p-md-4 flex align-items-center">
+                        <div class="col-12 md:col-4 flex align-items-center">
                             <h2>{{customerMin}}</h2>
                             <p>MIN</p>
                         </div>
-                        <div class="p-col-12 p-md-4 flex align-items-center">
+                        <div class="col-12 md:col-4 flex align-items-center">
                             <h2 style="color:#FC6161">{{customerAvg}}</h2>
                             <p>AVARAGE</p>
                         </div>
@@ -342,7 +342,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 p-lg-4">
+        <div class="col-12 lg:col-4">
             <div class="card widget-target">
                 <div class="card-header">
                     <span>Weekly target</span>
@@ -391,7 +391,7 @@
             </div>
         </div>
 
-        <div class="p-col-12 widget-customer-carousel">
+        <div class="col-12 widget-customer-carousel">
             <h6>Top customers</h6>
             <p-carousel [value]="customerCarousel" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="carouselResponsiveOptions">
                 <ng-template let-customer pTemplate="item">

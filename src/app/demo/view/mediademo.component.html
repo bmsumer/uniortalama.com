@@ -1,5 +1,5 @@
-<div class="p-grid p-fluid">
-    <div class="p-col-12">
+<div class="grid p-fluid">
+    <div class="col-12">
         <div class="card">
             <h5>Carousel</h5>
             <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="carouselResponsiveOptions">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="p-col-12">
+    <div class="col-12">
         <div class="card">
             <h5>Galleria</h5>
             <p-galleria [value]="images" [responsiveOptions]="galleriaResponsiveOptions"
@@ -35,7 +35,7 @@
                     <img [src]="item.itemImageSrc" style="width: 100%; display: block;"/>
                 </ng-template>
                 <ng-template pTemplate="thumbnail" let-item>
-                    <div class="p-grid p-nogutter p-justify-center">
+                    <div class="grid p-nogutter justify-content-center">
                         <img [src]="item.thumbnailImageSrc" style="display: block;"/>
                     </div>
                 </ng-template>

@@ -59,7 +59,7 @@ export class ChartsDemoComponent implements OnInit {
             scales: {
                 x: {
                     ticks: {
-                        fontColor: '#A0A7B5'
+                        color: '#A0A7B5'
                     },
                     grid: {
                         color:  'rgba(160, 167, 181, .3)',
@@ -67,7 +67,7 @@ export class ChartsDemoComponent implements OnInit {
                 },
                 y: {
                     ticks: {
-                        fontColor: '#A0A7B5'
+                        color: '#A0A7B5'
                     },
                     grid: {
                         color:  'rgba(160, 167, 181, .3)',
@@ -105,7 +105,7 @@ export class ChartsDemoComponent implements OnInit {
             scales: {
                 x: {
                     ticks: {
-                        fontColor: '#A0A7B5'
+                        color: '#A0A7B5'
                     },
                     grid: {
                         color:  'rgba(160, 167, 181, .3)',
@@ -113,7 +113,7 @@ export class ChartsDemoComponent implements OnInit {
                 },
                 y: {
                     ticks: {
-                        fontColor: '#A0A7B5'
+                        color: '#A0A7B5'
                     },
                     grid: {
                         color:  'rgba(160, 167, 181, .3)',
