@@ -117,17 +117,20 @@ export class DashboardDemoComponent implements OnInit {
                     borderColor: [
                         '#FC6161',
                     ],
-                    steppedLine: true,
                     pointBorderColor: 'transparent',
                     pointBackgroundColor: 'transparent',
                     type: 'line',
-                    fill: false
+                    fill: false,
+                    barPercentage: 0.5,
+                    stepped: true
                 },
                 {
                     label: 'Groth actual',
                     data: [600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810, 780],
                     backgroundColor: getComputedStyle(document.body).getPropertyValue('--primary-color') ,
-                    fill: true
+                    fill: true,
+                    barPercentage: 0.5,
+                    stepped: true
                 }
             ]
         };
