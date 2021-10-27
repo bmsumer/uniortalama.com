@@ -9,7 +9,7 @@ $colors: (
     "orange": #F57C00,
     "bluegray": #607D8B,
     "purple": #9C27B0
-);
+) !default;
 
 //shades
 $shade000:#FFFFFF!default;  //text color
@@ -21,7 +21,9 @@ $shade700:rgba(255, 255, 255, 0.15) !default;  //Alpha-03
 $shade800:rgba(255, 255, 255, 0.2) !default;  //Alpha-04
 $shade900:rgba(255, 255, 255, 0.25) !default;  //Alpha-05
 
-$solidSurfaceColor: #0a061a;
+$solidSurfaceColor: #0a061a !default;
+
+$hoverBg:rgba(255,255,255,.03) !default;
 
 //global
 $fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -813,38 +815,38 @@ $galleriaThumbnailNavigatorWidth:2rem !default;
 $galleriaThumbnailNavigatorHeight:2rem !default;
 
 //divider
-$dividerHorizontalMargin:1rem 0;
-$dividerHorizontalPadding:0 1rem;
-$dividerVerticalMargin:0 1rem;
-$dividerVerticalPadding:1rem 0;
-$dividerSize:1px;
-$dividerColor:$shade700;
+$dividerHorizontalMargin:1rem 0 !default;
+$dividerHorizontalPadding:0 1rem !default;
+$dividerVerticalMargin:0 1rem !default;
+$dividerVerticalPadding:1rem 0 !default;
+$dividerSize:1px !default;
+$dividerColor:$shade700 !default;
 
 //avatar
-$avatarBg:$shade500;
-$avatarTextColor:$textColor;
+$avatarBg:$shade500 !default;
+$avatarTextColor:$textColor !default;
 
 //chip
-$chipBg:$shade500;
-$chipTextColor:$textColor;
-$chipBorderRadius: 16px;
+$chipBg:$shade500 !default;
+$chipTextColor:$textColor !default;
+$chipBorderRadius: 16px !default;
 
 //scrollTop
-$scrollTopBg:$highlightBg;
-$scrollTopHoverBg:scale-color($highlightBg, $alpha: 24%);
-$scrollTopWidth:3rem;
-$scrollTopHeight:3rem;
-$scrollTopBorderRadius:50%;
-$scrollTopFontSize:1.5rem;
-$scrollTopTextColor:$highlightTextColor;
+$scrollTopBg:$highlightBg !default;
+$scrollTopHoverBg:scale-color($highlightBg, $alpha: 24%) !default;
+$scrollTopWidth:3rem !default;
+$scrollTopHeight:3rem !default;
+$scrollTopBorderRadius:50% !default;
+$scrollTopFontSize:1.5rem !default;
+$scrollTopTextColor:$highlightTextColor !default;
 
 //skeleton
-$skeletonBg:rgba(255,255,255,.06);
-$skeletonAnimationBg:rgba(255,255,255,.04);
+$skeletonBg:rgba(255,255,255,.06) !default;
+$skeletonAnimationBg:rgba(255,255,255,.04) !default;
 
 //splitter
-$splitterGutterBg:$shade700;
-$splitterGutterHandleBg:$shade700;
+$splitterGutterBg:$shade700 !default;
+$splitterGutterHandleBg:$shade700 !default;
 
 //speeddial
 $speedDialButtonWidth: 4rem !default;
@@ -869,29 +871,62 @@ $dockBorder: 1px solid rgba(255,255,255,0.2) !default;
 $dockPadding: .5rem .5rem !default;
 $dockBorderRadius: .5rem !default;
 
+//image
+$imageMaskBg:rgba(0,0,0,0.9) !default;
+$imagePreviewToolbarPadding:1rem !default;
+$imagePreviewIndicatorColor:#f8f9fa !default;
+$imagePreviewIndicatorBg:rgba(0,0,0,0.5) !default;
+$imagePreviewActionIconBg:transparent !default;
+$imagePreviewActionIconColor:#f8f9fa !default;
+$imagePreviewActionIconHoverBg:rgba(255,255,255,0.1) !default;
+$imagePreviewActionIconHoverColor:#f8f9fa !default;
+$imagePreviewActionIconWidth:3rem !default;
+$imagePreviewActionIconHeight:3rem !default;
+$imagePreviewActionIconFontSize:1.5rem !default;
+$imagePreviewActionIconBorderRadius:50% !default;
+
 :root {
-    --surface-a:#{$shade200};
-    --surface-b:#{$shade500};
-    --surface-c:#{$shade600};
-    --surface-d:#{$shade700};
+    --surface-a:#{$shade800};
+    --surface-b:#{$shade900};
+    --surface-c:#{$hoverBg};
+    --surface-d:#{$shade600};
     --surface-e:#{$shade800};
-    --surface-f:#{$shade900};
+    --surface-f:#{$shade800};
     --text-color:#{$shade000};
     --text-color-secondary:#{$shade100};
     --primary-color:#{$primaryColor};
     --primary-color-text:#{$primaryTextColor};
     --font-family:#{$fontFamily};
-    --surface-0: #17212f;
-    --surface-50: #1d2734;
-    --surface-100: #232c39;
-    --surface-200: #28323f;
-    --surface-300: #2e3744;
-    --surface-400: #343d49;
-    --surface-500: #3a424e;
-    --surface-600: #404853;
-    --surface-700: #454d59;
-    --surface-800: #4b535e;
-    --surface-900: #515963;
+    --surface-0: #121212;
+    --surface-50: #2a2a2a;
+    --surface-100: #414141;
+    --surface-200: #595959;
+    --surface-300: #717171;
+    --surface-400: #898989;
+    --surface-500: #a0a0a0;
+    --surface-600: #b8b8b8;
+    --surface-700: #d0d0d0;
+    --surface-800: #e7e7e7;
+    --surface-900: #ffffff;
+    --gray-50:#e7e7e7;
+    --gray-100: #d0d0d0;
+    --gray-200: #b8b8b8;
+    --gray-300: #a0a0a0;
+    --gray-400: #898989;
+    --gray-500: #717171;
+    --gray-600: #595959;
+    --gray-700: #414141;
+    --gray-800: #2a2a2a;
+    --gray-900: #121212;
     --content-padding:#{$panelContentPadding};
     --inline-spacing:#{$inlineSpacing};
+    --border-radius:#{$borderRadius};
+    --surface-ground:#121212;
+    --surface-section:#121212;
+    --surface-card:rgba(255, 255, 255, 0.05);
+    --surface-overlay:#0a061a;
+    --surface-border:rgba(255, 255, 255, 0.05);
+    --surface-hover:rgba(255,255,255,.03);
+    --maskbg: #{$maskBg};
+    --focus-ring: #{$focusShadow};
 }
