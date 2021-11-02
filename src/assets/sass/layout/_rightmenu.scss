@@ -56,6 +56,8 @@
     }
 
     .user-tasks {
+        display: flex;
+        justify-content: space-between;
         padding: 1.5rem 1rem;
         border-bottom: 1px solid $dividerColor;
 
@@ -69,6 +71,9 @@
             }
 
             .task-number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background-color: $rightMenuButtonBg;
                 color: $textColor;
                 text-align: center;

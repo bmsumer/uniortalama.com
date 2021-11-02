@@ -1,12 +1,12 @@
-<div class="layout-breadcrumb-container flex align-items-center justify-content-between">
-    <div class="layout-breadcrumb-left-items flex align-items-center">
+<div class="layout-breadcrumb-container">
+    <div class="layout-breadcrumb-left-items">
         <a href="#" class="menu-button" (click)="appMain.onMenuButtonClick($event)" *ngIf="appMain.isStatic() && !appMain.isMobile()">
             <i class="pi pi-bars"></i>
         </a>
 
         <p-breadcrumb [model]="items" styleClass="layout-breadcrumb py-2"></p-breadcrumb>
     </div>
-    <div class="layout-breadcrumb-right-items flex">
+    <div class="layout-breadcrumb-right-items">
         <a tabindex="0" class="search-icon" (click)="appMain.searchActive = true; appMain.searchClick = true;">
             <i class="pi pi-search"></i>
         </a>

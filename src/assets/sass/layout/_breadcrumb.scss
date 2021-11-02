@@ -1,6 +1,9 @@
 .layout-breadcrumb-container {
     background-color: transparent;
     padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     .layout-breadcrumb {
         background: transparent;
@@ -37,7 +40,14 @@
         }
     }
 
+    .layout-breadcrumb-left-items {
+        display: flex;
+        align-items: center;
+    }
+
     .layout-breadcrumb-right-items {
+        display: flex;
+
         .search-icon {
             display:none;
             align-items: center;
