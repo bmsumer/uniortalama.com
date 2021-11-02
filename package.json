@@ -1,6 +1,6 @@
 {
     "name": "atlantis",
-    "version": "12.0.1-SNAPSHOT",
+    "version": "12.2.0",
     "license": "PrimeNG Commercial",
     "scripts": {
         "ng": "ng",

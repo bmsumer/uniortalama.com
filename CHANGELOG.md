@@ -1,5 +1,16 @@
 # Changelog
 
+## 12.2.0
+**Migration Guide**
+
+- Update app.breadcrumb.component.html.
+- Update app.inlinemenu.component.html and app.rightmenu.component.html.
+- Update theme files and layout files.
+
+**Implemented New Features and Enhancements:**
+
+- Styles of new PrimeNG components
+
 ## 12.0.0
 **Migration Guide**
 - Update your project to Angular 12.
