@@ -34,6 +34,7 @@ import {FieldsetModule} from 'primeng/fieldset';
 import {FileUploadModule} from 'primeng/fileupload';
 import {FullCalendarModule} from '@fullcalendar/angular';
 import {GalleriaModule} from 'primeng/galleria';
+import {ImageModule} from 'primeng/image';
 import {InplaceModule} from 'primeng/inplace';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {InputMaskModule} from 'primeng/inputmask';
@@ -197,6 +198,7 @@ FullCalendarModule.registerPlugins([
         FullCalendarModule,
         GalleriaModule,
         KnobModule,
+        ImageModule,
         InplaceModule,
         InputNumberModule,
         InputMaskModule,
