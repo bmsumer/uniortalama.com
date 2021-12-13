@@ -76,8 +76,8 @@
     }
 
     &.p-datatable-scrollable {
-        .p-datatable-thead {
-            background: $overlayContentBg;
+        .p-datatable-thead th{
+            background: $solidSurfaceColor;
         }
     }
 }

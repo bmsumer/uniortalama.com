@@ -250,6 +250,7 @@ $colorPickerPreviewWidth:2rem !default;
 $colorPickerPreviewHeight:2rem !default;
 $colorPickerBg:$shade100 !default;
 $colorPickerBorderColor:#191919 !default;
+$colorPickerBorder:1px solid #191919 !default;
 $colorPickerHandleColor:#191919 !default;
 
 //togglebutton
@@ -316,6 +317,7 @@ $calendarHeaderCellPadding:0.357rem !default;
 $calendarHeaderCellFontWeight:500 !default;
 $calendarHeaderCellFontSize:12px !default;
 $calendarHeaderCellTextColor:$shade500 !default;
+$calendarMonthYearHeaderHoverTextColor: $primaryColor !default;
 
 $calendarCellDateBg:$shade100 !default;
 $calendarCellDatePadding:0.357rem !default;
@@ -686,6 +688,7 @@ $progressBarHeight:0.571rem !default;
 $progressBarBorder:0 none !default;
 $progressBarBg:$shade200 !default;
 $progressBarValueBg:$primaryColor !default;
+$progressBarValueTextColor:$primaryTextColor !default;
 
 //menu (e.g. menu, menubar, tieredmenu)
 $menuWidth:12.5rem !default;
