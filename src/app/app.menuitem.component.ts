@@ -24,7 +24,7 @@ import {AppMainComponent} from './app.main.component';
             <a (click)="itemClick($event)" (mouseenter)="hover=true" (mouseleave)="hover=false"
                *ngIf="(item.routerLink && !item.items) && item.visible !== false"
                [routerLink]="item.routerLink" routerLinkActive="active-menuitem-routerlink"
-               [routerLinkActiveOptions]="{exact: true}" [attr.target]="item.target" [attr.tabindex]="0"
+               [routerLinkActiveOptions]="{exact: !item.preventExact}" [attr.target]="item.target" [attr.tabindex]="0"
                [ngClass]="item.class" pRipple>
                 <i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
                 <span class="layout-menuitem-text">{{item.label}}</span>

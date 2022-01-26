@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import { AppComponent } from './app.component';
-import { AppMainComponent } from './app.main.component';
-
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {AppComponent} from './app.component';
+import {AppMainComponent} from './app.main.component';
+import {AppConfig} from './demo/domain/appconfig';
+import {ConfigService} from './demo/service/app.config.service';
+import {Subscription} from 'rxjs';
 @Component({
     selector: 'app-config',
     template: `
@@ -72,9 +74,17 @@ export class AppConfigComponent implements OnInit {
 
     themeColors: any[];
 
-    constructor(public appMain: AppMainComponent, public app: AppComponent) {}
+    config: AppConfig;
+
+    subscription: Subscription;
+
+    constructor(public appMain: AppMainComponent, public app: AppComponent, public configService: ConfigService) {}
 
     ngOnInit() {
+        this.subscription = this.configService.configUpdate$.subscribe(config => {
+            this.config = config;
+        });
+
         this.themeColors = [
             {name: 'blue', color: '#0F8BFD'},
             {name: 'green', color: '#0BD18A'},
@@ -103,6 +113,7 @@ export class AppConfigComponent implements OnInit {
         this.changeStyleSheetsColor('theme-css', 'theme-' + scheme + '.css', 1);
 
         this.app.colorScheme = scheme;
+        this.configService.updateConfig({...this.config, ...{dark:scheme === 'dark'}});
     }
 
     changeStyleSheetsColor(id, value, from) {

@@ -3,8 +3,7 @@ import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit{
 
@@ -18,8 +17,7 @@ export class AppComponent implements OnInit{
 
     colorScheme = 'dark';
 
-    constructor(private primengConfig: PrimeNGConfig) {
-    }
+    constructor(private primengConfig: PrimeNGConfig) {}
 
     ngOnInit() {
         this.primengConfig.ripple = true;

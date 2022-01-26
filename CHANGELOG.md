@@ -1,4 +1,7 @@
 # Changelog
+## 13.1.0
+**Migration Guide**
+- Update demos and styling.
 
 ## 13.0.0
 **Migration Guide**

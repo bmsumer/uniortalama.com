@@ -7,7 +7,6 @@ import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 })
 export class InvalidStateDemoComponent implements OnInit {
 
-
     countries: any[];
 
     cities: any[];
@@ -31,6 +30,8 @@ export class InvalidStateDemoComponent implements OnInit {
     value8: any;
 
     value9: any;
+
+    value10: any;
 
     constructor(private countryService: CountryService, private breadcrumbService: AppBreadcrumbService) {
         this.breadcrumbService.setItems([
