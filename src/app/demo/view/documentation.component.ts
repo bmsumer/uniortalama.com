@@ -4,20 +4,15 @@ import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 @Component({
     templateUrl: './documentation.component.html',
     styles: [`
-        .docs h1 {
-            margin-top: 30px;
+        :host ::ng-deep .language-css .token.string {
+            background: var(--surface-overlay);
+            color: var(--text-white);
         }
-
-        .docs pre.doc-command {
-            font-family: monospace;
-            background-color: #0C2238;
-            color: #dddddd;
-            padding: 1em;
-            font-size: 14px;
-            border-radius: 3px;
-            overflow: auto;
-        }`
-    ]
+        :host ::ng-deep.token.operator {
+            background: var(--surface-overlay);
+            color: var(--text-white);
+        }
+    `]
 })
 export class DocumentationComponent {
 

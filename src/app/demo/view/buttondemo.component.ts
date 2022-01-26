@@ -7,6 +7,8 @@ import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 })
 export class ButtonDemoComponent implements OnInit {
 
+    loading = [false, false, false, false];
+
     constructor(private breadcrumbService: AppBreadcrumbService) {
         this.breadcrumbService.setItems([
             { label: 'UI Kit' },
@@ -24,5 +26,10 @@ export class ButtonDemoComponent implements OnInit {
             {separator: true},
             {label: 'Setup', icon: 'pi pi-cog'}
         ];
+    }
+
+    load(index) {
+        this.loading[index] = true;
+        setTimeout(() => this.loading[index] = false, 1000);
     }
 }

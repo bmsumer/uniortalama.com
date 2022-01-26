@@ -1,15 +1,19 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {EventService} from '../service/eventservice';
 import {PrimeIcons} from 'primeng/api';
 import {Customer} from '../domain/customer';
 import {CustomerService} from '../service/customerservice';
 import {AppBreadcrumbService} from '../../app.breadcrumb.service';
+import {AppConfig} from '../domain/appconfig';
+import {ConfigService} from '../service/app.config.service';
+import {Subscription} from 'rxjs';
 
 @Component({
     templateUrl: './dashboard.component.html',
-    styleUrls: ['./tabledemo.scss']
 })
-export class DashboardDemoComponent implements OnInit {
+export class DashboardDemoComponent implements OnInit, OnDestroy {
+
+    config: AppConfig;
 
     visitorChart: any;
 
@@ -63,6 +67,8 @@ export class DashboardDemoComponent implements OnInit {
 
     customerAvg: any;
 
+    subscription: Subscription;
+
     carouselResponsiveOptions: any[] = [
         {
             breakpoint: '1024px',
@@ -83,12 +89,17 @@ export class DashboardDemoComponent implements OnInit {
 
     customerCarousel: any[];
 
-    constructor(private customerService: CustomerService, private eventService: EventService,
-                private breadcrumbService: AppBreadcrumbService) {
+    constructor(private customerService: CustomerService, private eventService: EventService, private breadcrumbService: AppBreadcrumbService, public configService: ConfigService) {
         this.breadcrumbService.setItems([
             {label: 'Dashboard'},
             {label: 'Sales Dashboard', routerLink: ['/']},
         ]);
+
+        this.config = this.configService.config;
+        this.subscription = this.configService.configUpdate$.subscribe(config => {
+            this.config = config;
+            this.updateChartOptions();
+        });
     }
 
     ngOnInit() {
@@ -139,8 +150,11 @@ export class DashboardDemoComponent implements OnInit {
             plugins: {
                 legend: {
                     position: 'top',
-                    align: 'end'
-                }
+                    align: 'end',
+                    labels:{
+                        color:'#ebedef'
+                    }
+                },
             },
             responsive: true,
             hover: {
@@ -148,6 +162,9 @@ export class DashboardDemoComponent implements OnInit {
             },
             scales: {
                 y: {
+                    ticks:{
+                        color:'#ebedef'
+                    },
                     min: 500,
                     max: 900
                     ,
@@ -156,6 +173,9 @@ export class DashboardDemoComponent implements OnInit {
                     }
                 },
                 x: {
+                    ticks:{
+                        color:'#ebedef'
+                    },
                     barPercentage: 0.5,
                     grid: {
                         display: false
@@ -215,7 +235,15 @@ export class DashboardDemoComponent implements OnInit {
             ]
         };
 
-        this.countryChartOptions = {};
+        this.countryChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#ebedef'
+                    }
+                }
+            }
+        };
 
         this.revenueChart = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -259,13 +287,26 @@ export class DashboardDemoComponent implements OnInit {
         };
 
         this.revenueChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#ebedef'
+                    }
+                }
+            },
             responsive: true,
             hover: {
                 mode: 'index'
             },
             scales: {
+                x:{
+                    ticks: {
+                        color: '#ebedef'
+                    },
+                },
                 y: {
                     ticks: {
+                        color: '#ebedef',
                         min: 0,
                         max: 60,
                         stepSize: 5
@@ -432,9 +473,15 @@ export class DashboardDemoComponent implements OnInit {
             },
             scales: {
                 y: {
+                    ticks: {
+                        color: '#ebedef'
+                    },
                     display: false,
                 },
                 x: {
+                    ticks: {
+                        color: '#ebedef'
+                    },
                     grid : {
                         display : false
                     }
@@ -628,6 +675,226 @@ export class DashboardDemoComponent implements OnInit {
             this.customersTable = this.customersTable1;
         } else {
             this.customersTable = this.customersTable2;
+        }
+    }
+
+    updateChartOptions(){
+        if  (this.config.dark)
+            this.applyDarkTheme();
+        else
+            this.applyLightTheme();
+    }
+
+    applyLightTheme(){
+        this.visitorChartOptions = {
+            plugins: {
+                legend: {
+                    position: 'top',
+                    align: 'end',
+                    labels:{
+                        color:'#44486D'
+                    }
+                },
+            },
+            responsive: true,
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                y: {
+                    ticks:{
+                        color:'#44486D'
+                    },
+                    min: 500,
+                    max: 900
+                    ,
+                    grid: {
+                        display: false
+                    }
+                },
+                x: {
+                    ticks:{
+                        color:'#44486D'
+                    },
+                    barPercentage: 0.5,
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        this.countryChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#44486D'
+                    }
+                }
+            }
+        };
+
+        this.revenueChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#44486D'
+                    }
+                }
+            },
+            responsive: true,
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                x:{
+                    ticks: {
+                        color: '#44486D'
+                    },
+                },
+                y: {
+                    ticks: {
+                        color: '#44486D',
+                        min: 0,
+                        max: 60,
+                        stepSize: 5
+                    }
+                }
+            }
+        };
+
+        this.customerChartOptions = {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: '#44486D'
+                    },
+                    display: false,
+                },
+                x: {
+                    ticks: {
+                        color: '#44486D'
+                    },
+                    grid : {
+                        display : false
+                    }
+                }
+            },
+        };
+
+    }
+
+    applyDarkTheme(){
+        this.visitorChartOptions = {
+            plugins: {
+                legend: {
+                    position: 'top',
+                    align: 'end',
+                    labels:{
+                        color:'#ebedef'
+                    }
+                },
+            },
+            responsive: true,
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                y: {
+                    ticks:{
+                        color:'#ebedef'
+                    },
+                    min: 500,
+                    max: 900
+                    ,
+                    grid: {
+                        display: false
+                    }
+                },
+                x: {
+                    ticks:{
+                        color:'#ebedef'
+                    },
+                    barPercentage: 0.5,
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        this.countryChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#ebedef'
+                    }
+                }
+            }
+        };
+
+        this.revenueChartOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#ebedef'
+                    }
+                }
+            },
+            responsive: true,
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                x:{
+                    ticks: {
+                        color: '#ebedef'
+                    },
+                },
+                y: {
+                    ticks: {
+                        color: '#ebedef',
+                        min: 0,
+                        max: 60,
+                        stepSize: 5
+                    }
+                }
+            }
+        };
+
+        this.customerChartOptions = {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: '#ebedef'
+                    },
+                    display: false,
+                },
+                x: {
+                    ticks: {
+                        color: '#ebedef'
+                    },
+                    grid : {
+                        display : false
+                    }
+                }
+            },
+        };
+    }
+
+    ngOnDestroy(){
+        if(this.subscription){
+            this.subscription.unsubscribe();
         }
     }
 }

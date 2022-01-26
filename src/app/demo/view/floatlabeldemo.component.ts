@@ -4,7 +4,6 @@ import {AppBreadcrumbService} from '../../app.breadcrumb.service';
 
 @Component({
     templateUrl: './floatlabeldemo.component.html',
-    styleUrls: ['./floatlabeldemo.scss']
 })
 export class FloatLabelDemoComponent implements OnInit {
 
