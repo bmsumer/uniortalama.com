@@ -5,11 +5,11 @@ import {AppBreadcrumbService} from '../../app.breadcrumb.service';
     templateUrl: './documentation.component.html',
     styles: [`
         :host ::ng-deep .language-css .token.string {
-            background: var(--surface-overlay);
+            background: var(--surface-50);
             color: var(--text-white);
         }
         :host ::ng-deep.token.operator {
-            background: var(--surface-overlay);
+            background: var(--surface-50);
             color: var(--text-white);
         }
     `]

@@ -272,7 +272,7 @@
 					</tr>
 				</ng-template>
 				<ng-template pTemplate="body" let-customer let-rowIndex="rowIndex">
-					<tr pRowGroupHeader *ngIf="rowGroupMetadata[customer.representative.name].index === rowIndex" style="background-color:var(--surface-overlay);">
+					<tr pRowGroupHeader *ngIf="rowGroupMetadata[customer.representative.name].index === rowIndex" style="background-color:var(--surface-50);">
 						<td colspan="5" style="min-width: 200px;">
 							<img [alt]="customer.representative.name" src="assets/demo/images/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
 							<span class="font-bold ml-2">{{customer.representative.name}}</span>

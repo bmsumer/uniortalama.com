@@ -13,7 +13,7 @@ import { MessageService, ConfirmationService } from 'primeng/api'
     styles: [`
         :host ::ng-deep  .p-frozen-column {
             font-weight: bold;
-            background-color: var(--surface-overlay) !important;
+            background-color: var(--surface-50) !important;
             border-radius: 0 !important;
         }
 
