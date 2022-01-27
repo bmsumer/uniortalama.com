@@ -1,16 +1,14 @@
+
 <div class="grid">
 	<div class="col-12">
 		<div class="card">
 			<h5>DataView</h5>
 			<p-dataView #dv [value]="products" [paginator]="true" [rows]="9" filterBy="name" [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
 				<ng-template pTemplate="header">
-					<div class="grid grid-nogutter">
-						<div class="col-6 text-left">
-							<p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)"></p-dropdown>
-						</div>
-						<div class="col-6 text-right">
-							<p-dataViewLayoutOptions></p-dataViewLayoutOptions>
-						</div>
+					<div class="grid grid-nogutter flex-column md:flex-row justify-content-between">
+						<p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price" (onChange)="onSortChange($event)"></p-dropdown>
+						<input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)" class="my-3 md:my-0" style="max-width:200px;">
+						<p-dataViewLayoutOptions></p-dataViewLayoutOptions>
 					</div>
 				</ng-template>
 
