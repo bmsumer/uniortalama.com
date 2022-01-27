@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MegaMenuItem, MenuItem } from 'primeng/api';
-
+import { AppBreadcrumbService } from 'src/app/app.breadcrumb.service';
 @Component({
     templateUrl: './menus.component.html',
     encapsulation: ViewEncapsulation.None
@@ -28,6 +28,13 @@ export class MenusComponent implements OnInit {
     plainMenuItems: MenuItem[];
 
     pageIndex: number = 0;
+
+    constructor(private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'UI Kit' },
+            { label: 'Menu', routerLink: ['/uikit/menu'] }
+        ]);
+    }
 
     ngOnInit() {
 
