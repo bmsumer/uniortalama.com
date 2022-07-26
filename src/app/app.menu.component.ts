@@ -42,9 +42,9 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label:'Prime Blocks', icon:'pi pi-fw pi-prime', routerLink: ['/blocks'],
+                label:'Prime Blocks', icon:'pi pi-fw pi-prime', routerLink: ['/primeblocks/freeblocks'],
                 items:[
-                    {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks']},
+                    {label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/primeblocks/freeblocks']},
                     {label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: ['https://www.primefaces.org/primeblocks-ng'], target: '_blank'},
                 ]
             },

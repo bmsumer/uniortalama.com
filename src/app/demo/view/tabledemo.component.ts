@@ -1,14 +1,13 @@
-import { Component, OnInit, ViewChild, ChangeDetectorRef, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Customer, Representative } from '../domain/customer';
 import { CustomerService } from '../service/customerservice';
 import { Product } from '../domain/product';
 import { ProductService } from '../service/productservice';
+import { AppBreadcrumbService } from '../../app.breadcrumb.service';
 import { Table } from 'primeng/table';
-import { MessageService, ConfirmationService } from 'primeng/api'
 
 @Component({
     templateUrl: './tabledemo.component.html',
-    providers: [MessageService, ConfirmationService],
     styleUrls: ['../../../assets/demo/badges.scss'],
     styles: [`
         :host ::ng-deep  .p-frozen-column {
@@ -60,7 +59,12 @@ export class TableDemoComponent implements OnInit {
 
     @ViewChild('filter') filter: ElementRef;
 
-    constructor(private customerService: CustomerService, private productService: ProductService, private messageService: MessageService, private confirmService: ConfirmationService, private cd: ChangeDetectorRef) {}
+    constructor(private customerService: CustomerService, private productService: ProductService, private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'UI Kit' },
+            { label: 'Table', routerLink: ['/uikit/table'] }
+        ]);
+    }
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then(customers => {

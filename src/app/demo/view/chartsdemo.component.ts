@@ -1,7 +1,8 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
-import {Subscription} from 'rxjs';
-import {AppConfig} from '../domain/appconfig';
-import {ConfigService} from '../service/app.config.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AppConfig } from '../domain/appconfig';
+import { ConfigService } from '../service/app.config.service';
+import { AppBreadcrumbService } from '../../app.breadcrumb.service';
 
 @Component({
     templateUrl: './chartsdemo.component.html'
@@ -32,8 +33,11 @@ export class ChartsDemoComponent implements OnInit, OnDestroy {
 
     subscription: Subscription;
 
-    constructor(public configService: ConfigService) {
-
+    constructor(public configService: ConfigService, private breadcrumbService: AppBreadcrumbService) {
+        this.breadcrumbService.setItems([
+            { label: 'UI Kit' },
+            { label: 'Chart', routerLink: ['/uikit/charts'] }
+        ]);
     }
     ngOnInit() {
         this.config = this.configService.config;

@@ -62,7 +62,7 @@ import {BlocksComponent} from './blocks/blocks/blocks.component';
                     {path: 'pages/help', component: AppHelpComponent},
                     {path: 'pages/empty', component: EmptyDemoComponent},
                     {path: 'documentation', component: DocumentationComponent},
-                    {path: 'blocks', component: BlocksComponent}
+                    {path: 'primeblocks/freeblocks', component: BlocksComponent}
                 ]
             },
             {path: 'error', component: AppErrorComponent},
