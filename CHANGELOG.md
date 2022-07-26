@@ -5,6 +5,9 @@
 - Update to Angular 14.
 - Update to PrimeNG 14.
 
+**Implemented New Features and Enhancements:**
+- Added primary color variants
+
 ## 13.1.0
 **Migration Guide**
 - Upgrade to PrimeFlex v3.
