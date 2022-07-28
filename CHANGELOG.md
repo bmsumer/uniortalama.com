@@ -2,11 +2,13 @@
 
 ## 14.0.0
 **Migration Guide**
-- Update to Angular 14.
-- Update to PrimeNG 14.
-
+- Upgrade to PrimeNG 14
+- Upgrade to Angular 14
+  
 **Implemented New Features and Enhancements:**
-- Added primary color variants
+- Update to PrimeNG 14
+- Update to Angular 14
+- Add primary color variable to theme variables.
 
 ## 13.1.0
 **Migration Guide**
