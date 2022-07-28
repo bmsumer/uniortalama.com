@@ -5,10 +5,12 @@ import { Product } from '../domain/product';
 import { ProductService } from '../service/productservice';
 import { AppBreadcrumbService } from '../../app.breadcrumb.service';
 import { Table } from 'primeng/table';
+import { MessageService } from 'primeng/api';
 
 @Component({
     templateUrl: './tabledemo.component.html',
     styleUrls: ['../../../assets/demo/badges.scss'],
+    providers: [MessageService],
     styles: [`
         :host ::ng-deep  .p-frozen-column {
             font-weight: bold;
@@ -59,7 +61,7 @@ export class TableDemoComponent implements OnInit {
 
     @ViewChild('filter') filter: ElementRef;
 
-    constructor(private customerService: CustomerService, private productService: ProductService, private breadcrumbService: AppBreadcrumbService) {
+    constructor(private customerService: CustomerService, private productService: ProductService, private breadcrumbService: AppBreadcrumbService, private messageService: MessageService) {
         this.breadcrumbService.setItems([
             { label: 'UI Kit' },
             { label: 'Table', routerLink: ['/uikit/table'] }
