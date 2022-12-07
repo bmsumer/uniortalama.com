@@ -53,6 +53,7 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     {label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', routerLink: ['utilities/icons']},
                     {label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank'},
+                    {label: 'Figma', icon: 'pi pi-fw pi-pencil', url: ['https://www.figma.com/file/two0OGwOwHfq0sdjeK34l0/Preview-%7C-Atlantis-2022?node-id=15%3A1427&t=2lNJ5EzW0xuvQWdm-1'], target: '_blank'},
                 ]
             },
             {
