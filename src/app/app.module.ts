@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
@@ -32,7 +32,6 @@ import {DividerModule} from 'primeng/divider';
 import {DropdownModule} from 'primeng/dropdown';
 import {FieldsetModule} from 'primeng/fieldset';
 import {FileUploadModule} from 'primeng/fileupload';
-import {FullCalendarModule} from '@fullcalendar/angular';
 import {GalleriaModule} from 'primeng/galleria';
 import {ImageModule} from 'primeng/image';
 import {InplaceModule} from 'primeng/inplace';
@@ -147,16 +146,6 @@ import {MenuService} from './app.menu.service';
 import {AppBreadcrumbService} from './app.breadcrumb.service';
 import {ConfigService} from './demo/service/app.config.service';
 
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from '@fullcalendar/interaction';
-
-FullCalendarModule.registerPlugins([
-    dayGridPlugin,
-    timeGridPlugin,
-    interactionPlugin
-]);
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -190,7 +179,6 @@ FullCalendarModule.registerPlugins([
         DropdownModule,
         FieldsetModule,
         FileUploadModule,
-        FullCalendarModule,
         GalleriaModule,
         KnobModule,
         ImageModule,
@@ -295,6 +283,7 @@ FullCalendarModule.registerPlugins([
         CountryService, CustomerService, EventService, IconService, NodeService,
         PhotoService, ProductService, MenuService, AppBreadcrumbService, ConfigService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
