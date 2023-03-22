@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: $scale;
+}
+
+body {
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    background: var(--body-bg);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+.layout-container {
+    background-image: var(--body-image);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
