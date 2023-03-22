@@ -1007,6 +1007,7 @@ a {
   }
   .layout-container.layout-mobile-active .layout-sidebar {
     transform: translateX(0);
+    background: var(--surface-ground);
   }
   .layout-container.layout-mobile-active .layout-mask {
     display: block;
