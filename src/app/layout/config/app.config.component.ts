@@ -79,8 +79,8 @@ export class AppConfigComponent implements OnInit {
             { name: 'orange', color: '#FD9214' },
             { name: 'purple', color: '#873EFE' },
             { name: 'red', color: '#FC6161' },
-            { name: 'teal', color: '#EEE500' },
-            { name: 'yellow', color: '#00D0DE' }
+            { name: 'teal', color: '#00D0DE' },
+            { name: 'yellow', color: '#EEE500' }
         ];
     }
 
