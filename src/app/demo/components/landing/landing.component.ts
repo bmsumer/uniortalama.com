@@ -19,6 +19,12 @@ export class LandingComponent implements OnDestroy {
         });
     }
 
+    scrollToElement($element: any): void {
+        setTimeout(() => {
+            $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }, 200);
+    }
+
     ngOnDestroy() {
         this.subscription.unsubscribe();
     }

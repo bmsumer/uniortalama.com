@@ -155,7 +155,7 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
                 const offsetLeft = el.parentElement?.offsetLeft || 0;
                 el.style.left = (offsetLeft - scrollLeft) + 'px';
             }
-            else if (this.layoutService.isSlim()|| this.layoutService.isSlimPlus()) {
+            else if (this.layoutService.isSlim() || this.layoutService.isSlimPlus()) {
                 el.style.removeProperty('left');
                 const scrollTop = container.scrollTop;
                 const offsetTop = el.parentElement?.offsetTop || 0;

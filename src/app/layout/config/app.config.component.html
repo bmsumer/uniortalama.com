@@ -12,7 +12,7 @@
                 [ngStyle]="{'background-color': theme.color}"><i *ngIf="theme.name == this.layoutService.config.theme " class="pi pi-check text-white"></i></button>
         </div>
     </div>
-    <h5>Layout Themes</h5>
+    <!-- <h5>Layout Themes</h5>
     <div class="flex flex-wrap row-gap-3">
         <div class="w-3" *ngFor="let layout of layoutThemes">
             <button type="button" 
@@ -20,7 +20,7 @@
                 (click)="changeLayout(layout.name)" 
                 [ngStyle]="{'background-color': layout.color}"><i *ngIf="layout.name == this.layoutService.config.layout " class="pi pi-check text-white"></i></button>
         </div>
-    </div>
+    </div> -->
     <h5>Scale</h5>
     <div class="flex align-items-center">
         <button icon="pi pi-minus" type="button" pButton (click)="decrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem mr-2" [disabled]="scale === scales[0]"></button>

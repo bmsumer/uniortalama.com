@@ -1,5 +1,5 @@
-<div class="landing-container" style="background: #100E23;">
-    <div id="header" class="flex flex-column w-full p-6"
+<div #home class="landing-container" style="background: #100E23;">
+    <div id="header" class=" landing-header flex flex-column w-full p-6"
         style="min-height: 1000px;background: url('/assets/demo/images/landing/landing-header-2x.jpg') top left no-repeat;background-size: cover;">
         <div class="header-menu-container flex align-items-center justify-content-between">
             <div class="header-left-elements flex align-items-center justify-content-between">
@@ -8,23 +8,53 @@
                     <img src="/assets/layout/images/appname-dark.png" alt="layout" class="appname ml-2"
                         style="height: 12px">
                 </div>
-                <ul id="menu">
-                    <li class="landing-menu-item">
-                        <a href="#"
-                            class="flex p-3 font-medium text-gray-700 cursor-pointer  hover:text-gray-900">Home</a>
+
+                <ul #menu id="menu" style="top: 0px; right: 0%"
+                    class="list-none  ng-hidden md:flex md:flex-row flex-column align-items-start bg-white absolute md:relative h-screen md:h-auto  md:surface-ground m-0 z-5 w-full sm:w-6 md:w-full py-6 md:py-0">
+                    <a pRipple
+                        class="cursor-pointer block md:hidden text-gray-800 font-medium line-height-3 hover:text-gray-800 absolute"
+                        style="top: 3rem; right: 2rem" pStyleClass="@parent" enterClass="ng-hidden"
+                        enterActiveClass="px-scalein" leaveToClass="ng-hidden" leaveActiveClass="px-fadeout">
+                        <i class="pi pi-times text-4xl"></i>
+                    </a>
+
+                    <li class="mt-5 md:mt-0">
+                        <a (click)="scrollToElement(home)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Home</span>
+                        </a>
                     </li>
-                    <li class="landing-menu-item"><a href="#meet-atlantis"
-                            class="flex p-3 font-medium text-gray-700 cursor-pointer hover:text-gray-900">Meet
-                            Atlantis</a></li>
-                    <li class="landing-menu-item"><a href="#features"
-                            class="flex p-3 font-medium text-gray-700 cursor-pointer hover:text-gray-900">Features</a>
+                    <li>
+                        <a (click)="scrollToElement(meet)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Meet
+                                Atlantis</span>
+                        </a>
                     </li>
-                    <li class="landing-menu-item"><a href="#pricing"
-                            class="flex p-3 font-medium text-gray-700 cursor-pointer hover:text-gray-900">Pricing</a>
+                    <li>
+                        <a (click)="scrollToElement(features)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Features</span>
+                        </a>
                     </li>
-                    <li class="landing-menu-item"><a href="#footer"
-                            class="flex pl-3 py-3 font-medium text-gray-700 cursor-pointer hover:text-gray-900">Buy
-                            Now</a></li>
+                    <li>
+                        <a (click)="scrollToElement(pricing)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                            enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                            class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Pricing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a pRipple pStyleClass="@grandparent" enterClass="ng-hidden" enterActiveClass="px-fadein"
+                            leaveToClass="ng-hidden"
+                            class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
+                            <span>Buy Now</span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
 
@@ -38,12 +68,14 @@
                 </a>
 
                 <button
-                    class="contact-button p-button-outlined p-button-secondary p-button-text p-button p-component font-medium border-round text-gray-700"
+                    class="contact-button mr-3 p-button-outlined p-button-secondary p-button-text p-button p-component font-medium border-round text-gray-700"
                     style=" background: rgba(68, 72, 109, 0.05);">
                     <span aria-hidden="true" class="p-button-label">Contact</span>
                 </button>
 
-                <a id="menu-button" href="#" class="lg:hidden font-medium text-gray-700 cursor-pointer">
+                <a pRipple class="lg:hidden font-medium text-gray-700 cursor-pointer" pStyleClass="#menu"
+                    enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                    leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true">
                     <i class="pi pi-bars fs-xlarge"></i>
                 </a>
             </div>
@@ -58,44 +90,44 @@
             </a>
         </div>
 
-        <div class="header-features" style="padding: 100px 60px;">
+        <div #features class="header-features" style="padding: 100px 60px;">
             <div class="grid flex">
-                <div class="col-12 md:col-4 flex justify-content-center">
+                <div class="col-12 md:col-6 lg:col-4 flex justify-content-center">
                     <div class=" header-feature-box mr-3 mb-4 border-round-3xl p-5">
                         <span class="title mb-3 block text-2xl">Responsive Layout</span>
                         <span class="content">View it on the web and mobile device. Prime premium themes are aready for
                             the all devices.</span>
                     </div>
                 </div>
-                <div class="col-12 md:col-4 flex justify-content-center">
+                <div class="col-12 md:col-6 lg:col-4 flex justify-content-center">
                     <div class="header-feature-box mr-3 mb-4 border-round-3xl p-5">
                         <span class="title mb-3 block text-2xl">Fresh</span>
                         <span class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor.</span>
                     </div>
                 </div>
-                <div class="col-12 md:col-4 flex justify-content-center">
+                <div class="col-12 md:col-6 lg:col-4 flex justify-content-center">
                     <div class="header-feature-box mr-3 mb-4 border-round-3xl p-5">
                         <span class="title mb-3  block text-2xl">Modern Design</span>
                         <span class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor.</span>
                     </div>
                 </div>
-                <div class="col-12 md:col-4 flex justify-content-center">
+                <div class="col-12 md:col-6 lg:col-4 flex justify-content-center">
                     <div class="header-feature-box mr-3 mb-4 border-round-3xl p-5">
                         <span class="title mb-3 block text-2xl">Clean code</span>
                         <span class="content">Our frontend is so easy to understand. If you want to modify the code it’s
                             an easy job for you. Our code is clean and easy to read.</span>
                     </div>
                 </div>
-                <div class="col-12 md:col-4 flex justify-content-center">
+                <div class="col-12 md:col-6 lg:col-4 flex justify-content-center">
                     <div class="header-feature-box mr-3 mb-4 border-round-3xl p-5">
                         <span class="title mb-3 block text-2xl">Ready!</span>
                         <span class="content">We work hard to write down all aspects of prime themes to make sure that
                             there is no unanswered questions left.</span>
                     </div>
                 </div>
-                <div class="col-12 md:col-4 flex justify-content-center">
+                <div class="col-12 md:col-6 lg:col-4 flex justify-content-center">
                     <div class="header-feature-box mr-3 mb-4 border-round-3xl p-5">
                         <span class="title mb-3 block text-2xl">Well documented</span>
                         <span class="content">We work hard to write down all aspects of prime themes to make sure that
@@ -106,7 +138,7 @@
         </div>
     </div>
 
-    <div id="meet-atlantis" class="flex justify-content-center w-full bg-gray-900 relative"
+    <div #meet id="meet-atlantis" class="flex justify-content-center w-full bg-gray-900 relative"
         style=" min-height: 620px;padding-top: 65px;">
         <div class="ellipsis-1 absolute right-0" style="z-index: 11;">
             <img src="/assets/demo/images/landing/ellipse-1.png" alt="atlantis" width="410">
@@ -121,9 +153,9 @@
             <img src="/assets/demo/images/landing/ellipse-4.png" alt="atlantis" width="125">
         </div>
 
-        <div class="atlantis-modes" style=" z-index: 10;">
+        <div class="atlantis-modes w-auto px-5" style=" z-index: 10;">
             <img src="/assets/demo/images/landing/atlantis-dark.png" alt="atlantis"
-                style=" max-width: 800px; border-radius: 8px;">
+               class="w-full" style=" max-width: 800px; border-radius: 8px;">
         </div>
     </div>
 
@@ -147,7 +179,7 @@
         </div>
         <div class="landing-wrapper clip-path px-6 pb-8 absolute w-full"
             style="color: #44486D; background: linear-gradient(180deg, #F4F8FB 17.13%, #EEEEFA 65.89%);">
-            <div id="features" class="pr-8" style="padding-left: 14rem;">
+            <div id="features" class="pr-8 features" style="padding-left: 14rem;">
                 <h2 class="font-medium text-3xl text-center text-gray-800">Features</h2>
                 <div class="grid feature-boxes feature-boxes-1" style="margin-bottom: 170px;">
                     <div class="col-12 md:col-6">
@@ -321,7 +353,8 @@
                 </div>
             </div>
 
-            <div id="pricing" class="flex flex-column pr-8" style="padding-left: 14rem; margin-bottom: 8.5rem;">
+            <div #pricing id="pricing" class="flex pricing flex-column pr-8"
+                style="padding-left: 14rem; margin-bottom: 8.5rem;">
                 <h2 class="text-gray-900 font-medium text-3xl">Pricing</h2>
                 <p class="text-2xl" style="max-width: 650px;margin-bottom: 4.5rem;">Proin maximus sem non congue
                     ultricies. Aenean porttitor nulla suscipit, laoreet nunc eget, pharetra felis.
@@ -330,23 +363,23 @@
                     faucibus. </p>
 
                 <div class="grid pricing-content w-full">
-                    <div class="col-12 xl:col-4">
-                        <div class="card p-0 mr-6 h-full bg-white"
+                    <div class="col-12 lg:col-4">
+                        <div class="card p-0 mr-6 h-full bg-white w-full"
                             style="border-radius: 20px;box-shadow: 0px 10px 50px rgba(29, 15, 57, 0.13);">
                             <div class="flex flex-column align-items-center p-5">
                                 <span class="type font-medium text-3xl">Basic</span>
                                 <h1 class="font-medium " style="font-size: 50px;">$5</h1>
                             </div>
                             <ul class="options py-0 px-5 mt-0">
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">
                                     Responsive Layout</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">
                                     Unlimited Push Messages</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">50
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">50
                                     Support Ticket</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">Free
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">Free
                                     Shipping</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">10GB
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">10GB
                                     Storage</li>
                             </ul>
                             <div class="flex align-items-center justify-content-center">
@@ -357,23 +390,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 xl:col-4">
-                        <div class="card p-0 mr-6 h-full bg-white"
+                    <div class="col-12 lg:col-4">
+                        <div class="card p-0 mr-6 h-full bg-white w-full"
                             style="border-radius: 20px;box-shadow: 0px 10px 50px rgba(29, 15, 57, 0.13);">
                             <div class="flex flex-column align-items-center p-5">
                                 <span class="type font-medium text-3xl">Standart</span>
                                 <h1 class="font-medium " style="font-size: 50px;">$25</h1>
                             </div>
                             <ul class="options py-0 px-5 mt-0">
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">
                                     Responsive Layout</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">
                                     Unlimited Push Messages</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">50
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">50
                                     Support Ticket</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">Free
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">Free
                                     Shipping</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">10GB
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">10GB
                                     Storage</li>
                             </ul>
                             <div class="flex align-items-center justify-content-center">
@@ -384,23 +417,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 xl:col-4 pricing-box pricing-professional">
-                        <div class="card p-0 mr-6 h-full bg-white"
+                    <div class="col-12 lg:col-4 pricing-box pricing-professional">
+                        <div class="card p-0 mr-6 h-full bg-white w-full"
                             style="border-radius: 20px;box-shadow: 0px 10px 50px rgba(29, 15, 57, 0.13);">
                             <div class="flex flex-column align-items-center p-5">
                                 <span class="type font-medium text-3xl">Professional</span>
                                 <h1 class="font-medium " style="font-size: 50px;">$50</h1>
                             </div>
-                            <ul class="options py-0 px-5 mt-0">
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">
+                            <ul class="options py-0 px-5 mt-0 text-center">
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">
                                     Responsive Layout</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">
                                     Unlimited Push Messages</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">50
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">50
                                     Support Ticket</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">Free
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">Free
                                     Shipping</li>
-                                <li class="flex align-items-center justify-content-between text-xl p-2 text-center">10GB
+                                <li class="flex align-items-center justify-content-center text-xl p-2 text-center">10GB
                                     Storage</li>
                             </ul>
                             <div class="flex align-items-center justify-content-center">
@@ -414,7 +447,7 @@
                 </div>
             </div>
 
-            <div id="footer" class="border-top-1 surface-border">
+            <div id="footer" class="footer border-top-1 surface-border">
                 <div class="footer-header-container flex align-items-center justify-content-between pb-4 border-bottom-2 border-gray-50"
                     style="mix-blend-mode: multiply;">
                     <div class="footer-left-elements flex align-items-center justify-content-between">

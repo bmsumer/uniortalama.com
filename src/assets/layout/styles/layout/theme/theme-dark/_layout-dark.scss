@@ -1,42 +1,4 @@
 
-//general
-:root {
-    --sidebar-shadow: none;
-    --sidebar-border: 1px solid var(--surface-border);
-    --card-shadow: none;
-    
-    // --body-bg:linear-gradient(180deg, #2E323F 0%, #0A061A 100%) ;
-    --body-bg:linear-gradient(180deg, #2E323F 0%, #0A061A 100%);
-    --body-image:  url("/assets/layout/images/effect-ondark.png");
-    --root-menu-item-hover-bg:rgba(255, 255, 255, 0.05);
-    
-    --exception-pages-image: url('/assets/layout/images/pages/exception-ondark.png');
-}
-
-
-$breakpoint:992px !default;
-$scale:14px !default;
-
-$breakpoint:992px !default;
-$scale:14px !default;
-
-@import '../../_fonts';
-@import '../../_animation';
-@import '../../_main';
-@import '../../_sidebar_vertical';
-@import '../../_sidebar_slim';
-@import '../../_sidebar_slim_plus';
-@import '../../_sidebar_horizontal';
-@import '../../_sidebar_reveal';
-@import '../../_sidebar_drawer';
-@import '../../_responsive';
-@import '../../_topbar';
-@import '../../_breadcrumb';
-@import '../../_profile';
-@import '../../_config';
-@import '../../_content';
-@import '../../_typography';
-@import '../../_utils';
 $fontSize:14px !default;
 $fontFamily:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $transitionDuration:.2s !default;

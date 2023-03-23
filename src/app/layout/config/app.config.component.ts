@@ -79,19 +79,8 @@ export class AppConfigComponent implements OnInit {
             { name: 'orange', color: '#FD9214' },
             { name: 'purple', color: '#873EFE' },
             { name: 'red', color: '#FC6161' },
-            { name: 'teal', color: '#00D0DE' },
-            { name: 'yellow', color: '#EEE500' }
-        ];
-
-        this.layoutThemes = [
-            { name: 'blue', color: '#0F8BFD' },
-            { name: 'green', color: '#0BD18A' },
-            { name: 'magenta', color: '#EC4DBC' },
-            { name: 'orange', color: '#FD9214' },
-            { name: 'purple', color: '#873EFE' },
-            { name: 'red', color: '#FC6161' },
-            { name: 'teal', color: '#00D0DE' },
-            { name: 'yellow', color: '#EEE500' }
+            { name: 'teal', color: '#EEE500' },
+            { name: 'yellow', color: '#00D0DE' }
         ];
     }
 
@@ -121,15 +110,6 @@ export class AppConfigComponent implements OnInit {
         },'theme-link');
     }
 
-    changeLayout(layout:string) {
-        const layoutLink = <HTMLLinkElement>document.getElementById('layout-css');
-       
-        const newHref = layoutLink.getAttribute('href')!.replace(this.layoutService.config.layout, layout);;
-        this.replaceThemeLink(newHref, () => {
-            this.layoutService.config.layout = layout;
-            this.layoutService.onConfigUpdate();
-        },'layout-css');
-    }
 
     replaceThemeLink(href: string, onComplete: Function,linkId:string) {
         const id = linkId;

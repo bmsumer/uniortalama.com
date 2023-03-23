@@ -9,7 +9,7 @@ export class AppTopbarComponent {
 
     @ViewChild('menubutton') menuButton!: ElementRef;
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService,public el: ElementRef) { }
 
     onMenuButtonClick() {
         this.layoutService.onMenuToggle();

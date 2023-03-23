@@ -10,7 +10,7 @@
         <app-sidebar></app-sidebar>
     </div>
     <div class="topbar-end">
-        <ul class="topbar-menu">
+        <ul class="topbar-menu  ">
             <li #profile class="profile-item topbar-item " >
                 <a pStyleClass="@next" enterClass="ng-hidden" enterActiveClass="px-scalein" leaveToClass="ng-hidden" leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true" pRipple class="cursor-pointer">
                     <img class="border-circle" src="assets/demo/images/avatar/square/avatar-m-1.jpg">
@@ -37,7 +37,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="topbar-search">
+            <li class="topbar-search hidden lg:block">
                 <span class="p-input-icon-left">
                     <i class="pi pi-search"></i>
                     <input type="text" pInputText placeholder="Search" class="w-12rem sm:w-full">
@@ -46,8 +46,8 @@
             <li class="ml-3">
                 <button pButton type="button" icon="pi pi-cog" class="p-button-text p-button-secondary text-color-secondary p-button-rounded flex-shrink-0" (click)="onConfigButtonClick()"></button>
             </li>
-            <li class="right-panel-button relative">
-                <button pButton  type="button" label="Today" icon="pi pi-bookmark" 
+            <li class="right-panel-button relative hidden lg:block">
+                <button pButton  type="button" label="Today" style="width:5.7rem" icon="pi pi-bookmark" 
                 class="layout-rightmenu-button hidden md:block font-normal" styleClass="font-normal" (click)="onSidebarButtonClick()"></button>
                 <button pButton type="button" icon="pi pi-bookmark" styleClass="font-normal" class="layout-rightmenu-button block md:hidden" (click)="onSidebarButtonClick()"></button>
             </li>

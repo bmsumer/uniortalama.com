@@ -1,8 +1,21 @@
-<nav class="layout-breadcrumb">
+<nav class="layout-breadcrumb flex">
     <ol>
         <ng-template ngFor let-item let-last="last" [ngForOf]="breadcrumbs$ | async">
             <li>{{item.label}}</li>
             <li *ngIf="!last" class="layout-breadcrumb-chevron"> / </li>
         </ng-template>
     </ol>
+    <ul class="topbar-menu flex lg:hidden">
+        <li class="topbar-search">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText placeholder="Search" class="w-12rem sm:w-full">
+            </span>
+        </li>
+        <li class="right-panel-button relative">
+            <button pButton  type="button" label="Today" style="width:5.7rem" icon="pi pi-bookmark" 
+            class="layout-rightmenu-button hidden md:block font-normal" styleClass="font-normal" (click)="onSidebarButtonClick()"></button>
+            <button pButton type="button" icon="pi pi-bookmark" styleClass="font-normal" class="layout-rightmenu-button flex md:hidden" (click)="onSidebarButtonClick()"></button>
+        </li>
+    </ul>
 </nav>

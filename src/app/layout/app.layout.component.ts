@@ -23,9 +23,13 @@ export class AppLayoutComponent implements OnDestroy {
     constructor(private menuService: MenuService, public layoutService: LayoutService, public renderer: Renderer2, public router: Router) {
         this.overlayMenuOpenSubscription = this.layoutService.overlayOpen$.subscribe(() => {
             if (!this.menuOutsideClickListener) {
-                this.menuOutsideClickListener = this.renderer.listen('document', 'click', event => {
-                    const isOutsideClicked = !(this.appSidebar.el.nativeElement.isSameNode(event.target) || this.appSidebar.el.nativeElement.contains(event.target)
-                    || this.appTopbar.menuButton.nativeElement.isSameNode(event.target) || this.appTopbar.menuButton.nativeElement.contains(event.target));
+                this.menuOutsideClickListener = this.renderer.listen('document', 'click', (event) => {
+                    const isOutsideClicked = !(
+                        this.appTopbar.el.nativeElement.isSameNode(event.target) ||
+                        this.appTopbar.el.nativeElement.contains(event.target) ||
+                        this.appTopbar.menuButton.nativeElement.isSameNode(event.target) ||
+                        this.appTopbar.menuButton.nativeElement.contains(event.target)
+                    );
                     if (isOutsideClicked) {
                         this.hideMenu();
                     }

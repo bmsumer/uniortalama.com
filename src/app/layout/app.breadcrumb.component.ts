@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { LayoutService } from './service/app.layout.service';
 
 interface Breadcrumb {
     label: string;
@@ -18,7 +19,7 @@ export class AppBreadcrumbComponent {
 
     readonly breadcrumbs$ = this._breadcrumbs$.asObservable();
 
-    constructor(private router: Router) {
+    constructor(private router: Router,public layoutService: LayoutService) {
         this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(event => {
             const root = this.router.routerState.snapshot.root;
             const breadcrumbs: Breadcrumb[] = [];
@@ -26,6 +27,14 @@ export class AppBreadcrumbComponent {
 
             this._breadcrumbs$.next(breadcrumbs);
         });
+    }
+
+    onConfigButtonClick() {
+        this.layoutService.showConfigSidebar();
+    }
+    
+    onSidebarButtonClick() {
+        this.layoutService.showSidebar();
     }
 
     private addBreadcrumb(route: ActivatedRouteSnapshot, parentUrl: string[], breadcrumbs: Breadcrumb[]) {

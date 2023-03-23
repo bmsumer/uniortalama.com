@@ -51,7 +51,18 @@
         overflow: hidden;
     }
 
+    .layout-topbar {
+        .topbar-menu {
+            margin-right: 0rem !important;
+        }
+        .right-panel-button{
+            position: absolute !important;
+            right: 0;
+        }
+    }
+
     .layout-container {
+
         .layout-content-wrapper {
             margin-left: 0;
             padding: 1rem;

@@ -10,7 +10,6 @@ export interface AppConfig {
     inputStyle: string;
     colorScheme: ColorScheme;
     theme: string;
-    layout:string;
     ripple: boolean;
     menuMode: MenuMode;
     scale: number;
@@ -38,7 +37,6 @@ export class LayoutService {
         menuMode: 'static',
         colorScheme: 'dark',
         theme: 'magenta',
-        layout: 'blue',
         scale: 14,
     };
 
