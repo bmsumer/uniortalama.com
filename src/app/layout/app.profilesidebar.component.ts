@@ -6,7 +6,7 @@ import { LayoutService } from './service/app.layout.service';
     templateUrl: './app.profilesidebar.component.html'
 })
 export class AppProfileSidebarComponent {
-    date: Date;
+    date: Date= new Date();
     constructor(public layoutService: LayoutService) { }
 
     get visible(): boolean {
