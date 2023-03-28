@@ -14,7 +14,7 @@
                 transform: translateX(-15.5rem);
                 z-index: 999;
                 background: var(--surface-ground);
-
+                padding-bottom: 3rem;
                 .sidebar-header {
                     display: flex;
                     justify-content: flex-end;
@@ -104,6 +104,7 @@
 
             &.layout-sidebar-active {
                 .layout-sidebar {
+                    padding-bottom: 0rem;
                     transform: translateX(0);
                     .layout-menu-container {
                         overflow: auto;

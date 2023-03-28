@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
@@ -18,7 +18,9 @@ export class AppBreadcrumbComponent {
     private readonly _breadcrumbs$ = new BehaviorSubject<Breadcrumb[]>([]);
 
     readonly breadcrumbs$ = this._breadcrumbs$.asObservable();
-
+    @ViewChild('searchinput') searchInput!: ElementRef;
+    searchActive: boolean = false;
+    
     constructor(private router: Router,public layoutService: LayoutService) {
         this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(event => {
             const root = this.router.routerState.snapshot.root;
@@ -27,6 +29,17 @@ export class AppBreadcrumbComponent {
 
             this._breadcrumbs$.next(breadcrumbs);
         });
+    }
+
+    activateSearch() {
+        this.searchActive = true;
+        setTimeout(() => {
+            this.searchInput.nativeElement.focus();
+        }, 100);
+    }
+
+    deactivateSearch() {
+        this.searchActive = false;
     }
 
     onConfigButtonClick() {

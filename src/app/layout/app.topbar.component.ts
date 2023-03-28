@@ -8,9 +8,19 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 export class AppTopbarComponent {
 
     @ViewChild('menubutton') menuButton!: ElementRef;
-
+    @ViewChild('searchinput') searchInput!: ElementRef;
+    searchActive: boolean = false;
     constructor(public layoutService: LayoutService,public el: ElementRef) { }
+    activateSearch() {
+        this.searchActive = true;
+        setTimeout(() => {
+            this.searchInput.nativeElement.focus();
+        }, 100);
+    }
 
+    deactivateSearch() {
+        this.searchActive = false;
+    }
     onMenuButtonClick() {
         this.layoutService.onMenuToggle();
     }

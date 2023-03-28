@@ -11,6 +11,30 @@
     </div>
     <div class="topbar-end">
         <ul class="topbar-menu  ">
+            <li class="hidden lg:block">
+                <div class="topbar-search" [ngClass]="{'topbar-search-active': searchActive}">
+                    <button pButton icon="pi pi-search" class="topbar-searchbutton p-button-text p-button-secondary text-color-secondary p-button-rounded flex-shrink-0" type="button" (click)="activateSearch()"></button>
+                    <div class="search-input-wrapper">
+                        <span class="p-input-icon-right">
+                            <input #searchinput type="text" pInputText placeholder="Search" (blur)="deactivateSearch()" (keydown.escape)="deactivateSearch()"/>
+                            <i class="pi pi-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </li>
+           
+            <li  class="profile-item topbar-item " >
+                <button pButton type="button" icon="pi pi-bell" class="p-button-text p-button-secondary text-color-secondary p-button-rounded flex-shrink-0"></button>
+            </li>
+
+            <li  class="profile-item topbar-item " >
+                <button pButton type="button" icon="pi pi-comment"  class="p-button-text p-button-secondary relative text-color-secondary p-button-rounded flex-shrink-0"></button>
+            </li>
+
+            <li class="ml-3">
+                <button pButton type="button" icon="pi pi-cog" class="p-button-text p-button-secondary text-color-secondary p-button-rounded flex-shrink-0" (click)="onConfigButtonClick()"></button>
+            </li>
+
             <li #profile class="profile-item topbar-item " >
                 <a pStyleClass="@next" enterClass="ng-hidden" enterActiveClass="px-scalein" leaveToClass="ng-hidden" leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true" pRipple class="cursor-pointer">
                     <img class="border-circle" src="assets/demo/images/avatar/square/avatar-m-1.jpg">
@@ -37,15 +61,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="topbar-search hidden lg:block">
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search"></i>
-                    <input type="text" pInputText placeholder="Search" class="w-12rem sm:w-full">
-                </span>
-            </li>
-            <li class="ml-3">
-                <button pButton type="button" icon="pi pi-cog" class="p-button-text p-button-secondary text-color-secondary p-button-rounded flex-shrink-0" (click)="onConfigButtonClick()"></button>
-            </li>
+      
             <li class="right-panel-button relative hidden lg:block">
                 <button pButton  type="button" label="Today" style="width:5.7rem" icon="pi pi-bookmark" 
                 class="layout-rightmenu-button hidden md:block font-normal" styleClass="font-normal" (click)="onSidebarButtonClick()"></button>
