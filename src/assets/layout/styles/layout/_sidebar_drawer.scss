@@ -33,10 +33,19 @@
                         }
 
                         .app-logo-normal {
-                            display: none;
+                            display: flex;
+                            align-items: center;
                             width: 0;
-                            transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
-                            transition-delay: 500ms;
+                            transition: width 0.1s cubic-bezier(0, 0, 0.2, 1);
+                            transition-delay: 50ms;
+                            max-width: 0;
+                            height: 0;
+                            img {
+                                width: 0;
+                                transition: width 0.1s cubic-bezier(0, 0, 0.2, 1);
+                                transition-delay: 50ms;
+                                max-width: 0;
+                            }
                         }
                     }
 
@@ -126,10 +135,19 @@
                         .app-logo {
                             text-align: left;
                             .app-logo-normal {
-                                display: flex;
+                                height: auto;
                                 width: 100%;
-                                transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
-                                transition-delay: 500ms;
+                                max-width: none;
+                                img {
+                                    &:first-child{
+                                        width: 32px;
+                                        max-width: none;
+                                    }
+                                    &:last-child{
+                                        width: 142px;
+                                        max-width: none;
+                                    }
+                                }
                             }
 
                             .app-logo-small {
@@ -164,7 +182,7 @@
                         }
                         a {
                             user-select: none;
-                
+
                             &.active-menuitem {
                                 > .layout-submenu-toggler {
                                     transform: rotate(-180deg);
@@ -194,7 +212,6 @@
                             a {
                                 width: auto;
 
-                              
                                 .layout-submenu-toggler {
                                     display: block;
                                 }
@@ -258,7 +275,7 @@
                 }
 
                 .layout-content-wrapper {
-                    margin-left:22rem;
+                    margin-left: 22rem;
                 }
             }
         }

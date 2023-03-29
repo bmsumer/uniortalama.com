@@ -63,14 +63,6 @@ export class AppConfigComponent implements OnInit {
         this.changeColorScheme(_val);
     }
 
-    get inputStyle(): string {
-        return this.layoutService.config.inputStyle;
-    }
-
-    set inputStyle(_val: string) {
-        this.layoutService.config.inputStyle = _val;
-    }
-
     get ripple(): boolean {
         return this.layoutService.config.ripple;
     }
@@ -138,7 +130,6 @@ export class AppConfigComponent implements OnInit {
 
     replaceThemeLink(href: string, onComplete: Function, linkId: string) {
         const id = linkId;
-        console.log(linkId);
         const themeLink = <HTMLLinkElement>document.getElementById(id);
         const cloneLinkElement = <HTMLLinkElement>themeLink.cloneNode(true);                                
 

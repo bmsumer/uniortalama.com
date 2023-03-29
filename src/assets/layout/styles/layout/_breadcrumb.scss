@@ -13,10 +13,7 @@
             font-weight: 600;
         }
     }
-    .topbar-menu {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    .breadcrumb-menu {
         margin: 0;
         padding: 0 1.15rem 0 0.85rem;
         padding-right: 0;
@@ -24,60 +21,19 @@
         flex-grow: 1;
         color: var(--topbar-item-text-color);
         margin-right: -2rem;
-    
+
         li {
             margin-left: 1.5rem;
-            &.topbar-item {
-                margin-left: 1.5rem;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-    
-                img {
-                    width: 2rem;
-                    height: 2rem;
-                }
-    
-                button {
-                    border-radius: 50%;
-                    width: 2rem;
-                    height: 2rem;
-                    transition: box-shadow var(--transition-duration);
-    
-                    &:focus {
-                        box-shadow: var(--focus-ring);
-                    }
-                }
-    
-                ul {
-                    position: absolute;
-                    bottom: -9.4rem;
-                    right: 0;
-                    display: none;
-                    color: var(--text-color);
-                    background: var(--surface-ground);
-                    box-shadow: var(--box-shadow);
-                    &.active-topbar-menu {
-                        display: block;
-                    }
-    
-                    a {
-                        color: var(--text-color);
-                    }
-    
-    
-                   
-                }
-            }
-            .topbar-search {
+            .breadcrumb-search {
                 display: flex;
                 align-items: center;
                 flex-shrink: 0;
                 width: 100%;
                 margin-left: 0rem;
-                .topbar-searchbutton {
+
+                .breadcrumb-searchbutton {
                    display: flex;
+                   opacity: 1;
                 }
         
                 .search-input-wrapper {
@@ -105,14 +61,11 @@
                     }
                 }
         
-                &.topbar-search-active {
-                    .topbar-searchbutton {
+                &.breadcrumb-search-active {
+                    .breadcrumb-searchbutton {
                         opacity: 0;
-                        display: none;
                         pointer-events: none;
                         cursor: default;
-                        transition: opacity .1s;
-                        transition-delay: .1s;
                     }
                     
                     .search-input-wrapper {
@@ -134,13 +87,6 @@
                     }
                 }
             }
-    
-            button {
-                span {
-                    color: var(--item-text-color);
-                }
-            }
-          
         }
     }
 }

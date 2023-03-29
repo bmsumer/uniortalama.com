@@ -41,7 +41,7 @@ $primeIconFontSize:1rem !default;
 $divider:1px solid $shade500 !default;
 $inlineSpacing:.5rem !default; //spacing between inline elements
 $disabledOpacity:.4 !default; //opacity of a disabled item
-$maskBg:rgba(0, 0, 0, 0.4) !default; //modal mask bg color
+$maskBg:rgba(0, 0, 0, 0.2) !default; //modal mask bg color
 $loadingIconFontSize:2rem !default;
 $errorColor:#FC6161 !default;
 
@@ -145,7 +145,7 @@ $plainButtonTextColor:$textSecondaryColor !default;
 $plainButtonHoverBgColor:$shade500 !default;
 $plainButtonActiveBgColor:rgba(255,255,255,.16) !default;
 
-$secondaryButtonBg:$shade500 !default;
+$secondaryButtonBg:#a0a3ad !default;
 $secondaryButtonTextColor:#FFFFFF !default;
 $secondaryButtonBorder:1px solid transparent !default;
 $secondaryButtonHoverBg:$shade600 !default;

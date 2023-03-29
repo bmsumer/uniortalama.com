@@ -123,10 +123,11 @@
         margin-left: auto !important;
         margin-right: auto !important;
         .topbar-menu {
-            margin-right: 0rem;
+            margin-right: 0rem !important;
         }
+       
         .right-panel-button{
-            position: absolute !important;;
+            position: absolute !important;
             right: 0;
         }
     }

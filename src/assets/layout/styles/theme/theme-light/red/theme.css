@@ -40,7 +40,7 @@
   --surface-overlay:#ececf9;
   --surface-border:rgba(68, 72, 109, 0.2);
   --surface-hover:rgba(68, 72, 109, 0.07);
-  --maskbg: rgba(0, 0, 0, 0.4);
+  --maskbg: rgba(0, 0, 0, 0.2);
   --focus-ring: 0 none;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .p-component-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
 }
 
@@ -2402,7 +2402,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-speeddial-mask {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .p-splitbutton {

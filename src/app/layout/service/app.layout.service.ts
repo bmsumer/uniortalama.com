@@ -7,7 +7,6 @@ export type ColorScheme = 'light' | 'dark';
 
 
 export interface AppConfig {
-    inputStyle: string;
     colorScheme: ColorScheme;
     theme: string;
     ripple: boolean;
@@ -33,7 +32,6 @@ export class LayoutService {
 
     config: AppConfig = {
         ripple: false,
-        inputStyle: 'outlined',
         menuMode: 'static',
         colorScheme: 'dark',
         theme: 'magenta',

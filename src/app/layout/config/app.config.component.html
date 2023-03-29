@@ -12,15 +12,6 @@
                 [ngStyle]="{'background-color': theme.color}"><i *ngIf="theme.name == this.layoutService.config.theme " class="pi pi-check text-white"></i></button>
         </div>
     </div>
-    <!-- <h5>Layout Themes</h5>
-    <div class="flex flex-wrap row-gap-3">
-        <div class="w-3" *ngFor="let layout of layoutThemes">
-            <button type="button" 
-                class="cursor-pointer p-link w-2rem h-2rem border-circle flex-shrink-0 flex align-items-center justify-content-center" 
-                (click)="changeLayout(layout.name)" 
-                [ngStyle]="{'background-color': layout.color}"><i *ngIf="layout.name == this.layoutService.config.layout " class="pi pi-check text-white"></i></button>
-        </div>
-    </div> -->
     <h5>Scale</h5>
     <div class="flex align-items-center">
         <button icon="pi pi-minus" type="button" pButton (click)="decrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem mr-2" [disabled]="scale === scales[0]"></button>
@@ -76,18 +67,6 @@
     </div>
 
     <ng-container *ngIf="!minimal">
-        <!-- <h5>Input Style</h5>
-        <div class="flex">
-            <div class="field-radiobutton flex-1">
-                <p-radioButton name="inputStyle" value="outlined" [(ngModel)]="inputStyle" inputId="outlined_input"></p-radioButton>
-                <label for="outlined_input">Outlined</label>
-            </div>
-            <div class="field-radiobutton flex-1">
-                <p-radioButton name="inputStyle" value="filled" [(ngModel)]="inputStyle" inputId="filled_input"></p-radioButton>
-                <label for="filled_input">Filled</label>
-            </div>
-        </div> -->
-    
         <h5>Ripple Effect</h5>
         <p-inputSwitch [(ngModel)]="ripple"></p-inputSwitch>
     </ng-container>

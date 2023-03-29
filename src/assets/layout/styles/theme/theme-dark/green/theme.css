@@ -40,7 +40,7 @@
   --surface-overlay:linear-gradient(180deg, #2E323F 0%, #0A061A 100%);
   --surface-border:rgba(255, 255, 255, 0.15);
   --surface-hover:rgba(255, 255, 255, 0.05);
-  --maskbg: rgba(0, 0, 0, 0.4);
+  --maskbg: rgba(0, 0, 0, 0.2);
   --focus-ring: 0 none;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .p-component-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
 }
 
@@ -2013,7 +2013,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 
 .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
   color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.05);
+  background: #a0a3ad;
   border: 1px solid transparent;
 }
 .p-button.p-button-secondary:enabled:hover, .p-buttonset.p-button-secondary > .p-button:enabled:hover, .p-splitbutton.p-button-secondary > .p-button:enabled:hover {
@@ -2031,33 +2031,33 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 .p-button.p-button-secondary.p-button-outlined, .p-buttonset.p-button-secondary > .p-button.p-button-outlined, .p-splitbutton.p-button-secondary > .p-button.p-button-outlined {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
   border: 1px solid;
 }
 .p-button.p-button-secondary.p-button-outlined:enabled:hover, .p-buttonset.p-button-secondary > .p-button.p-button-outlined:enabled:hover, .p-splitbutton.p-button-secondary > .p-button.p-button-outlined:enabled:hover {
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.05);
+  background: rgba(160, 163, 173, 0.04);
+  color: #a0a3ad;
   border: 1px solid;
 }
 .p-button.p-button-secondary.p-button-outlined:enabled:active, .p-buttonset.p-button-secondary > .p-button.p-button-outlined:enabled:active, .p-splitbutton.p-button-secondary > .p-button.p-button-outlined:enabled:active {
-  background: rgba(255, 255, 255, 0.16);
-  color: rgba(255, 255, 255, 0.05);
+  background: rgba(160, 163, 173, 0.16);
+  color: #a0a3ad;
   border: 1px solid;
 }
 .p-button.p-button-secondary.p-button-text, .p-buttonset.p-button-secondary > .p-button.p-button-text, .p-splitbutton.p-button-secondary > .p-button.p-button-text {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
   border-color: transparent;
 }
 .p-button.p-button-secondary.p-button-text:enabled:hover, .p-buttonset.p-button-secondary > .p-button.p-button-text:enabled:hover, .p-splitbutton.p-button-secondary > .p-button.p-button-text:enabled:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(160, 163, 173, 0.04);
   border-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
 }
 .p-button.p-button-secondary.p-button-text:enabled:active, .p-buttonset.p-button-secondary > .p-button.p-button-text:enabled:active, .p-splitbutton.p-button-secondary > .p-button.p-button-text:enabled:active {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(160, 163, 173, 0.16);
   border-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
 }
 
 .p-button.p-button-info, .p-buttonset.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button {
@@ -2390,7 +2390,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-speeddial-mask {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .p-splitbutton {
@@ -2473,31 +2473,31 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 
 .p-splitbutton.p-button-secondary.p-button-outlined > .p-button {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
   border: 1px solid;
 }
 .p-splitbutton.p-button-secondary.p-button-outlined > .p-button:enabled:hover, .p-splitbutton.p-button-secondary.p-button-outlined > .p-button:not(button):not(a):not(.p-disabled):hover {
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.05);
+  background: rgba(160, 163, 173, 0.04);
+  color: #a0a3ad;
 }
 .p-splitbutton.p-button-secondary.p-button-outlined > .p-button:enabled:active, .p-splitbutton.p-button-secondary.p-button-outlined > .p-button:not(button):not(a):not(.p-disabled):active {
-  background: rgba(255, 255, 255, 0.16);
-  color: rgba(255, 255, 255, 0.05);
+  background: rgba(160, 163, 173, 0.16);
+  color: #a0a3ad;
 }
 .p-splitbutton.p-button-secondary.p-button-text > .p-button {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
   border-color: transparent;
 }
 .p-splitbutton.p-button-secondary.p-button-text > .p-button:enabled:hover, .p-splitbutton.p-button-secondary.p-button-text > .p-button:not(button):not(a):not(.p-disabled):hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(160, 163, 173, 0.04);
   border-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
 }
 .p-splitbutton.p-button-secondary.p-button-text > .p-button:enabled:active, .p-splitbutton.p-button-secondary.p-button-text > .p-button:not(button):not(a):not(.p-disabled):active {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(160, 163, 173, 0.16);
   border-color: transparent;
-  color: rgba(255, 255, 255, 0.05);
+  color: #a0a3ad;
 }
 
 .p-splitbutton.p-button-info.p-button-outlined > .p-button {
@@ -6124,7 +6124,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   line-height: 1.429rem;
 }
 .p-badge.p-badge-secondary {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #a0a3ad;
   color: #FFFFFF;
 }
 .p-badge.p-badge-success {
@@ -6319,7 +6319,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(11, 209, 138, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
 }
 .p-button.p-button-secondary:enabled:focus {
-  box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(255, 255, 255, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(160, 163, 173, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
 }
 .p-button.p-button-success:enabled:focus {
   box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px rgba(11, 209, 138, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0);
