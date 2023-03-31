@@ -1,5 +1,16 @@
 # Changelog
 
+## 15.1.0
+
+**Implemented New Features and Enhancements:**
+- Introduced next-gen implementation based on LayoutService
+- Updated UI kit demos
+- Added Apps
+- Added E-commerce demos
+- New authentication pages
+- New Drawer menu
+- New Reveal menu
+
 ## 15.0.0
 **Migration Guide**
 - Upgrade to PrimeNG 15

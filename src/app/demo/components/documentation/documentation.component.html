@@ -8,7 +8,7 @@
     <p>Once CLI is ready in your system, extract the contents of the zip file distribution, cd to the directory,
         install the libraries from npm and then execute "ng serve" to run the application in your local environment.</p>
 
-<pre class="app-code"><code>cd apollo
+<pre class="app-code"><code>cd atlantis
 npm install
 ng serve</code></pre>
 
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit &#123;
         //optional configuration with the default configuration
         this.layoutService.config = &#123;
             ripple: false,                      //toggles ripple on and off
-            menuMode: 'static',                 //layout mode of the menu, valid values are "static", "overlay", "slim" and "horizontal"
+            menuMode: 'static',                 //layout mode of the menu, valid values are "static", "overlay", "slim", "horizontal", "drawer" and "reveal"
             colorScheme: 'light',               //color scheme of the template, valid values are "light" and "dark"
             theme: 'indigo',                    //default component theme for PrimeNG
             menuTheme: "colorScheme",           //theme of the menu, valid values are "colorScheme", "primaryColor" and "transparent"
@@ -119,7 +119,7 @@ export class AppMenuComponent implements OnInit &#123;
     </div>
 
     <h4>Theme</h4>
-    <p>Apollo provides 24 PrimeNG themes out of the box. Setup of a theme is simple by including the css of theme
+    <p>Apollo provides 16 PrimeNG themes out of the box. Setup of a theme is simple by including the css of theme
         to your bundle that are located inside <span class="text-primary font-medium">assets/layout/styles/theme/</span>
         folder such as <span class="text-primary font-medium">assets/layout/styles/theme/theme-light/blue/theme.css</span>.</p>
 
