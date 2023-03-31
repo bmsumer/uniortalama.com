@@ -16,6 +16,8 @@ export class AppLayoutComponent implements OnDestroy {
 
     menuOutsideClickListener: any;
 
+    menuScrollListener: any;
+
     @ViewChild(AppSidebarComponent) appSidebar!: AppSidebarComponent;
 
     @ViewChild(AppTopbarComponent) appTopbar!: AppTopbarComponent;
@@ -31,6 +33,13 @@ export class AppLayoutComponent implements OnDestroy {
                         this.appTopbar.menuButton.nativeElement.contains(event.target)
                     );
                     if (isOutsideClicked) {
+                        this.hideMenu();
+                    }
+                });
+            }
+            if ((this.layoutService.isHorizontal() || this.layoutService.isSlim()) && !this.menuScrollListener) {
+                this.menuScrollListener = this.renderer.listen(this.appSidebar.menuContainer.nativeElement, 'scroll', event => {
+                    if (this.layoutService.isDesktop()) {
                         this.hideMenu();
                     }
                 });
@@ -74,6 +83,10 @@ export class AppLayoutComponent implements OnDestroy {
         if(this.menuOutsideClickListener) {
             this.menuOutsideClickListener();
             this.menuOutsideClickListener = null;
+        }
+        if (this.menuScrollListener) {
+            this.menuScrollListener();
+            this.menuScrollListener = null;
         }
         this.unblockBodyScroll();
     }
