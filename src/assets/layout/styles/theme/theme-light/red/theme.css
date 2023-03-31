@@ -6328,25 +6328,25 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-button:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #feb0b0, 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #feb0b0, 0 1px 2px 0 black;
 }
 .p-button.p-button-secondary:enabled:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px rgba(152, 156, 191, 0.07), 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px rgba(152, 156, 191, 0.07), 0 1px 2px 0 black;
 }
 .p-button.p-button-success:enabled:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #75f8c9, 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #75f8c9, 0 1px 2px 0 black;
 }
 .p-button.p-button-info:enabled:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #c39fff, 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #c39fff, 0 1px 2px 0 black;
 }
 .p-button.p-button-warning:enabled:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #fffa77, 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #fffa77, 0 1px 2px 0 black;
 }
 .p-button.p-button-help:enabled:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #f6a6de, 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #f6a6de, 0 1px 2px 0 black;
 }
 .p-button.p-button-danger:enabled:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #feb0b0, 0 1px 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #feb0b0, 0 1px 2px 0 black;
 }
 
 .p-datatable .p-datatable-tbody > tr.p-datatable-dragpoint-top > td {
