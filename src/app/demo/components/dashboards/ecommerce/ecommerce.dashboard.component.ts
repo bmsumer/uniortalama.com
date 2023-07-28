@@ -104,7 +104,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
             // @ts-ignore
             this.customersTable1.forEach(customer => customer.date = new Date(customer.date));
         });
-        this.customerService.getCustomersMixed().then(customers => {
+        this.customerService.getCustomersMedium().then(customers => {
             this.customersTable2 = customers;
             // @ts-ignore
             this.customersTable2.forEach(customer => customer.date = new Date(customer.date));
