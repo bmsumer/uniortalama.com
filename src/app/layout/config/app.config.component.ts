@@ -29,10 +29,7 @@ export class AppConfigComponent implements OnInit {
     }
 
     set visible(_val: boolean) {
-        this.layoutService.config.update((config) => ({
-            ...config,
-            configSidebarVisible: _val,
-        }));
+        this.layoutService.state.configSidebarVisible = _val;
     }
 
     get scale(): number {
