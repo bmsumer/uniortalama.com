@@ -9,6 +9,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
 @NgModule({
     imports: [
@@ -20,8 +22,10 @@ import { DropdownModule } from 'primeng/dropdown';
         InputTextModule,
         InputNumberModule,
         ButtonModule,
-        RippleModule
+        RippleModule,
+        InputGroupModule,
+        InputGroupAddonModule,
     ],
-    declarations: [CheckoutFormComponent]
+    declarations: [CheckoutFormComponent],
 })
-export class CheckoutFormModule { }
+export class CheckoutFormModule {}

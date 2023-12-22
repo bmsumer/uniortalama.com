@@ -13,20 +13,20 @@
                     class="list-none  ng-hidden lg:flex lg:flex-row flex-column align-items-start bg-white absolute lg:relative h-screen lg:h-auto  lg:surface-ground m-0 z-5 w-full sm:w-6 lg:w-full py-6 lg:py-0">
                     <a pRipple
                         class="cursor-pointer block lg:hidden text-gray-800 font-medium line-height-3 hover:text-gray-800 absolute"
-                        style="top: 3rem; right: 2rem" pStyleClass="@parent" enterClass="ng-hidden"
+                        style="top: 3rem; right: 2rem" pStyleClass="@parent" enterFromClass="ng-hidden"
                         enterActiveClass="px-scalein" leaveToClass="ng-hidden" leaveActiveClass="px-fadeout">
                         <i class="pi pi-times text-4xl"></i>
                     </a>
 
                     <li class="mt-5 lg:mt-0">
-                        <a (click)="scrollToElement(home)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                        <a (click)="scrollToElement(home)" pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
                             enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                             class="flex m-0 lg:ml-5 lg:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="scrollToElement(meet)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                        <a (click)="scrollToElement(meet)" pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
                             enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                             class="flex m-0 lg:ml-5 lg:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
                             <span>Meet
@@ -34,21 +34,21 @@
                         </a>
                     </li>
                     <li>
-                        <a (click)="scrollToElement(features)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                        <a (click)="scrollToElement(features)" pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
                             enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                             class="flex m-0 lg:ml-5 lg:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
                             <span>Features</span>
                         </a>
                     </li>
                     <li>
-                        <a (click)="scrollToElement(pricing)" pRipple pStyleClass="@grandparent" enterClass="ng-hidden"
+                        <a (click)="scrollToElement(pricing)" pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden"
                             enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                             class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
                             <span>Pricing</span>
                         </a>
                     </li>
                     <li>
-                        <a pRipple pStyleClass="@grandparent" enterClass="ng-hidden" enterActiveClass="px-fadein"
+                        <a pRipple pStyleClass="@grandparent" enterFromClass="ng-hidden" enterActiveClass="px-fadein"
                             leaveToClass="ng-hidden"
                             class="flex m-0 md:ml-5 md:px-0 px-3 py-3 text-gray-800 font-medium line-height-3 hover:text-gray-800 cursor-pointer">
                             <span>Buy Now</span>
@@ -74,7 +74,7 @@
                 </button>
 
                 <a pRipple class="lg:hidden font-medium text-gray-700 cursor-pointer" pStyleClass="#menu"
-                    enterClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                    enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                     leaveActiveClass="px-fadeout" [hideOnOutsideClick]="true">
                     <i class="pi pi-bars fs-xlarge"></i>
                 </a>

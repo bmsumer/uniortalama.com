@@ -26,7 +26,7 @@
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-                            "src/favicon.ico", 
+                            "src/favicon.ico",
                             "src/assets"
                         ],
                         "styles": [
@@ -65,10 +65,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "atlantis-ng:build:production"
+                            "buildTarget": "atlantis-ng:build:production"
                         },
                         "development": {
-                            "browserTarget": "atlantis-ng:build:development"
+                            "buildTarget": "atlantis-ng:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "atlantis-ng:build"
+                        "buildTarget": "atlantis-ng:build"
                     }
                 },
                 "test": {
@@ -90,7 +90,7 @@
                         "karmaConfig": "karma.conf.js",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-                            "src/favicon.ico", 
+                            "src/favicon.ico",
                             "src/assets"
                         ],
                         "styles": [

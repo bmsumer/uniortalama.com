@@ -1,7 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/demo/api/product';
-import { AppConfig, LayoutService } from 'src/app/layout/service/app.layout.service';
+import {
+    AppConfig,
+    LayoutService,
+} from 'src/app/layout/service/app.layout.service';
 import { ProductService } from 'src/app/demo/service/product.service';
 import { Table } from 'primeng/table';
 import { Customer } from 'src/app/demo/api/customer';
@@ -9,15 +12,14 @@ import { PrimeIcons } from 'primeng/api';
 import { CustomerService } from 'src/app/demo/service/customer.service';
 
 @Component({
-    templateUrl: './ecommerce.dashboard.component.html'
+    templateUrl: './ecommerce.dashboard.component.html',
 })
 export class EcommerceDashboardComponent implements OnInit, OnDestroy {
-
     visitorChart: any;
 
     visitorChartOptions: any;
 
-    timelineEvents: any[]= [];
+    timelineEvents: any[] = [];
 
     countryChart: any;
 
@@ -27,13 +29,13 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
 
     revenueChartOptions: any;
 
-    customersTable: Customer[]= [];
+    customersTable: Customer[] = [];
 
-    customersTable1: Customer[]= [];
+    customersTable1: Customer[] = [];
 
-    customersTable2: Customer[]= [];
+    customersTable2: Customer[] = [];
 
-    selectedCustomers1: Customer[]= [];
+    selectedCustomers1: Customer[] = [];
 
     orderYear: any;
 
@@ -71,64 +73,124 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
         {
             breakpoint: '1024px',
             numVisible: 3,
-            numScroll: 3
+            numScroll: 3,
         },
         {
             breakpoint: '768px',
             numVisible: 2,
-            numScroll: 2
+            numScroll: 2,
         },
         {
             breakpoint: '560px',
             numVisible: 1,
-            numScroll: 1
-        }
+            numScroll: 1,
+        },
     ];
 
-    customerCarousel: any[]=[];
+    customerCarousel: any[] = [];
 
-    constructor(private productService: ProductService, private layoutService: LayoutService,private customerService: CustomerService) {
-        this.subscription = this.layoutService.configUpdate$.subscribe(config => {
-            this.initCharts();
-        });
+    constructor(
+        private productService: ProductService,
+        private layoutService: LayoutService,
+        private customerService: CustomerService
+    ) {
+        this.subscription = this.layoutService.configUpdate$.subscribe(
+            (config) => {
+                this.initCharts();
+            }
+        );
     }
 
     ngOnInit(): void {
-        this.customerService.getCustomersLarge().then(customers => {
+        this.customerService.getCustomersLarge().then((customers) => {
             this.customersTable = customers;
-            // @ts-ignore
-            this.customersTable.forEach(customer => customer.date = new Date(customer.date));
+            this.customersTable.forEach(
+                // @ts-ignore
+                (customer) => (customer.date = new Date(customer.date))
+            );
         });
-        this.customerService.getCustomersLarge().then(customers => {
+        this.customerService.getCustomersLarge().then((customers) => {
             this.customersTable1 = customers;
-            // @ts-ignore
-            this.customersTable1.forEach(customer => customer.date = new Date(customer.date));
+            this.customersTable1.forEach(
+                // @ts-ignore
+                (customer) => (customer.date = new Date(customer.date))
+            );
         });
-        this.customerService.getCustomersMedium().then(customers => {
+        this.customerService.getCustomersMedium().then((customers) => {
             this.customersTable2 = customers;
-            // @ts-ignore
-            this.customersTable2.forEach(customer => customer.date = new Date(customer.date));
+            this.customersTable2.forEach(
+                // @ts-ignore
+                (customer) => (customer.date = new Date(customer.date))
+            );
         });
-        
+
         this.initCharts();
 
         this.timelineEvents = [
-            {transaction: 'Payment from #28492', amount: '+$250.00', date: 'June 13, 2020 11:09 AM',
-                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
-            {transaction: 'Process refund to #94830', amount: '-$570.00', date: 'June 13, 2020 08:22 AM',
-                icon: PrimeIcons.REFRESH, iconColor: '#FC6161', amountColor: '#FC6161'},
-            {transaction: 'New 8 user to #5849', amount: '+$50.00', date: 'June 12, 2020 02:56 PM',
-                icon: PrimeIcons.PLUS, iconColor: '#0BD18A', amountColor: '#0BD18A'},
-            {transaction: 'Payment from #3382', amount: '+$3830.00', date: 'June 11, 2020 06:11 AM',
-                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
-            {transaction: 'Payment from #4738', amount: '+$845.00', date: 'June 11, 2020 03:50 AM',
-                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
-            {transaction: 'Payment failed form #60958', amount: '$1450.00', date: 'June 10, 2020 07:54 PM',
-                icon: PrimeIcons.EXCLAMATION_TRIANGLE, iconColor: '#EC4DBC', amountColor: '#EC4DBC'},
-            {transaction: 'Payment from #5748', amount: '+$50.00', date: 'June 09, 2020 11:37 PM',
-                icon: PrimeIcons.CHECK, iconColor: '#0F8BFD', amountColor: '#00D0DE'},
-            {transaction: 'Removed 32 users from #5849', amount: '-$240.00', date: 'June 09, 2020 08:40 PM',
-                icon: PrimeIcons.MINUS, iconColor: '#FC6161', amountColor: '#FC6161'},
+            {
+                transaction: 'Payment from #28492',
+                amount: '+$250.00',
+                date: 'June 13, 2020 11:09 AM',
+                icon: PrimeIcons.CHECK,
+                iconColor: '#0F8BFD',
+                amountColor: '#00D0DE',
+            },
+            {
+                transaction: 'Process refund to #94830',
+                amount: '-$570.00',
+                date: 'June 13, 2020 08:22 AM',
+                icon: PrimeIcons.REFRESH,
+                iconColor: '#FC6161',
+                amountColor: '#FC6161',
+            },
+            {
+                transaction: 'New 8 user to #5849',
+                amount: '+$50.00',
+                date: 'June 12, 2020 02:56 PM',
+                icon: PrimeIcons.PLUS,
+                iconColor: '#0BD18A',
+                amountColor: '#0BD18A',
+            },
+            {
+                transaction: 'Payment from #3382',
+                amount: '+$3830.00',
+                date: 'June 11, 2020 06:11 AM',
+                icon: PrimeIcons.CHECK,
+                iconColor: '#0F8BFD',
+                amountColor: '#00D0DE',
+            },
+            {
+                transaction: 'Payment from #4738',
+                amount: '+$845.00',
+                date: 'June 11, 2020 03:50 AM',
+                icon: PrimeIcons.CHECK,
+                iconColor: '#0F8BFD',
+                amountColor: '#00D0DE',
+            },
+            {
+                transaction: 'Payment failed form #60958',
+                amount: '$1450.00',
+                date: 'June 10, 2020 07:54 PM',
+                icon: PrimeIcons.EXCLAMATION_TRIANGLE,
+                iconColor: '#EC4DBC',
+                amountColor: '#EC4DBC',
+            },
+            {
+                transaction: 'Payment from #5748',
+                amount: '+$50.00',
+                date: 'June 09, 2020 11:37 PM',
+                icon: PrimeIcons.CHECK,
+                iconColor: '#0F8BFD',
+                amountColor: '#00D0DE',
+            },
+            {
+                transaction: 'Removed 32 users from #5849',
+                amount: '-$240.00',
+                date: 'June 09, 2020 08:40 PM',
+                icon: PrimeIcons.MINUS,
+                iconColor: '#FC6161',
+                amountColor: '#FC6161',
+            },
         ];
 
         this.customerMax = '1232';
@@ -138,114 +200,137 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
         this.customerAvg = '875';
 
         this.customerCarousel = [
-            {user: '9,673 Users', value: '$8,362,478', image: 'nasa'},
-            {user: '9,395 Users', value: '$7,927,105', image: 'beats'},
-            {user: '7,813 Users', value: '$6,471,594', image: 'gopro'},
-            {user: '7,613 Users', value: '$5,697,883', image: 'north'},
-            {user: '98,673 Users', value: '$7,653,311', image: 'mc'},
-            {user: '5,645 Users', value: '$4,567,823', image: 'dell'},
-            {user: '5,153 Users', value: '$5,342,678', image: 'wwf'},
-            {user: '4,338 Users', value: '$5,867,391', image: 'bmw'},
-            {user: '4,170 Users', value: '$4,647,233', image: 'pepsi'},
-            {user: '3,765 Users', value: '$4,123,876', image: 'netflix'},
-            {user: '3,490 Users', value: '$3,688,362', image: 'deloitte'},
-            {user: '2,976 Users', value: '$3,978,478', image: 'pg'},
+            { user: '9,673 Users', value: '$8,362,478', image: 'nasa' },
+            { user: '9,395 Users', value: '$7,927,105', image: 'beats' },
+            { user: '7,813 Users', value: '$6,471,594', image: 'gopro' },
+            { user: '7,613 Users', value: '$5,697,883', image: 'north' },
+            { user: '98,673 Users', value: '$7,653,311', image: 'mc' },
+            { user: '5,645 Users', value: '$4,567,823', image: 'dell' },
+            { user: '5,153 Users', value: '$5,342,678', image: 'wwf' },
+            { user: '4,338 Users', value: '$5,867,391', image: 'bmw' },
+            { user: '4,170 Users', value: '$4,647,233', image: 'pepsi' },
+            { user: '3,765 Users', value: '$4,123,876', image: 'netflix' },
+            { user: '3,490 Users', value: '$3,688,362', image: 'deloitte' },
+            { user: '2,976 Users', value: '$3,978,478', image: 'pg' },
         ];
 
         this.orderYear = [
-            {name: '2021', code: '0'},
-            {name: '2020', code: '1'}
+            { name: '2021', code: '0' },
+            { name: '2020', code: '1' },
         ];
 
         this.visitorYear = [
-            {name: '2020', code: '0'},
-            {name: '2019', code: '1'}
+            { name: '2020', code: '0' },
+            { name: '2019', code: '1' },
         ];
 
         this.customerYear = [
-            {name: '2020', code: '0'},
-            {name: '2019', code: '1'}
+            { name: '2020', code: '0' },
+            { name: '2019', code: '1' },
         ];
 
         this.revenueMonth = [
-            {name: 'January - July 2021', code: '0'},
-            {name: 'August - December 2020', code: '1'}
+            { name: 'January - July 2021', code: '0' },
+            { name: 'August - December 2020', code: '1' },
         ];
+
+        this.selectedVisitorYear = this.visitorYear[0];
     }
 
-    initCharts(){
+    initCharts() {
         const documentStyle = getComputedStyle(document.documentElement);
         const textColor = documentStyle.getPropertyValue('--text-color');
-        const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
-        const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
+        const textColorSecondary = documentStyle.getPropertyValue(
+            '--text-color-secondary'
+        );
+        const surfaceBorder =
+            documentStyle.getPropertyValue('--surface-border');
 
         this.growth = '$620,076';
         this.avgCustomer = '$1,120';
         this.visitorChart = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+            labels: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'July',
+                'Aug',
+                'Sept',
+                'Oct',
+                'Nov',
+                'Dec',
+            ],
             datasets: [
                 {
                     label: 'Plan',
-                    data: [630, 630, 695, 695, 695, 760, 760, 760, 840, 840, 840, 840],
-                    borderColor: [
-                        '#FC6161',
+                    data: [
+                        630, 630, 695, 695, 695, 760, 760, 760, 840, 840, 840,
+                        840,
                     ],
+                    borderColor: ['#FC6161'],
                     pointBorderColor: 'transparent',
                     pointBackgroundColor: 'transparent',
                     type: 'line',
                     fill: false,
                     barPercentage: 0.5,
-                    stepped: true
+                    stepped: true,
                 },
                 {
                     label: 'Groth actual',
-                    data: [600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810, 780],
-                    backgroundColor: getComputedStyle(document.body).getPropertyValue('--primary-color') ,
+                    data: [
+                        600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810,
+                        780,
+                    ],
+                    backgroundColor: getComputedStyle(
+                        document.body
+                    ).getPropertyValue('--primary-color'),
                     fill: true,
                     barPercentage: 0.5,
-                    stepped: true
-                }
-            ]
+                    stepped: true,
+                },
+            ],
         };
         this.visitorChartOptions = {
             plugins: {
                 legend: {
                     position: 'top',
                     align: 'end',
-                    labels:{
-                        color:textColor
-                    }
+                    labels: {
+                        color: textColor,
+                    },
                 },
             },
             responsive: true,
             hover: {
-                mode: 'index'
+                mode: 'index',
             },
             scales: {
                 y: {
-                    ticks:{
-                        color:textColor
+                    ticks: {
+                        color: textColor,
                     },
                     min: 500,
-                    max: 900
-                    ,
+                    max: 900,
                     grid: {
-                        display: false
-                    }
+                        display: false,
+                    },
                 },
                 x: {
-                    ticks:{
-                        color:textColor
+                    ticks: {
+                        color: textColor,
                     },
                     barPercentage: 0.5,
                     grid: {
-                        display: false
-                    }
-                }
-            }
+                        display: false,
+                    },
+                },
+            },
         };
         this.countryChart = {
-            labels: ['USA','CHN','JPN','AUS','IND','RUS','Other'   ],
+            labels: ['USA', 'CHN', 'JPN', 'AUS', 'IND', 'RUS', 'Other'],
             datasets: [
                 {
                     data: [30, 18, 36, 54, 61, 90, 72],
@@ -268,22 +353,30 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
                         documentStyle.getPropertyValue('--gray-500'),
                     ],
                     borderColor: 'transparent',
-                    fill: true
-                }
-            ]
+                    fill: true,
+                },
+            ],
         };
 
         this.countryChartOptions = {
             plugins: {
                 legend: {
                     labels: {
-                        color: textColor
-                    }
-                }
-            }
+                        color: textColor,
+                    },
+                },
+            },
         };
         this.revenueChart = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+            ],
             datasets: [
                 {
                     label: 'Sales',
@@ -292,7 +385,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
                     pointBackgroundColor: '#EEE500',
                     backgroundColor: 'rgba(238, 229, 0, 0.05)',
                     fill: true,
-                    tension: .4
+                    tension: 0.4,
                 },
                 {
                     label: 'Revenue',
@@ -301,7 +394,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
                     pointBackgroundColor: '#00D0DE',
                     backgroundColor: 'rgba(0, 208, 222, 0.05)',
                     fill: true,
-                    tension: .4
+                    tension: 0.4,
                 },
                 {
                     label: 'Expenses',
@@ -310,7 +403,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
                     pointBackgroundColor: '#FC6161',
                     backgroundColor: 'rgba(253, 72, 74, 0.05)',
                     fill: true,
-                    tension: .4
+                    tension: 0.4,
                 },
                 {
                     label: 'Customer',
@@ -319,26 +412,27 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
                     pointBackgroundColor: '#0F8BFD',
                     backgroundColor: 'rgba(15, 139, 253, 0.05)',
                     fill: true,
-                    tension: .4
-                }]
+                    tension: 0.4,
+                },
+            ],
         };
 
         this.revenueChartOptions = {
             plugins: {
                 legend: {
                     labels: {
-                        color: textColor
-                    }
-                }
+                        color: textColor,
+                    },
+                },
             },
             responsive: true,
             hover: {
-                mode: 'index'
+                mode: 'index',
             },
             scales: {
-                x:{
+                x: {
                     ticks: {
-                        color: textColor
+                        color: textColor,
                     },
                 },
                 y: {
@@ -346,198 +440,234 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
                         color: textColor,
                         min: 0,
                         max: 60,
-                        stepSize: 5
-                    }
-                }
-            }
+                        stepSize: 5,
+                    },
+                },
+            },
         };
         this.customerChart = {
             labels: ['January', 'March', 'May', 'Agust', 'October', 'December'],
             datasets: [
                 {
                     data: [10, 25, 48, 35, 54, 70],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-300'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-400'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [18, 35, 23, 30, 59, 65],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-400'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [20, 47, 46, 46, 61, 70],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-400'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [17, 34, 18, 48, 67, 68],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-500'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-600'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-600'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [9, 37, 47, 50, 60, 62],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-300'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-400'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [8, 48, 40, 52, 72, 75],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-200'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-300'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-200'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [10, 18, 50, 47, 63, 80],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-200'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-300'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-200'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [20, 36, 39, 58, 59, 85],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-400'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [30, 45, 35, 50, 54, 81],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-300'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-400'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [28, 35, 52, 56, 60, 77],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-200'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-300'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-200'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [40, 40, 38, 45, 68, 86],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-500'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-600'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-600'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [50, 23, 27, 34, 65, 90],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-400'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [29, 27, 29, 42, 55, 84],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-300'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-400'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [10, 37, 47, 29, 59, 80],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-400'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [10, 54, 42, 38, 63, 83],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-200'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-300'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-200'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [25, 44, 50, 56, 65, 92],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-200'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-300'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-200'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [30, 43, 48, 45, 73, 78],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-300'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-400'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-300'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
+                    barPercentage: 1.0,
                 },
                 {
                     data: [29, 47, 54, 60, 77, 86],
-                    backgroundColor: documentStyle.getPropertyValue('--primary-400'),
-                    hoverBackgroundColor: documentStyle.getPropertyValue('--primary-500'),
+                    backgroundColor:
+                        documentStyle.getPropertyValue('--primary-400'),
+                    hoverBackgroundColor:
+                        documentStyle.getPropertyValue('--primary-500'),
                     fill: true,
                     categoryPercentage: 1.0,
-                    barPercentage: 1.0
-                }
-            ]
+                    barPercentage: 1.0,
+                },
+            ],
         };
 
         this.customerChartOptions = {
             plugins: {
                 legend: {
-                    display: false
-                }
+                    display: false,
+                },
             },
             scales: {
                 y: {
                     ticks: {
-                        color: textColor
+                        color: textColor,
                     },
                     display: false,
                 },
                 x: {
                     ticks: {
-                        color: textColor
+                        color: textColor,
                     },
-                    grid : {
-                        display : false
-                    }
-                }
+                    grid: {
+                        display: false,
+                    },
+                },
             },
         };
     }
 
-    changeRevenueChart(event:any) {
+    changeRevenueChart(event: any) {
         const dataSet1 = [
             [37, 34, 21, 27, 10, 18, 15],
             [31, 27, 30, 37, 23, 29, 20],
             [21, 7, 13, 3, 19, 11, 6],
-            [47, 31, 35, 20, 46, 39, 25]
+            [47, 31, 35, 20, 46, 39, 25],
         ];
         const dataSet2 = [
             [31, 27, 30, 37, 23, 29, 20],
             [47, 31, 35, 20, 46, 39, 25],
             [37, 34, 21, 27, 10, 18, 15],
-            [21, 7, 13, 3, 19, 11, 6]
+            [21, 7, 13, 3, 19, 11, 6],
         ];
 
         if (event.value.code === '1') {
@@ -553,10 +683,10 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
         }
     }
 
-    changeVisitorChart(event:any) {
+    changeVisitorChart(event: any) {
         const dataSet1 = [
             [630, 630, 695, 695, 695, 760, 760, 760, 840, 840, 840, 840],
-            [600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810, 780]
+            [600, 671, 660, 665, 700, 610, 810, 790, 710, 860, 810, 780],
         ];
         const dataSet2 = [
             [580, 580, 620, 620, 620, 680, 680, 680, 730, 730, 730, 730],
@@ -576,7 +706,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
         }
     }
 
-    changeCustomerChart(event:any) {
+    changeCustomerChart(event: any) {
         const dataSet1 = [
             [10, 25, 48, 35, 54, 70],
             [18, 35, 23, 30, 59, 65],
@@ -595,7 +725,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
             [10, 54, 42, 38, 63, 83],
             [25, 44, 50, 56, 65, 92],
             [30, 43, 48, 45, 73, 78],
-            [29, 47, 54, 60, 77, 86]
+            [29, 47, 54, 60, 77, 86],
         ];
         const dataSet2 = [
             [10, 25, 48, 35, 54, 70],
@@ -615,7 +745,7 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
             [40, 40, 38, 45, 68, 86],
             [30, 43, 48, 45, 73, 78],
             [10, 54, 42, 38, 63, 83],
-            [29, 47, 54, 60, 77, 86]
+            [29, 47, 54, 60, 77, 86],
         ];
 
         if (event.value.code === '1') {
@@ -665,19 +795,17 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
         }
     }
 
-    recentSales(event:any) {
+    recentSales(event: any) {
         if (event.value.code === '0') {
             this.customersTable = this.customersTable1;
         } else {
             this.customersTable = this.customersTable2;
         }
     }
- 
 
     ngOnDestroy(): void {
         if (this.subscription) {
             this.subscription.unsubscribe();
         }
     }
-
 }
