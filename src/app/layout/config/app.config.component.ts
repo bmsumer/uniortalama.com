@@ -29,23 +29,32 @@ export class AppConfigComponent implements OnInit {
     }
 
     set visible(_val: boolean) {
-        this.layoutService.state.configSidebarVisible = _val;
+        this.layoutService.config.update((config) => ({
+            ...config,
+            configSidebarVisible: _val,
+        }));
     }
 
     get scale(): number {
-        return this.layoutService.config.scale;
+        return this.layoutService.config().scale;
     }
 
     set scale(_val: number) {
-        this.layoutService.config.scale = _val;
+        this.layoutService.config.update((config) => ({
+            ...config,
+            scale: _val,
+        }));
     }
 
     get menuMode(): MenuMode {
-        return this.layoutService.config.menuMode;
+        return this.layoutService.config().menuMode;
     }
 
     set menuMode(_val: MenuMode) {
-        this.layoutService.config.menuMode = _val;
+        this.layoutService.config.update((config) => ({
+            ...config,
+            menuMode: _val,
+        }));
         if (
             this.layoutService.isSlimPlus() ||
             this.layoutService.isSlim() ||
@@ -56,7 +65,7 @@ export class AppConfigComponent implements OnInit {
     }
 
     get colorScheme(): ColorScheme {
-        return this.layoutService.config.colorScheme;
+        return this.layoutService.config().colorScheme;
     }
 
     set colorScheme(_val: ColorScheme) {
@@ -64,11 +73,14 @@ export class AppConfigComponent implements OnInit {
     }
 
     get ripple(): boolean {
-        return this.layoutService.config.ripple;
+        return this.layoutService.config().ripple;
     }
 
     set ripple(_val: boolean) {
-        this.layoutService.config.ripple = _val;
+        this.layoutService.config.update((config) => ({
+            ...config,
+            ripple: _val,
+        }));
     }
 
     ngOnInit() {
@@ -89,64 +101,16 @@ export class AppConfigComponent implements OnInit {
     }
 
     changeColorScheme(colorScheme: ColorScheme) {
-        const themeLink = <HTMLLinkElement>(
-            document.getElementById("theme-link")
-        );
-        const themeLinkHref = themeLink.getAttribute("href");
-        const currentColorScheme =
-            "theme-" + this.layoutService.config.colorScheme;
-        const newColorScheme = "theme-" + colorScheme;
-        const newHref = themeLinkHref!.replace(
-            currentColorScheme,
-            newColorScheme
-        );
-        this.replaceThemeLink(
-            newHref,
-            () => {
-                this.layoutService.config.colorScheme = colorScheme;
-                this.layoutService.onConfigUpdate();
-            },
-            "theme-link"
-        );
+        this.layoutService.config.update((config) => ({
+            ...config,
+            colorScheme,
+        }));
     }
 
     changeTheme(theme: string) {
-        const themeLink = <HTMLLinkElement>(
-            document.getElementById("theme-link")
-        );
-
-        const newHref = themeLink
-            .getAttribute("href")!
-            .replace(this.layoutService.config.theme, theme);
-        this.replaceThemeLink(
-            newHref,
-            () => {
-                this.layoutService.config.theme = theme;
-                this.layoutService.onConfigUpdate();
-            },
-            "theme-link"
-        );
+        this.layoutService.config.update((config) => ({ ...config, theme }));
     }
 
-    replaceThemeLink(href: string, onComplete: Function, linkId: string) {
-        const id = linkId;
-        const themeLink = <HTMLLinkElement>document.getElementById(id);
-        const cloneLinkElement = <HTMLLinkElement>themeLink.cloneNode(true);                                
-
-        cloneLinkElement.setAttribute("href", href);
-        cloneLinkElement.setAttribute("id", id + "-clone");
-
-        themeLink.parentNode!.insertBefore(
-            cloneLinkElement,
-            themeLink.nextSibling
-        );
-
-        cloneLinkElement.addEventListener("load", () => {
-            themeLink.remove();
-            cloneLinkElement.setAttribute("id", id);
-            onComplete();
-        });
-    }
 
     decrementScale() {
         this.scale--;

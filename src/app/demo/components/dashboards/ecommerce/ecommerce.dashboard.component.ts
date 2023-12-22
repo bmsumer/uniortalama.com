@@ -1,12 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { Product } from 'src/app/demo/api/product';
+import { Subscription, debounceTime } from 'rxjs';
 import {
-    AppConfig,
     LayoutService,
 } from 'src/app/layout/service/app.layout.service';
 import { ProductService } from 'src/app/demo/service/product.service';
-import { Table } from 'primeng/table';
 import { Customer } from 'src/app/demo/api/customer';
 import { PrimeIcons } from 'primeng/api';
 import { CustomerService } from 'src/app/demo/service/customer.service';
@@ -94,11 +91,11 @@ export class EcommerceDashboardComponent implements OnInit, OnDestroy {
         private layoutService: LayoutService,
         private customerService: CustomerService
     ) {
-        this.subscription = this.layoutService.configUpdate$.subscribe(
-            (config) => {
+     this.subscription = this.layoutService.configUpdate$
+            .pipe(debounceTime(25))
+            .subscribe((config) => {
                 this.initCharts();
-            }
-        );
+            });
     }
 
     ngOnInit(): void {

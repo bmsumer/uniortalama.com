@@ -92,19 +92,19 @@ export class AppLayoutComponent implements OnDestroy {
 
     get containerClass() {
         return {
-            'layout-light': this.layoutService.config.colorScheme === 'light',
-            'layout-dark': this.layoutService.config.colorScheme === 'dark',
-            'layout-overlay': this.layoutService.config.menuMode === 'overlay',
-            'layout-static': this.layoutService.config.menuMode === 'static',
-            'layout-slim': this.layoutService.config.menuMode === 'slim',
-            'layout-slim-plus': this.layoutService.config.menuMode === 'slim-plus',
-            'layout-horizontal': this.layoutService.config.menuMode === 'horizontal',
-            'layout-reveal': this.layoutService.config.menuMode === 'reveal',
-            'layout-drawer': this.layoutService.config.menuMode === 'drawer',
-            'layout-static-inactive': this.layoutService.state.staticMenuDesktopInactive && this.layoutService.config.menuMode === 'static',
+            'layout-light': this.layoutService.config().colorScheme === 'light',
+            'layout-dark': this.layoutService.config().colorScheme === 'dark',
+            'layout-overlay': this.layoutService.config().menuMode === 'overlay',
+            'layout-static': this.layoutService.config().menuMode === 'static',
+            'layout-slim': this.layoutService.config().menuMode === 'slim',
+            'layout-slim-plus': this.layoutService.config().menuMode === 'slim-plus',
+            'layout-horizontal': this.layoutService.config().menuMode === 'horizontal',
+            'layout-reveal': this.layoutService.config().menuMode === 'reveal',
+            'layout-drawer': this.layoutService.config().menuMode === 'drawer',
+            'layout-static-inactive': this.layoutService.state.staticMenuDesktopInactive && this.layoutService.config().menuMode === 'static',
             'layout-overlay-active': this.layoutService.state.overlayMenuActive,
             'layout-mobile-active': this.layoutService.state.staticMenuMobileActive,
-            'p-ripple-disabled': !this.layoutService.config.ripple,
+            'p-ripple-disabled': !this.layoutService.config().ripple,
             'layout-sidebar-active': this.layoutService.state.sidebarActive,
             'layout-sidebar-anchored': this.layoutService.state.anchored
         }

@@ -17,7 +17,7 @@ export class VerificationComponent {
 	constructor(public layoutService: LayoutService) {}
 
 	get dark(): boolean {
-		return this.layoutService.config.colorScheme !== 'light';
+		return this.layoutService.config().colorScheme !== 'light';
 	}
     onDigitInput(event: any) {
         let element;
