@@ -1,10 +1,16 @@
 import { Injectable, effect, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 
-export type MenuMode = 'static' | 'overlay' | 'horizontal' | 'slim' | 'slim-plus' | 'reveal' | 'drawer';
+export type MenuMode =
+    | 'static'
+    | 'overlay'
+    | 'horizontal'
+    | 'slim'
+    | 'slim-plus'
+    | 'reveal'
+    | 'drawer';
 
 export type ColorScheme = 'light' | 'dark';
-
 
 export interface AppConfig {
     colorScheme: ColorScheme;
@@ -21,15 +27,14 @@ interface LayoutState {
     configSidebarVisible: boolean;
     staticMenuMobileActive: boolean;
     menuHoverActive: boolean;
-    sidebarActive:boolean;
-    anchored: boolean,
+    sidebarActive: boolean;
+    anchored: boolean;
 }
 
 @Injectable({
     providedIn: 'root',
 })
 export class LayoutService {
-
     _config: AppConfig = {
         ripple: false,
         menuMode: 'static',
@@ -47,8 +52,8 @@ export class LayoutService {
         configSidebarVisible: false,
         staticMenuMobileActive: false,
         menuHoverActive: false,
-        sidebarActive:false,
-        anchored: false
+        sidebarActive: false,
+        anchored: false,
     };
 
     private configUpdate = new Subject<AppConfig>();
@@ -61,12 +66,21 @@ export class LayoutService {
     constructor() {
         effect(() => {
             const config = this.config();
-            this.changeTheme();
+            if (this.updateStyle(config)) {
+                this.changeTheme();
+            }
             this.changeScale(config.scale);
-            this._config = { ...config };
             this.onConfigUpdate();
         });
     }
+
+    updateStyle(config: AppConfig) {
+        return (
+            config.theme !== this._config.theme ||
+            config.colorScheme !== this._config.colorScheme
+        );
+    }
+
     changeTheme() {
         const config = this.config();
         const themeLink = <HTMLLinkElement>(
@@ -86,6 +100,7 @@ export class LayoutService {
 
         this.replaceThemeLink(newHref);
     }
+
     replaceThemeLink(href: string) {
         const id = 'theme-link';
         let themeLink = <HTMLLinkElement>document.getElementById(id);
@@ -118,10 +133,11 @@ export class LayoutService {
         }
 
         if (this.isDesktop()) {
-            this.state.staticMenuDesktopInactive = !this.state.staticMenuDesktopInactive;
-        }
-        else {
-            this.state.staticMenuMobileActive = !this.state.staticMenuMobileActive;
+            this.state.staticMenuDesktopInactive =
+                !this.state.staticMenuDesktopInactive;
+        } else {
+            this.state.staticMenuMobileActive =
+                !this.state.staticMenuMobileActive;
 
             if (this.state.staticMenuMobileActive) {
                 this.overlayOpen.next(null);
@@ -166,7 +182,7 @@ export class LayoutService {
     }
 
     onConfigUpdate() {
+        this._config = { ...this.config() };
         this.configUpdate.next(this.config());
     }
-
 }
