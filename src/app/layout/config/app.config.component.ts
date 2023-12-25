@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { MenuService } from "../app.menu.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { MenuService } from '../app.menu.service';
 import {
     ColorScheme,
     LayoutService,
     MenuMode,
-} from "../service/app.layout.service";
+} from '../service/app.layout.service';
 
 @Component({
-    selector: "app-config",
-    templateUrl: "./app.config.component.html",
+    selector: 'app-config',
+    templateUrl: './app.config.component.html',
 })
 export class AppConfigComponent implements OnInit {
     @Input() minimal: boolean = false;
@@ -27,7 +27,6 @@ export class AppConfigComponent implements OnInit {
     get visible(): boolean {
         return this.layoutService.state.configSidebarVisible;
     }
-
     set visible(_val: boolean) {
         this.layoutService.state.configSidebarVisible = _val;
     }
@@ -35,7 +34,6 @@ export class AppConfigComponent implements OnInit {
     get scale(): number {
         return this.layoutService.config().scale;
     }
-
     set scale(_val: number) {
         this.layoutService.config.update((config) => ({
             ...config,
@@ -46,7 +44,6 @@ export class AppConfigComponent implements OnInit {
     get menuMode(): MenuMode {
         return this.layoutService.config().menuMode;
     }
-
     set menuMode(_val: MenuMode) {
         this.layoutService.config.update((config) => ({
             ...config,
@@ -64,15 +61,16 @@ export class AppConfigComponent implements OnInit {
     get colorScheme(): ColorScheme {
         return this.layoutService.config().colorScheme;
     }
-
     set colorScheme(_val: ColorScheme) {
-        this.changeColorScheme(_val);
+        this.layoutService.config.update((config) => ({
+            ...config,
+            colorScheme: _val,
+        }));
     }
 
     get ripple(): boolean {
         return this.layoutService.config().ripple;
     }
-
     set ripple(_val: boolean) {
         this.layoutService.config.update((config) => ({
             ...config,
@@ -80,16 +78,26 @@ export class AppConfigComponent implements OnInit {
         }));
     }
 
+    get theme(): string {
+        return this.layoutService.config().theme;
+    }
+    set theme(_val: string) {
+        this.layoutService.config.update((config) => ({
+            ...config,
+            theme: _val,
+        }));
+    }
+
     ngOnInit() {
         this.componentThemes = [
-            { name: "blue", color: "#0F8BFD" },
-            { name: "green", color: "#0BD18A" },
-            { name: "magenta", color: "#EC4DBC" },
-            { name: "orange", color: "#FD9214" },
-            { name: "purple", color: "#873EFE" },
-            { name: "red", color: "#FC6161" },
-            { name: "teal", color: "#00D0DE" },
-            { name: "yellow", color: "#EEE500" },
+            { name: 'blue', color: '#0F8BFD' },
+            { name: 'green', color: '#0BD18A' },
+            { name: 'magenta', color: '#EC4DBC' },
+            { name: 'orange', color: '#FD9214' },
+            { name: 'purple', color: '#873EFE' },
+            { name: 'red', color: '#FC6161' },
+            { name: 'teal', color: '#00D0DE' },
+            { name: 'yellow', color: '#EEE500' },
         ];
     }
 
@@ -98,28 +106,18 @@ export class AppConfigComponent implements OnInit {
     }
 
     changeColorScheme(colorScheme: ColorScheme) {
-        this.layoutService.config.update((config) => ({
-            ...config,
-            colorScheme,
-        }));
+        this.colorScheme = colorScheme;
     }
 
     changeTheme(theme: string) {
-        this.layoutService.config.update((config) => ({ ...config, theme }));
+        this.theme = theme;
     }
-
 
     decrementScale() {
         this.scale--;
-        this.applyScale();
     }
 
     incrementScale() {
         this.scale++;
-        this.applyScale();
-    }
-
-    applyScale() {
-        document.documentElement.style.fontSize = this.scale + "px";
     }
 }
