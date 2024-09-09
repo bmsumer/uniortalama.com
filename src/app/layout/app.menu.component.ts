@@ -23,6 +23,23 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
+                label: 'Sayfalar',
+                icon: 'pi pi-school',
+                items: [
+                    {
+                            label: 'Admin Sayfaları',
+                            icon: 'pi pi-school',
+                            items: [
+                                {
+                                    label:'Okul Ekle',
+                                    icon: 'pi pi-fw pi-school',
+                                    routerLink: ['/pages/admin/add-school']
+                                }
+                            ]
+                    }
+                ]
+            },
+            {
                 label: 'Apps',
                 icon: 'pi pi-th-large',
                 items: [

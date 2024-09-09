@@ -1,0 +1,19 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header line-height-4 mb-4">
+                <h4>Okul Ekle</h4>
+            </div>
+                <div class="flex align-items-center mb-5" >
+                    <h6 class="m-0">Okul Adı: </h6>
+                    <input type="text" pInputText placeholder="Okul Adı" class="ml-2">
+                </div>
+                <div class="flex align-items-center mb-2">
+                    <h6 class="m-0 mr-2">Okul Resmi: </h6>
+
+            <p-fileUpload mode="basic" name="demo[]" url="./upload.php" accept="image/*" [maxFileSize]="1000000" (onUpload)="onBasicUpload()"></p-fileUpload>
+
+                </div>
+        </div>
+    </div>
+</div>
