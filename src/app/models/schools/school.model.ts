@@ -5,5 +5,5 @@ export class SchoolModel{
     name: string;
     information: string;
     image: string;
-    noteModel: NoteModelsModel;
+    noteModel: NoteModelsModel = new NoteModelsModel();
 }

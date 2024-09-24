@@ -52,6 +52,7 @@ export class AddSchoolComponent implements OnInit{
     getNotSistemi(){
         this.service.getNoteSystems().subscribe((res: NoteSystemsModel[])=> {
             this.noteSystems = res;
+            // this.newSchool.noteModel.system = this.noteSystems[0];
             // this.selectedNoteSystem = this.noteSystems[0];
         })
     }
@@ -59,6 +60,7 @@ export class AddSchoolComponent implements OnInit{
     getNoteModels(){
         this.service.getNoteModels().subscribe((res: NoteModelsModel[])=> {
             this.noteModelList = res;
+            // debugger;
             this.newSchool.noteModel = this.noteModelList[0];
             // this.selectedNoteSystem = this.noteSystems.filter(item => item.id == this.selectedNoteModel.systemId)[0];
             this.changeSystem();
@@ -67,12 +69,13 @@ export class AddSchoolComponent implements OnInit{
 
     changeSystem(){
         if(this.selectedNoteType == true){
-            let item: NoteModelsModel = new NoteModelsModel();
-            let note: NoteModel  = new NoteModel();
-            note.name = "";
-            note.note = 0.00;
-            item.notes.push(note);
-            this.newSchool.noteModel = item;
+            // let item: NoteModelsModel = new NoteModelsModel();
+            // let note: NoteModel  = new NoteModel();
+
+            // note.name = "";
+            // note.note = 0.00;
+            // item.notes.push(note);
+            // this.newSchool.noteModel = item;
         }
         else{
             this.newSchool.noteModel = this.noteModelList[0];

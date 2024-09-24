@@ -3,6 +3,6 @@ import { NoteModel } from "./note.model";
 
 export class NoteModelsModel{
     id: number;
-    system: NoteSystemsModel;
+    system: NoteSystemsModel = new NoteSystemsModel();
     notes: NoteModel[]  =[];
 }

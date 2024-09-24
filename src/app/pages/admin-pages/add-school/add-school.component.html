@@ -101,7 +101,7 @@
                                     <p-radioButton name="noteModel" [value]="item" [(ngModel)]="newSchool.noteModel" id="{{item.id}}"></p-radioButton>
                                     <label for="{{item.id}}">
                                         <div class="flex align-items-center">
-                                            <input id="float-input" class="mr-2" type="text" [value]="item.system" style=" max-width: 4.5rem;" pInputText [disabled]="true">
+                                            <input id="float-input" class="mr-2" type="text" [value]="item.system.systemName" style=" max-width: 4.5rem;" pInputText [disabled]="true">
 
                                             <p-table [value]="[[]]" scrollDirection="both" [scrollable]="true" scrollHeight="400px" styleClass="mt-3" responsiveLayout="scroll">
                                                 <ng-template pTemplate="header">
