@@ -55,7 +55,7 @@ export class JwtInterceptor implements HttpInterceptor {
         }
         else if ((!token || token == "") && !request.url.includes('/assets')) {
             // this.router.navigate(['/auth/login']);
-            this.router.navigate(['/']);
+            // this.router.navigate(['/']);
         }
 
         return next.handle(request).pipe(
@@ -66,8 +66,8 @@ export class JwtInterceptor implements HttpInterceptor {
             catchError((error) => {
                 this.spiner.set(false);
                 if (error.status == 401) {
-                    localStorage.setItem('lastPage', this.router.url)
-                    this.router.navigate(['/auth/lockscreen'])
+                    // localStorage.setItem('lastPage', this.router.url)
+                    // this.router.navigate(['/auth/lockscreen'])
                 }
                 //   if (error instanceof HttpErrorResponse) {
                 //   localStorage.removeItem('token');

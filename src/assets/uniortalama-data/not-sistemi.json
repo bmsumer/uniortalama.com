@@ -1,0 +1,8 @@
+{
+    "data": [
+        {"id": 1, "systemName": "100'lük", "lang": "tr", "maxValue": 100.00},
+        {"id": 2, "systemName": "10'luk", "lang": "tr", "maxValue": 10.00},
+        {"id": 3, "systemName": "5'lik", "lang": "tr", "maxValue": 5.00},
+        {"id": 4, "systemName": "4'lük", "lang": "tr", "maxValue": 4.00}
+    ]
+}

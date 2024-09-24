@@ -9,6 +9,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FileUploadModule } from 'primeng/fileupload';
 import { MessageService } from 'primeng/api';
 import { ToastrService } from 'src/app/shared-services/toastr.service';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { DropdownModule } from 'primeng/dropdown';
+import { TableModule } from 'primeng/table';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { BadgeModule } from 'primeng/badge';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
 	imports: [
@@ -17,7 +24,14 @@ import { ToastrService } from 'src/app/shared-services/toastr.service';
         AutoCompleteModule,
         FormsModule,
         InputTextModule,
-        FileUploadModule
+        FileUploadModule,
+        InputNumberModule,
+        RadioButtonModule,
+        DropdownModule,
+        TableModule,
+        InputTextareaModule,
+        BadgeModule,
+        ToastModule
 	],
     providers: [MessageService, ToastrService],
 	declarations: [AddSchoolComponent]

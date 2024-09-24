@@ -1,0 +1,126 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "system": {"id": 4, "systemName": "4'lük", "lang": "tr", "maxValue": 4.00},
+            "notes": [
+                {
+                    "id": 1 ,
+                    "name": "AA",
+                    "note": 4.00
+                },
+                {
+                    "id": 2 ,
+                    "name": "AB",
+                    "note": 3.70
+                },
+                {
+                    "id": 3 ,
+                    "name": "BA",
+                    "note": 3.30
+                },
+                {
+                    "id": 4 ,
+                    "name": "BB",
+                    "note": 3.00
+                },
+                {
+                    "id": 5 ,
+                    "name": "BC",
+                    "note": 2.70
+                },
+                {
+                    "id": 6 ,
+                    "name": "CB",
+                    "note": 2.30
+                },
+                {
+                    "id": 7 ,
+                    "name": "CC",
+                    "note": 2.00
+                },
+                {
+                    "id": 8 ,
+                    "name": "CD",
+                    "note": 1.70
+                },
+                {
+                    "id": 9 ,
+                    "name": "DC",
+                    "note": 1.30
+                },
+                {
+                    "id": 10 ,
+                    "name": "DD",
+                    "note": 1.10
+                },
+                {
+                    "id": 11 ,
+                    "name": "FF",
+                    "note": 0.00
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "system": {"id": 1, "systemName": "100'lük", "lang": "tr", "maxValue": 100.00},
+            "notes": [
+                {
+                    "id": 1 ,
+                    "name": "AA",
+                    "note": 100.00
+                },
+                {
+                    "id": 2 ,
+                    "name": "AB",
+                    "note": 90.00
+                },
+                {
+                    "id": 3 ,
+                    "name": "BA",
+                    "note": 80.00
+                },
+                {
+                    "id": 4 ,
+                    "name": "BB",
+                    "note": 75.00
+                },
+                {
+                    "id": 5 ,
+                    "name": "BC",
+                    "note": 65.00
+                },
+                {
+                    "id": 6 ,
+                    "name": "CB",
+                    "note": 57.50
+                },
+                {
+                    "id": 7 ,
+                    "name": "CC",
+                    "note": 50.00
+                },
+                {
+                    "id": 8 ,
+                    "name": "CD",
+                    "note": 40.00
+                },
+                {
+                    "id": 9 ,
+                    "name": "DC",
+                    "note": 30.00
+                },
+                {
+                    "id": 10 ,
+                    "name": "DD",
+                    "note": 25.00
+                },
+                {
+                    "id": 11 ,
+                    "name": "FF",
+                    "note": 0.00
+                }
+            ]
+        }
+    ]
+}

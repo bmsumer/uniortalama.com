@@ -8,31 +8,33 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SpinerService } from './shared-services/spiner.service';
+import { CommonModule } from '@angular/common';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
   }
-@NgModule({
+  @NgModule({
     declarations: [
-        AppComponent
+      AppComponent
     ],
     imports: [
-        AppRoutingModule,
-        AppLayoutModule,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-              provide: TranslateLoader,
-              useFactory: createTranslateLoader,
-              deps: [HttpClient]
-            }
-          })
+      AppRoutingModule,
+      AppLayoutModule,
+      CommonModule,
+      HttpClientModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: createTranslateLoader,
+          deps: [HttpClient]
+        }
+      })
     ],
     providers: [
-        httpInterceptorProviders,
-        { provide: LocationStrategy, useClass: HashLocationStrategy },
-        SpinerService
+      httpInterceptorProviders,
+      { provide: LocationStrategy, useClass: HashLocationStrategy },
+      SpinerService
     ],
     bootstrap: [AppComponent]
-})
+  })
 export class AppModule { }

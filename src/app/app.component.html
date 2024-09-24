@@ -1,1 +1,6 @@
 <router-outlet></router-outlet>
+<div class="progress-spinner" *ngIf="getSpinnerValue()">
+    <div class="flex justify-content-center">
+        <i class="pi pi-spin pi-spinner" style="font-size: 8rem"></i>
+    </div>
+</div>
