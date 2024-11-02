@@ -10,7 +10,7 @@ import { LanguageService } from './shared-services/language.service';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    spinnerStatus = false;
+    spinnerStatus = true;
     localLangs: string[] = [];
 
     constructor(
